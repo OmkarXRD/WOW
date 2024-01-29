@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Fragments.Profile.EditProfileSection.ConnectedAccountsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@drawable/wallet_background"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp">
+
+        <ImageView
+            android:id="@+id/backEducation"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
+            android:rotation="180"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/connectAccounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/backEducation"
+            android:fontFamily="@font/inter_medium"
+            android:text="Connected Account"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:layout_marginTop="5dp"
+        android:paddingVertical="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/imgPhone"
+            android:fontFamily="@font/inter"
+            android:paddingVertical="5dp"
+            android:text="Phone"
+            android:textColor="#A4000000"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imgPhone"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/smartphone_call"
+            app:tint="#8FB878" />
+
+        <ImageView
+            android:id="@+id/phoneArrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:tint="#A4000000" />
+
+        <TextView
+            android:id="@+id/connectedPhoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/phoneArrow"
+            android:fontFamily="@font/inter"
+            android:text="+91 9876543210"
+            android:textColor="#A4000000"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="5dp"
+        android:background="#8DD6D6D6" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/imgFacebook"
+            android:fontFamily="@font/inter"
+            android:paddingVertical="5dp"
+            android:text="Facebook"
+            android:textColor="#A4000000"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imgFacebook"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/facebook_1_"
+            app:tint="#4B00F3" />
+
+        <ImageView
+            android:id="@+id/facebookArrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:tint="#A4000000" />
+
+        <TextView
+            android:id="@+id/connectFacebookTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/facebookArrow"
+            android:fontFamily="@font/inter"
+            android:text="Akash syal"
+            android:textColor="#A4000000"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="5dp"
+        android:background="#8DD6D6D6" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/imgGoogle"
+            android:fontFamily="@font/inter"
+            android:paddingVertical="5dp"
+            android:text="Google"
+            android:textColor="#A4000000"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imgGoogle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/google" />
+
+        <ImageView
+            android:id="@+id/googleArrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:tint="#A4000000" />
+
+        <TextView
+            android:id="@+id/connectGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/googleArrow"
+            android:fontFamily="@font/inter"
+            android:text="Akash.syal96"
+            android:textColor="#A4000000"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="5dp"
+        android:background="#8DD6D6D6" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="40dp">
+
+        <TextView
+            android:id="@+id/whyToConnect1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="Why to Connect Account?"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/whyToConnect2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/whyToConnect1"
+            android:fontFamily="@font/inter"
+            android:lineSpacingExtra="3dp"
+            android:text="Connect to Phone is recommended to protect your Yeah! Live account."
+            android:textColor="#535353"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/whyToConnect3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/whyToConnect2"
+            android:fontFamily="@font/inter"
+            android:text="Your connected phone will be used to recieve verification code when account setting changed."
+            android:textColor="#535353"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/whyToConnect4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/whyToConnect3"
+            android:fontFamily="@font/inter"
+            android:lineSpacingExtra="3dp"
+            android:text="Once connected, you can easily to log in yeah! Live with any connected account from anywhere."
+            android:textColor="#535353"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/whyToConnect5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/whyToConnect4"
+            android:fontFamily="@font/inter"
+            android:lineSpacingExtra="3dp"
+            android:text="You can set to show your social account to your profile."
+            android:textColor="#535353"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

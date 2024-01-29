@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.Profile.EditProfileSection.PhoneVerificationFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@drawable/edit_profile_background_gradient"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp">
+
+        <ImageView
+            android:id="@+id/backEducation"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:rotation="180"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/phoneVerification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/backEducation"
+            android:fontFamily="@font/inter_medium"
+            android:text="Phone Verification"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/back_light"
+        android:paddingVertical="15dp">
+
+        <ImageView
+            android:id="@+id/imgSmartPhone"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/smartphone_1_"
+            app:tint="#3CB371" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgSmartPhone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="+91 9876543210"
+            android:textColor="@color/black"
+            android:layout_marginBottom="15dp"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/imgPhone"
+            android:fontFamily="@font/inter"
+            android:text="Change Phone Number"
+            android:textColor="#757474"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imgPhone"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/smartphone_call"
+            app:tint="#757474" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_forward_ios_24"
+            app:tint="#757474" />
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/back_light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/imgChngPass"
+            android:fontFamily="@font/inter"
+            android:paddingVertical="5dp"
+            android:text="Change Password"
+            android:textColor="#757474"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imgChngPass"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/open_lock"
+            app:tint="#757474" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_forward_ios_24"
+            app:tint="#757474" />
+
+    </RelativeLayout>
+
+</LinearLayout>

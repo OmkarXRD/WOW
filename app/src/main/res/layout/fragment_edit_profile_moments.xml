@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.Profile.EditProfileSection.EditProfileMomentsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="785dp">
+            <RelativeLayout
+                android:id="@+id/rlTop"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <ImageView
+                    android:id="@+id/editProfileBgImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wow_icon" />
+                <RelativeLayout
+                    android:id="@+id/rlEditMainTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="30dp">
+
+                    <ImageView
+                        android:id="@+id/editProfileBackImg"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:rotation="180"
+                        android:src="@drawable/ic_baseline_arrow_forward_24"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/editProfileBackImg"
+                        android:text="Profile"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:id="@+id/editpro"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/edit__2___1_"
+                        app:tint="@color/white" />
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_toLeftOf="@id/editpro"
+                        android:src="@drawable/ic_baseline_search_24"
+                        android:visibility="gone"
+                        app:tint="@color/white" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlTop"
+                android:layout_marginTop="-50dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgCirclePhoto"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/wow_icon"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="1dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlUserData"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@id/imgCirclePhoto"
+                    android:paddingBottom="5dp">
+
+                    <ImageView
+                        android:id="@+id/imgVip"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/image_2"
+                        android:src="@drawable/group_457"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="1dp"
+                        android:layout_toRightOf="@+id/imgVip"
+                        android:background="@drawable/background_transparent"
+                        android:maxLength="12"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="5dp"
+                        android:singleLine="true"
+                        android:text="Akshay Syal"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tUserName"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/vipBTN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_8"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:background="@drawable/back_green">
+
+                            <TextView
+                                android:id="@+id/editProfileVipLvlTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="@dimen/dp_5"
+                                android:layout_marginEnd="@dimen/dp_5"
+                                android:text="Vip lvl."
+                                android:textColor="@color/white"
+                                android:textSize="9sp" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/sendingLayout"
+                            android:layout_width="50dp"
+                            android:layout_height="15dp"
+                            android:layout_marginHorizontal="@dimen/dp_3"
+                            android:layout_weight="1"
+                            android:background="@drawable/onetotengradient"
+                            >
+
+                            <ImageView
+                                android:id="@+id/lvlimg"
+                                android:layout_width="8dp"
+                                android:layout_height="14dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:src="@drawable/starlevel" />
+
+                            <TextView
+                                android:id="@+id/WLevelTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="@dimen/dp_5"
+                                android:layout_marginEnd="@dimen/dp_5"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="9sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="50dp"
+                            android:layout_height="15dp"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_weight="1"
+                            android:background="@drawable/back_blue"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="@dimen/dp_5"
+                                android:layout_marginEnd="@dimen/dp_5"
+                                android:text="lvl"
+                                android:textColor="@color/white"
+                                android:textSize="9sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/level"
+                            android:layout_width="50dp"
+                            android:layout_height="15dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:layout_marginStart="2dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/receivingLayout"
+                                android:scaleType="fitXY"/>
+                            <ImageView
+                                android:id="@id/imggg"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dp_5"
+                                android:src="@drawable/receiveicon" />
+
+                            <TextView
+                                android:id="@+id/editProfileMyLvlTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginHorizontal="@dimen/dp_5"
+                                android:layout_toRightOf="@id/imggg"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/rlUserData"
+                    android:layout_toEndOf="@id/imgCirclePhoto">
+
+                    <TextView
+                        android:id="@+id/editProfileMomentUsernameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:text="id"
+                        android:textColor="#7A7878"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/myCountryTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editProfileMomentUsernameTv"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:text="India"
+                        android:textColor="#7A7878"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/editProfileMomentUsernameTv"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@+id/myCountryTv"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_shape_corners_8dp"
+                        android:backgroundTint="#0ed8a3"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="1dp">
+
+                        <ImageView
+                            android:id="@+id/myGenderImg"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/description"
+                            android:src="@drawable/male"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/myAgeTv"
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="3dp"
+                            android:text="35"
+                            android:textColor="@color/white"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/vipImage"
+                        android:layout_width="30dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toRightOf="@+id/layout"
+                        android:layout_marginBottom="-5dp"
+                        android:visibility="gone"
+                        android:src="@drawable/vip1img"/>
+
+                    <ImageView
+                        android:id="@+id/coinAjency"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toRightOf="@+id/vipImage"
+                        android:visibility="gone"
+                        android:src="@drawable/dollarrr"/>
+
+                    <RelativeLayout
+                        android:id="@+id/anchorlayout"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_18"
+                        android:layout_marginTop="@dimen/dp_32"
+                        android:visibility="gone"
+                        android:layout_toRightOf="@id/coinAjency">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:src="@drawable/microphoneicon"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ajencyIconLayout"
+                        android:layout_width="@dimen/dp_28"
+                        android:layout_height="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_32"
+                        android:layout_marginStart="2dp"
+                        android:visibility="gone"
+                        android:layout_toRightOf="@id/anchorlayout">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:src="@drawable/ajencytag"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/familyRl"
+                        android:layout_width="@dimen/dp_120"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:visibility="gone"
+                        android:background="@drawable/family_badge_23">
+                        <TextView
+                            android:id="@+id/tvFamily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="2dp"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:text="Family Time"
+                            android:textColor="@color/white"
+                            android:textSize="9sp" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llFans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBio2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/editFansLinarLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/editMomentProfileFansTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="1.3M"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Fans"
+                            android:textColor="#FF706E6E"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFollowing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvBio2"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/llFans"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/editFollowingLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/editMomentProfileFollowingTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2.6M"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Following"
+                            android:textColor="#FF706E6E"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewFans"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/llFans"
+                android:layout_marginTop="10dp"
+                android:background="@color/background" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlGfitWall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewFans"/>
+
+            <TextView
+                android:id="@+id/tvBio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlData"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Bio: "
+                android:textColor="#5C5B5B"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvBio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlData"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@+id/tvBio"
+                android:text="One day I wake up and realized I was made for anyone, I was for me, I am my own. "
+                android:textColor="#717070"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/momentstablay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlGfitWall"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="#fa02e6"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="1dp"
+                app:tabMinWidth="10dp"
+                app:tabSelectedTextColor="#fa02e6"
+                app:tabTextColor="@color/grey">
+
+            </com.google.android.material.tabs.TabLayout>
+
+
+            <View
+                android:id="@+id/viewmoments"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/momentstablay"
+                android:background="@color/background" />
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/mommentViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="900dp"
+                android:layout_below="@+id/viewmoments" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/floatingAddBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#fa02e6"
+        android:visibility="visible"
+        app:icon="@drawable/ic_baseline_add"
+        app:iconSize="35dp"
+        app:iconTint="@color/white" />
+
+
+</RelativeLayout>

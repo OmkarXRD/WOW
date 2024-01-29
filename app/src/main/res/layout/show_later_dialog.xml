@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:layout_gravity="center_vertical"
+    android:layout_marginHorizontal="15dp"
+    android:background="@drawable/disconnect_bottom_sheet_background"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="Message will be sent to your phone later. Are you sure you want to return."
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_toStartOf="@id/tvReturn"
+            android:fontFamily="@font/poppins"
+            android:text="Wait"
+            android:textColor="#AF6B6B"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="Return"
+            android:textColor="#AF6B6B"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

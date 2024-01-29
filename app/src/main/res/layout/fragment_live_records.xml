@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.Profile.Income.LiveRecordsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/liveRecordsTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/liveRecordsBackImg"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/cross"
+                android:contentDescription="@string/description"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Monthly Records"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@+id/liveRecordsBackImg"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/liveRecordsDesTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/liveRecordsTopRL"
+            android:background="#3932DA15"
+            android:paddingVertical="10dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="@color/green"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/liverecordtvdes"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/liveRecordMonthRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/liveRecordsDesTV"
+            android:padding="20dp"
+            android:background="@color/light_grey_bg_color">
+
+            <TextView
+                android:id="@+id/monthydateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:fontFamily="sans-serif-medium"
+                android:textSize="16sp"
+                android:paddingHorizontal="@dimen/dp_5"
+                android:layout_centerHorizontal="true"
+                android:drawableTint="#fa02e6"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                android:textColor="#fa02e6"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/liveRecord10MinusRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/liveRecordMonthRL"
+            android:padding="20dp"
+            android:background="#163BB327">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All data will be updated every 10 minutes;"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/holo_red_light"/>
+
+        </RelativeLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="@dimen/dp_20"
+                    app:cardCornerRadius="@dimen/dp_20"
+                    android:elevation="10dp"
+                    android:layout_below="@+id/liveRecord10MinusRL">
+                    <RelativeLayout
+                        android:id="@+id/totalDiamondsRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient"
+                        android:layout_below="@+id/liveRecord10MinusRL">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/light_grey_bg_color"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="20dp">
+                            <TextView
+                                android:id="@+id/monthlyDiamonds"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:text="Total Diamonds: 0 "
+                                android:textColor="@color/white"
+                                android:drawableRight="@drawable/diamond"
+                                android:fontFamily="sans-serif-medium"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:visibility="gone"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Streamer income: 0   Guest income: 3031"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:visibility="gone"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Rewards: 0   Rooms's dimonds tally: 0"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:singleLine="true"
+                                android:visibility="gone"
+                                android:textSize="14sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Uncounted diamonds: 0"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:visibility="gone"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Message gift: 0"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="@dimen/dp_20"
+                    app:cardCornerRadius="20dp"
+                    android:layout_below="@+id/cardView">
+
+                    <RelativeLayout
+                        android:id="@+id/totalVlidDaysRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/cardView"
+                        android:elevation="@dimen/dp_10"
+                        android:background="@drawable/wallet_background">
+
+                        <TextView
+                            android:id="@+id/validDays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Total Valid days: 0 Daily"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+        <RelativeLayout
+            android:id="@+id/totalActiveRL"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_below="@+id/cardView2"
+            android:layout_marginTop="20dp">
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@color/orange_live_record"/>
+            <View
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_alignParentEnd="true"
+                android:background="@color/orange_live_record"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/light_grey_bg_color"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginStart="20dp">
+                <TextView
+                    android:id="@+id/monthlyDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Total active duration : 380 Minutes"
+                    android:textColor="@color/orange_live_record"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_grey"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/streamingDes"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_grey"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Mintues"/>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/gameStramingRL"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/totalActiveRL"
+            android:visibility="gone"
+            android:layout_marginTop="20dp">
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@color/light_green_live_record"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/light_grey_bg_color"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Game Streaming duration: 0 Minutes"
+                    android:textColor="@color/light_green_live_record"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gameStramingRL"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:background="@color/light_grey_bg_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="16sp"
+                android:textColor="@color/grey"/>
+
+            <TextView
+                android:id="@+id/dailydateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30/08/2022"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="16sp"
+                android:drawableRight="@drawable/ic_baseline_calendar_month_24"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/grey"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutt"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/layout"
+            android:visibility="gone"
+            android:layout_marginTop="20dp">
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@color/blue_color"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/light_grey_bg_color"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp">
+                <TextView
+                    android:id="@+id/dailyTextDiamonds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Total Diamonds: 3031"
+                    android:textColor="@color/blue_color"
+                    android:drawableRight="@drawable/diamond"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_grey"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Streamer income: 0   Guest income: 3031"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_grey"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Rewards: 0   Rooms's dimonds tally: 0"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_grey"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Uncounted diamonds: 0"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_grey"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Message gift: 0"/>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/layoutt"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_marginStart="20dp">
+            <TextView
+                android:id="@+id/dailyDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Total active duration : 380 Minutes"
+                android:textColor="@color/orange_live_record"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_grey"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/streamingDes"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_grey"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Mintues"/>
+
+
+        </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.Profile.UserLevel.HowLevelUpFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/howTolevelBackImg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/cross"
+                android:layout_marginStart="15dp"
+                app:tint="@color/grey"
+                android:contentDescription="@string/description"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="How to level up?"
+                android:textSize="16sp"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/howTolevelBackImg"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/howLevetSendGiftRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp">
+
+            <RelativeLayout
+                android:id="@+id/sendGiftRL"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#efe7ff"
+                android:background="@drawable/round_shape_corners">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/gifts_3"
+                    app:tint="#935afd"
+                   />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/sendGiftRL"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Send Gifts"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="1 coin = 1 Exp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue_color"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="+1"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:textColor="@color/golden_color"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/light_grey_color"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"/>
+
+        <RelativeLayout
+            android:id="@+id/howLevetCarstRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp">
+
+            <RelativeLayout
+                android:id="@+id/buyCarsRL"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#fee6f0"
+                android:background="@drawable/round_shape_corners">
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/car_2"
+                    app:tint="#fa5495"
+                    android:contentDescription="@string/description"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/buyCarsRL"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Buy Cars"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="1 coin = 1 Exp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue_color"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="+1"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:textColor="@color/golden_color"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/light_grey_color"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"/>
+
+        <RelativeLayout
+            android:id="@+id/wealthInsideFrameRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp">
+
+            <RelativeLayout
+                android:id="@+id/buyFramesRL"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#d1f6fe"
+                android:background="@drawable/round_shape_corners">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/account_1"
+                    app:tint="#0ca9f1"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/buyFramesRL"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Buy Frames"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="1 coin = 1 Exp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue_color"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="+1"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:textColor="@color/golden_color"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/light_grey_color"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"/>
+
+        <RelativeLayout
+            android:id="@+id/howlevelBubbleRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp">
+
+            <RelativeLayout
+                android:id="@+id/buyABubbleRL"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#ffe3e6"
+                android:background="@drawable/round_shape_corners">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/love_mesage" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/buyABubbleRL"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Buy a bubble"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="1 coin = 1 Exp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue_color"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="+1"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:textColor="@color/golden_color"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/light_grey_color"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"/>
+
+        <RelativeLayout
+            android:id="@+id/buyVipParentRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp">
+
+            <RelativeLayout
+                android:id="@+id/buyVipRL"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#ffe3e6"
+                android:background="@drawable/round_shape_corners">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/vip" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/buyVipRL"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Buy VIP"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="1 coin = 1 Exp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue_color"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="+1"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:textColor="@color/golden_color"
+                />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/light_grey_color"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"/>
+    </LinearLayout>
+
+</FrameLayout>

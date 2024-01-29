@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="10dp">
+
+    <RelativeLayout
+        android:id="@+id/commentReplyRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/subCommentCirImg"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/photo2"
+            android:contentDescription="@string/description"
+            />
+
+        <TextView
+            android:id="@+id/subcCommentUserNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rahul_005dhg"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            android:layout_toRightOf="@+id/subCommentCirImg"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/subCommentTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nice"
+            android:textSize="14sp"
+            android:layout_marginEnd="50dp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/subcCommentUserNameTV"
+            android:layout_marginStart="5dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

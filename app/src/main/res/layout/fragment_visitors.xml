@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.Profile.Visitors.VisitorsFragment">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:id="@+id/visitorsTopRL"
+          >
+
+          <ImageView
+              android:id="@+id/visitorsBackImag"
+              android:layout_width="22dp"
+              android:layout_height="22dp"
+              android:layout_marginStart="10dp"
+              android:layout_centerVertical="true"
+              android:src="@drawable/back__1_"
+              />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Visitors"
+              android:layout_toRightOf="@+id/visitorsBackImag"
+              android:layout_centerVertical="true"
+              android:textSize="16sp"
+              android:layout_marginStart="20dp"
+              android:textColor="@color/black"
+              android:fontFamily="sans-serif-medium"/>
+      </RelativeLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/visitorsRV"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_below="@+id/visitorsTopRL"
+          tools:listitem="@layout/visitors_rv_design"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+          />
+
+  </RelativeLayout>
+
+</FrameLayout>

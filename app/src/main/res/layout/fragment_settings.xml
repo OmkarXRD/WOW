@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Fragments.Profile.Settings.SettingsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@drawable/wallet_background"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp">
+
+
+        <ImageView
+            android:id="@+id/settingBackImg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:rotation="180"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/settingBackImg"
+            android:fontFamily="@font/inter"
+            android:gravity="center_vertical"
+            android:text="Settings"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="Removed Notification Section"
+            android:textColor="#757474"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/background"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/accountAndSecurity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="Account and Security"
+            android:textColor="#757474"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/background" />
+
+
+        <TextView
+            android:id="@+id/privacyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="Privacy"
+            android:textColor="#757474"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/background" />
+
+
+        <TextView
+            android:id="@+id/hostApplyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="Apply Host"
+            android:textColor="#757474"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/background" />
+
+        <TextView
+            android:id="@+id/settingsBlockedListTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="Blocked List"
+            android:textColor="#757474"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/background" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/settingConnectAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="Connected Accounts"
+                android:textColor="#757474"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/unprotected"
+                android:rotation="180"
+                android:src="@drawable/unprotected"
+                app:tint="@color/red" />
+
+            <TextView
+                android:id="@+id/unprotected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/inter"
+                android:paddingVertical="5dp"
+                android:text="Unprotected"
+                android:textColor="@color/red"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/background" />
+
+        <TextView
+            android:id="@+id/aboutUsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="About Us"
+            android:textColor="#757474"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/background"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="Help Us Translate "
+            android:textColor="#757474"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/background" />
+
+        <TextView
+            android:id="@+id/cleanCacheTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="Clean Cache"
+            android:textColor="#757474"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/background"
+            android:baselineAligned="false" />
+
+        <TextView
+            android:id="@+id/settingsLogoutTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="Sign Out"
+            android:textColor="#757474"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/background" />
+    </LinearLayout>
+</LinearLayout>

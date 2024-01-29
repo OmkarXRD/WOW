@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Profile.UserLevel.WealthFrameFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wealth_frame_bg_img"
+        >
+        <RelativeLayout
+            android:id="@+id/wealthCarTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp">
+
+            <ImageView
+                android:id="@+id/wealthFrameBackImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back__1_"
+                android:layout_marginStart="10dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/description"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="Frame"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:singleLine="true"
+                android:fontFamily="sans-serif-medium"/>
+
+        </RelativeLayout>
+
+       <RelativeLayout
+           android:id="@+id/nameLetterRL"
+           android:layout_width="60dp"
+           android:layout_height="60dp"
+           android:layout_centerHorizontal="true"
+           android:layout_below="@+id/wealthCarTopRL"
+           android:background="@drawable/wealth_frame_name_round"
+           android:layout_marginVertical="30dp">
+
+           <TextView
+               android:id="@+id/wealthFrameLetterTV"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:fontFamily="sans-serif-medium"
+               android:singleLine="true"
+               android:text="J"
+               android:textAlignment="center"
+               android:textColor="@color/white"
+               android:textSize="40sp" />
+
+       </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Assemble your cheeri"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/nameLetterRL"
+            android:singleLine="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/wealth_frame_top_round_corners">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/weathInsideFrameRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/wealth_frame_rv_design"
+                app:spanCount="3"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="3dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                />
+
+
+
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/wealthInsideFrameObtainLvBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/btn_round_corners"
+            android:layout_marginHorizontal="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:layout_alignParentBottom="true"
+            android:text="How to obtain?"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            />
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

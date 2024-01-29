@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Profile.OtherUserTabs.UsersReportSecondFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_grey_bg_color">
+
+            <RelativeLayout
+                android:id="@+id/userRportTopRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/userReportSecondBackImg"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/cross"
+                    app:tint="@color/dark_grey"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/description"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:text="Users Report"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/userReportSecondBackImg"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/selectIllegTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp"
+                android:textColor="@color/dark_grey"
+                android:paddingStart="20dp"
+                android:layout_below="@+id/userRportTopRL"
+                android:text="Tell us why you report this user please"
+                />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userReportSecondRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/selectIllegTV"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/users_report_rv_design"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/reportBtn1"
+                android:layout_below="@+id/userReportSecondRV"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/round_shape_corners"
+                android:text="Report"
+                android:layout_marginTop="150dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/reportBtn2"
+                android:layout_below="@+id/userReportSecondRV"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/user_report_blue_btn"
+                android:text="Report"
+                android:visibility="gone"
+                android:layout_marginTop="150dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+
+</FrameLayout>

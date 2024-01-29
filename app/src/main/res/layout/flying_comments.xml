@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearRRRS"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_marginVertical="100dp"
+        android:elevation="10dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/logoutdesign"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/pic"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="10dp"
+                    app:cardCornerRadius="14dp">
+
+                    <ImageView
+                        android:id="@+id/vip1FlyingCommentImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/hobo" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/w"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pic"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Flying comment"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/w1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/w"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="Get 1000 flying comment you can use them in Live Room"
+                android:textSize="14sp" />
+
+
+
+
+            <Button
+                android:id="@+id/flyingConfirmBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/w1"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="25dp"
+                android:backgroundTint="#977823"
+                android:text="Confirm" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+

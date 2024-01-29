@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/liveBottomSheetRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_corners_round">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/chiragTablayout"
+            android:layout_width="match_parent"
+            app:tabIndicatorFullWidth="false"
+            app:tabMinWidth="10dp"
+            app:tabGravity="fill"
+            app:tabTextColor="@color/black"
+            android:background="@color/light_grey_color"
+            app:tabIndicatorColor="@color/green"
+            android:layout_marginTop="20dp"
+            android:layout_height="40dp">
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/chiragViewPager"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/chiragTablayout"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

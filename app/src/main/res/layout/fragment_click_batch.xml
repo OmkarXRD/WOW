@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Profile.OtherUserTabs.ClickBatchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_70">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="700dp"
+                  >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/clickBtchBackImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginVertical="10dp"
+                            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                            app:tint="@color/white" />
+
+                        <LinearLayout
+                            android:id="@+id/idTopTxs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/clickBtchBackImg"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+
+                            <TextView
+                                android:id="@+id/x"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Iron"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/x1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/im"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_toRightOf="@id/x"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Bronze"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+
+                            <TextView
+                                android:id="@+id/x3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/im"
+                                android:layout_toRightOf="@+id/x1"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Silver"
+                                android:textColor="@color/white"
+
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/x4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/im"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_toRightOf="@+id/x3"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Gold"
+                                android:textColor="@color/white"
+
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/x6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/im"
+                                android:layout_toRightOf="@+id/x4"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Diamond"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/idTopTxs">
+
+                            <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/clickBadgeTablyout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginHorizontal="20dp"
+                                android:layout_marginTop="5dp"
+                                app:tabGravity="fill"
+                                app:tabIndicatorColor="#58CA5D"
+                                app:tabIndicatorFullWidth="false"
+                                app:tabIndicatorHeight="1dp"
+                                android:layout_marginBottom="@dimen/dp_20"
+                                app:tabMinWidth="10dp"
+                                app:tabMode="scrollable"
+                                app:tabSelectedTextColor="#58CA5D"
+                                app:tabTextAppearance="@style/CustomTextAppearanceTab"
+                                app:tabTextColor="@color/grey">
+
+                            </com.google.android.material.tabs.TabLayout>
+
+                            <androidx.viewpager.widget.ViewPager
+                                android:id="@+id/clickBagViewPager"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/clickBadgeTablyout"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:background="@color/white" />
+                        </RelativeLayout>
+
+
+                        <!--                <RelativeLayout-->
+                        <!--                    android:layout_width="wrap_content"-->
+                        <!--                    android:layout_height="wrap_content"-->
+                        <!--                    android:layout_below="@id/idTopTxs"-->
+                        <!--                    android:layout_centerHorizontal="true">-->
+
+                        <!--                    <ImageView-->
+                        <!--                        android:id="@+id/pic"-->
+                        <!--                        android:layout_width="80dp"-->
+                        <!--                        android:layout_height="80dp"-->
+                        <!--                        android:layout_marginStart="20dp"-->
+                        <!--                        android:layout_marginTop="30dp"-->
+                        <!--                        android:src="@drawable/monster" />-->
+
+                        <!--                    <ImageView-->
+                        <!--                        android:id="@+id/pic1"-->
+                        <!--                        android:layout_width="150dp"-->
+                        <!--                        android:layout_height="100dp"-->
+                        <!--                        android:layout_toRightOf="@id/pic"-->
+                        <!--                        android:src="@drawable/monster" />-->
+
+                        <!--                    <ImageView-->
+                        <!--                        android:id="@+id/pic2"-->
+                        <!--                        android:layout_width="80dp"-->
+                        <!--                        android:layout_height="80dp"-->
+                        <!--                        android:layout_marginTop="30dp"-->
+                        <!--                        android:layout_toRightOf="@id/pic1"-->
+                        <!--                        android:src="@drawable/monster" />-->
+
+                        <!--                    <TextView-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:layout_below="@id/pic1"-->
+                        <!--                        android:layout_marginStart="150dp"-->
+                        <!--                        android:fontFamily="sans-serif-medium"-->
+                        <!--                        android:text="Silver v"-->
+                        <!--                        android:textColor="@color/white" />-->
+
+
+                        <!--                </RelativeLayout>-->
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/howToLevelUpFamily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#3AD553"
+        android:gravity="center"
+        android:text="How to upgrade quickly?"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</FrameLayout>

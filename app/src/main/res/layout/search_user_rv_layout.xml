@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/searchUsrMainRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:visibility="visible"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/searchUserCircleIV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/img1"
+            />
+
+        <TextView
+            android:id="@+id/searchedUserNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:text="Rohit deep"
+            android:singleLine="true"
+            android:layout_marginEnd="40dp"
+            android:layout_toRightOf="@+id/searchUserCircleIV"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"/>
+
+<!--        android:src="@drawable/live_img"-->
+
+
+        <ImageView
+            android:id="@+id/liveRound"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/greeni"
+            android:layout_alignParentEnd="true"
+            android:visibility="visible"
+            android:background="@drawable/full_round_shape"
+            android:layout_centerVertical="true"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/searchUsersFamilyInviteBtn"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/round_corners_gredient"
+            android:textAllCaps="false"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:text="Invite"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

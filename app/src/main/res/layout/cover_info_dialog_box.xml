@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/linearRelative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/top_round_corners_call_dialog_box"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <RelativeLayout
+                android:id="@+id/relatives"
+                android:layout_width="90dp"
+                android:layout_height="95dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="18dp">
+
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/rect_corners_6dp">
+
+                    <ImageView
+                        android:id="@+id/coverInfoUserImg"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_plus__6_" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/relativesS"
+                    android:layout_width="78dp"
+                    android:layout_height="83dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true">
+
+                    <ImageView
+                        android:id="@+id/coverInfoSelectImg"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_circle"
+                        android:elevation="10dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_baseline_camera_alt_24"
+                        app:tint="@color/white" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/coverInfoCloseImg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
+                android:rotation="45"
+                android:src="@drawable/ic_baseline_add_24" />
+
+            <EditText
+                android:id="@+id/coverInfoLiveTitleTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relatives"
+                android:layout_marginHorizontal="20dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-medium"
+                android:hint="Your Live's Title"
+                android:lines="2"
+                android:maxLength="80" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/coverInfoRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coverInfoLiveTitleTv"
+                android:layout_marginTop="20dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="4"
+                tools:listitem="@layout/cover_info_rv_design" />
+
+
+            <RelativeLayout
+                android:id="@+id/live"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relatives"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/te1"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/coverinfotext"
+                    android:backgroundTint="@color/greeni"
+                    android:gravity="center"
+                    android:text="Live"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/te2"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/te1"
+                    android:background="@drawable/coverinfotext"
+                    android:gravity="center"
+                    android:text="chat" />
+
+                <TextView
+                    android:id="@+id/te3"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/te2"
+                    android:background="@drawable/coverinfotext"
+                    android:gravity="center"
+                    android:text="Party" />
+
+                <TextView
+                    android:id="@+id/te4"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/te3"
+                    android:background="@drawable/coverinfotext"
+                    android:gravity="center"
+                    android:text="Sing" />
+
+                <TextView
+                    android:id="@+id/te5"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/te1"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/coverinfotext"
+                    android:gravity="center"
+                    android:text="Radio" />
+
+                <TextView
+                    android:id="@+id/te6"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/te2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/te5"
+                    android:background="@drawable/coverinfotext"
+                    android:gravity="center"
+                    android:text="Poetry" />
+
+                <TextView
+                    android:id="@+id/te7"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/te3"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/te6"
+                    android:background="@drawable/coverinfotext"
+                    android:gravity="center"
+                    android:text="Game" />
+
+                <TextView
+                    android:id="@+id/te8"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/te4"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/te7"
+                    android:background="@drawable/coverinfotext"
+                    android:gravity="center"
+                    android:text="Soccer" />
+
+                <TextView
+                    android:id="@+id/te9"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/te5"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/coverinfotext"
+                    android:gravity="center"
+                    android:text="Birthday" />
+
+                <TextView
+                    android:id="@+id/te10"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/te6"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/te9"
+                    android:background="@drawable/coverinfotext"
+                    android:gravity="center"
+                    android:text="Emotions" />
+
+                <TextView
+                    android:id="@+id/te11"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/te6"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/te10"
+                    android:background="@drawable/coverinfotext"
+                    android:gravity="center"
+                    android:text="DJ" />
+
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coverInfoConfirmBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/light_grey_color"
+                android:text="Confirm" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

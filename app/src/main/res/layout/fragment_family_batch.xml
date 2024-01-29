@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.Profile.OtherUserTabs.FamilyBatchFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rel"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp">
+
+                    <ImageView
+                        android:id="@+id/batchClick"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="30dp"
+                        android:elevation="4dp"
+                        android:src="@drawable/monster" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/themee" />
+
+                        <ImageView
+                            android:id="@+id/familyBatchBackImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginVertical="10dp"
+                            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                            app:tint="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/familyInvitationImg"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:contentDescription="@string/description"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/invitation"
+                                android:visibility="gone"
+                                app:tint="@color/white" />
+                            <TextView
+                                android:id="@+id/reqestCountTv"
+                                android:layout_width="@dimen/dp_18"
+                                android:layout_height="@dimen/dp_18"
+                                android:layout_toLeftOf="@id/familyInvitationImg"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:padding="@dimen/dp_2"
+                                android:background="@drawable/background_round"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:layout_alignParentEnd="true"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+
+
+
+                        </RelativeLayout>
+
+
+                        <ImageView
+                            android:id="@+id/leaveFamilyImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toLeftOf="@+id/familyBatchQuestion"
+                            android:src="@drawable/ic_baseline_settings_24"
+                            app:tint="@color/white" />
+
+                        <ImageView
+                            android:id="@+id/editFamily"
+                            android:layout_width="@dimen/dp_25"
+                            android:layout_height="@dimen/dp_25"
+                            android:layout_marginVertical="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:visibility="gone"
+                            android:layout_toLeftOf="@+id/familyBatchQuestion"
+                            android:src="@drawable/editprofile"
+                            app:tint="@color/white" />
+
+                        <ImageView
+                            android:id="@+id/familyBatchQuestion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginVertical="10dp"
+                            android:layout_marginEnd="45dp"
+                            android:src="@drawable/ic_baseline_help_24" />
+
+                        <ImageView
+                            android:id="@+id/img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="40dp"
+                            android:src="@drawable/badge" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="65dp"
+                            app:cardCornerRadius="250dp">
+                            <ImageView
+                                android:id="@+id/familyBatchImg"
+                                android:layout_width="50dp"
+                                android:layout_height="55dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/wow_icon" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/familyBatchFamilyName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img"
+                            android:layout_centerHorizontal="true"
+                            android:text="No Family"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/t1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/familyBatchFamilyName"
+                            android:layout_centerHorizontal="true"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/totalreciveCoin"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_below="@+id/t1"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:layout_marginTop="0dp"-->
+<!--                            android:text="0"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+
+
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="40dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/currentLevelLowerBoundTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Lv.0"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <com.google.android.material.progressindicator.LinearProgressIndicator
+                                android:id="@+id/WealthprogressBar"
+                                android:layout_width="200dp"
+                                android:layout_height="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@drawable/round_shape_corners"
+                                android:scaleY="2"
+                                app:indicatorColor="#fbc100"/>
+
+                            <!--                            <View-->
+                            <!--                                android:layout_width="200dp"-->
+                            <!--                                android:layout_height="8dp"-->
+                            <!--                                android:layout_gravity="center_vertical"-->
+                            <!--                                android:layout_marginHorizontal="15dp"-->
+                            <!--                                android:background="@drawable/round_shape_corners"-->
+                            <!--                                android:backgroundTint="@color/black" />-->
+
+                            <TextView
+                                android:id="@+id/currentLevelUpperBoundTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Lv.1"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/totalreciveCoin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Family Notice"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/FamilyDescriptionTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:text="Welcome all waka users"
+                    android:textColor="@color/green"
+                    android:textSize="16sp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/familyMemberRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp"
+                        android:rotation="180"
+                        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                        app:tint="@color/grey" />
+
+                    <TextView
+                        android:id="@+id/familyMembersCountTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Family Members 0/300"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                  <RelativeLayout
+                      android:id="@+id/family"
+                      android:layout_width="@dimen/dp_80"
+                      android:layout_centerVertical="true"
+                      android:layout_height="@dimen/dp_80">
+
+                      <de.hdodenhof.circleimageview.CircleImageView
+                          android:id="@+id/familyMemberCirImg"
+                          android:layout_width="60dp"
+                          android:layout_height="60dp"
+                          android:layout_centerInParent="true"
+                          android:layout_marginVertical="2.5dp"
+                          android:layout_marginStart="@dimen/dp_5"
+                          android:contentDescription="@string/description"
+                          android:src="@drawable/wow_icon"
+                          app:layout_constraintLeft_toLeftOf="parent"
+                          app:layout_constraintRight_toRightOf="parent"
+                          app:layout_constraintTop_toTopOf="parent" />
+
+                      <ImageView
+                          android:layout_width="@dimen/dp_20"
+                          android:layout_height="@dimen/dp_20"
+                          android:layout_marginStart="@dimen/dp_55"
+                          android:layout_marginTop="@dimen/dp_40"
+                          android:elevation="@dimen/dp_20"
+                          android:src="@drawable/leaderimage" />
+                  </RelativeLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/familyMemberRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        android:layout_toRightOf="@+id/family"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/family_member_rv_design" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Family Rooms"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/familyLiveRoomRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:listitem="@layout/family_live_room_rv_design" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/joinFamilyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="20dp"
+               android:background="@drawable/wallet_background"
+                android:text="Join"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

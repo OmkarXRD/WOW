@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F0F0"
+    tools:context=".Fragments.Profile.IncomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/incomeTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/liveRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Live Record"
+                android:textColor="@color/black"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_10"/>
+
+            <ImageView
+                android:id="@+id/incomeBackImg"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/back__1_" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@+id/incomeBackImg"
+                android:fontFamily="sans-serif-medium"
+                android:text="Income"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/incomeLIveRecodsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="LIVE Record"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/incomeTopRL"
+            android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/diamondsTV"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#F1F0F0"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:singleLine="true"
+                android:text="Diamonds available"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/diamondImgRL"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/diamondsTV"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/incomeDiamondImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/diamond_6" />
+
+            <TextView
+                android:id="@+id/totalDiamondsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@+id/incomeDiamondImg"
+                android:fontFamily="sans-serif-medium"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/diamondExchangeRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/diamondImgRL"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/exchangeDiamonRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/dimondsRL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/full_round_shape"
+                    android:backgroundTint="@color/purple_200"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/description"
+                        android:src="@drawable/diamond_6" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/diamondExchangeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toRightOf="@+id/dimondsRL"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Diamond Exchange"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/atleastTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/exchangeDiamonRl"
+                android:layout_marginStart="70dp"
+                android:text="*At least exchange  of 100 diamonds "
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/roundEdtxRL"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/atleastTV"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_shape_corners">
+
+                <EditText
+                    android:id="@+id/coinsEdtx"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter Exchange number"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:layout_toLeftOf="@+id/incomeAllTV"
+                   />
+
+                <RelativeLayout
+                    android:id="@+id/incomeAllTV"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/round_right_coner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:text="All"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/RedemptionRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/roundEdtxRL">
+
+                <RelativeLayout
+                    android:id="@+id/secondDiamondRL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/full_round_shape"
+                    android:backgroundTint="@color/purple_200"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/description"
+                        android:src="@drawable/diamond_6" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toRightOf="@+id/secondDiamondRL"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Redemption Details"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/reditionPointslinealyout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RedemptionRL"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="1.The gifts you receive will be automatically converted into diamonds"
+                    android:textColor="@color/grey"
+                    android:layout_marginBottom="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="2. Data is refreshed every 10 minutes"
+                    android:textColor="@color/grey"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="@string/incometx4"
+                    android:textColor="@color/grey"
+                    android:layout_marginBottom="5dp"
+                    />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/incomeLine"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/grey"
+                android:layout_below="@+id/reditionPointslinealyout"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/incomeLine">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Exchange the golds: "
+                        android:textSize="16sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/coins_img"
+                        android:contentDescription="@string/description"/>
+
+                    <TextView
+                        android:id="@+id/goldCoinsTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="0"
+                        android:textColor="@color/red"
+                        android:layout_marginStart="2dp"/>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/exchangeCoinsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rect_corners_6dp"
+                    android:text="Exchange of golds"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/totalCoinsTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#F1F0F0"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:singleLine="true"
+                        android:text="Coins avalilable"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/totalIncomeCoinsRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/exchangeCoinsBtn"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/incomeCoinsImg"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/coins_img" />
+
+                    <TextView
+                        android:id="@+id/totalIncomeCoinTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/incomeCoinsImg"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="If you receive a gift, you will receive diamonds by rate"-->
+        <!--            android:layout_below="@+id/diamondImgRL"-->
+        <!--            android:layout_marginTop="5dp"-->
+        <!--            android:textSize="12sp"-->
+        <!--            android:singleLine="true"-->
+        <!--            android:visibility="visible"-->
+        <!--            android:layout_marginStart="20dp"-->
+        <!--            android:fontFamily="sans-serif-medium"/>-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/diamondExchangeRL"
+            android:orientation="vertical"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/incomeQuestionImg"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/question_2"
+                app:tint="@color/grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What's the use of diamonds?"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+
+</FrameLayout>

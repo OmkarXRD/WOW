@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Fragments.Profile.Family.Fragment_family_new">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/level_first"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <RelativeLayout
+                    android:id="@+id/newFamilyTop2RL"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="top"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="20dp"
+                    android:visibility="invisible"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_gravity="top"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginTop="65dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/family_bg_1" />
+
+                    <RelativeLayout
+                        android:id="@+id/top2Img"
+                        android:layout_width="match_parent"
+                        android:layout_height="105dp"
+                        android:layout_gravity="top"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/family_badge_2"
+                        android:elevation="4dp">
+
+                    </RelativeLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/newfamilyTop2CirImg"
+                        android:layout_width="47dp"
+                        android:layout_height="36dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="37.5dp"
+                        android:elevation="3dp"
+                        android:src="@drawable/demo_user_profile_img"
+                        android:tint="@color/white"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/familyTopTv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_below="@+id/top2Img"
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/family_2tv">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/familyName2RL"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/familyTopTv2"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/family2_name">
+
+                        <TextView
+                            android:id="@+id/newFamilyTop2Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:maxLength="12"
+                            android:singleLine="true"
+                            android:text="THE WARRIOR"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/top2FamilyFireRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_below="@+id/familyName2RL"
+                        android:layout_marginHorizontal="35dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/family_fire_1">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <TextView
+                                android:id="@+id/familyFire2Tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:maxLength="12"
+                                android:singleLine="true"
+                                android:text="33M"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="2dp"
+                                android:layout_toRightOf="@+id/familyFire2Tv"
+                                android:contentDescription="@string/description"
+                                android:src="@drawable/fire" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/newFamilyTop1RL"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="top"
+                    android:layout_marginHorizontal="5dp"
+                    android:visibility="invisible"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_gravity="top"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/family_bg_1" />
+
+                    <RelativeLayout
+                        android:id="@+id/top1Img"
+                        android:layout_width="match_parent"
+                        android:layout_height="95dp"
+                        android:layout_gravity="top"
+                        android:layout_weight="1"
+                        android:background="@drawable/family_badge_11"
+                        android:elevation="4dp">
+
+                    </RelativeLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/newfamilyTop1CirImg"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="24dp"
+                        android:elevation="3dp"
+                        android:src="@drawable/demo_user_profile_img"
+                        android:tint="@color/white"
+
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/familyTopTv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_below="@+id/top1Img"
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/family_top1_tv">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/familyName1RL"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/familyTopTv1"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/famiy_name_1">
+
+                        <TextView
+                            android:id="@+id/newFamilyTop1Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:maxLength="12"
+                            android:singleLine="true"
+                            android:text="THE WARRIOR"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/top1FamilyFireRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_below="@+id/familyName1RL"
+                        android:layout_marginHorizontal="35dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/family_fire_1">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <TextView
+                                android:id="@+id/familyFire1Tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:maxLength="12"
+                                android:singleLine="true"
+                                android:text="33M"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="2dp"
+                                android:layout_toRightOf="@+id/familyFire1Tv"
+                                android:contentDescription="@string/description"
+                                android:src="@drawable/fire" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/top3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/newfamilyTop1CirImg"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="TOP 1"
+                        android:textColor="@color/golden_color"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_below="@+id/top3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/fire"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/newFamilyTop3RL"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="top"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="20dp"
+                    android:visibility="invisible"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_gravity="top"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/family_bg_1" />
+
+                    <RelativeLayout
+                        android:id="@+id/top3Img"
+                        android:layout_width="match_parent"
+                        android:layout_height="95dp"
+                        android:layout_gravity="top"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/family_badge_3"
+                        android:elevation="4dp">
+
+                    </RelativeLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/newfamilyTop3CirImg"
+                        android:layout_width="39dp"
+                        android:layout_height="39dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="26dp"
+                        android:elevation="3dp"
+                        android:src="@drawable/demo_user_profile_img"
+                        android:tint="@color/white"
+
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/familyTopTv3"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_below="@+id/top3Img"
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/family3_tv">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/familyName3RL"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/familyTopTv3"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/family3_name">
+
+                        <TextView
+                            android:id="@+id/newFamilyTop3Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:maxLength="12"
+                            android:singleLine="true"
+                            android:text="THE WARRIOR"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/top3FamilyFireRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_below="@+id/familyName3RL"
+                        android:layout_marginHorizontal="35dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/family_fire_1">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <TextView
+                                android:id="@+id/familyFire3Tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:maxLength="12"
+                                android:singleLine="true"
+                                android:text="33M"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="2dp"
+                                android:layout_toRightOf="@+id/familyFire3Tv"
+                                android:contentDescription="@string/description"
+                                android:src="@drawable/fire" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/level_first"
+                android:layout_marginHorizontal="4dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:spanCount="1"
+                tools:listitem="@layout/item_new" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

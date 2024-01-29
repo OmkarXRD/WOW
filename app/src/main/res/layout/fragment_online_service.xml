@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    tools:context=".Fragments.Profile.OnlineServices.OnlineServiceFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/onlineServiceTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingVertical="5dp">
+
+            <ImageView
+                android:id="@+id/onlineServiceBackImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/back__1_" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please Send email to us if.."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/adminOnlineTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Offline"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/onlineServiceLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/onlineServiceTopRL"
+            android:background="@color/light_grey_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/onlineServiceLine"
+            android:background="@color/light_grey_bg_color" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/onlineServiceRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/onlineServiceBottomRL"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/online_services_rv_design" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/humanServiceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_above="@+id/onlineServiceBottomRL"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_shape_corners"
+            android:backgroundTint="@color/blue_color"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:singleLine="true"
+            android:text="Human Service"
+            android:textAllCaps="false"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/onlineServiceBottomRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/onlineServicePlusRL"
+                android:background="@drawable/round_shape_corners">
+
+                <EditText
+                    android:id="@+id/onlineServiceEdtx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/onlineServiceEmoji"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="sans-serif-medium"
+                    android:hint="Typing..."
+                    android:maxLines="4"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/onlineServiceEmoji"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/emoji_24"
+                    android:visibility="gone"
+                    app:tint="@color/grey" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/onlineServicePlusRL"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/full_round_shape"
+                android:elevation="0.5dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/send_1_"
+                    app:tint="@color/grey" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

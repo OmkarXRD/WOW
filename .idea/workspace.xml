@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/_item_online_services.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_call.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_end_live.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/back_layout.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/bottom_navigation.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/call_activity_chat_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/call_activity_gifts_menu_dialog_box.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/chat_notification_layout.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/chat_requests_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/chat_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/clean_chat_dialog_box.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/clean_storage_box.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/cover_info_dialog_box.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/cover_info_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_drawer.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_live_user_joined.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/family_invitations_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/family_live_room_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/family_member_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/family_members_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/family_requests_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/family_tab_items.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fans_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/flying_comments.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/following_and_friends_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/following_dialog_box.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/following_live_users_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment__bubble.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment__competition.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment__entry_effect.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment__family.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment__friends.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment__my__cars.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment__my__frames.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_apply_for_agency.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_badge_detail.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_billing_record.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bronze.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bronze2_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bronze3_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bronze4_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bronze5_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cars.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_charming.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_chat.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_chat_requests.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_coins_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_profile_main.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_profile_moments.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_event_family.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_events.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_events_friend.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_events_invitations.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_family_batch.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_family_invitation_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_family_invitations.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_family_members.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_family_new.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_family_requests.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_family_rules.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_following.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_following2.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_following_fragments.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_following_live_users.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_frames.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_friend_live_users.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_friends.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_gift_firend.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_go_live.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_gold.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_help_center.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_how_level_up.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_live_diamond24_hours.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_live_diamond_dialog.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_live_diamonds_total.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_live_free_theme.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_live_purchased_theme.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_live_record.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_live_records.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_live_theme.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_local_added.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_lucky_wheel.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_mall.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_meet.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_meet_msg.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_messages.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_moment.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_moment_dialog.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_moment_following_friends_live.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_moment_square.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_moment_square_posts.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_more.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_more_countries.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_multi_audio_live.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_multi_guest.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_music.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_nearby_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_notification.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_number.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_online_service.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_other_user.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_other_user_glory_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_other_user_profile_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_otp.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_phone_code.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_phone_number_login.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_phone_verification.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_popular_exclusive_guest.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_popular_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_privacy.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_privacy_policy.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_gift_wall.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_main.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_tabs2.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_recharge_coints.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_related__live__notification_.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_related_live.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_related_moments.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_related_notification.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_related_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_reset_password.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_search_users.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_second_main.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_send_gallery_dialog.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_silver.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_silver_coins_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_subscriptions.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_terms_conditions_t_v.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_upload_moment.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_user_level.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_user_profile.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_users_report.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_users_report_second.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_v_i_p_center.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_vip1.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_vip2.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_vip3.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_vip4.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_vip5.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_visitors.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_wealth.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_wealth_car.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_wealth_frame.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_whats_on.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_yoho_board.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/friend_live_gallery_send_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/friend_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/friends_dialog_box.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/friends_live_users_rv_desing.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/get_this_car.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/guidedtourdesign.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/hidden_country_and_online_time.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/hidden_dialog_box.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/hidden_dialog_box_vip.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/hide_country_dialog_box.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/idbanneddesign.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_dialog_buy.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_frames.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_new.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/items_cars.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/messages_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/mylook_entry_effects_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/other_user_side_menu.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/popular_all_items.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/profile_bottom_sheet.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/reserved_seat_live_users_rv_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/select_payment_method.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/share_bottom_sheet.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/upgradequickelybottomsheet.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/user_msg.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/vip7.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/winnerspindialog.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/items.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/post_menu.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/report_on_post.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/navigation/home_graph.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/navigation/login_graph.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7fbe7f4d-af4c-474b-b3a8-adb47f5cf8c0" name="Changes" comment="Initial Commit" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\rishabh\.android\avd\Pixel_4_API_33.avd]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="WorldSocialIntegrationapp" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="WorldSocialIntegrationapp" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="WorldSocialIntegrationapp" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="WorldSocialIntegrationapp" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="EXPORT_PRIVATE_KEY" value="false" />
+    <option name="KEY_STORE_PATH" value="D:\KeyStore\Wow.jks" />
+    <option name="KEY_ALIAS" value="key0" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2aOcjsZ7NyeIjPz4T0pyIyq6zBq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ApkExportedModule": "WorldSocialIntegrationapp.app",
+    "BundleExportedModule": "WorldSocialIntegrationapp.app",
+    "ExportApk.ApkPathForWorldSocialIntegrationapp.app": "D:\\WOW's application\\WOW's Mobile\\app",
+    "ExportBundle.BundlePathForWorldSocialIntegrationapp.app": "D:\\WOW's application\\WOW's Mobile\\app",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.4.1/f9e48179ea0c6ac0080a277b9383f74523f56aa2/appcompat-1.4.1-sources.jar!/androidx/appcompat/widget/AppCompatButton.java_SELECTED": "AppCompatButton",
+    "android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.2.1/f0f93e67af3f7417bdd560d5142f6dec4fe629c3/recyclerview-1.2.1-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED": "RecyclerView",
+    "android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.6.0/976aa22bd46c7748fade98594298bcd36b92f844/material-1.6.0-sources.jar!/com/google/android/material/progressindicator/BaseProgressIndicator.java_SELECTED": "BaseProgressIndicator",
+    "android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.6.0/976aa22bd46c7748fade98594298bcd36b92f844/material-1.6.0-sources.jar!/com/google/android/material/progressindicator/LinearProgressIndicator.java_SELECTED": "LinearProgressIndicator",
+    "android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/view/View.java_SELECTED": "View",
+    "android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/widget/ImageView.java_SELECTED": "ImageView",
+    "android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/widget/TextView.java_SELECTED": "TextView",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "Rebasing ",
+    "last_opened_file_path": "D:/WOW's application/WOW's",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater",
+    "show.migrate.to.gradle.popup": "false"
+  },
+  "keyToStringList": {
+    "ExportApk.BuildVariants": [
+      "debug"
+    ]
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="WorldSocialIntegrationapp.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7fbe7f4d-af4c-474b-b3a8-adb47f5cf8c0" name="Changes" comment="" />
+      <created>1704193204545</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704193204545</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Remove apk builds">
+      <option name="closed" value="true" />
+      <created>1706511976336</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706511976336</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1706512401469</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706512401469</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Revert &quot;removed large files&quot;&#10;&#10;This reverts commit c55257ea">
+      <option name="closed" value="true" />
+      <created>1706513833707</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706513833707</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Revert &quot;removed large files&quot;&#10;&#10;This reverts commit c55257ea">
+      <option name="closed" value="true" />
+      <created>1706514575139</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706514575139</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Remove apk builds" />
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="Revert &quot;removed large files&quot;&#10;&#10;This reverts commit c55257ea" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;removed large files&quot;&#10;&#10;This reverts commit c55257ea" />
+  </component>
+</project>

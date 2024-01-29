@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!--    android:background="@drawable/background_bottom_navigation"-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.9dp"
+        android:background="@color/light_grey_bg_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:elevation="1dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:id="@+id/homeFragmentLlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/homeFragment"
+                android:layout_width="@dimen/dp_26"
+                android:layout_height="@dimen/dp_26"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_home_ftr" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/secondMainLlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/secondMain"
+                android:layout_width="@dimen/dp_26"
+                android:layout_height="@dimen/dp_26"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/icon_explore_ftr" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/bottomMultiLive"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_live_ftr"
+            android:visibility="gone"
+            app:tint="#333333" />
+
+        <RelativeLayout
+            android:id="@+id/bottomMessageLlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/msgCardView"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                app:cardCornerRadius="@dimen/dp_10"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:visibility="gone"
+                android:backgroundTint="@color/red">
+                <TextView
+                    android:id="@+id/chatReqMsgCountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="2"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:textSize="12sp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:id="@+id/bottomMessage"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:src="@drawable/chattt" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomProfileLLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/bottomProfile"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_profile_ftr" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

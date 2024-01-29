@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_multiGuestFragment"
+            app:destination="@id/multiGuestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondMainFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Union.UnionMainFragment"
+        android:label="fragment_second_main"
+        tools:layout="@layout/fragment_second_main" >
+        <action
+            android:id="@+id/action_secondMainFragment_to_moreCountriesFragment"
+            app:destination="@id/moreCountriesFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/multiGuestFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.HomeInnerFragments.MultiGuestFragment"
+        android:label="fragment_multi_guest"
+        tools:layout="@layout/fragment_multi_guest" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+
+        <action
+            android:id="@+id/action_settingsFragment_to_connectedAccountsFragment"
+            app:destination="@id/connectedAccountsFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_settingsFragment_to_applyForHostFragment"-->
+<!--            app:destination="@id/applyForHostFragment" />-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/connectedAccountsFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.EditProfileSection.ConnectedAccountsFragment"
+        android:label="fragment_connected_accounts"
+        tools:layout="@layout/fragment_connected_accounts">
+        <action
+            android:id="@+id/action_connectedAccountsFragment_to_phoneVerificationFragment"
+            app:destination="@id/phoneVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneVerificationFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.EditProfileSection.PhoneVerificationFragment"
+        android:label="fragment_phone_verification"
+        tools:layout="@layout/fragment_phone_verification">
+        <action
+            android:id="@+id/action_phoneVerificationFragment_to_phoneCodeFragment"
+            app:destination="@id/phoneCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneCodeFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.EditProfileSection.PhoneCodeFragment"
+        android:label="fragment_phone_code"
+        tools:layout="@layout/fragment_phone_code" />
+    <fragment
+        android:id="@+id/editProfileMainFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.EditProfileSection.EditProfileMainFragment"
+        android:label="fragment_edit_profile_main"
+        tools:layout="@layout/fragment_edit_profile_main">
+        <action
+            android:id="@+id/action_editProfileMainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_editProfileMainFragment_to_editProfileMomentsFragment"
+            app:destination="@id/editProfileMomentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileMomentsFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.EditProfileSection.EditProfileMomentsFragment"
+        android:label="fragment_edit_profile_moments"
+        tools:layout="@layout/fragment_edit_profile_moments" >
+        <action
+            android:id="@+id/action_editProfileMomentsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_editProfileMomentsFragment_to_fragment_Edit_profile"
+            app:destination="@id/fragment_Edit_profile" />
+        <action
+            android:id="@+id/action_editProfileMomentsFragment_to_fragment_Edit_profile2"
+            app:destination="@id/fragment_Edit_profile" />
+        <action
+            android:id="@+id/action_editProfileMomentsFragment_to_uploadMomentFragment"
+            app:destination="@id/uploadMomentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/multiAudioLiveFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.MultiAudio.MultiAudioLiveFragment"
+        android:label="fragment_multi_audio_live"
+        tools:layout="@layout/fragment_multi_audio_live">
+        <action
+            android:id="@+id/action_multiAudioLiveFragment_to_goLiveFragment2"
+            app:destination="@id/goLiveFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/goLiveFragment2"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Live.GoLiveFragment"
+        android:label="fragment_go_live"
+        tools:layout="@layout/fragment_go_live" >
+        <action
+            android:id="@+id/action_goLiveFragment2_to_liveQualityFragment"
+            app:destination="@id/liveQualityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/liveQualityFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Live.EndLiveActivity"
+        android:label="fragment_live_quality"
+        tools:layout="@layout/activity_end_live" />
+    <fragment
+        android:id="@+id/moreCountriesFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Union.UnionInnerFragments.MoreCountriesFragment"
+        android:label="fragment_more_countries"
+        tools:layout="@layout/fragment_more_countries" />
+    <fragment
+        android:id="@+id/profileMainFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.ProfileMainFragment"
+        android:label="fragment_profile_main"
+        tools:layout="@layout/fragment_profile_main" >
+        <action
+            android:id="@+id/action_profileMainFragment_to_editProfileMomentsFragment"
+            app:destination="@id/editProfileMomentsFragment" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_incomeFragment"
+            app:destination="@id/incomeFragment" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_visitorsFragment"
+            app:destination="@id/visitorsFragment" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_friendsFragment"
+            app:destination="@id/friendsFragment" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_followingFragment"
+            app:destination="@id/followingFragment" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_fansFragment"
+            app:destination="@id/fansFragment" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_userLevelFragment2"
+            app:destination="@id/userLevelFragment2" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_vip1"
+            app:destination="@id/vip1"
+            app:launchSingleTop="false" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_VIPCenterFragment"
+            app:destination="@id/VIPCenterFragment" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_fragment_mall"
+            app:destination="@id/fragment_mall" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_fragment_My_look"
+            app:destination="@id/fragment_My_look" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_fragment_Settings"
+            app:destination="@id/fragment_Settings" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_fragment_Settings2"
+            app:destination="@id/fragment_Settings" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_badgesFragment"
+            app:destination="@id/badgesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/incomeFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.IncomeFragment"
+        android:label="fragment_income"
+        tools:layout="@layout/fragment_income" />
+    <fragment
+        android:id="@+id/visitorsFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Visitors.VisitorsFragment"
+        android:label="fragment_visitors"
+        tools:layout="@layout/fragment_visitors" />
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Friends.FriendsFragment"
+        android:label="fragment_friends"
+        tools:layout="@layout/fragment_friends" />
+    <fragment
+        android:id="@+id/followingFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Friends.ProfileTabs"
+        android:label="fragment_following"
+        tools:layout="@layout/fragment_following" />
+    <fragment
+        android:id="@+id/fansFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Friends.FansFragment"
+        android:label="fragment_fans"
+        tools:layout="@layout/fragment_fans" />
+    <fragment
+        android:id="@+id/userLevelFragment2"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.UserLevel.UserLevelFragment"
+        android:label="fragment_user_level"
+        tools:layout="@layout/fragment_user_level" />
+    <fragment
+        android:id="@+id/vip1"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.VIPCenter.Vip1"
+        android:label="fragment_vip1"
+        tools:layout="@layout/fragment_vip1" />
+    <fragment
+        android:id="@+id/VIPCenterFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.VIPCenter.VIPCenterFragment"
+        android:label="fragment_v_i_p_center"
+        tools:layout="@layout/fragment_v_i_p_center" />
+    <fragment
+        android:id="@+id/fragment_mall"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Mall.Fragment_mall"
+        android:label="fragment_mall"
+        tools:layout="@layout/fragment_mall" >
+        <action
+            android:id="@+id/action_fragment_mall_to_fragment_Friends"
+            app:destination="@id/fragment_Friends" />
+        <action
+            android:id="@+id/action_fragment_mall_to_googleWalletFragment"
+            app:destination="@id/googleWalletFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_My_look"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.My_look.Fragment_My_look"
+        android:label="fragment__my_look"
+        tools:layout="@layout/fragment__my_look" />
+    <fragment
+        android:id="@+id/fragment_Settings"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Settings.Fragment_Settings"
+        android:label="fragment__settings"
+        tools:layout="@layout/fragment__settings" />
+    <fragment
+        android:id="@+id/fragment_Create_Family"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Family.Fragment_Create_Family"
+        android:label="fragment__create__family"
+        tools:layout="@layout/fragment__create__family" />
+    <fragment
+        android:id="@+id/fragment_Friends"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Fragment_Friends"
+        android:label="fragment__friends"
+        tools:layout="@layout/fragment__friends" />
+    <fragment
+        android:id="@+id/googleWalletFragment"
+        android:name="com.live.worldsocialintegrationapp.ModelClasses.Wallet.GoogleWalletFragment"
+        android:label="fragment_google_wallet"
+        tools:layout="@layout/fragment_google_wallet" />
+    <fragment
+        android:id="@+id/fragment_Edit_profile"
+        android:name="com.live.worldsocialintegrationapp.Fragment_Edit_profile"
+        android:label="fragment__edit_profile"
+        tools:layout="@layout/fragment__edit_profile" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.ChatsFragments.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/userProfile"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.UserProfile"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" >
+        <action
+            android:id="@+id/action_userProfile_to_editProfileMomentsFragment"
+            app:destination="@id/editProfileMomentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchUsers"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.Related.SearchUsers"
+        android:label="fragment_search_users"
+        tools:layout="@layout/fragment_search_users" >
+        <action
+            android:id="@+id/action_searchUsers_to_userProfile"
+            app:destination="@id/userProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadMomentFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.EditProfileSection.UploadMomentFragment"
+        android:label="fragment_upload_moment"
+        tools:layout="@layout/fragment_upload_moment" >
+        <action
+            android:id="@+id/action_uploadMomentFragment_to_editProfileMomentsFragment2"
+            app:destination="@id/editProfileMomentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.EditProfileSection.Comments.CommentsFragment"
+        android:label="fragment_comments"
+        tools:layout="@layout/fragment_comments" />
+    <fragment
+        android:id="@+id/fragment_Moments"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Fragment_Moments"
+        android:label="fragment__moments"
+        tools:layout="@layout/fragment__moments" />
+    <fragment
+        android:id="@+id/billingRecordFragment2"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.RechargePackage.BillingRecord.BillingRecordFragment"
+        android:label="fragment_billing_record"
+        tools:layout="@layout/fragment_billing_record" />
+    <fragment
+        android:id="@+id/helpCenterFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.RechargePackage.HelpCenterFragment"
+        android:label="fragment_help_center"
+        tools:layout="@layout/fragment_help_center" />
+    <fragment
+        android:id="@+id/profileTabsFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Friends.ProfileTabsFragment"
+        android:label="fragment_profile_tabs2"
+        tools:layout="@layout/fragment_profile_tabs2" />
+    <fragment
+        android:id="@+id/howLevelUpFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.UserLevel.HowLevelUpFragment"
+        android:label="fragment_how_level_up"
+        tools:layout="@layout/fragment_how_level_up" />
+    <fragment
+        android:id="@+id/otherUser"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.OtherUser"
+        android:label="fragment_other_user"
+        tools:layout="@layout/fragment_other_user" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Settings.Privacy.PrivacyFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" >
+        <action
+            android:id="@+id/action_privacyFragment_to_VIPCenterFragment"
+            app:destination="@id/VIPCenterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountAndSecurityFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Settings.AccountAndSecurity.AccountAndSecurityFragment"
+        android:label="fragment_account_and_security"
+        tools:layout="@layout/fragment_account_and_security" />
+    <fragment
+        android:id="@+id/changePhoneNumberFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Settings.AccountAndSecurity.ChangePhoneNumberFragment"
+        android:label="fragment_change_phone_number"
+        tools:layout="@layout/fragment_change_phone_number" />
+    <fragment
+        android:id="@+id/numberFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Settings.AccountAndSecurity.NumberFragment"
+        android:label="fragment_number"
+        tools:layout="@layout/fragment_number" />
+    <fragment
+        android:id="@+id/resetPassword"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Settings.AccountAndSecurity.ResetPassword"
+        android:label="fragment_reset_password"
+        tools:layout="@layout/fragment_reset_password" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Settings.About.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/editProfileScreen"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.EditProfileSection.EditProfileScreen"
+        android:label="fragment_edit_profile_screen"
+        tools:layout="@layout/fragment_edit_profile_screen" />
+    <fragment
+        android:id="@+id/musicFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Music.MusicFragment"
+        android:label="fragment_music"
+        tools:layout="@layout/fragment_music" />
+    <fragment
+        android:id="@+id/meetMsgFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Union.UnionInnerFragments.Meet.MeetMsgFragment"
+        android:label="fragment_meet_msg"
+        tools:layout="@layout/fragment_meet_msg" />
+    <fragment
+        android:id="@+id/yohoBoard"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Union.UnionInnerFragments.Trophy.YohoBoard"
+        android:label="fragment_yoho_board"
+        tools:layout="@layout/fragment_yoho_board" />
+    <fragment
+        android:id="@+id/moment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.Related.Moment"
+        android:label="fragment_moment"
+        tools:layout="@layout/fragment_moment" />
+    <fragment
+        android:id="@+id/relatedLiveFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.Related.RelatedLiveFragment"
+        android:label="fragment_related_live"
+        tools:layout="@layout/fragment_related_live" />
+    <fragment
+        android:id="@+id/giftWallFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Union.UnionInnerFragments.More.GiftWallFragment"
+        android:label="fragment_gift_wall"
+        tools:layout="@layout/fragment_gift_wall" />
+    <fragment
+        android:id="@+id/familyBatchFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.OtherUserTabs.FamilyBatchFragment"
+        android:label="fragment_family_batch"
+        tools:layout="@layout/fragment_family_batch" >
+        <action
+            android:id="@+id/action_familyBatchFragment_to_familyMembersFragment"
+            app:destination="@id/familyMembersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clickBatchFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.OtherUserTabs.ClickBatchFragment"
+        android:label="fragment_click_batch"
+        tools:layout="@layout/fragment_click_batch" />
+    <fragment
+        android:id="@+id/badgesFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Badges.BadgesFragment"
+        android:label="fragment_badges"
+        tools:layout="@layout/fragment_badges" />
+    <fragment
+        android:id="@+id/badgeDetailFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Badges.BadgeDetailFragment"
+        android:label="fragment_badge_detail"
+        tools:layout="@layout/fragment_badge_detail" />
+    <fragment
+        android:id="@+id/onlineServiceFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.OnlineServices.OnlineServiceFragment"
+        android:label="fragment_online_service"
+        tools:layout="@layout/fragment_online_service" />
+    <fragment
+        android:id="@+id/usersReportFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.OtherUserTabs.UsersReportFragment"
+        android:label="fragment_users_report"
+        tools:layout="@layout/fragment_users_report" />
+    <fragment
+        android:id="@+id/usersReportSecondFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.OtherUserTabs.UsersReportSecondFragment"
+        android:label="fragment_users_report_second"
+        tools:layout="@layout/fragment_users_report_second" />
+    <fragment
+        android:id="@+id/giftWallQuestionFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Union.UnionInnerFragments.More.GiftWallQuestionFragment"
+        android:label="fragment_gift_wall_question"
+        tools:layout="@layout/fragment_gift_wall_question" />
+    <fragment
+        android:id="@+id/countriesFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Union.UnionInnerFragments.More.CountriesFragment"
+        android:label="fragment_countries"
+        tools:layout="@layout/fragment_countries" />
+    <fragment
+        android:id="@+id/liveRecordsFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Income.LiveRecordsFragment"
+        android:label="fragment_live_records"
+        tools:layout="@layout/fragment_live_records" />
+    <fragment
+        android:id="@+id/familyRulesFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Family.FamilyRulesFragment"
+        android:label="fragment_family_rules"
+        tools:layout="@layout/fragment_family_rules" />
+    <fragment
+        android:id="@+id/chatRequests"
+        android:name="com.live.worldsocialintegrationapp.Fragments.ChatsFragments.ChatRequests"
+        android:label="fragment_chat_requests"
+        tools:layout="@layout/fragment_chat_requests" />
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.HomeInnerFragments.Events.EventsFragment"
+        android:label="fragment_events"
+        tools:layout="@layout/fragment_events" />
+    <fragment
+        android:id="@+id/followingLiveUsersFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.Related.RelatedLive.FollowingLiveUsersFragment"
+        android:label="fragment_following_live_users"
+        tools:layout="@layout/fragment_following_live_users" />
+    <fragment
+        android:id="@+id/followingFragment2"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Friends.FollowingFragment"
+        android:label="fragment_following2"
+        tools:layout="@layout/fragment_following2" />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Settings.About.PrivacyPolicyFragment"
+        android:label="fragment_privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+    <fragment
+        android:id="@+id/termsConditionsTV"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Settings.About.TermsConditionsTV"
+        android:label="fragment_terms_conditions_t_v"
+        tools:layout="@layout/fragment_terms_conditions_t_v" />
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.ChatsFragments.MessagesFragment"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages" />
+    <fragment
+        android:id="@+id/eventDetailsFragement"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.HomeInnerFragments.Events.EventDetailsFragement"
+        android:label="fragment_event_details_fragement"
+        tools:layout="@layout/fragment_event_details_fragement" />
+    <fragment
+        android:id="@+id/eventUserProfileFragemnt"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.HomeInnerFragments.Events.EventUserProfileFragemnt"
+        android:label="fragment_event_user_profile_fragemnt"
+        tools:layout="@layout/fragment_event_user_profile_fragemnt" />
+    <fragment
+        android:id="@+id/eventsFriendFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.HomeInnerFragments.Events.EventsFriendFragment"
+        android:label="fragment_events_friend"
+        tools:layout="@layout/fragment_events_friend" />
+    <fragment
+        android:id="@+id/eventCreateAnFragemnt"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.HomeInnerFragments.Events.Subscription.EventCreateAnFragemnt"
+        android:label="fragment_event_create_an_fragemnt"
+        tools:layout="@layout/fragment_event_create_an_fragemnt" />
+    <fragment
+        android:id="@+id/eventSelectAPosterFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.HomeInnerFragments.Events.Subscription.EventSelectAPosterFragment"
+        android:label="fragment_event_select_a_poster"
+        tools:layout="@layout/fragment_event_select_a_poster" />
+    <fragment
+        android:id="@+id/rechargeCointsFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.RechargePackage.RechargeCointsFragment"
+        android:label="fragment_recharge_coints"
+        tools:layout="@layout/fragment_recharge_coints" />
+    <fragment
+        android:id="@+id/wealthCarFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.UserLevel.WealthCarFragment"
+        android:label="fragment_wealth_car"
+        tools:layout="@layout/fragment_wealth_car" />
+    <fragment
+        android:id="@+id/wealthFrameFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.UserLevel.WealthFrameFragment"
+        android:label="fragment_wealth_frame"
+        tools:layout="@layout/fragment_wealth_frame" />
+    <fragment
+        android:id="@+id/fragment_cars"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Mall.Fragment_cars"
+        android:label="fragment_cars"
+        tools:layout="@layout/fragment_cars" />
+    <fragment
+        android:id="@+id/fragment_frames"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Mall.Fragment_frames"
+        android:label="fragment_frames"
+        tools:layout="@layout/fragment_frames" />
+    <fragment
+        android:id="@+id/imageSlideFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.ImageSlideFragment"
+        android:label="fragment_image_slide"
+        tools:layout="@layout/fragment_image_slide" />
+    <fragment
+        android:id="@+id/createFamilyFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Family.CreateFamilyFragment"
+        android:label="fragment_create_family"
+        tools:layout="@layout/fragment_create_family" />
+    <fragment
+        android:id="@+id/fragment_family_new"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Family.Fragment_family_new"
+        android:label="fragment_family_new"
+        tools:layout="@layout/fragment_family_new" />
+    <fragment
+        android:id="@+id/fragment_Family"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Family.Fragment_Family"
+        android:label="fragment__family"
+        tools:layout="@layout/fragment__family" />
+    <fragment
+        android:id="@+id/familyInvitationsFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Family.FamilyInvitationsFragment"
+        android:label="fragment_family_invitations"
+        tools:layout="@layout/fragment_family_invitations" />
+    <fragment
+        android:id="@+id/familyMembersFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Family.FamilyMembersFragment"
+        android:label="fragment_family_members"
+        tools:layout="@layout/fragment_family_members" />
+    <fragment
+        android:id="@+id/fragment_BlockedUser"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Settings.Fragment_BlockedUser"
+        android:label="fragment__blocked_user"
+        tools:layout="@layout/fragment__blocked_user" />
+    <fragment
+        android:id="@+id/eventsInvitationsFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.Home.HomeInnerFragments.Events.EventsInvitationsFragment"
+        android:label="fragment_events_invitations"
+        tools:layout="@layout/fragment_events_invitations" />
+    <fragment
+        android:id="@+id/applyForHostFragment"
+        android:name="com.live.worldsocialintegrationapp.ApplyForHostFragment"
+        android:label="fragment_apply_for_host"
+        tools:layout="@layout/fragment_apply_for_host" />
+
+    <fragment
+        android:id="@+id/apply_for_agency"
+        android:name="com.live.worldsocialintegrationapp.Fragments.ApplyForAgencyFragment"
+        android:label="fragment_apply_for_agency"
+        tools:layout="@layout/fragment_apply_for_agency" />
+
+    <fragment
+        android:id="@+id/fragment_notification"
+        android:name="com.live.worldsocialintegrationapp.Fragments.NotificationFragment"
+        tools:layout="@layout/fragment_notification"/>
+
+    <fragment
+        android:id="@+id/fragment_profileGiftWall"
+        android:name="com.live.worldsocialintegrationapp.Fragments.ProfileGiftWallFragment"
+        tools:layout="@layout/fragment_profile_gift_wall"/>
+    <fragment
+        android:id="@+id/chatServiceFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.ChatsFragments.ChatServiceFragment"
+        android:label="fragment_chat_service"
+        tools:layout="@layout/fragment_chat_service" />
+    <fragment
+        android:id="@+id/giftFirendFragment"
+        android:name="com.live.worldsocialintegrationapp.GiftFirendFragment"
+        android:label="fragment_gift_firend"
+        tools:layout="@layout/fragment_gift_firend" />
+
+
+</navigation>

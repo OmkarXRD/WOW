@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/top_round_corners_call_dialog_box"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Admin"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/newRelative"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/t1"
+            android:layout_marginVertical="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cards"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="500dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/photo4" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cards"
+                android:text="Masoom Gaur"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_delete_24"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/newRelative1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/newRelative"
+            android:layout_marginVertical="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardsss"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="500dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/photo4" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cardsss"
+                android:text="Masoom Gaur"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_delete_24"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newRelative2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/newRelative1"
+            android:layout_marginVertical="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardssss"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="500dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/girl" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cardssss"
+                android:text="Masoom Gaur"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_delete_24"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newRelative3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/newRelative2"
+            android:layout_marginVertical="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardsssss"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="500dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/girl" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cardsssss"
+                android:text="Masoom Gaur"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_delete_24"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/newRelative4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/newRelative3"
+            android:layout_marginVertical="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardssssss"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="500dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/girl" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cardssssss"
+                android:text="Masoom Gaur"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_delete_24"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newRelative5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/newRelative4"
+            android:layout_marginVertical="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardsssssss"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="500dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/girl" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cardsssssss"
+                android:text="Masoom Gaur"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_delete_24"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newRelative6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/newRelative5"
+            android:layout_marginVertical="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardssssssss"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="500dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/girl" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cardssssssss"
+                android:text="Masoom Gaur"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_delete_24"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newRelative7"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/newRelative6"
+            android:layout_marginVertical="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardsssssssss"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="500dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/girl" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cardsssssssss"
+                android:text="Masoom Gaur"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_delete_24"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newRelative8"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/newRelative7"
+            android:layout_marginVertical="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardssssssssss"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="500dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/girl" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cardssssssssss"
+                android:text="Masoom Gaur"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_delete_24"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newRelative9"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/newRelative8"
+            android:layout_marginVertical="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardsssssssssss"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="500dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/girl" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cardsssssssssss"
+                android:text="Masoom Gaur"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_delete_24"/>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+</LinearLayout>

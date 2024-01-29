@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Profile.Badges.BadgesFragment"
+    android:background="#363146">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/badgesRL"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/badgesBackImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back__1_"
+                app:tint="@color/white"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="16sp"
+                android:layout_toRightOf="@+id/badgesBackImg"
+                android:layout_marginStart="20dp"
+                android:text="Badges"/>
+
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/badgesTablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="#fed97c"
+            android:layout_marginStart="20dp"
+            app:tabGravity="fill"
+            android:layout_below="@+id/badgesRL"
+            android:layout_marginTop="10dp"
+            app:tabIndicatorFullWidth="false"
+            app:tabMinWidth="10dp"
+            android:background="#363146"
+            app:tabTextColor="#fed97c">
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/badgesViewPager"
+            android:layout_width="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/badgesTablayout"
+            android:layout_height="match_parent"/>
+
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

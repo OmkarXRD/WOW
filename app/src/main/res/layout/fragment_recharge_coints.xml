@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Profile.RechargePackage.RechargeCointsFragment">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:id="@+id/rechargeTopLlout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/wallet_background"
+           android:orientation="vertical">
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="40dp">
+               <ImageView
+                   android:id="@+id/rechargeBackImag"
+                   android:layout_width="24dp"
+                   android:layout_height="24dp"
+                   android:src="@drawable/back__1_"
+                   app:tint="@color/white"
+                   android:layout_marginStart="10dp"
+                   android:contentDescription="@string/description"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Google Wallet"
+                   android:layout_toRightOf="@+id/rechargeBackImag"
+                   android:layout_marginStart="20dp"
+                   android:textSize="16sp"
+                   android:textColor="@color/white"
+                   android:fontFamily="sans-serif-medium"
+                   />
+
+               <ImageView
+                   android:id="@+id/googleWaletBillingImg"
+                   android:layout_width="24dp"
+                   android:layout_height="24dp"
+                   android:src="@drawable/invoice"
+                   app:tint="@color/white"
+                   android:layout_marginStart="10dp"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginEnd="20dp"
+                   android:contentDescription="@string/description"/>
+           </RelativeLayout>
+
+           <com.google.android.material.tabs.TabLayout
+               android:id="@+id/rechargeTabLayout"
+               android:layout_width="match_parent"
+               app:tabIndicatorFullWidth="false"
+               app:tabMinWidth="10dp"
+               app:tabGravity="fill"
+               app:tabTextColor="@color/white"
+               android:background="@drawable/wallet_background"
+               app:tabIndicatorColor="@color/white"
+               android:layout_marginTop="20dp"
+               android:layout_height="40dp">
+           </com.google.android.material.tabs.TabLayout>
+
+       </LinearLayout>
+
+       <androidx.viewpager.widget.ViewPager
+           android:id="@+id/rechargeViewPager"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@+id/rechargeTopLlout" />
+
+   </RelativeLayout>
+
+</FrameLayout>

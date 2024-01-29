@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <item android:maxLevel="1" android:drawable="@drawable/progress_horizontal_green"/>-->
+<!--    <item android:maxLevel="2" android:drawable="@drawable/progress_horizontal_red"/>-->
+
+</layer-list>

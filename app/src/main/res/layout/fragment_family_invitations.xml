@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.Profile.Family.FamilyInvitationsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/familyInvitationsBackImg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back__1_"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/description"/>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/familyInvitationTablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/familyInvitationsBackImg"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextColor="#BDAC8F" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/familyInvitatiomnViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/familyInvitationTablayout" />
+    </RelativeLayout>
+
+
+</FrameLayout>

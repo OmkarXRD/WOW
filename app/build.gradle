@@ -1,0 +1,225 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.live.worldsocialintegrationapp"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        archivesBaseName = "WOWs ${getDate()}"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+                viewBinding true
+    }
+
+    android {
+        ndkVersion '21.3.6528147'
+    }
+
+}
+static def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyyy-MM-dd')
+    return formattedDate
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment:2.4.2'
+    implementation 'androidx.navigation:navigation-ui:2.4.2'
+
+    //emoji
+    implementation "io.github.aghajari:AXEmojiView:1.5.2"
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:21.1.0'
+
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.google.android.gms:play-services-places:15.0.1'
+    implementation 'com.google.maps.android:android-maps-utils:0.4+'
+
+
+//    implementation "io.github.aghajari:AXEmojiView-Microsoft3DProvider:1.5.2"
+//    implementation "io.github.aghajari:AXEmojiView-GoogleProvider:1.5.2"
+//    implementation "io.github.aghajari:AXEmojiView-SamsungProvider:1.5.2"
+//    implementation "io.github.aghajari:AXEmojiView-FacebookProvider:1.5.2"
+//    implementation "io.github.aghajari:AXEmojiView-WhatsAppProvider:1.5.2"
+//    implementation "io.github.aghajari:AXEmojiView-TwitterProvider:1.5.2"
+//    implementation "io.github.aghajari:AXEmojiView-EmojidexProvider:1.5.2"
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // circular Image View
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:30.3.1')
+    implementation 'com.google.firebase:firebase-inappmessaging-display:20.1.3'
+    implementation 'com.google.firebase:firebase-messaging:23.0.8'
+    implementation 'com.google.firebase:firebase-auth:21.0.8'
+    implementation 'com.google.firebase:firebase-analytics:21.1.1'
+    implementation 'com.google.firebase:firebase-crashlytics'
+
+    implementation 'com.google.firebase:firebase-appindexing:19.1.0'
+    implementation 'com.google.firebase:firebase-core:19.0.0'
+//  implementation 'com.google.firebase:firebase-messaging:17.3.4'
+
+    //rounded image view
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //Retrofit dependcies
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    //gson converter of retrofit
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    //ccp
+    implementation 'com.hbb20:ccp:2.5.0'
+
+    implementation 'org.apache.commons:commons-lang3:3.4'
+    implementation 'org.apache.commons:commons-lang3:3.4'
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.16.0' // Use the latest version
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    //otp
+    implementation 'com.github.aabhasr1:OtpView:v1.1.2'
+
+    // agora audio live
+    implementation 'io.agora.rtc:full-sdk:3.5.0.4'
+    implementation 'com.google.firebase:firebase-database:20.0.5'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'org.slf4j:slf4j-api:1.7.25'
+
+    //shape image
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+
+    //Refresh
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    //lottie
+    implementation "com.airbnb.android:lottie:3.4.1"
+    //implementation "com.airbnb.android:lottie:6.0.0"
+
+    //country code picker
+    implementation 'com.github.joielechong:countrycodepicker:2.4.2'
+
+
+    //RazorPay
+    implementation 'com.razorpay:checkout:1.6.26'
+
+//  implementation fileTree(dir: 'libs', include: ['*.aar'])
+
+    //google login
+    //implementation 'com.google.android.gms:play-services-auth:20.3.0'
+    implementation 'com.google.android.gms:play-services-auth:20.5.0'
+
+    //facebook login
+    implementation 'com.facebook.android:facebook-login:latest.release'
+    //emoji
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-emoji:28.0.0'
+
+    //imageSlide
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.0.7'
+
+    //SvGA
+    implementation 'com.github.yyued:svgaplayer-android:2.6.1'
+
+    //agora audio
+    implementation 'com.yanzhenjie:permission:2.0.3'
+//  implementation 'io.agora.rtc:full-sdk:4.0.1.'
+
+    implementation 'com.vanniktech:emoji-google:0.6.0'
+
+    implementation 'com.vanniktech:emoji-ios:0.6.0'
+
+    implementation 'com.vanniktech:emoji-twitter:0.6.0'
+
+    //dotsIndicator
+    implementation("com.tbuonomo:dotsindicator:4.3")
+
+    //room
+//    implementation "androidx.room:room-runtime:2.4.3"
+
+    def room_version = "2.4.3"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+
+    //crash app
+//    implementation 'cat.ereza:customactivityoncrash:2.4.0'
+
+
+    //first time open
+//    implementation 'uk.co.samuelwall:material-tap-target-prompt:3.3.2'
+
+    implementation 'com.github.amlcurran.showcaseview:library:5.4.3'
+
+    implementation 'com.github.takusemba:spotlight:2.0.5'
+
+    //speech recog
+//    implementation 'androidx.speech:speech-tts:1.1.0'
+
+    //runtime permission
+    implementation 'com.karumi:dexter:6.2.2'
+    implementation 'com.github.yyued:SVGAPlayer-Android:2.6.1'
+    implementation 'com.caverock:androidsvg:1.2.1'
+   // implementation 'com.github.yyued:svgaplayer-android:2.6.1'
+
+    //Toast
+    implementation 'com.tapadoo.android:alerter:6.1.0'
+
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+
+    //games
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.github.jetradarmobile:android-snowfall:1.2.1'
+    implementation 'com.wajahatkarim:EasyFlipView:3.0.3'
+
+    implementation 'com.facebook.android:audience-network-sdk:6.+'
+
+    implementation 'com.github.takusemba:spotlight:1.3.0'
+    implementation 'com.facebook.android:facebook-android-sdk:[8,9)'
+
+    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
+    implementation("com.google.firebase:firebase-auth")
+
+    implementation 'com.facebook.android:facebook-login:latest.release'
+
+    implementation "androidx.activity:activity-ktx:1.2.3"
+    implementation "androidx.fragment:fragment-ktx:1.3.3"
+
+    implementation 'phonepe.intentsdk.android.release:IntentSDK:2.3.0'
+
+
+}

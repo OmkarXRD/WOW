@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Profile.OtherUserTabs.UsersReportFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey_bg_color"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/userRportTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingVertical="12dp">
+
+            <ImageView
+                android:id="@+id/userRportBackImg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/cross"
+                app:tint="@color/dark_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/userRportBackImg"
+                android:fontFamily="sans-serif-medium"
+                android:text="Users Report"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/selectIllegTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userRportTopRL"
+            android:paddingVertical="12dp"
+            android:paddingStart="20dp"
+            android:text="Select the illegal component"
+            android:textColor="@color/dark_grey" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/userReportRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selectIllegTV"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/users_report_rv_design" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/usrReportNextBtn1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/userReportRV"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/round_shape_corners"
+            android:backgroundTint="@color/grey"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/usrReportNextBtn2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/userReportRV"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/user_report_blue_btn"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</FrameLayout>

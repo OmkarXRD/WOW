@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <LinearLayout
+        android:id="@+id/linearRRRS"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginVertical="100dp"
+        android:layout_marginHorizontal="5dp"
+        android:elevation="10dp"
+        android:background="@drawable/logoutdesign"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/pic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/antiban"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="30dp"/>
+            <TextView
+                android:id="@+id/w"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pic"
+                android:text="Anti-ban"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/w1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/w"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:text="You can send any message in the live chat, no one can ban you"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/antiBanConfirmBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/w1"
+                android:layout_marginHorizontal="20dp"
+                android:text="Confirm"
+                android:backgroundTint="#977823"
+                android:layout_marginVertical="10dp"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+

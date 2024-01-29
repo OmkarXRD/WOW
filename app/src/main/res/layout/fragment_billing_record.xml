@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.Profile.RechargePackage.BillingRecord.BillingRecordFragment">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <RelativeLayout
+           android:id="@+id/billingRecordTopRL"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="30dp">
+           <ImageView
+               android:id="@+id/billingRecBackImg"
+               android:layout_width="24dp"
+               android:layout_height="24dp"
+               android:src="@drawable/back__1_"
+               app:tint="@color/black"
+               android:layout_marginStart="10dp"
+               android:contentDescription="@string/description"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Billing Record"
+               android:layout_toRightOf="@+id/billingRecBackImg"
+               android:layout_marginStart="20dp"
+               android:textSize="16sp"
+               android:textColor="@color/black"
+               android:fontFamily="sans-serif-medium"
+               />
+
+       </RelativeLayout>
+
+       <com.google.android.material.tabs.TabLayout
+           android:id="@+id/billingRecTablayout"
+           android:layout_width="match_parent"
+           app:tabIndicatorFullWidth="false"
+           app:tabMinWidth="10dp"
+           app:tabGravity="fill"
+           app:tabTextColor="@color/black"
+           app:tabIndicatorColor="@color/green"
+           android:layout_marginTop="20dp"
+           android:layout_below="@+id/billingRecordTopRL"
+           android:layout_height="40dp">
+       </com.google.android.material.tabs.TabLayout>
+
+       <androidx.viewpager.widget.ViewPager
+           android:id="@+id/billingRecViewPager"
+           android:layout_width="match_parent"
+           android:layout_below="@+id/billingRecTablayout"
+           android:layout_height="match_parent"/>
+
+   </RelativeLayout>
+
+</FrameLayout>

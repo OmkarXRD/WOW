@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.Profile.Family.FamilyMembersFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/noMemberFoundTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="No Members Found"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:layout_marginStart="20dp"
+            android:layout_centerInParent="true"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/familyMembersTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp">
+
+            <ImageView
+            android:id="@+id/familyMembersBackImg"
+            android:layout_width="24dp"
+                android:layout_marginStart="20dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back__1_" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Members"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/familyMembersBackImg"
+            android:layout_marginStart="20dp"
+            android:textSize="18sp" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/familyMembersRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/family_members_rv_design"
+            android:layout_below="@+id/familyMembersTopRL"
+            />
+
+    </RelativeLayout>
+
+</FrameLayout>

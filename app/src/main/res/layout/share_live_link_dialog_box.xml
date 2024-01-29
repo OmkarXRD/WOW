@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearRRR"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="@drawable/logoutdesign"
+        android:elevation="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <TextView
+            android:id="@+id/liveShareTopTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Share it with 1 friends"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/shareLinkCirImg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/description"
+                android:src="@drawable/images" />
+
+
+            <TextView
+                android:id="@+id/liveShareDesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/warning"
+                android:layout_gravity="center_vertical"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="5dp"
+                android:text="I'm in jaspal's room. You are welcome to join me!"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/liveShareEdTx"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/rect_shape_share_link_btn"
+            android:backgroundTint="@color/light_grey_color"
+            android:hint="Say something"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancelliveShareBtn"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/announcement"
+                android:text="Cancel"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/confirmLiveShareBtn"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/announcement"
+                android:backgroundTint="@color/green"
+                android:text="Confirm"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

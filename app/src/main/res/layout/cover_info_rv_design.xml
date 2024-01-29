@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/te1"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/coverinfotext"
+        android:backgroundTint="@color/greeni"
+        android:gravity="center"
+        android:text="Live"
+        android:visibility="gone"
+        android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/coverItemsTV"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@+id/te1"
+        android:background="@drawable/coverinfotext"
+        android:gravity="center"
+        android:visibility="visible"
+        android:text="chat" />
+
+
+</RelativeLayout>

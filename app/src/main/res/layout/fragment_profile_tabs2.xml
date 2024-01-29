@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.Profile.Friends.ProfileTabsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/friendsRL">
+
+            <ImageView
+                android:id="@+id/profileTabsBackImg"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back__1_"
+                />
+
+            <TextView
+                android:id="@+id/profileTabsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friends"
+                android:layout_toRightOf="@+id/profileTabsBackImg"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"/>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                app:tint="@color/black"
+                android:visibility="gone"
+                android:src="@drawable/icon_search"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/grey"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/profileTabTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/friendsRL"
+         >
+
+            <RelativeLayout
+                android:id="@+id/homeRlTop1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+              >
+
+                <LinearLayout
+                    android:id="@+id/nameHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/Related"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:id="@+id/profiletabFriendsTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:textStyle="bold"
+                            android:text="Friends"
+                            android:textColor="@color/grey"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/friendsLine"
+                            android:layout_width="15dp"
+                            android:layout_height="1.5dp"
+                            android:background="@color/grey" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/Popular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:id="@+id/profiletabFollowingTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:textStyle="bold"
+                            android:text="Following"
+
+                            android:textColor="@color/grey"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/followingLine"
+                            android:layout_width="15dp"
+                            android:layout_height="1.5dp"
+                            android:background="@color/grey"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Nearby"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/Popular"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/profiletabFansTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="Fans"
+                            android:textColor="@color/grey"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/fansLine"
+                            android:layout_width="15dp"
+                            android:layout_height="1.5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/grey"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/profileTabsFramlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/profileTabTopRL" />
+
+<!--        <com.google.android.material.tabs.TabLayout-->
+<!--            android:id="@+id/profileTablayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_below="@+id/friendsRL"-->
+<!--            app:tabIndicatorColor="@color/grey"-->
+<!--            app:tabGravity="fill"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            app:tabIndicatorFullWidth="false"-->
+<!--            app:tabMinWidth="10dp"-->
+<!--            app:tabTextColor="@color/grey">-->
+
+<!--        </com.google.android.material.tabs.TabLayout>-->
+
+
+<!--        <androidx.viewpager.widget.ViewPager-->
+<!--            android:id="@+id/profileTabsViewPager"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_below="@+id/profileTablayout"-->
+<!--            android:layout_height="match_parent"/>-->
+    </RelativeLayout>
+
+
+</FrameLayout>

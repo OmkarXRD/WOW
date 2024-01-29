@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ApplyForHostFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/imageBack_applyAgency"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@string/description"
+            android:rotation="180"
+            android:src="@drawable/next"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/imageBack_applyAgency"
+            android:fontFamily="sans-serif-medium"
+            android:text="Apply For Anchor"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/grey"/>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="Broadcaster information table"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_15"
+                android:gravity="center"
+                android:text="@string/your_personal_information_is_safe_with_us_you_can_fill_in_the_details_worry_free"
+                android:textColor="#871afd"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_22"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WOW's ID :" />
+
+                <TextView
+                    android:id="@+id/wowsid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:text="invalid id"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/get_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:hint="*Enter you real name"
+                android:padding="@dimen/dp_5"
+                android:textColor="@color/black"
+                android:textColorHint="@color/browser_actions_title_color"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="* country/region"
+
+                android:textColor="@color/black"
+                android:textColorHint="@color/browser_actions_title_color"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/countrytext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="India"
+                    android:textColor="@color/black" />
+
+                <!--                <Spinner-->
+                <!--                    android:id="@+id/spinner_country_select"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="40dp"-->
+                <!--                    android:layout_centerVertical="true"-->
+                <!--                    android:textColor="@color/black"-->
+
+                <!--                    android:textColorHint="@color/browser_actions_title_color"-->
+
+                <!--                    android:textSize="14sp" />-->
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey" />
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/get_address"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:hint="Enter your address(optional)"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="14sp"-->
+            <!--                android:padding="@dimen/dp_5"-->
+            <!--                android:textColorHint="@color/browser_actions_title_color"-->
+
+            <!--                android:background="@android:color/transparent"-->
+            <!--                android:layout_marginStart="20dp"-->
+            <!--                android:layout_marginTop="20dp"/>-->
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:background="@color/grey"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_marginHorizontal="20dp"/>-->
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/get_email_address"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:hint="*Enter your email address"-->
+            <!--                android:textSize="14sp"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:inputType="textEmailAddress"-->
+            <!--                android:textColorHint="@color/browser_actions_title_color"-->
+            <!--                android:padding="@dimen/dp_5"-->
+            <!--                android:background="@android:color/transparent"-->
+            <!--                android:layout_marginStart="20dp"-->
+            <!--                android:layout_marginTop="20dp"/>-->
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:background="@color/grey"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_marginHorizontal="20dp"/>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:textColorHint="@color/browser_actions_title_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/dp_5"
+                android:textColor="@color/black"
+                android:textColorHint="@color/browser_actions_title_color"
+                android:textSize="14sp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="20dp"
+                android:visibility="gone"
+                android:background="@drawable/dot_grey_strock">
+
+
+                <ImageView
+                    android:id="@+id/imageNationaliId"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_200"
+                    android:padding="@dimen/dp_2"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:id="@+id/clickImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:layout_width="19dp"
+                        android:layout_height="17dp"
+                        android:background="@drawable/ic_plus__4_"
+                        android:backgroundTint="#fa02e6"
+                        android:contentDescription="@string/description" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/click_to_upload_national_id_image"
+                        android:textColor="#fa02e6"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Choose how you want to be paid"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="*Select payment recival type"
+                android:textColorHint="@color/browser_actions_title_color"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioGroup
+                    android:id="@+id/radioGrp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20sp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/self_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/app_pink_color"
+                        android:gravity="center"
+                        android:text="Self"
+                        android:textColor="@color/browser_actions_title_color"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/viaAgency_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/app_pink_color"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="Via Agency"
+                        android:textColor="@color/browser_actions_title_color"
+                        android:textSize="14dp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="*Select payment Method"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioGroup
+                    android:id="@+id/radioGrp2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20sp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/cash_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/app_pink_color"
+                        android:gravity="center"
+                        android:text="Cash"
+                        android:textColor="@color/browser_actions_title_color"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/bank_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/app_pink_color"
+                        android:checked="false"
+                        android:gravity="center"
+
+                        android:text="Bank"
+                        android:textColor="@color/browser_actions_title_color"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/paypal_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/app_pink_color"
+                        android:checked="false"
+                        android:gravity="center"
+
+                        android:text="Paypal"
+                        android:textColor="@color/browser_actions_title_color"
+                        android:textSize="14dp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/i_want_to_join_bango_agency"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/editAgencyid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="enter your agency id"
+                    android:textColor="@color/black"
+                    android:text="12164"
+                    android:textSize="@dimen/sp_14" />
+
+                <!--                <Spinner-->
+                <!--                    android:id="@+id/get_agency_id"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="40dp"-->
+                <!--                    android:layout_centerVertical="true"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textColorHint="@color/browser_actions_title_color"-->
+                <!--                    android:textSize="14sp" />-->
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/apply_for_host_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/gradienttwo"
+                android:elevation="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Apply"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

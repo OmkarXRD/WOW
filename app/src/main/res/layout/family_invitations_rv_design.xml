@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/invitationsCirImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/description"
+        android:src="@drawable/girl_imge87777" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/familyInvitationAcceptBtn"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@+id/invitationsCirImg"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/familyInvitationNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:singleLine="true"
+            android:text="Rohabn"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/familyInvitationDesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:singleLine="true"
+            android:text="Rohabn"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/familyInvitationRejectBtn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/btn_round_corners"
+        android:text="Reject"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/familyInvitationAcceptBtn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_toLeftOf="@+id/familyInvitationRejectBtn"
+        android:background="@drawable/btn_round_corners"
+        android:text="Accept"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/invitationsCirImg"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey" />
+
+</RelativeLayout>

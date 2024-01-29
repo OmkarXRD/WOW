@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingVertical="20dp"
+        android:background="@drawable/disconnect_bottom_sheet_background">
+
+
+        <TextView
+            android:id="@+id/sure_to_disconnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:text="Are you sure you want to disconnect"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/No_disconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sure_to_disconnect"
+            android:layout_alignParentEnd="true"
+            android:text="Confirm"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="15dp"
+            android:fontFamily="@font/inter"
+            android:textColor="#FF4081"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sure_to_disconnect"
+            android:layout_toStartOf="@id/No_disconnect"
+            android:text="Cancel"
+            android:fontFamily="@font/inter"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF4081"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

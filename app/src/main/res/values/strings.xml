@@ -1,0 +1,189 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">WOW\'s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    <string name="google_api_key">AIzaSyADgo_g1l-oiDR5HDNWrq2BZPRvv2c_Pms</string>-->
+
+    <string name="razor_api_key">rzp_test_usEmd5LTJQKCTA</string>
+
+    <!--     facebook-->
+    <string name="facebook_app_id">292751556811555</string>
+    <string name="fb_login_protocol_scheme">fb292751556811555</string>
+    <string name="facebook_client_token">56789</string>
+    <string name="government_address_id_proof">government address id proof</string>
+
+
+    <string name="post_bio"><b>Akshay Syal</b>Lorem lpsum is simply dummy text of the printing and typesetting industry. Lorem lpsum...</string>
+    <string name="by_continuing_you_agree_to_the_terms_of_service_and_privacy_policy">By continuing you agree to the <b>Terms of Service</b> and Privacy Policy.</string>
+    <string name="abc">abc</string>
+    <string name="_00458547">0012</string>
+    <string name="scarllet">Scarllet</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="country">Country</string>
+    <string name="india">India</string>
+    <string name="_91">+91</string>
+    <string name="todo">TODO</string>
+    <string name="resend"><b>Resend</b></string>
+    <string name="united_states">United States</string>
+    <string name="countries">Countries</string>
+    <string name="description">description</string>
+    <string name="no_car_available">No car available now . Cars effect will be more attractive in live Room</string>
+    <string name="no_frames">No frames available yet. If you buy and use it you ll get a decoration on your avtar</string>
+    <string name="no_bubble">Currently no bubble available .A bubble can make you shine in the streem.</string>
+    <string name="you_do_not">You do not have a Color ID at the moment Color ID adds unique features and color to your ID card.</string>
+    <string name="hide_country_and_online_time">Hide country and online time</string>
+    <string name="a_mystery">A Mystery Man just entered the room</string>
+    <string name="account_security"><![CDATA[Account & Security]]></string>
+    <string name="whatfamily">A family is an organization created by users on their own Users apply to join the family and work together with like _ minded partners to keep the family growing</string>
+    <string name="tips_buy">Sure to buy this car ? If use the car, you \'ll get more attention in the Live Room.</string>
+    <string name="recharge">Not enough coins, want to recharge?</string>
+    <string name="click_to_add_your_tag">Let others Know who you are and what you like</string>
+    <string name="more_tags">More tags, more like_minded friend</string>
+    <string name="hobby">Hobby</string>
+    <string name="Skill">Skill</string>
+    <string name="instageam_certification">Instageam certification</string>
+    <string name="ans">Answer emotional question</string>
+    <string name="save">Save</string>
+    <string name="agora_app_id">86f31e0182524c3ebc7af02c9a35e0ca</string>
+
+
+    <string name="bit_rate_value_with_unit">%d kbps</string>
+    <string name="frame_rate_value_with_unit">%d fps</string>
+    <string name="msg_connection_error">Connection error, please check the network settings or make sure channel name/access token are valid</string>
+
+    <string name="cant_create_family">You need a wealth level >=30 to create a family. Upgrade your level or try to join a fun family!</string>
+
+
+    <string name="label_title_resolution">Resolution</string>
+    <string name="label_title_frame_rate">Frame Rate(fps)</string>
+    <string name="helpcentertvdes">when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</string>
+    <string name="privacytv">On the profile page, your country will appear as unknown country(exclusive privilege of VIP 4)</string>
+    <string name="privacydialogtv">VIP exclusive privilege.Activate VIP 4 then you can use it.</string>
+
+    <string-array name="string_array_resolutions">
+        <item>160x120</item>
+        // 120P
+        <item>320x180</item>
+        // 180P
+        <item>320x240</item>
+        // 240P the default one
+        <item>640x360</item>
+        // 360P
+        <item>640x480</item>
+        // 480P
+        <item>1280x720</item>
+        // 720P
+    </string-array>
+
+    <string-array name="string_array_frame_rate">
+        <item>1</item>
+        <item>7</item>
+        <item>10</item>
+        <item>15</item>
+        // the default one
+        <item>24</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="string_array_bit_rate">
+        <item>80</item>
+        // 120P
+        <item>160</item>
+        // 180P
+        <item>200</item>
+        // 240P
+        <item>400</item>
+        // 360P
+        <item>500</item>
+        // 480P
+        <item>1000</item>
+        // 720P
+    </string-array>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="start_spotlight">Start Spotlight</string>
+    <string name="close_spotlight">Close Spotlight</string>
+    <string name="next_target">Next Target</string>
+
+    <string name="send_any_">Send any gift for 1 first time</string>
+    <string name="giftwalltv">1.What is the gift wall?</string>
+    <string name="giftwalltv1">A single gift of more than 5,000 coins will appear on the gift wall!</string>
+    <string name="giftwalltv2">2.How to grab the front row of the gift wall?</string>
+    <string name="giftwalltv3">The larger the number of gold coins in a single gift, the more advanced the display.</string>
+    <string name="giftwalltv4">3.How long will the records on the gift will be kept?</string>
+    <string name="giftwalltv5">24 Hours</string>
+    <string name="liverecordtvdes">In the stream of these region(XM,TR,FR,DE,IT,PH,Pk,VN,TH,,CG),donations between users from other countries will not be counted to redeem diamonds.</string>
+    <string name="streamingDes">Streaming duration: 104 Minutes Guest duration: 276</string>
+
+
+    <string name="tv1">A family is an organization created by user on their own.\nUsers apply to join the family and work together with like-\nminded partners to keep the family growing.</string>
+    <string name="tv2">Create a family: you can create a family after your wealth level\nmeet the requirement,Upload the family cover,name nad\nnotice,you can run your family after passing the review.\n\nJoin the family: On the family Home page, click "Join Family" to\nInitiate the application,and you can join the family after passing the family review.</string>
+    <string name="tv3">No, one person can only create or join the family.</string>
+    <string name="tv4">The number of members is related to the family level, and the\ninitial number is 150.The higher the family level, the greater the capacity.</string>
+    <string name="tv5">A family can have to 5 administrators</string>
+    <string name="tv6">sort by the total contribution of family members.</string>
+    <string name="tv7">The family level represents the strength of the family.The\nstronger the family,the higher the level.The current family\nlevel is divided into four levels:steel,bronze,silver,and gold. </string>
+    <string name="tv8">As the level increases, the upper limit of member and\nadministrators will continue to increase;at the same 6time, the \nstyle of family badge and family frame will continue to\nupgrade as the level increases. Upgrade to the Golden Family\nto unlock the exclusive gifts of the golden family. </string>
+    <string name="tv9">Calculate the sum of Contribution of family members in\neach season.The higher the contribution value,the higher the\nlevel.The level will be settled at the end of the season as the\ninitial level for the next season.</string>
+    <string name="tv10"></string>
+    <string name="question_7">7. What is the family level?</string>
+    <string name="quesition10des">If a user quits a family, their family level remains the same, yet contribution will be reset;</string>
+    <string name="qustin10des1">Users\' starting contribution level after joining the family is 0.</string>
+
+    <string name="welcome">Welcome hai Apka Annu Dvarra Ayojit birthday party main</string>
+    <string name="birthday_party_de_yarr">Birthday party de yarr</string>
+    <string name="will_start_on">will start on</string>
+    <string name="click">click_to_add_your_tag</string>
+    <string name="welocome_">welcome hai apka shubam ki biethday party mein!</string>
+    <string name="you_event">Your event has been created. The event will start at 8:30. Don\'t miss out</string>
+    <string name="incometx4">3. Please note that the gifts rececived from rooms  will be automatically converted into diamonds(not include lucky gifts.), the gifts received in moment will not be automatically converted into diamond temporarily.</string>
+    <string name="subscriptiontx">You haven\'t subscribed to any event.Check out on the at the what\'s on page!</string>
+    <string name="send_dialog_tv">Are you sure you want to send this car to your friend </string>
+    <string name="exclusiveStringGiftTx">Only VIP 7 can give exclusive gifts. After VIP 7 is activated.you can enter the live studio to give this gift.  When you give a gift,it will be displayed in other rooms.</string>
+    <string name="add_to_blocked_list">Add to blocked list</string>
+    <string name="report">Report</string>
+    <string name="remove_post">remove</string>
+    <string name="sure_to_add_him">Sure to add him to blocked list? When added, will remove friend relationship, unfollow him, stop receiving his request or chat messages, later prevent him from entering your live room</string>
+    <string name="wow_s_board">Wow\'s Board</string>
+    <string name="admintxt1">1.Way to add: Cilck on Add as admin at mini profile of any users in the room;</string>
+    <string name="admintxt2">2.Permanently valid unless you remove him; </string>
+    <string name="admintxt21">3. You can set up 8 admins. 1 admin can be set for each </string>
+    <string name="admintxt3">30 charming level increased; 4.Admin privileges in this room:</string>
+    <string name="admintxt4">(1) Kick out from the seat;</string>
+    <string name="admintxt5">(2) Kick out from the room;</string>
+    <string name="admintxt6">(3) Invite audience to Mic;</string>
+    <string name="admintxt7">(4) Close the Mic;</string>
+    <string name="admintxt8">(3) Ban from chatting;</string>
+    <string name="admintxt9">(4) Set voice effect;</string>
+    <string name="admintxt10">(7) Play music</string>
+    <string name="banuserdescriptin">After the ban, the other person won\'t be able to send messages. Do you confirm banning ?</string>
+    <string name="onlineservice">Please provide more detail of your issue, or send email to cs@Wows .media, we will be happy to help.</string>
+    <string name="invite_for_seat_tv">You have been invited by the broadcaster or admininstrator to seat, start chatting or left?</string>
+    <string name="anyone_who_opens_the_lucky_bag_may_get_coins_learn_more">Anyone who opens the lucky bag may get coins Learn more.</string>
+    <string name="lucky_rules1">1.By sending a lucky bag you coins will be consumed. When others open it,they will follow you!</string>
+    <string name="lucky_rules2">2.You will get coins randomly when you open it.</string>
+    <string name="lucky_rules3">3.After 30 mintues,unspent coins will be returned to the sender.</string>
+    <string name="lucky_rules4">4.Not get any wealthy exp by sending lucky bags.</string>
+    <string name="lucky_rules5">5.Fraud is forbidden, otherwise you will be banned forever.</string>
+    <string name="every_10_minutes_on_mic_daily">Every 10 minutes on-mic \n daily</string>
+    <string name="enter_your_mobile_whatsapp_number">*Enter your mobile number</string>
+    <string name="click_to_upload_national_id_image"><u>Click to upload national ID image</u></string>
+    <string name="i_want_to_join_bango_agency">I am verify user of WOW\'s and i want to join.....</string>
+    <string name="congratulations_your_request_has_been_submitted_please_wait_for_a_while_for_approval_thanks">Congratulations &#128079; &#129395; your request has been submitted please wait for a while for approval. Thanks</string>
+    <string name="your_personal_information_is_safe_with_us_you_can_fill_in_the_details_worry_free">Your personal information is safe with us. You can \n fill in the details worry-free!</string>
+    <string name="silver">SILVER \n COINS</string>
+
+    <array name="com_google_android_gms_fonts_certs">
+        <item>@array/com_google_android_gms_fonts_certs_dev</item>
+        <item>@array/com_google_android_gms_fonts_certs_prod</item>
+    </array>
+    <string-array name="com_google_android_gms_fonts_certs_dev" tools:ignore="Typos">
+        <item>MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPWW+wPPKQmsHxajtWjmQwWfna8mZuSeJS48LIgAZlKkpFeVyxW0qMBujb8X8ETrWy550NaFtI6t9+u7hZeTfHwqNvacKhp1RbE6dBRGWynwMVX8XW8N1+UjFaq6GCJukT4qmpN2afb8sCjUigq0GuMwYXrFVee74bQgLHWGJwPmvmLHC69EH6kWr22ijx4OKXlSIx2xT1AsSHee70w5iDBiK4aph27yH3TxkXy9V89TDdexAcKk/cVHYNnDBapcavl7y0RiQ4biu8ymM8Ga/nmzhRKya6G0cGw8CAQOjgfwwgfkwHQYDVR0OBBYEFI0cxb6VTEM8YYY6FbBMvAPyT+CyMIHJBgNVHSMEgcEwgb6AFI0cxb6VTEM8YYY6FbBMvAPyT+CyoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JMrSu1xuTKEBahWRbqHsXclaXjoBADb0kkjVEJu/Lh5hgYZnOjvlba8Ld7HCKePCVePoTJBdI4fvugnL8TsgK05aIskyY0hKI9L8KfqfGTl1lzOv2KoWD0KWwtAWPoGChZxmQ+nBli+gwYMzM1vAkP+aayLe0a1EQimlOalO762r0GXO0ks+UeXde2Z4e+8S/pf7pITEI/tP+MxJTALw9QUWEv9lKTk+jkbqxbsh8nfBUapfKqYn0eidpwq2AzVp3juYl7//fKnaPhJD9gs=</item>
+    </string-array>
+    <string-array name="com_google_android_gms_fonts_certs_prod" tools:ignore="Typos">
+        <item>MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0I9Y4sypEwPpt1TTcvZApxsdyxMJZ2JORland2qSGT2y5b+3JKkedxiLDmpHpDsz2WCbdxgxRczfey5YZnTJ4VZbH0xqWVW/8lGmPav5xVwnIiJS6HXk+BVKZF+JcWjAsb/GEuq/eFdpuzSqeYTcfi6idkyugwfYwXFU1+5fZKUaRKYCwkkFQVfcAs1fXA5V+++FGfvjJ/CxURaSxaBvGdGDhfXE28LWuT9ozCl5xw4Yq5OGazvV24mZVSoOO0yZ31j7kYvtwYK6NeADwbSxDdJEqO4k//0zOHKrUiGYXtqw/A0LFFtqoZKFjnkCAQOjgdkwgdYwHQYDVR0OBBYEFMd9jMIhF1Ylmn/Tgt9r45jk14alMIGmBgNVHSMEgZ4wgZuAFMd9jMIhF1Ylmn/Tgt9r45jk14aloXikdjB0MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWSCCQDC4IdGZEowjTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBAUAA4IBAQBt0lLO74UwLDYKqs6Tm8/yzKkEu116FmH4rkaymUIE0P9KaMftGlMexFlaYjzmB2OxZyl6euNXEsQH8gjwyxCUKRJNexBiGcCEyj6z+a1fuHHvkiaai+KL8W1EyNmgjmyy8AW7P+LLlkR+ho5zEHatRbM/YAnqGcFh5iZBqpknHf1SKMXFh4dd239FJ1jWYfbMDMy3NS5CTMQ2XFI1MvcyUTdZPErjQfTbQe3aDQsQcafEQPD+nqActifKZ0Np0IS9L9kR/wbNvyz6ENwPiTrjV2KRkEjH78ZMcUQXg0L3BYHJ3lc69Vs5Ddf9uUGGMYldX3WfMBEmh/9iFBDAaTCK</item>
+    </string-array>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ndroid="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_shape_corners"
+    android:backgroundTint="@color/white"
+    android:paddingHorizontal="20dp"
+    android:elevation="8dp">
+
+
+    <TextView
+        android:id="@+id/createFamilyTipsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:singleLine="true"
+        android:text="Tips"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/createFamlyTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createFamilyTipsTv"
+        android:layout_centerHorizontal="true"
+
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="3"
+        android:text="@string/cant_create_family"
+        android:textColor="#E8000000"
+        android:textSize="14sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createFamilyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/createFamlyTv"
+
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rect_conrs_lucky_bag_white"
+        android:backgroundTint="@color/green"
+        android:fontFamily="sans-serif-medium"
+        android:singleLine="true"
+        android:text="Confirm"
+        android:layout_marginVertical="20dp"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>

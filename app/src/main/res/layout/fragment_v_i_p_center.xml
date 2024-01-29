@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Profile.VIPCenter.VIPCenterFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/userLvlTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_85"
+            android:background="@color/blue">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/vipCenterTablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:background="@color/blue"
+                app:tabIndicatorColor="@color/golden_color"
+                app:tabSelectedTextColor="@color/golden_color"
+                app:tabTextColor="#BDAC8F">
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <ImageView
+                android:id="@+id/vipBackImg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/backarrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/vipBackImg"
+                android:text="VIP Center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vipCenterViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/userLvlTopRL" />
+
+    </RelativeLayout>
+
+</FrameLayout>

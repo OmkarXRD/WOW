@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.Union.UnionInnerFragments.More.CountriesFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/usaTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/countriesBackImg"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/back__1_"
+                app:tint="@color/dark_grey"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/description"/>
+
+            <TextView
+                android:id="@+id/usaName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:text="USA"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/countriesBackImg"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/usaDiamondRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_round_corners"
+            android:paddingVertical="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/light_grey_bg_color"
+            android:layout_below="@+id/usaTopRL"
+            >
+
+            <ImageView
+                android:id="@+id/usaTrophyImag"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/trophy"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Diamonds"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/usaTrophyImag"
+                android:layout_marginStart="10dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/girl"
+                    android:layout_marginHorizontal="2.5dp"
+                    android:contentDescription="@string/description"
+                    android:layout_centerVertical="true"
+                    />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/girl"
+                    android:layout_marginHorizontal="2.5dp"
+                    android:contentDescription="@string/description"
+                    android:layout_centerVertical="true"
+                    />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/girl"
+                    android:layout_marginHorizontal="2.5dp"
+                    android:contentDescription="@string/description"
+                    android:layout_centerVertical="true"
+                    />
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:rotation="180"
+                    android:src="@drawable/back__1_"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/noUserFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No User Found"
+
+            android:layout_centerInParent="true"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/countriesRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/usaDiamondRL"
+            app:spanCount="2"
+            android:layout_marginHorizontal="5dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/countries_rv_design"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

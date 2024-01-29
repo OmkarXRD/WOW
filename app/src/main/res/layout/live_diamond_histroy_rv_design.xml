@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/blacklist1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/countTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/liveDaimondCirImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_gravity="center"
+            android:src="@drawable/img1"
+            android:contentDescription="@string/description"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="150dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/liveDiamondsNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blocked User"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_gravity="center"
+
+                android:textColor="@color/black"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/liveDiamondDoblLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_shape_corners_8dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="5dp">
+
+                    <ImageView
+                        android:id="@+id/liveDiamondGenderImg"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/description"
+                        android:src="@drawable/male"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/liveDiamondAgeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="35"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/diamondsllauyout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/live_diamond_round_corners"
+        android:layout_centerVertical="true"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/liveDiamondTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="252"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="#f1589a"
+            android:layout_marginStart="5dp"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/diamond"
+            android:contentDescription="@string/description"
+            />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/blacklist1"
+        android:background="#9F9D9D">
+
+    </View>
+
+</RelativeLayout>

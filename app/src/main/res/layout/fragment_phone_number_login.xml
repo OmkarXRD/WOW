@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.SignUp.PhoneNumberLoginFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlPhoneTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:id="@+id/backLoginOrRegister"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:rotation="180"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:tint="@color/black"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/Profilename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/backLoginOrRegister"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/phone_number"
+            android:textColor="@color/header_color"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlPhoneTop"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/country"
+        android:textColor="@color/sub_header_color"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/countrySelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCountry"
+        android:layout_marginHorizontal="35dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/black"
+        android:gravity="center_vertical"
+        android:text="@string/india"
+        android:textColor="@color/black"
+        app:drawableEndCompat="@drawable/india_1_"
+        tools:ignore="LabelFor" />
+
+    <View
+        android:id="@+id/countrySelectView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/countrySelect"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countrySelectView"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/phone_number"
+        android:textColor="@color/sub_header_color"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/LlEnterPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPhone"
+        android:layout_marginHorizontal="35dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+<!--            <com.hbb20.CountryCodePicker-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                app:ccp_arrowSize="15dp"-->
+<!--                app:ccp_countryPreference="@string/india"-->
+<!--                app:ccp_showFlag="false"-->
+<!--                app:ccp_showNameCode="false"-->
+<!--                app:ccp_textSize="15sp" />-->
+
+            <TextView
+                android:id="@+id/phoneLoginNumberTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00000000"
+                android:drawableEnd="@drawable/tick"
+                android:hint="@string/enter_your_phone_number"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:text="9877776646"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/morePhn"
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:layout_below="@id/LoginLinearlyut"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/more"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/lLLoginButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/morePhn"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/loginWithMobile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="9dp"
+                android:src="@drawable/fb"
+                tools:ignore="ContentDescription" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="9dp"
+                android:src="@drawable/group_464"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LoginLinearlyut"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/LlEnterPhone"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/backtologinbutton"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

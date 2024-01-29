@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearRRRS"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_marginVertical="100dp"
+        android:elevation="10dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/logoutdesign"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/pic"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="30dp"
+                android:background="@drawable/exclusive"
+                android:layout_height="60dp"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_centerHorizontal="true"
+                    app:cardCornerRadius="14dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/hobo"
+                        android:scaleType="fitXY"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/w"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pic"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Exclusive gift"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/w1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/w"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Only VIP 7 can give exclusive gifts. After VIP"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/w2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/w1"
+                android:layout_centerHorizontal="true"
+                android:text="7 is activated.you can enter the live studio to"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/w3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/w2"
+                android:layout_centerHorizontal="true"
+                android:text="give this gift.  When you give a gift,it will be"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/w4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/w3"
+                android:layout_centerHorizontal="true"
+                android:text="displayed in other rooms."
+                android:textSize="14sp" />
+
+
+            <Button
+                android:id="@+id/exclusiveGiftConfirmBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/w4"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#977823"
+                android:text="Confirm" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+

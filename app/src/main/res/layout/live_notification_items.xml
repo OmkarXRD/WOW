@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/photo4"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:id="@+id/liveImgNotify" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/liveImgNotify"
+        android:layout_marginTop="5dp"
+        android:id="@+id/llLiveNotification"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cute Angel"
+                android:textColor="@color/black"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@drawable/female"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/pink_oval"
+                android:rotation="-35"
+                android:padding="3.5dp"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Space"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/inter"
+            android:textSize="10sp"
+            android:layout_marginTop="-2dp"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/short_location" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="2.5dp"
+        android:layout_toEndOf="@id/liveImgNotify"
+        android:scaleType="fitXY"
+        android:scaleY="3"
+        android:src="@drawable/waves"
+        app:tint="@color/grey" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/video_camera"
+            app:tint="@color/grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/inter"
+            android:text="1h 14m"
+            android:textColor="@color/grey"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

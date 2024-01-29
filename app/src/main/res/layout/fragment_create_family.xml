@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.Profile.Family.CreateFamilyFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/crateFamilyBackImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back__1_"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+
+            <TextView
+                android:id="@+id/createTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/crateFamilyBackImg"
+                android:text="Create Family"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+            <View
+                android:id="@+id/crateFamilyLine"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/light_grey_color"
+                android:layout_below="@+id/crateFamilyBackImg"
+                android:layout_marginTop="10dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/createFamilyCirImg"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/crateFamilyLine"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/demo_user_profile_img" />
+
+            <EditText
+                android:id="@+id/crateFmilyNameEdtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/createFamilyCirImg"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_strock_cornes"
+                android:hint="Enter family name"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+
+
+            <EditText
+                android:id="@+id/fmailyDesciptionEdtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/crateFmilyNameEdtx"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_strock_cornes"
+                android:hint="Description"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/createFamilySubmitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/fmailyDesciptionEdtx"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/wallet_background"
+                android:fontFamily="sans-serif-medium"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+
+        </RelativeLayout>
+
+
+
+</FrameLayout>

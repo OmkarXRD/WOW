@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.ChatsFragments.MessagesFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/messagesTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/msgBackImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/arrow_3" />
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/msgCircleImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@+id/msgBackImg"
+                android:src="@drawable/photo2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_toRightOf="@+id/msgCircleImg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/messageUserNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Rohit"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/onliveTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:lineSpacingExtra="0dp"
+                    android:text="online"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/messagesTopRL"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messageRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomRL"
+            android:layout_below="@+id/messagesTopRL"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/messages_rv_design" />
+
+        <ImageView
+            android:id="@+id/stopRecodingImg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_above="@+id/bottomRL"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/ic_baseline_mic_off_24"
+            android:backgroundTint="@color/pink_color"
+            android:contentDescription="@string/description"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/bottomRL"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_grey_color" />
+
+
+            <ImageView
+                android:id="@+id/voiceRecoderImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/microphone"
+                android:backgroundTint="@color/pink_color"
+                android:contentDescription="@string/description"
+                android:visibility="visible" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/voiceRecoderLottie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@+id/voiceRecoderImg"
+                android:contentDescription="@string/description"
+                android:visibility="gone"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/voice_recoder_loti" />
+
+            <ImageView
+                android:id="@+id/chatCameraImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/ic_camera__2_"
+                android:backgroundTint="@color/pink_color"
+                android:contentDescription="@string/description"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/galleryImg"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_toRightOf="@+id/voiceRecoderImg"
+                android:background="@drawable/gallery_icon"
+                android:backgroundTint="@color/pink_color"
+                android:contentDescription="@string/description"
+                android:visibility="visible" />
+
+
+            <EditText
+                android:id="@+id/chatMsgEdtx"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="2dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toLeftOf="@+id/msgSendRL"
+                android:layout_toRightOf="@+id/galleryImg"
+                android:background="@android:color/transparent"
+                android:hint="Type message..."
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/msgSendRL"
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/full_round_gredient"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_sent_mail__1_"
+                    android:backgroundTint="@color/white" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/selectedImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomRL"
+            android:layout_below="@+id/messagesTopRL"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/description"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/messageBackImg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@+id/messagesTopRL"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/close_button"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

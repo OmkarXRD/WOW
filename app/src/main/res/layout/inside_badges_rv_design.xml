@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/bgDetailTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Super Star Level 1"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+    <ImageView
+        android:id="@+id/bageImg"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/bgDetailTV"
+        android:src="@drawable/pk_queen"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/description"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/bgRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Now 15,11,309/50,000,000"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_below="@+id/bageImg"
+        android:fontFamily="sans-serif-medium"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/badgesTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:text="You will receive this after joining a family that reaches the Gold level"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_below="@+id/bgRate"
+        android:fontFamily="sans-serif-medium"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+</RelativeLayout>

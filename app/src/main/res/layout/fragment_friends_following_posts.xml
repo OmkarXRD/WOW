@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Home.Related.RelatedMoment.FriendsFollowingPostsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/momentFiendsFollowingNoPostImg"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/no_records"
+            app:tint="@color/grey"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/description"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/friendsFollowingPostRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/posts_items" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

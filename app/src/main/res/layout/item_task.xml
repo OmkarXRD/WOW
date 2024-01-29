@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white">
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="40dp"-->
+<!--&lt;!&ndash;            android:layout_height="4dp"&ndash;&gt;-->
+
+        <ImageView
+            android:id="@+id/profile_hour"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/giftbox" />
+
+        <TextView
+            android:id="@+id/hour_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/profile_hour"
+            android:text="@string/send_any_"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/hour_name"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/profile_hour"
+            >
+
+            <ImageView
+                android:id="@+id/silverCoinImg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/silver_img"
+                android:contentDescription="@string/description"/>
+
+            <TextView
+                android:id="@+id/plusCoinsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+100"
+                android:textColor="#74b9d9"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dailyTaskGoRL"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="visible"
+        android:background="@drawable/go_back">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="5dp"
+            android:text="Go"
+            android:textColor="#8ad69c"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/dailyTaskDoneRL"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/light_grey_color"
+        android:background="@drawable/go_back">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="5dp"
+            android:text="Done"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+

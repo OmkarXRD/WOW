@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.Union.UnionMainFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlSecondFragment"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/gradient"
+        android:gravity="bottom"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/Games"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/GamesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="GAMES"
+                android:textColor="@color/white"
+                android:shadowColor="#1E1E1E"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/relatedView"
+                android:layout_width="10dp"
+                android:layout_height="1.5dp"
+                android:shadowColor="#1E1E1E"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Meet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/Games"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/MeetText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="MEET"
+                android:shadowColor="#1E1E1E"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/popularView"
+                android:layout_width="10dp"
+                android:layout_height="1.5dp"
+                android:shadowColor="#1E1E1E"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/More"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/Meet"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/MoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="MORE"
+                android:shadowColor="#1E1E1E"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/nearbyView"
+                android:layout_width="10dp"
+                android:layout_height="1.5dp"
+                android:shadowColor="#1E1E1E"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/trophyImg"
+            android:layout_width="25dp"
+            android:layout_height="18dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/trophysvg"
+            app:tint="@color/white" />
+
+<!--        <ImageView-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="18dp"-->
+<!--            android:layout_marginEnd="15dp"-->
+<!--            android:layout_toStartOf="@+id/icon_notification_home"-->
+<!--            android:src="@drawable/icon_search"-->
+<!--            app:tint="@color/white" />-->
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/secondFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlSecondFragment" />
+</RelativeLayout>

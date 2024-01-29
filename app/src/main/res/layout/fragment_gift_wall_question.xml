@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Union.UnionInnerFragments.More.GiftWallQuestionFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/giftwallRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/giftWallQustinBackImg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/cross"
+                app:tint="@color/dark_grey"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/description"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:text="Gift Wall"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/giftWallQustinBackImg"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/giftWallImg"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/gift_wall_image"
+            android:padding="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/giftwallRL"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/giftWallImg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/giftwalltv"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/giftwalltv1"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-medium"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/giftwalltv2"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/giftwalltv3"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-medium"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/giftwalltv4"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/giftwalltv5"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-medium"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

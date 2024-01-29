@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/rect_round_corners"
+        >
+
+        <RelativeLayout
+            android:id="@+id/colorIdLockRL"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_margin="5dp"
+            android:backgroundTint="#fa6c0a"
+            android:background="@drawable/round_shape_corners">
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/lock_1"
+                app:tint="@color/white"
+                />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ColorIdLevelImg"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:src="@drawable/level_img"/>
+
+            <com.opensource.svgaplayer.SVGAImageView
+                android:id="@+id/wealthColorsRVImage"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                app:antiAlias="true"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/colorIdLevelDayTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 day(s)"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="12sp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/colorIdLevelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unlock LV 100"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="12sp"
+                android:singleLine="true"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
