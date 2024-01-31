@@ -177,8 +177,13 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (binding.switchButton.isChecked()){
+                    Log.i("Googlee"," in Onactive 1");
                     Intent signInIntent = mGoogleSignInClient.getSignInIntent();
                     startActivityForResult(signInIntent, REQ_ONE_TAP);
+
+
+
+
                 }else {
                     Toast.makeText(requireContext(), "Please accept the terms and conditions", Toast.LENGTH_SHORT).show();
                 }
@@ -284,11 +289,15 @@ public class LoginFragment extends Fragment {
 
         binding.llLoginWithFacebook.setOnClickListener(view -> {
             if (binding.switchButton.isChecked()){
+
                FacebookLogin();
             }else {
                 Toast.makeText(requireContext(), "Please accept the terms and conditions", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+
     }
 
     private void checkUserStatus() {
@@ -310,6 +319,7 @@ public class LoginFragment extends Fragment {
             handleSignInResult(task);
             callbackManager.onActivityResult(requestCode, resultCode, data);
         } else {
+
             super.onActivityResult(requestCode, resultCode, data);
         }
 
@@ -476,6 +486,7 @@ public class LoginFragment extends Fragment {
         Log.d("socialLoginApi", "socialLoginApi: "+continent);
         Log.d("socialLoginApi", "socialLoginApi: "+countryNew);
         Log.d("socialLoginApi", "socialLoginApi: "+s);
+        Log.d("socialLoginApi", "socialLoginApi: "+deviceId);
 
         new Mvvm().socialLogin(requireActivity(),
                         CommonUtils.getRequestBodyText(socialId),
@@ -487,10 +498,11 @@ public class LoginFragment extends Fragment {
                         CommonUtils.getRequestBodyText(email),
                         CommonUtils.getRequestBodyText(""),
                         CommonUtils.getFileData(s,"image"),
-                        CommonUtils.getRequestBodyText(countryName))
+                        CommonUtils.getRequestBodyText(countryNew))
                 .observe(requireActivity(), socialLoginRoot -> {
 //                    if (socialLoginRoot != null) {
-                        if (socialLoginRoot.getStatus() == 1) {
+                        if (socialLoginRoot != null && socialLoginRoot.getStatus() == 1) {
+                            Log.i("socialLoginApi","inside if");
                             //Toast.makeText(requireContext(), "1"+socialLoginRoot.getMessage(), Toast.LENGTH_SHORT).show();
                             App.getSharedpref().saveString(AppConstant.SESSION, "1");
                             App.getSharedpref().saveString("idbannedStatus",String.valueOf(socialLoginRoot.getDetails().idBannedStatus));
@@ -563,6 +575,7 @@ public class LoginFragment extends Fragment {
                         Location location = task.getResult();
                         if (location == null) {
                             requestNewLocationData();
+                            Log.i("Googleeee","in if of lcation provider client");
                         } else {
 
                             latitude = location.getLatitude();
@@ -640,13 +653,14 @@ public class LoginFragment extends Fragment {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == PERMISSION_ID) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Log.i("Googleeee","in on request persmission method");
                 getLastLocation();
             }
         }
     }
 
     private void getCompleteAddressString() {
-
+        Log.i("Googleeee","inside getCompleteAddressString");
         Geocoder geocoder;
         List<Address> addresses = null;
         geocoder = new Geocoder(requireContext(), Locale.getDefault());
@@ -666,6 +680,7 @@ public class LoginFragment extends Fragment {
             }
             country= addresses.get(0).getCountryName();
             App.getSharedpref().saveString("countryName",country);
+            Log.i("Googleeee","above function call");
             loginWithGoogle(country, latitude, longitude);
 //            App.getSharedpref().saveString(AppConstants.USER_CURRENT_ADDRESS, addresses.get(0).getLocality());
 
