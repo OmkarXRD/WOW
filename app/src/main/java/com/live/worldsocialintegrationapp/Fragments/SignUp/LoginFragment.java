@@ -284,7 +284,7 @@ public class LoginFragment extends Fragment {
 
         binding.llLoginWithFacebook.setOnClickListener(view -> {
             if (binding.switchButton.isChecked()){
-               //FacebookLogin();
+               FacebookLogin();
             }else {
                 Toast.makeText(requireContext(), "Please accept the terms and conditions", Toast.LENGTH_SHORT).show();
             }
