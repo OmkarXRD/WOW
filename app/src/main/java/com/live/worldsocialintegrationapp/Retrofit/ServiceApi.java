@@ -399,7 +399,7 @@ public interface ServiceApi {
                                       @Part("name") RequestBody name,
                                       @Part("email") RequestBody email,
                                       @Part("continent") RequestBody continent,
-                                      @Part MultipartBody.Part image,
+                                      //@Part MultipartBody.Part image,
                                       @Part("Country") RequestBody Country);
 
     @FormUrlEncoded

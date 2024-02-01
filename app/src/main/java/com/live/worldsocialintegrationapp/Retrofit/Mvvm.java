@@ -1905,12 +1905,13 @@ public class Mvvm extends ViewModel {
     private MutableLiveData<SocialLoginRoot> socialLoginRootMutableLiveData;
 
     public LiveData<SocialLoginRoot> socialLogin(Activity activity, RequestBody social_id, RequestBody reg_id, RequestBody dev_id, RequestBody dev_type,
-                                                 RequestBody phone, RequestBody name, RequestBody email, RequestBody continent, MultipartBody.Part image, RequestBody country) {
-
+                                                 RequestBody phone, RequestBody name, RequestBody email, RequestBody continent, RequestBody country) {
+//        public LiveData<SocialLoginRoot> socialLogin(Activity activity, RequestBody social_id, RequestBody reg_id, RequestBody dev_id, RequestBody dev_type,
+//                RequestBody phone, RequestBody name, RequestBody email, RequestBody continent, MultipartBody.Part image, RequestBody country) {
         socialLoginRootMutableLiveData = new MutableLiveData<>();
         if (CommonUtils.isNetworkConnected(activity)) {
 
-            serviceApi.socialLogin(social_id, reg_id, dev_id, dev_type, phone, name, email, continent, image, country).enqueue(new Callback<SocialLoginRoot>() {
+            serviceApi.socialLogin(social_id, reg_id, dev_id, dev_type, phone, name, email, continent, country).enqueue(new Callback<SocialLoginRoot>() {
                 @Override
                 public void onResponse(@NonNull Call<SocialLoginRoot> call, @NonNull Response<SocialLoginRoot> response) {
                     if (response.body() != null) {
@@ -1924,6 +1925,7 @@ public class Mvvm extends ViewModel {
                 public void onFailure(@NonNull Call<SocialLoginRoot> call, @NonNull Throwable t) {
                     socialLoginRootMutableLiveData.postValue(null);
                     Toast.makeText(activity, "onFailure " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.i("onFailure", " "+ t.getMessage());
                 }
             });
 

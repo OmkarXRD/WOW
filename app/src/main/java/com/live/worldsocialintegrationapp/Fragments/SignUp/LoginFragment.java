@@ -70,11 +70,17 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.concurrent.Executor;
 
-import okhttp3.MediaType;
 import okhttp3.MultipartBody;
+import okhttp3.OkHttpClient;
 import okhttp3.RequestBody;
+
+import okhttp3.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class LoginFragment extends Fragment {
 
@@ -338,9 +344,6 @@ public class LoginFragment extends Fragment {
     }
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
-
-
-
         try {
             GoogleSignInAccount acct = completedTask.getResult(ApiException.class);
             if (acct != null) {
@@ -353,6 +356,12 @@ public class LoginFragment extends Fragment {
                 Uri personPhoto = acct.getPhotoUrl();
                 Toast.makeText(requireActivity(), "LogIn Success", Toast.LENGTH_SHORT).show();
                 socialLoginApi(countryNew,personId,personName,personEmail,personPhoto.toString());
+
+
+
+
+
+
             }
             // Signed in successfully, show authenticated UI.
         } catch (ApiException e) {
@@ -393,6 +402,9 @@ public class LoginFragment extends Fragment {
 //            Log.w("TAG", "signInResult:failed code=" + e.getMessage());
 //        }
     }
+
+
+
 
     private void FacebookLogin() {
 
@@ -481,12 +493,15 @@ public class LoginFragment extends Fragment {
 
         Log.d("socialLoginApi", "socialLoginApi: "+socialId);
         Log.d("socialLoginApi", "socialLoginApi: "+RegId);
+        Log.d("socialLoginApi", "socialLoginApi: "+deviceId);
+        Log.d("socialLoginApi", "socialLoginApi: "+ "Device type");
+        Log.d("socialLoginApi", "socialLoginApi: "+ "Phone number");
         Log.d("socialLoginApi", "socialLoginApi: "+name);
         Log.d("socialLoginApi", "socialLoginApi: "+email);
         Log.d("socialLoginApi", "socialLoginApi: "+continent);
         Log.d("socialLoginApi", "socialLoginApi: "+countryNew);
         Log.d("socialLoginApi", "socialLoginApi: "+s);
-        Log.d("socialLoginApi", "socialLoginApi: "+deviceId);
+
 
         new Mvvm().socialLogin(requireActivity(),
                         CommonUtils.getRequestBodyText(socialId),
@@ -496,8 +511,8 @@ public class LoginFragment extends Fragment {
                         CommonUtils.getRequestBodyText(""),
                         CommonUtils.getRequestBodyText(name),
                         CommonUtils.getRequestBodyText(email),
-                        CommonUtils.getRequestBodyText(""),
-                        CommonUtils.getFileData(s,"image"),
+                        CommonUtils.getRequestBodyText(continent),
+                       // CommonUtils.getFileData(s,"image"),
                         CommonUtils.getRequestBodyText(countryNew))
                 .observe(requireActivity(), socialLoginRoot -> {
 //                    if (socialLoginRoot != null) {
@@ -505,7 +520,7 @@ public class LoginFragment extends Fragment {
                             Log.i("socialLoginApi","inside if");
                             //Toast.makeText(requireContext(), "1"+socialLoginRoot.getMessage(), Toast.LENGTH_SHORT).show();
                             App.getSharedpref().saveString(AppConstant.SESSION, "1");
-                            App.getSharedpref().saveString("idbannedStatus",String.valueOf(socialLoginRoot.getDetails().idBannedStatus));
+                            App.getSharedpref().saveString("id bannedStatus",String.valueOf(socialLoginRoot.getDetails().idBannedStatus));
                             App.getSharedpref().saveString("username", socialLoginRoot.getDetails().getUsername());
                             App.getSharedpref().saveString("image", socialLoginRoot.getDetails().getImage());
                             App.getSharedpref().saveString("name", socialLoginRoot.getDetails().getName());
@@ -513,7 +528,6 @@ public class LoginFragment extends Fragment {
                             App.getSharedpref().saveString("userId", socialLoginRoot.getDetails().getId());
                             App.getSharedpref().saveString("country", socialLoginRoot.getDetails().getCountry());
                             App.getSharedpref().saveString("dob", socialLoginRoot.getDetails().getDob());
-
                             App.getSharedpref().saveModel("RegisterRoot", socialLoginRoot.getDetails());
                             AppConstants.USER_ID = socialLoginRoot.getDetails().getId();
 

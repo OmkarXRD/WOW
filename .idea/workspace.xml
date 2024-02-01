@@ -2,7 +2,16 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <device id="pixel_4" />
+        <device id="pixel_4a" />
+        <device id="pixel_4_xl" />
+        <device id="pixel_xl" />
+        <device id="pixel_6" />
+        <device id="_device_class_phone" />
+        <device id="pixel_7" />
+        <device id="tv_4k" />
+      </config>
     </shared>
     <layouts>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/_item_online_services.xml">
@@ -923,7 +932,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7fbe7f4d-af4c-474b-b3a8-adb47f5cf8c0" name="Changes" comment="Initial Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/SignUp/LoginFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/SignUp/LoginFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/Mvvm.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/Mvvm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/ServiceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/ServiceApi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1002,38 +1014,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ApkExportedModule": "WorldSocialIntegrationapp.app",
-    "BundleExportedModule": "WorldSocialIntegrationapp.app",
-    "ExportApk.ApkPathForWorldSocialIntegrationapp.app": "D:\\WOW's application\\WOW's Mobile\\app",
-    "ExportBundle.BundlePathForWorldSocialIntegrationapp.app": "D:\\WOW's application\\WOW's Mobile\\app",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.4.1/f9e48179ea0c6ac0080a277b9383f74523f56aa2/appcompat-1.4.1-sources.jar!/androidx/appcompat/widget/AppCompatButton.java_SELECTED": "AppCompatButton",
-    "android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.2.1/f0f93e67af3f7417bdd560d5142f6dec4fe629c3/recyclerview-1.2.1-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED": "RecyclerView",
-    "android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.6.0/976aa22bd46c7748fade98594298bcd36b92f844/material-1.6.0-sources.jar!/com/google/android/material/progressindicator/BaseProgressIndicator.java_SELECTED": "BaseProgressIndicator",
-    "android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.6.0/976aa22bd46c7748fade98594298bcd36b92f844/material-1.6.0-sources.jar!/com/google/android/material/progressindicator/LinearProgressIndicator.java_SELECTED": "LinearProgressIndicator",
-    "android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/view/View.java_SELECTED": "View",
-    "android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/widget/ImageView.java_SELECTED": "ImageView",
-    "android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/widget/TextView.java_SELECTED": "TextView",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "com.google.services.firebase.aqiPopupShown": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "develop",
-    "last_opened_file_path": "D:/WOW's application/WOW's",
-    "settings.editor.selected.configurable": "experimental",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ApkExportedModule&quot;: &quot;WorldSocialIntegrationapp.app&quot;,
+    &quot;BundleExportedModule&quot;: &quot;WorldSocialIntegrationapp.app&quot;,
+    &quot;ExportApk.ApkPathForWorldSocialIntegrationapp.app&quot;: &quot;D:\\WOW's application\\WOW's Mobile\\app&quot;,
+    &quot;ExportBundle.BundlePathForWorldSocialIntegrationapp.app&quot;: &quot;D:\\WOW's application\\WOW's Mobile\\app&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.4.1/f9e48179ea0c6ac0080a277b9383f74523f56aa2/appcompat-1.4.1-sources.jar!/androidx/appcompat/widget/AppCompatButton.java_SELECTED&quot;: &quot;AppCompatButton&quot;,
+    &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.2.1/f0f93e67af3f7417bdd560d5142f6dec4fe629c3/recyclerview-1.2.1-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED&quot;: &quot;RecyclerView&quot;,
+    &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.6.0/976aa22bd46c7748fade98594298bcd36b92f844/material-1.6.0-sources.jar!/com/google/android/material/progressindicator/BaseProgressIndicator.java_SELECTED&quot;: &quot;BaseProgressIndicator&quot;,
+    &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.6.0/976aa22bd46c7748fade98594298bcd36b92f844/material-1.6.0-sources.jar!/com/google/android/material/progressindicator/LinearProgressIndicator.java_SELECTED&quot;: &quot;LinearProgressIndicator&quot;,
+    &quot;android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/view/View.java_SELECTED&quot;: &quot;View&quot;,
+    &quot;android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/widget/ImageView.java_SELECTED&quot;: &quot;ImageView&quot;,
+    &quot;android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/widget/TextView.java_SELECTED&quot;: &quot;TextView&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/WOW's application/WOW's&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;experimental&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   },
-  "keyToStringList": {
-    "ExportApk.BuildVariants": [
-      "debug"
+  &quot;keyToStringList&quot;: {
+    &quot;ExportApk.BuildVariants&quot;: [
+      &quot;debug&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="WorldSocialIntegrationapp.app.main" />
