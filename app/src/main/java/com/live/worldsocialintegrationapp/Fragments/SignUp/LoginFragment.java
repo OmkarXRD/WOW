@@ -357,11 +357,6 @@ public class LoginFragment extends Fragment {
                 Toast.makeText(requireActivity(), "LogIn Success", Toast.LENGTH_SHORT).show();
                 socialLoginApi(countryNew,personId,personName,personEmail,personPhoto.toString());
 
-
-
-
-
-
             }
             // Signed in successfully, show authenticated UI.
         } catch (ApiException e) {
@@ -501,6 +496,8 @@ public class LoginFragment extends Fragment {
         Log.d("socialLoginApi", "socialLoginApi: "+continent);
         Log.d("socialLoginApi", "socialLoginApi: "+countryNew);
         Log.d("socialLoginApi", "socialLoginApi: "+s);
+        String continentName = App.getSharedpref().getString("continentName");
+
 
 
         new Mvvm().socialLogin(requireActivity(),
@@ -511,7 +508,7 @@ public class LoginFragment extends Fragment {
                         CommonUtils.getRequestBodyText(""),
                         CommonUtils.getRequestBodyText(name),
                         CommonUtils.getRequestBodyText(email),
-                        CommonUtils.getRequestBodyText(continent),
+                        CommonUtils.getRequestBodyText(continentName),
                        // CommonUtils.getFileData(s,"image"),
                         CommonUtils.getRequestBodyText(countryNew))
                 .observe(requireActivity(), socialLoginRoot -> {
@@ -667,7 +664,7 @@ public class LoginFragment extends Fragment {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == PERMISSION_ID) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Log.i("Googleeee","in on request persmission method");
+
                 getLastLocation();
             }
         }
@@ -694,7 +691,7 @@ public class LoginFragment extends Fragment {
             }
             country= addresses.get(0).getCountryName();
             App.getSharedpref().saveString("countryName",country);
-            Log.i("Googleeee","above function call");
+
             loginWithGoogle(country, latitude, longitude);
 //            App.getSharedpref().saveString(AppConstants.USER_CURRENT_ADDRESS, addresses.get(0).getLocality());
 
