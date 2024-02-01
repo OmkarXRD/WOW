@@ -987,7 +987,7 @@
                         <option name="myPosition">
                           <Point>
                             <option name="x" value="2940" />
-                            <option name="y" value="4924" />
+                            <option name="y" value="4918" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -1414,8 +1414,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="410" />
+                            <option name="x" value="234" />
+                            <option name="y" value="414" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -1431,6 +1431,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="fragment_phone_code">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="1079" />
+                            <option name="y" value="551" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -1480,6 +1492,11 @@
                         <option name="myPositions">
                           <map>
                             <entry key="action_phoneNumberLoginFragment_to_countrySelectFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_phoneNumberLoginFragment_to_enterOtp">
                               <value>
                                 <LayoutPositions />
                               </value>

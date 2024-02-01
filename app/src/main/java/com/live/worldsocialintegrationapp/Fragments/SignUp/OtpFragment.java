@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 
@@ -17,6 +18,11 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthOptions;
+import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.live.worldsocialintegrationapp.Activites.HomeActivity;
 import com.live.worldsocialintegrationapp.Activites.IdBannedActivity;
@@ -28,11 +34,19 @@ import com.live.worldsocialintegrationapp.utils.App;
 import com.live.worldsocialintegrationapp.utils.AppConstant;
 import com.live.worldsocialintegrationapp.utils.AppConstants;
 
+import java.util.concurrent.TimeUnit;
+
 public class OtpFragment extends Fragment {
 
     FragmentOtpBinding binding;
     String RegId="";
-    String continentName,countryName;
+    String continentName,countryName, phoneNo, verificationCode;
+
+    PhoneAuthProvider.ForceResendingToken resendingToken;
+
+    Long timeOutSeconds = 60L;
+
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -57,9 +71,12 @@ public class OtpFragment extends Fragment {
                     Log.d("OTP","REGID "+RegId);
 
                 });
-
+        phoneNo = getArguments().getString("phoneNo");
         onclicks();
         timer();
+        binding.phoneNumber.setText(phoneNo);
+        sendOtp(phoneNo,false);
+
     }
 
     private void timer() {
@@ -95,8 +112,74 @@ public class OtpFragment extends Fragment {
             }
         });
 
-        binding.btnVerificationCode.setOnClickListener(this::registerUserApi);
+        //userd to check otp from api
+        //binding.btnVerificationCode.setOnClickListener(this::registerUserApi);
+
+        binding.btnVerificationCode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("OtpScreen","pressed verification button ");
+            }
+        });
+
     }
+
+    void sendOtp(String phoneNumber,boolean isResend){
+       setInProgress(true);
+
+        PhoneAuthOptions.Builder builder = PhoneAuthOptions.newBuilder(mAuth)
+                .setPhoneNumber(phoneNumber)
+                .setTimeout(timeOutSeconds, TimeUnit.SECONDS)
+                .setActivity(requireActivity())
+                .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                    @Override
+                    public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+                        signIn(phoneAuthCredential);
+                        setInProgress(false);
+                    }
+
+                    @Override
+                    public void onVerificationFailed(@NonNull FirebaseException e) {
+                        Toast.makeText(requireContext(), "OTP Verification Failed", Toast.LENGTH_SHORT).show();
+                        setInProgress(false);
+                    }
+
+                    @Override
+                    public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                        super.onCodeSent(s, forceResendingToken);
+                        verificationCode = s;
+                        resendingToken = forceResendingToken;
+                        Toast.makeText(requireContext(), "OTP Sent Successfully", Toast.LENGTH_SHORT).show();
+                        setInProgress(false);
+                    }
+                });
+        if(isResend){
+            PhoneAuthProvider.verifyPhoneNumber(builder.setForceResendingToken(resendingToken).build());
+        }else{
+            PhoneAuthProvider.verifyPhoneNumber(builder.build());
+        }
+
+    }
+
+    void signIn(PhoneAuthCredential phoneAuthCredential){
+
+
+    }
+
+
+
+    void setInProgress(boolean inProgress){
+        if(inProgress){
+            binding.btnVerificationCode.setVisibility(View.GONE);
+        }
+        else {
+            binding.btnVerificationCode.setVisibility(View.VISIBLE);
+            binding.progressBar.setVisibility(View.GONE);
+        }
+
+    }
+
+
 
     private void registerUserApi(View view) {
 

@@ -265,6 +265,7 @@ public class LoginFragment extends Fragment {
             public void onClick(View view) {
                 if (binding.switchButton.isChecked()){
                     Navigation.findNavController(binding.getRoot()).navigate(R.id.action_loginFragment_to_enterPhoneFragment, getArguments());
+
                 }else {
                     Toast.makeText(requireContext(), "Please accept the terms and conditions", Toast.LENGTH_SHORT).show();
                 }

@@ -55,6 +55,7 @@
             android:textSize="12sp" />
 
         <TextView
+            android:id="@+id/phoneNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/imgSmartPhone"
@@ -97,7 +98,7 @@
             android:background="@drawable/resend_button"
             android:paddingHorizontal="5dp"
             android:paddingVertical="3dp"
-            android:text="Resend (56)"
+            android:text="Resend (60)"
             android:textColor="#52000000" />
 
     </RelativeLayout>
@@ -116,6 +117,18 @@
         android:background="@drawable/pink_button"
         android:fontFamily="@font/inter_medium"
         android:text="Next"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/pink_button"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="@color/white"
+        android:visibility="visible"/>
 
 </LinearLayout>
