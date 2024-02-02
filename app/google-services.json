@@ -15,43 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "831085508894-4uqkdkia1hcdecrdhrl2umet12f7o1b3.apps.googleusercontent.com",
+          "client_id": "831085508894-d873pqrqt9rtuu2c48carj6i07ub87i7.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.live.worldsocialintegrationapp",
-            "certificate_hash": "b6f1beb7260ceeac86ce0bf4bd55d877f4f4a341"
-          }
-        },
-        {
-          "client_id": "831085508894-du7dl75kopjll2oksfsgi7b3fvk22d20.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.live.worldsocialintegrationapp",
-            "certificate_hash": "2b83a9719bc800d4bd3c4411bb09aefac55760b7"
-          }
-        },
-        {
-          "client_id": "831085508894-fhma647pbt905mo6sbk5kih4fd2gsch0.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.live.worldsocialintegrationapp",
-            "certificate_hash": "98cffb987a777e0a047a5660fd2936f3f8a69d66"
-          }
-        },
-        {
-          "client_id": "831085508894-kt7jmeac69c5vrcdiuqtcdu9cpbgh2f5.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.live.worldsocialintegrationapp",
-            "certificate_hash": "1aaa3b20e02b6d4e6561dd1ec94a4bab2f6d0c03"
-          }
-        },
-        {
-          "client_id": "831085508894-s72bvjqksqedgnooi1p6dca69e8f35vs.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.live.worldsocialintegrationapp",
-            "certificate_hash": "82cf5623f07f95d3377b20e20c01214a22a3516d"
+            "certificate_hash": "d0966c38b1e692e2ed8e7a70ecd42e7ac12ddef7"
           }
         },
         {

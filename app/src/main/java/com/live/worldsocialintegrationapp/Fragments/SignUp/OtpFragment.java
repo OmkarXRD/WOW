@@ -71,7 +71,7 @@ public class OtpFragment extends Fragment {
                     Log.d("OTP","REGID "+RegId);
 
                 });
-        phoneNo = getArguments().getString("phoneNo");
+        phoneNo = "+"+getArguments().getString("countryCode")+""+getArguments().getString("phoneNo");
         onclicks();
         timer();
         binding.phoneNumber.setText(phoneNo);
@@ -141,6 +141,7 @@ public class OtpFragment extends Fragment {
                     @Override
                     public void onVerificationFailed(@NonNull FirebaseException e) {
                         Toast.makeText(requireContext(), "OTP Verification Failed", Toast.LENGTH_SHORT).show();
+                        Log.i("GOOGLEE","error "+ e);
                         setInProgress(false);
                     }
 
@@ -150,6 +151,8 @@ public class OtpFragment extends Fragment {
                         verificationCode = s;
                         resendingToken = forceResendingToken;
                         Toast.makeText(requireContext(), "OTP Sent Successfully", Toast.LENGTH_SHORT).show();
+                        Log.i("GOOGLEE","error oncodeSent 1"+ s);
+                        Log.i("GOOGLEE","error oncodeSent 2"+ forceResendingToken);
                         setInProgress(false);
                     }
                 });
