@@ -354,9 +354,15 @@ public class LoginFragment extends Fragment {
                 String personFamilyName = acct.getFamilyName();
                 String personEmail = acct.getEmail();
                 String personId = acct.getId();
-                Uri personPhoto = acct.getPhotoUrl();
+                //Uri personPhoto = acct.getPhotoUrl();
                 Toast.makeText(requireActivity(), "LogIn Success", Toast.LENGTH_SHORT).show();
-                socialLoginApi(countryNew,personId,personName,personEmail,personPhoto.toString());
+                Log.i("socialLoginApi"," above social login api call ");
+                Log.i("socialLoginApi",countryNew);
+                Log.i("socialLoginApi",personId);
+                Log.i("socialLoginApi",personName);
+                Log.i("socialLoginApi",personEmail);
+                //Log.i("socialLoginApi",personPhoto.toString());
+                socialLoginApi(countryNew,personId,personName,personEmail);
 
             }
             // Signed in successfully, show authenticated UI.
@@ -485,8 +491,9 @@ public class LoginFragment extends Fragment {
                 });
     }
 
-    private void socialLoginApi(String continent, String socialId, String name, String email, String s) {
+    private void socialLoginApi(String continent, String socialId, String name, String email) {
 
+        Log.d("socialLoginApi", "socialLoginApi: ");
         Log.d("socialLoginApi", "socialLoginApi: "+socialId);
         Log.d("socialLoginApi", "socialLoginApi: "+RegId);
         Log.d("socialLoginApi", "socialLoginApi: "+deviceId);
@@ -496,7 +503,7 @@ public class LoginFragment extends Fragment {
         Log.d("socialLoginApi", "socialLoginApi: "+email);
         Log.d("socialLoginApi", "socialLoginApi: "+continent);
         Log.d("socialLoginApi", "socialLoginApi: "+countryNew);
-        Log.d("socialLoginApi", "socialLoginApi: "+s);
+        //Log.d("socialLoginApi", "socialLoginApi: "+s);
         String continentName = App.getSharedpref().getString("continentName");
 
 
@@ -692,7 +699,7 @@ public class LoginFragment extends Fragment {
             }
             country= addresses.get(0).getCountryName();
             App.getSharedpref().saveString("countryName",country);
-
+            Log.i("socialLoginApi","Country " + country);
             loginWithGoogle(country, latitude, longitude);
 //            App.getSharedpref().saveString(AppConstants.USER_CURRENT_ADDRESS, addresses.get(0).getLocality());
 
