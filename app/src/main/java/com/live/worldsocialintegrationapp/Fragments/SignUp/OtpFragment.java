@@ -17,8 +17,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
@@ -40,7 +43,9 @@ public class OtpFragment extends Fragment {
 
     FragmentOtpBinding binding;
     String RegId="";
-    String continentName,countryName, phoneNo, verificationCode;
+    String continentName,countryName, phoneNo, verificationCode,countryCode;
+
+    boolean isResend = false;
 
     PhoneAuthProvider.ForceResendingToken resendingToken;
 
@@ -71,11 +76,12 @@ public class OtpFragment extends Fragment {
                     Log.d("OTP","REGID "+RegId);
 
                 });
-        phoneNo = "+"+getArguments().getString("countryCode")+""+getArguments().getString("phoneNo");
+        countryCode = getArguments().getString("countryCode");
+        phoneNo = "+"+countryCode+""+getArguments().getString("phoneNo");
         onclicks();
         timer();
         binding.phoneNumber.setText(phoneNo);
-        sendOtp(phoneNo,false);
+        sendOtp(phoneNo,isResend);
 
     }
 
@@ -108,6 +114,8 @@ public class OtpFragment extends Fragment {
             public void onClick(View view) {
                 if (binding.timer.getText().toString().equals("Resend")) {
                 timer();
+                Log.i("GOOGLEE","resend pressed");
+                    sendOtp(phoneNo,isResend);
                 }
             }
         });
@@ -118,9 +126,15 @@ public class OtpFragment extends Fragment {
         binding.btnVerificationCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("OtpScreen","pressed verification button ");
+                //Log.i("GOOGLEE","pressed verification button ");
+                //String enteredOtp = binding.otpView.getOTP().toString();
+                //PhoneAuthCredential credential =  PhoneAuthProvider.getCredential(verificationCode,enteredOtp);
+                //signIn(credential);
+
             }
         });
+
+
 
     }
 
@@ -166,7 +180,57 @@ public class OtpFragment extends Fragment {
 
     void signIn(PhoneAuthCredential phoneAuthCredential){
 
-
+        setInProgress(true);
+        mAuth.signInWithCredential(phoneAuthCredential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                setInProgress(false);
+                if(task.isSuccessful()){
+                    startActivity(new Intent(requireContext(),HomeActivity.class));
+                   // String otp = "1111";
+//                    new Mvvm().registerUser(requireActivity(),countryCode+countryName,otp,App.getSharedpref().getString("countryName"),continentName,RegId).observe(requireActivity(), new Observer<RegisterRoot>() {
+//                        @Override
+//                        public void onChanged(RegisterRoot registerRoot) {
+//                            if (registerRoot.getSuccess().equalsIgnoreCase("1")) {
+//                                //    Toast.makeText(requireContext(), "getIdBannedStatus"+registerRoot.getDetails().getIdBannedStatus().toString(), Toast.LENGTH_SHORT).show();
+//                                //     Toast.makeText(requireContext(), "id : " + registerRoot.getDetails().getId(), Toast.LENGTH_SHORT).show();
+//                                App.getSharedpref().saveString(AppConstant.SESSION, "1");
+//                                App.getSharedpref().saveModel("RegisterRoot",registerRoot.getDetails());
+//                                //Toast.makeText(requireContext(), "image :-", Toast.LENGTH_SHORT).show();
+//                                App.getSharedpref().saveString("username",registerRoot.getDetails().getUsername());
+//                                App.getSharedpref().saveString("image",registerRoot.getDetails().getImage());
+//                                App.getSharedpref().saveString("name",registerRoot.getDetails().getName());
+//                                App.getSharedpref().saveString("country",registerRoot.getDetails().getCountry());
+//                                App.getSharedpref().saveString("phone",registerRoot.getDetails().getPhone());
+//                                App.getSharedpref().saveString("userId",registerRoot.getDetails().getId());
+//                                App.getSharedpref().saveString("dob",registerRoot.getDetails().getDob());
+//                                App.getSharedpref().saveString("gender",registerRoot.getDetails().getGender());
+//                                App.getSharedpref().saveString("vipLevel",registerRoot.getDetails().getVipLevel());
+//                                App.getSharedpref().saveString("mylevel",registerRoot.getDetails().getMyLevel());
+//                                App.getSharedpref().saveString("country_showUnshow",registerRoot.getDetails().getCountryShowUnshow());
+//                                App.getSharedpref().saveString("familyId",registerRoot.getDetails().getFamilyId());
+//                                App.getSharedpref().saveString("eventId",registerRoot.getDetails().getEventId());
+//                                AppConstants.USER_ID = registerRoot.getDetails().getId();
+////                            Log.i("IDDDDDD",registerRoot.getDetails().getId());
+////                            Log.i("IDDDDDD",registerRoot.getDetails().getUsername());
+//
+//                                if (String.valueOf(registerRoot.getDetails().getIdBannedStatus()).equals("true")){
+//                                    //  Toast.makeText(requireContext(), "id banned", Toast.LENGTH_SHORT).show();
+//                                    startActivity(new Intent(requireContext(), IdBannedActivity.class));
+//                                }else {
+//                                    startActivity(new Intent(requireContext(),HomeActivity.class));
+//                                }
+//                            } else {
+////                            Toast.makeText(requireContext(), "0 " + registerRoot.getMessage(), Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                    });
+                }
+                else{
+                    Toast.makeText(requireContext(), "OTP Verification Failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
 
