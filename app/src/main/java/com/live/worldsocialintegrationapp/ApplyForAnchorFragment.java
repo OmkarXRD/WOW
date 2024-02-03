@@ -1,9 +1,5 @@
 package com.live.worldsocialintegrationapp;
 
-import static android.content.ContentValues.TAG;
-
-import static com.facebook.FacebookSdk.getApplicationContext;
-
 import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
@@ -20,8 +16,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 
-import android.util.Log;
-import android.util.Patterns;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,15 +34,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.live.worldsocialintegrationapp.ModelClasses.AllPopularUsers.Detail;
-import com.live.worldsocialintegrationapp.ModelClasses.GetUserDetail.Details;
-import com.live.worldsocialintegrationapp.ModelClasses.GetUserDetail.GetUserDetailRoot;
 import com.live.worldsocialintegrationapp.Retrofit.AgencyRoot;
 import com.live.worldsocialintegrationapp.Retrofit.Mvvm;
-import com.live.worldsocialintegrationapp.Root.CountryRoot;
-import com.live.worldsocialintegrationapp.Root.CountryRootDetails;
 import com.live.worldsocialintegrationapp.utils.App;
-import com.live.worldsocialintegrationapp.utils.AppConstant;
 import com.live.worldsocialintegrationapp.utils.AppConstants;
 import com.live.worldsocialintegrationapp.utils.CommonUtils;
 import com.live.worldsocialintegrationapp.utils.RealPathUtil;
@@ -59,12 +47,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Handler;
 
 import okhttp3.RequestBody;
 
 
-public class ApplyForHostFragment extends Fragment {
+public class ApplyForAnchorFragment extends Fragment {
 
     private Spinner spinner_country_select,get_agency_id;
     private EditText get_name, get_address, get_email_address;
@@ -88,7 +75,7 @@ public class ApplyForHostFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_apply_for_host, container, false);
+        return inflater.inflate(R.layout.fragment_apply_for_anchor, container, false);
     }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {

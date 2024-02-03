@@ -41,6 +41,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/phoneNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="15dp"
@@ -84,7 +85,6 @@
             android:layout_marginEnd="10dp"
             android:layout_toStartOf="@id/phoneArrow"
             android:fontFamily="@font/inter"
-            android:text="+91 9876543210"
             android:textColor="#A4000000"
             android:textSize="14sp" />
     </RelativeLayout>

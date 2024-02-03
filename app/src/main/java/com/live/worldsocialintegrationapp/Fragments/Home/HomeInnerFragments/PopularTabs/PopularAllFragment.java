@@ -152,7 +152,7 @@ public class PopularAllFragment extends Fragment implements PopularAllItemsAdapt
                     }
                 }
             }
-        });
+          });
         }
     }
 
@@ -410,17 +410,21 @@ public class PopularAllFragment extends Fragment implements PopularAllItemsAdapt
         }
     }
 
+    //method to detect touch input on Banners
     @Override
     public void onClickCallback(int pos) {
-        if (pos==3){
+        if(pos == 2){
+            Navigation.findNavController(binding.getRoot()).navigate(R.id.applyforAnchor);
+        }
+        //Navigation.findNavController(binding.getRoot()).navigate(R.id.apply_for_agency);
 
-            Navigation.findNavController(binding.getRoot()).navigate(R.id.applyForHostFragment);
-
+            //below condition shows 2 options to user apply for agency and apply for Host
+        //        if (pos==2){
 //            Dialog dialog = new Dialog(requireContext());
 //            dialog.setContentView(R.layout.applyforagencyandanchor);
 //            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 //            dialog.setCancelable(true);
-//            TextView applyforhost  = dialog.findViewById(R.id.applyforhost);
+//            TextView applyforAnchor  = dialog.findViewById(R.id.applyforAnchor);
 //            TextView applyforagency = dialog.findViewById(R.id.applyforagency);
 //            Window window = dialog.getWindow();
 //            window.setGravity(Gravity.CENTER);
@@ -438,7 +442,7 @@ public class PopularAllFragment extends Fragment implements PopularAllItemsAdapt
 //                }
 //            });
 //
-//            applyforhost.setOnClickListener(new View.OnClickListener() {
+//            applyforAnchor.setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View v) {
 //                    dialog.dismiss();
@@ -458,22 +462,23 @@ public class PopularAllFragment extends Fragment implements PopularAllItemsAdapt
 //                    builder.setPositiveButton("Yes", (DialogInterface.OnClickListener) (dialog, which) -> {
 //                        // When the user click yes button then app will close
 //
-//                        new Mvvm().applyHost(AppConstants.USER_ID).observe(requireActivity(), new Observer<ApplyForHostModelClass>() {
-//                            @Override
-//                            public void onChanged(ApplyForHostModelClass applyForHostModelClass) {
-//                                if (applyForHostModelClass!=null){
-//                                    if (applyForHostModelClass.getStatus()==1){
-//                                        Toast.makeText(requireContext(), ""+applyForHostModelClass.getMessage(), Toast.LENGTH_SHORT).show();
-//                                    }else {
-//                                        Toast.makeText(requireContext(), ""+applyForHostModelClass.getMessage(), Toast.LENGTH_SHORT).show();
-//                                    }
-//                                }else {
-//                                    Toast.makeText(requireContext(), "Technical issue accquired", Toast.LENGTH_SHORT).show();
-//                                }
 //
-//                            }
-//                        });
-//
+////                        new Mvvm().applyHost(AppConstants.USER_ID).observe(requireActivity(), new Observer<ApplyForHostModelClass>() {
+////                            @Override
+////                            public void onChanged(ApplyForHostModelClass applyForHostModelClass) {
+////                                if (applyForHostModelClass!=null){
+////                                    if (applyForHostModelClass.getStatus()==1){
+////                                        Toast.makeText(requireContext(), ""+applyForHostModelClass.getMessage(), Toast.LENGTH_SHORT).show();
+////                                    }else {
+////                                        Toast.makeText(requireContext(), ""+applyForHostModelClass.getMessage(), Toast.LENGTH_SHORT).show();
+////                                    }
+////                                }else {
+////                                    Toast.makeText(requireContext(), "Technical issue occurred", Toast.LENGTH_SHORT).show();
+////                                }
+////
+////                            }
+////                        });
+//                        Navigation.findNavController(binding.getRoot()).navigate(R.id.applyForHostFragment);
 //                    });
 //
 //                    // Set the Negative button with No name Lambda OnClickListener method is use of DialogInterface interface.
@@ -489,9 +494,8 @@ public class PopularAllFragment extends Fragment implements PopularAllItemsAdapt
 //
 //                }
 //            });
-        }else {
+//        }
 
-        }
     }
     @Override
     public void onDestroy() {

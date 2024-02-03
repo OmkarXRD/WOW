@@ -16,7 +16,7 @@
         android:elevation="@dimen/dp_10"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/applyforhost"
+            android:id="@+id/applyforAnchor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Apply for Anchor"

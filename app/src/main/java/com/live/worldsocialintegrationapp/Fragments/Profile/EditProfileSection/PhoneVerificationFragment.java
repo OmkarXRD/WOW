@@ -11,12 +11,13 @@ import android.view.ViewGroup;
 
 import com.live.worldsocialintegrationapp.R;
 import com.live.worldsocialintegrationapp.databinding.FragmentPhoneVerificationBinding;
+import com.live.worldsocialintegrationapp.utils.App;
 
 
 public class PhoneVerificationFragment extends Fragment {
 
     FragmentPhoneVerificationBinding binding;
-
+    String phoneNumber;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -24,14 +25,26 @@ public class PhoneVerificationFragment extends Fragment {
        binding = FragmentPhoneVerificationBinding.inflate( inflater, container, false );
 
         onClicks();
-
+        onCreate();
        return  binding.getRoot();
+    }
+
+    private void onCreate(){
+        phoneNumber =  App.getSharedpref().getString("phone");
+        binding.changePhoneNumber.setText(phoneNumber);
     }
 
     private void onClicks() {
 
-        binding.phoneVerification.setOnClickListener( view -> {
+        binding.updateNumber.setOnClickListener( view -> {
             Navigation.findNavController( binding.getRoot() ).navigate( R.id.action_phoneVerificationFragment_to_phoneCodeFragment );
         } );
+
+        binding.backEducation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
     }
 }

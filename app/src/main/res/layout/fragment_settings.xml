@@ -21,6 +21,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
             android:rotation="180"
             android:src="@drawable/ic_baseline_arrow_forward_24"
             app:tint="@color/white" />

@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".Fragments.Profile.EditProfileSection.PhoneCodeFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="85dp"
-        android:background="@drawable/edit_profile_background_gradient"
+        android:background="@drawable/wallet_background"
         android:paddingHorizontal="10dp"
         android:paddingVertical="15dp">
 
@@ -62,6 +63,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/inter_medium"
             android:text="+91 9876543210"
             android:textColor="@color/black"
@@ -91,6 +93,7 @@
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/otpTimer"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_alignParentEnd="true"
@@ -98,7 +101,7 @@
             android:background="@drawable/resend_button"
             android:paddingHorizontal="5dp"
             android:paddingVertical="3dp"
-            android:text="Resend (60)"
+            android:text="00:60"
             android:textColor="#52000000" />
 
     </RelativeLayout>

@@ -7,9 +7,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.live.worldsocialintegrationapp.R;
 import com.live.worldsocialintegrationapp.databinding.FragmentConnectedAccountsBinding;
@@ -19,13 +21,12 @@ import com.live.worldsocialintegrationapp.utils.App;
 public class ConnectedAccountsFragment extends Fragment {
 
     FragmentConnectedAccountsBinding binding;
-    private String phone, gamil, facebook;
+    private String phone, email, facebook,name;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentConnectedAccountsBinding.inflate(inflater, container, false);
-
         onClick();
         return binding.getRoot();
 
@@ -37,10 +38,13 @@ public class ConnectedAccountsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         phone = App.getSharedpref().getString("phone");
-        gamil = App.getSharedpref().getString("gamil");
+        email = App.getSharedpref().getString("email");
+        name = App.getSharedpref().getString("name");
+
         facebook = App.getSharedpref().getString("facebook");
         if (phone.isEmpty()) {
-            binding.connectedPhoneTv.setText("+91 000000000");
+            binding.connectedPhoneTv.setText(" ");
+
         }else{
             binding.connectedPhoneTv.setText(phone);
         }
@@ -49,10 +53,10 @@ public class ConnectedAccountsFragment extends Fragment {
         }else{
             binding.connectFacebookTv.setText(facebook);
         }
-        if (gamil.isEmpty()) {
+        if (email.isEmpty()) {
             binding.connectGoogle.setText(" ");
         }else{
-            binding.connectGoogle.setText(gamil);
+            binding.connectGoogle.setText(email);
         }
 
 
@@ -62,8 +66,22 @@ public class ConnectedAccountsFragment extends Fragment {
 
     private void onClick() {
 
-        binding.connectAccounts.setOnClickListener(view -> {
-            Navigation.findNavController(binding.getRoot()).navigate(R.id.action_connectedAccountsFragment_to_phoneVerificationFragment);
+        binding.phoneNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (phone.isEmpty()){
+                    Toast.makeText(requireContext(), "You don't have any number linked", Toast.LENGTH_SHORT).show();
+                }else{
+                    Navigation.findNavController(binding.getRoot()).navigate(R.id.action_connectedAccountsFragment_to_phoneVerificationFragment);
+                }
+            }
+        });
+
+        binding.backEducation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
         });
 
     }

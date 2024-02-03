@@ -90,7 +90,7 @@ public class SettingsFragment extends Fragment {
     private void onClick() {
 
         binding.hostApplyTv.setOnClickListener(view -> {
-            Navigation.findNavController(binding.getRoot()).navigate(R.id.applyForHostFragment);
+            Navigation.findNavController(binding.getRoot()).navigate(R.id.applyforAnchor);
         });
         binding.settingConnectAccount.setOnClickListener(view -> {
             Navigation.findNavController(binding.getRoot()).navigate(R.id.action_settingsFragment_to_connectedAccountsFragment);

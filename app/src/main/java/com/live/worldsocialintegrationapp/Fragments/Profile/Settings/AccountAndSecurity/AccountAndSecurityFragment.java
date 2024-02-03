@@ -28,7 +28,7 @@ import com.live.worldsocialintegrationapp.utils.CommonUtils;
 
 
 public class AccountAndSecurityFragment extends Fragment {
-    private String phone, gamil, facebook;
+    private String phone, email, facebook;
     private TextView numberBoundTv, googleBoundTv, facebookBoundTv;
 
     @Override
@@ -47,7 +47,7 @@ public class AccountAndSecurityFragment extends Fragment {
         clicks(view);
 
         phone = App.getSharedpref().getString("phone");
-        gamil = App.getSharedpref().getString("gamil");
+        email = App.getSharedpref().getString("email");
         facebook = App.getSharedpref().getString("facebook");
 
         if (phone.isEmpty()) {
@@ -62,7 +62,7 @@ public class AccountAndSecurityFragment extends Fragment {
             facebookBoundTv.setText("Bound");
             facebookBoundTv.setTextColor(getResources().getColor(R.color.green));
         }
-        if (gamil.isEmpty()) {
+        if (email.isEmpty()) {
             googleBoundTv.setText("Unbound");
         } else {
             googleBoundTv.setText("Bound");

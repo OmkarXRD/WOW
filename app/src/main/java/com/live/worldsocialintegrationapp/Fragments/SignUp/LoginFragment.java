@@ -523,6 +523,8 @@ public class LoginFragment extends Fragment {
 //                    if (socialLoginRoot != null) {
                         if (socialLoginRoot != null && socialLoginRoot.getStatus() == 1) {
                             Log.i("socialLoginApi","inside if");
+                            Log.i("socialLoginApi","inside if "+email);
+                            Log.i("socialLoginApi","inside 2 " + socialLoginRoot.getDetails().getEmail());
                             //Toast.makeText(requireContext(), "1"+socialLoginRoot.getMessage(), Toast.LENGTH_SHORT).show();
                             App.getSharedpref().saveString(AppConstant.SESSION, "1");
                             App.getSharedpref().saveString("id bannedStatus",String.valueOf(socialLoginRoot.getDetails().idBannedStatus));
@@ -533,6 +535,7 @@ public class LoginFragment extends Fragment {
                             App.getSharedpref().saveString("userId", socialLoginRoot.getDetails().getId());
                             App.getSharedpref().saveString("country", socialLoginRoot.getDetails().getCountry());
                             App.getSharedpref().saveString("dob", socialLoginRoot.getDetails().getDob());
+                            App.getSharedpref().saveString("email", socialLoginRoot.getDetails().getEmail());
                             App.getSharedpref().saveModel("RegisterRoot", socialLoginRoot.getDetails());
                             AppConstants.USER_ID = socialLoginRoot.getDetails().getId();
 

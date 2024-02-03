@@ -844,9 +844,7 @@ public interface ServiceApi {
     @POST("get_single_family_details")
     Call<GetFamilyDetails> getFamilyLevelDetail(@Field("type") Integer type);
 
-    @Multipart
-    @POST("hostApi")
-    Call<Map> getApplyForHost(@PartMap HashMap<String, RequestBody> data);
+
 
     @GET("get_agencies")
     Call<AgencyRoot> getAgencyCode();
@@ -859,6 +857,10 @@ public interface ServiceApi {
                              @Part MultipartBody.Part panCardFrontPhoto,
                              @Part MultipartBody.Part aadharCardBack,
                              @Part MultipartBody.Part govt_photoId_proof);
+
+    @Multipart
+    @POST("hostApi")
+    Call<Map> getApplyForHost(@PartMap HashMap<String, RequestBody> data);
 
     @FormUrlEncoded
     @POST("apply_for_host")

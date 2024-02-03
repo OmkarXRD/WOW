@@ -579,10 +579,10 @@
         android:label="fragment_events_invitations"
         tools:layout="@layout/fragment_events_invitations" />
     <fragment
-        android:id="@+id/applyForHostFragment"
-        android:name="com.live.worldsocialintegrationapp.ApplyForHostFragment"
+        android:id="@+id/applyforAnchor"
+        android:name="com.live.worldsocialintegrationapp.ApplyForAnchorFragment"
         android:label="fragment_apply_for_host"
-        tools:layout="@layout/fragment_apply_for_host" />
+        tools:layout="@layout/fragment_apply_for_anchor" />
 
     <fragment
         android:id="@+id/apply_for_agency"
