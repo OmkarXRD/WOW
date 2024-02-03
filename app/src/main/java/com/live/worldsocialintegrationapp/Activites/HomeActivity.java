@@ -123,6 +123,8 @@ public class HomeActivity extends AppCompatActivity {
             Manifest.permission.BLUETOOTH_CONNECT,
             Manifest.permission.BLUETOOTH_PRIVILEGED
     };
+    private NavController.OnDestinationChangedListener navControllerListener;
+
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -233,16 +235,18 @@ public class HomeActivity extends AppCompatActivity {
         } else {
         }
         chatRequestCount();
-        Log.i("HomeScreen","in on create");
 
         //Implemented by #007
         //Checking if user is navigating back to homeFragment from chatScreen or any other screen
         NavController navController = Navigation.findNavController(HomeActivity.this, R.id.nav_home);
-        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+        navControllerListener = (controller, destination, arguments) -> {
             if (destination.getId() == R.id.homeFragment) {
                 updateBottomBar();
             }
-        });
+        };
+        navController.addOnDestinationChangedListener(navControllerListener);
+
+
     }
 
     //method to update the bottom bar by #007
@@ -508,9 +512,14 @@ public class HomeActivity extends AppCompatActivity {
     protected void onDestroy() {
 //        Toast.makeText(this, "destroyhomeactivity", Toast.LENGTH_SHORT).show();
 //        removeLiveUser();
+        super.onDestroy();
+        NavController navController = Navigation.findNavController(HomeActivity.this, R.id.nav_home);
+        navController.removeOnDestinationChangedListener(navControllerListener);
+
+
         onlineUsers.child(AppConstants.USER_ID).removeValue();
         finishAffinity();
-        super.onDestroy();
+
         binding = null;
     }
 
