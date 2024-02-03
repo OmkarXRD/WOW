@@ -3,6 +3,7 @@ package com.live.worldsocialintegrationapp.Activites;
 import static androidx.fragment.app.FragmentManager.TAG;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -27,6 +28,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -231,8 +233,26 @@ public class HomeActivity extends AppCompatActivity {
         } else {
         }
         chatRequestCount();
+        Log.i("HomeScreen","in on create");
+
+        //Implemented by #007
+        //Checking if user is navigating back to homeFragment from chatScreen or any other screen
+        NavController navController = Navigation.findNavController(HomeActivity.this, R.id.nav_home);
+        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+            if (destination.getId() == R.id.homeFragment) {
+                updateBottomBar();
+            }
+        });
     }
 
+    //method to update the bottom bar by #007
+    private void updateBottomBar() {
+        binding.bottomLay.homeFragment.setImageResource(R.drawable.icon_home_ftr_activesvg);
+        binding.bottomLay.secondMain.setImageResource(R.drawable.icon_explore_ftsvgr);
+        binding.bottomLay.bottomMessage.setImageResource(R.drawable.chattt);
+        binding.bottomLay.bottomProfile.setImageResource(R.drawable.icon_profile_ftr);
+
+    }
 
     private void banUserStatusCheck() {
         String id = App.getSharedpref().getString("userId");

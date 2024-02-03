@@ -83,7 +83,7 @@ public class ChatFragment extends Fragment implements ChatRVAdapter.Callback {
         }
 
         if (backPressed==0) {
-            //Bottom nav bar is enabled for now as per client requirement by#007
+
             //CommonUtils.disableBottomNavigation(requireActivity());
         }else if (backPressed == 1){
 //            binding.back.setOnClickListener(view1 -> );
@@ -214,12 +214,14 @@ public class ChatFragment extends Fragment implements ChatRVAdapter.Callback {
     }
     private void onBackPressed(View view) {
 
-//        binding.back.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Navigation.findNavController(requireActivity().findViewById(R.id.nav_home)).navigate(R.id.homeFragment);
-//            }
-//        });
+        binding.back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //getActivity().onBackPressed();
+                Navigation.findNavController(requireActivity().findViewById(R.id.nav_home)).navigate(R.id.homeFragment);
+
+            }
+        });
 
 
 
