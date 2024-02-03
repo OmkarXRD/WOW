@@ -329,12 +329,19 @@ public class Mvvm extends ViewModel {
     public LiveData<RegisterRoot> registerUser(Activity activity, String phone, String otp, String country, String continent, String regId) {
         mutableLiveData = new MutableLiveData();
         if (CommonUtils.isNetworkConnected(activity)) {
+            Log.i("RegisterUser","in else");
+            Log.i("RegisterUser","phn"+phone);
+            Log.i("RegisterUser","otp "+otp);
+            Log.i("RegisterUser","country "+country);
+            Log.i("RegisterUser","continent "+continent);
+            Log.i("RegisterUser","regId "+regId);
             serviceApi.registerUser(phone, otp, country, continent, regId).enqueue(new Callback<RegisterRoot>() {
                 @Override
                 public void onResponse(Call<RegisterRoot> call, Response<RegisterRoot> response) {
                     if (response.body() != null) {
                         mutableLiveData.postValue(response.body());
                     } else {
+                        Log.i("RegisterUser","in else");
                         Toast.makeText(activity, "Technical issue", Toast.LENGTH_SHORT).show();
                     }
                 }

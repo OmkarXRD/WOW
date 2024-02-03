@@ -259,12 +259,22 @@
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_connected_accounts.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_profile_main.xml">
         <config>
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_profile_moments.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_enter_phone.xml">
         <config>
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
@@ -932,10 +942,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7fbe7f4d-af4c-474b-b3a8-adb47f5cf8c0" name="Changes" comment="Initial Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/SignUp/LoginFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/SignUp/LoginFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/SignUp/OtpFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/SignUp/OtpFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/Mvvm.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/Mvvm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/ServiceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/ServiceApi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -945,7 +953,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\rishabh\.android\avd\Pixel_4_API_33.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[8c6859b8]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -1018,7 +1026,7 @@
   &quot;keyToString&quot;: {
     &quot;ApkExportedModule&quot;: &quot;WorldSocialIntegrationapp.app&quot;,
     &quot;BundleExportedModule&quot;: &quot;WorldSocialIntegrationapp.app&quot;,
-    &quot;ExportApk.ApkPathForWorldSocialIntegrationapp.app&quot;: &quot;D:\\WOW's application\\WOW's Mobile\\app&quot;,
+    &quot;ExportApk.ApkPathForWorldSocialIntegrationapp.app&quot;: &quot;D:\\Builds WOW\\Build 1 with key\\Debug&quot;,
     &quot;ExportBundle.BundlePathForWorldSocialIntegrationapp.app&quot;: &quot;D:\\WOW's application\\WOW's Mobile\\app&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -1026,6 +1034,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.4.1/f9e48179ea0c6ac0080a277b9383f74523f56aa2/appcompat-1.4.1-sources.jar!/androidx/appcompat/widget/AppCompatButton.java_SELECTED&quot;: &quot;AppCompatButton&quot;,
     &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.2.1/f0f93e67af3f7417bdd560d5142f6dec4fe629c3/recyclerview-1.2.1-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED&quot;: &quot;RecyclerView&quot;,
+    &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.github.aabhasr1/OtpView/v1.1.2/3111a07f43afb3a044512cd8e5003913ec0a4cec/OtpView-v1.1.2-sources.jar!/in/aabhasjindal/otptextview/OtpTextView.java_SELECTED&quot;: &quot;OtpTextView&quot;,
     &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.6.0/976aa22bd46c7748fade98594298bcd36b92f844/material-1.6.0-sources.jar!/com/google/android/material/progressindicator/BaseProgressIndicator.java_SELECTED&quot;: &quot;BaseProgressIndicator&quot;,
     &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.6.0/976aa22bd46c7748fade98594298bcd36b92f844/material-1.6.0-sources.jar!/com/google/android/material/progressindicator/LinearProgressIndicator.java_SELECTED&quot;: &quot;LinearProgressIndicator&quot;,
     &quot;android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/view/View.java_SELECTED&quot;: &quot;View&quot;,
@@ -1035,14 +1044,14 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/WOW's application/WOW's&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/twilio&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Builds WOW/Build 1 with key/Debug&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;experimental&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;ExportApk.BuildVariants&quot;: [
-      &quot;debug&quot;
+      &quot;release&quot;
     ]
   }
 }</component>

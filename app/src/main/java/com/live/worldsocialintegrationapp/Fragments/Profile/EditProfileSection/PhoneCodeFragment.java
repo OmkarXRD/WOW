@@ -6,12 +6,14 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Toast;
 
 import com.live.worldsocialintegrationapp.R;
 import com.live.worldsocialintegrationapp.databinding.FragmentPhoneCodeBinding;
@@ -31,6 +33,10 @@ public class PhoneCodeFragment extends Fragment {
     }
 
     private void onClick() {
+        //Toast.makeText(requireContext(), "Verification code is sent to "+getArguments().getString("phoneNo"), Toast.LENGTH_SHORT).show();
+        //binding.phoneNumber.setText(getArguments().getString("phoneNo"));
+
+
         binding.nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,4 +71,9 @@ public class PhoneCodeFragment extends Fragment {
 
 
     }
+
+
+
+
+
 }

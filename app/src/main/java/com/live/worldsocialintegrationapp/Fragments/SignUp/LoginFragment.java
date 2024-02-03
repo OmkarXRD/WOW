@@ -265,6 +265,7 @@ public class LoginFragment extends Fragment {
             public void onClick(View view) {
                 if (binding.switchButton.isChecked()){
                     Navigation.findNavController(binding.getRoot()).navigate(R.id.action_loginFragment_to_enterPhoneFragment, getArguments());
+
                 }else {
                     Toast.makeText(requireContext(), "Please accept the terms and conditions", Toast.LENGTH_SHORT).show();
                 }
@@ -353,14 +354,15 @@ public class LoginFragment extends Fragment {
                 String personFamilyName = acct.getFamilyName();
                 String personEmail = acct.getEmail();
                 String personId = acct.getId();
-                Uri personPhoto = acct.getPhotoUrl();
+                //Uri personPhoto = acct.getPhotoUrl();
                 Toast.makeText(requireActivity(), "LogIn Success", Toast.LENGTH_SHORT).show();
-                socialLoginApi(countryNew,personId,personName,personEmail,personPhoto.toString());
-
-
-
-
-
+                Log.i("socialLoginApi"," above social login api call ");
+                Log.i("socialLoginApi",countryNew);
+                Log.i("socialLoginApi",personId);
+                Log.i("socialLoginApi",personName);
+                Log.i("socialLoginApi",personEmail);
+                //Log.i("socialLoginApi",personPhoto.toString());
+                socialLoginApi(countryNew,personId,personName,personEmail);
 
             }
             // Signed in successfully, show authenticated UI.
@@ -489,8 +491,9 @@ public class LoginFragment extends Fragment {
                 });
     }
 
-    private void socialLoginApi(String continent, String socialId, String name, String email, String s) {
+    private void socialLoginApi(String continent, String socialId, String name, String email) {
 
+        Log.d("socialLoginApi", "socialLoginApi: ");
         Log.d("socialLoginApi", "socialLoginApi: "+socialId);
         Log.d("socialLoginApi", "socialLoginApi: "+RegId);
         Log.d("socialLoginApi", "socialLoginApi: "+deviceId);
@@ -500,7 +503,9 @@ public class LoginFragment extends Fragment {
         Log.d("socialLoginApi", "socialLoginApi: "+email);
         Log.d("socialLoginApi", "socialLoginApi: "+continent);
         Log.d("socialLoginApi", "socialLoginApi: "+countryNew);
-        Log.d("socialLoginApi", "socialLoginApi: "+s);
+        //Log.d("socialLoginApi", "socialLoginApi: "+s);
+        String continentName = App.getSharedpref().getString("continentName");
+
 
 
         new Mvvm().socialLogin(requireActivity(),
@@ -511,7 +516,7 @@ public class LoginFragment extends Fragment {
                         CommonUtils.getRequestBodyText(""),
                         CommonUtils.getRequestBodyText(name),
                         CommonUtils.getRequestBodyText(email),
-                        CommonUtils.getRequestBodyText(continent),
+                        CommonUtils.getRequestBodyText(continentName),
                        // CommonUtils.getFileData(s,"image"),
                         CommonUtils.getRequestBodyText(countryNew))
                 .observe(requireActivity(), socialLoginRoot -> {
@@ -667,7 +672,7 @@ public class LoginFragment extends Fragment {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == PERMISSION_ID) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Log.i("Googleeee","in on request persmission method");
+
                 getLastLocation();
             }
         }
@@ -694,7 +699,7 @@ public class LoginFragment extends Fragment {
             }
             country= addresses.get(0).getCountryName();
             App.getSharedpref().saveString("countryName",country);
-            Log.i("Googleeee","above function call");
+            Log.i("socialLoginApi","Country " + country);
             loginWithGoogle(country, latitude, longitude);
 //            App.getSharedpref().saveString(AppConstants.USER_CURRENT_ADDRESS, addresses.get(0).getLocality());
 
