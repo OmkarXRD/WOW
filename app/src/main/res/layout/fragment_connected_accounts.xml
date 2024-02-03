@@ -122,10 +122,11 @@
 
         <ImageView
             android:id="@+id/facebookArrow"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="10dp"
+            android:layout_height="11dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
             android:src="@drawable/ic_baseline_arrow_forward_ios_24"
             app:tint="#A4000000" />
 
@@ -226,7 +227,7 @@
             android:layout_below="@id/whyToConnect1"
             android:fontFamily="@font/inter"
             android:lineSpacingExtra="3dp"
-            android:text="Connect to Phone is recommended to protect your Yeah! Live account."
+            android:text="Connect to Phone is recommended to protect your WOW! Live account."
             android:textColor="#535353"
             android:textSize="12sp" />
 
@@ -247,7 +248,7 @@
             android:layout_below="@id/whyToConnect3"
             android:fontFamily="@font/inter"
             android:lineSpacingExtra="3dp"
-            android:text="Once connected, you can easily to log in yeah! Live with any connected account from anywhere."
+            android:text="Once connected, you can easily to log in WOW! Live with any connected account from anywhere."
             android:textColor="#535353"
             android:textSize="12sp" />
 

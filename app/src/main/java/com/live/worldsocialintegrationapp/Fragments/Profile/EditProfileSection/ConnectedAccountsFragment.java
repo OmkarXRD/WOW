@@ -44,19 +44,24 @@ public class ConnectedAccountsFragment extends Fragment {
         facebook = App.getSharedpref().getString("facebook");
         if (phone.isEmpty()) {
             binding.connectedPhoneTv.setText(" ");
-
+            binding.phoneArrow.setVisibility(View.GONE);
         }else{
             binding.connectedPhoneTv.setText(phone);
+            binding.phoneArrow.setVisibility(View.VISIBLE);
         }
         if (facebook.isEmpty()) {
             binding.connectFacebookTv.setText(" ");
+            binding.facebookArrow.setVisibility(View.GONE);
         }else{
             binding.connectFacebookTv.setText(facebook);
+            binding.facebookArrow.setVisibility(View.VISIBLE);
         }
         if (email.isEmpty()) {
             binding.connectGoogle.setText(" ");
+            binding.googleArrow.setVisibility(View.GONE);
         }else{
             binding.connectGoogle.setText(email);
+            binding.googleArrow.setVisibility(View.VISIBLE);
         }
 
 
