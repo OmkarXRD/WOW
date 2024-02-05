@@ -51,21 +51,24 @@ public class AccountAndSecurityFragment extends Fragment {
         facebook = App.getSharedpref().getString("facebook");
 
         if (phone.isEmpty()) {
-            numberBoundTv.setText("Unbound");
-        } else {
             numberBoundTv.setText("Bound");
+
+        } else {
+            numberBoundTv.setText("Unbound");
             numberBoundTv.setTextColor(getResources().getColor(R.color.green));
         }
         if (facebook.isEmpty()) {
-            facebookBoundTv.setText("Unbound");
-        } else {
             facebookBoundTv.setText("Bound");
+
+        } else {
+            facebookBoundTv.setText("Unbound");
             facebookBoundTv.setTextColor(getResources().getColor(R.color.green));
         }
         if (email.isEmpty()) {
-            googleBoundTv.setText("Unbound");
-        } else {
             googleBoundTv.setText("Bound");
+        } else {
+
+            googleBoundTv.setText("Unbound");
             googleBoundTv.setTextColor(getResources().getColor(R.color.green));
         }
     }

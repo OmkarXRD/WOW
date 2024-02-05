@@ -32,6 +32,7 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.google.android.gms.auth.api.identity.BeginSignInRequest;
@@ -64,6 +65,8 @@ import com.live.worldsocialintegrationapp.utils.App;
 import com.live.worldsocialintegrationapp.utils.AppConstant;
 import com.live.worldsocialintegrationapp.utils.AppConstants;
 import com.live.worldsocialintegrationapp.utils.CommonUtils;
+
+import org.json.JSONException;
 
 import java.io.File;
 import java.io.IOException;
@@ -296,7 +299,6 @@ public class LoginFragment extends Fragment {
 
         binding.llLoginWithFacebook.setOnClickListener(view -> {
             if (binding.switchButton.isChecked()){
-
                FacebookLogin();
             }else {
                 Toast.makeText(requireContext(), "Please accept the terms and conditions", Toast.LENGTH_SHORT).show();
@@ -321,7 +323,9 @@ public class LoginFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQ_ONE_TAP) {
+            Log.i("Facebookzzzzzzzzz","zzzzzzzzz");
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
             callbackManager.onActivityResult(requestCode, resultCode, data);
@@ -405,16 +409,44 @@ public class LoginFragment extends Fragment {
 //        }
     }
 
-
-
-
     private void FacebookLogin() {
 
-        loginManager.logInWithReadPermissions(LoginFragment.this,
-                Arrays.asList("email", "public_profile"));
+       loginManager.logInWithReadPermissions(LoginFragment.this, Arrays.asList("public_profile"));
+        Log.i("Facebookzzzzzzzzz","Logged in successfully 1");
+//        loginManager.logInWithReadPermissions(LoginFragment.this,
+//                Arrays.asList("email", "public_profile"));
         loginManager.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
+                Log.i("Facebookzzzzzzzzz","Logged in successfully 2" + loginResult.toString());
+
+                GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), (object, response) -> {
+                    if (object != null) {
+                        Log.i("Facebookzzzzzzzzz","Logged in successfully in if" );
+                        Log.i("Facebookzzzzzzzzz",object.toString() );
+                        try {
+
+                            String personName = object.getString("name");
+                            //String personEmail = object.getString("email");
+                            String socialID = object.getString("id");
+                            App.getSharedpref().saveString("facebook",personName);
+                            Toast.makeText(requireActivity(), "LogIn Success", Toast.LENGTH_SHORT).show();
+                            Log.i("socialLoginApi",personName);
+
+                            //added static email for now as we need to get mail from facebook
+                            socialLoginApi(countryNew,socialID,personName,"www.test@gmail.com");
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    else{
+                        Log.i("Facebookzzzzzzzzz","Logged in successfully in else");
+                    }
+                });
+                request.executeAsync();
+
 //                GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), (object, response) -> {
 //                    if (object != null) {
 //
@@ -455,13 +487,13 @@ public class LoginFragment extends Fragment {
 
             @Override
             public void onCancel() {
-                Log.v("LoginScreen", "---onCancel");
+                Log.i("Facebookzzzzzzzzz","on cancel");
             }
 
             @Override
             public void onError(FacebookException error) {
                 // here write code when get error
-                Log.v("LoginScreen", "----onError: " + error.getMessage());
+                Log.v("Facebookzzzzzzzzz", "----onError: " + error.getMessage());
             }
         });
     }
@@ -541,7 +573,8 @@ public class LoginFragment extends Fragment {
                             }else {
                                 startActivity(new Intent(requireContext(), IdBannedActivity.class));
                             }
-                        } else {
+                        }
+                        else {
                             if (getContext() != null) {
                                 Toast.makeText(requireContext(), "Technical issue ", Toast.LENGTH_SHORT).show();
                             }

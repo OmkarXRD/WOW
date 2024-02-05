@@ -9,8 +9,10 @@
     <!--     facebook-->
     <string name="facebook_app_id">292751556811555</string>
     <string name="fb_login_protocol_scheme">fb292751556811555</string>
-    <string name="facebook_client_token">56789</string>
+    <string name="facebook_client_token">a90f6cd6c68e4edf612e263a95692fd6</string>
     <string name="government_address_id_proof">government address id proof</string>
+
+
 
 
     <string name="post_bio"><b>Akshay Syal</b>Lorem lpsum is simply dummy text of the printing and typesetting industry. Lorem lpsum...</string>
