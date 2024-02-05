@@ -44,18 +44,6 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="applyForHostFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="2940" />
-                            <option name="y" value="724" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="apply_for_agency">
                     <value>
                       <LayoutPositions>
@@ -63,6 +51,18 @@
                           <Point>
                             <option name="x" value="3184" />
                             <option name="y" value="724" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="applyforAnchor">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                       </LayoutPositions>

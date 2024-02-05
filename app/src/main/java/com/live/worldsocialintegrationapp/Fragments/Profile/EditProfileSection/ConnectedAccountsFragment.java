@@ -63,10 +63,6 @@ public class ConnectedAccountsFragment extends Fragment {
             binding.connectGoogle.setText(email);
             binding.googleArrow.setVisibility(View.VISIBLE);
         }
-
-
-
-
     }
 
     private void onClick() {
