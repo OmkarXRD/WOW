@@ -2,11 +2,14 @@ package com.live.worldsocialintegrationapp.Fragments.Profile.EditProfileSection;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.navigation.Navigation;
 
 import android.os.CountDownTimer;
@@ -18,14 +21,35 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthOptions;
+import com.google.firebase.auth.PhoneAuthProvider;
+import com.live.worldsocialintegrationapp.Activites.HomeActivity;
+import com.live.worldsocialintegrationapp.Activites.IdBannedActivity;
+import com.live.worldsocialintegrationapp.ModelClasses.Register.RegisterRoot;
 import com.live.worldsocialintegrationapp.R;
+import com.live.worldsocialintegrationapp.Retrofit.Mvvm;
 import com.live.worldsocialintegrationapp.databinding.FragmentPhoneCodeBinding;
 import com.live.worldsocialintegrationapp.utils.App;
+import com.live.worldsocialintegrationapp.utils.AppConstant;
+import com.live.worldsocialintegrationapp.utils.AppConstants;
+
+import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 public class PhoneCodeFragment extends Fragment {
 
     FragmentPhoneCodeBinding binding;
-    String phoneNumber;
+    String phoneNumber,verificationCode,countryCode,upadtedPhoneNo;
+    PhoneAuthProvider.ForceResendingToken resendingToken;
+    boolean isResend = false;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    Long timeOutSeconds = 60L;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -33,13 +57,20 @@ public class PhoneCodeFragment extends Fragment {
 
         onClick();
         onCreate();
+        sendOtp(upadtedPhoneNo,isResend);
         timer();
         return binding.getRoot();
     }
 
     private void onCreate(){
         phoneNumber =  App.getSharedpref().getString("phone");
+        if(Objects.equals(phoneNumber, "")){
+            phoneNumber = getArguments().getString("phone");
+        }
         binding.phoneNumber.setText(phoneNumber);
+        countryCode = getArguments().getString("countryCode");
+        upadtedPhoneNo = "+"+countryCode+""+phoneNumber;
+        Log.i("OTPCheck","error "+upadtedPhoneNo);
     }
     private void onClick() {
         //Toast.makeText(requireContext(), "Verification code is sent to "+getArguments().getString("phoneNo"), Toast.LENGTH_SHORT).show();
@@ -48,7 +79,11 @@ public class PhoneCodeFragment extends Fragment {
         binding.nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showdialogbox();
+               // showdialogbox();
+                String enteredOtp = binding.otpText.getText().toString();
+                Log.i("OTPCheck","otp "+enteredOtp);
+                PhoneAuthCredential credential =  PhoneAuthProvider.getCredential(verificationCode,enteredOtp);
+                signIn(credential);
             }
         });
         binding.backEducation.setOnClickListener(new View.OnClickListener() {
@@ -113,7 +148,76 @@ public class PhoneCodeFragment extends Fragment {
 
     }
 
+    void sendOtp(String phoneNumber,boolean isResend){
+        setInProgress(true);
 
+        PhoneAuthOptions.Builder builder = PhoneAuthOptions.newBuilder(mAuth)
+                .setPhoneNumber(phoneNumber)
+                .setTimeout(timeOutSeconds, TimeUnit.SECONDS)
+                .setActivity(requireActivity())
+                .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                    @Override
+                    public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+                        signIn(phoneAuthCredential);
+                        setInProgress(false);
+                    }
+
+                    @Override
+                    public void onVerificationFailed(@NonNull FirebaseException e) {
+                        Toast.makeText(requireContext(), "OTP Verification Failed", Toast.LENGTH_SHORT).show();
+                        Log.i("OTPCheck","error "+ e);
+                        setInProgress(false);
+                    }
+
+                    @Override
+                    public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                        super.onCodeSent(s, forceResendingToken);
+                        verificationCode = s;
+                        resendingToken = forceResendingToken;
+                        Toast.makeText(requireContext(), "OTP Sent Successfully", Toast.LENGTH_SHORT).show();
+                        Log.i("OTPCheck","error oncodeSent 1"+ s);
+                        Log.i("OTPCheck","error oncodeSent 2"+ forceResendingToken);
+                        setInProgress(false);
+                    }
+                });
+        if(isResend){
+            PhoneAuthProvider.verifyPhoneNumber(builder.setForceResendingToken(resendingToken).build());
+        }else{
+            PhoneAuthProvider.verifyPhoneNumber(builder.build());
+        }
+
+    }
+
+    void signIn(PhoneAuthCredential phoneAuthCredential){
+
+        setInProgress(true);
+        mAuth.signInWithCredential(phoneAuthCredential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                setInProgress(false);
+                if(task.isSuccessful()){
+                    Navigation.findNavController(binding.getRoot()).navigate(R.id.action_phoneCodeFrag_to_addPasswordFrag);
+                    App.getSharedpref().saveString("phone",countryCode+""+phoneNumber);
+                }
+                else{
+                    Toast.makeText(requireContext(), "OTP Verification Failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+
+
+    void setInProgress(boolean inProgress){
+        if(inProgress){
+            binding.nextButton.setVisibility(View.GONE);
+        }
+        else {
+           binding.nextButton.setVisibility(View.VISIBLE);
+            binding.progressBar.setVisibility(View.GONE);
+        }
+
+    }
 
 
 

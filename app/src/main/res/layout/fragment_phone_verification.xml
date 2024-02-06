@@ -121,6 +121,7 @@
         android:background="@color/back_light" />
 
     <RelativeLayout
+        android:id="@+id/changePassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="15dp"

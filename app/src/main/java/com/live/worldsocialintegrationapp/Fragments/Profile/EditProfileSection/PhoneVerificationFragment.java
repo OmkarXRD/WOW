@@ -1,5 +1,6 @@
 package com.live.worldsocialintegrationapp.Fragments.Profile.EditProfileSection;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -17,7 +18,7 @@ import com.live.worldsocialintegrationapp.utils.App;
 public class PhoneVerificationFragment extends Fragment {
 
     FragmentPhoneVerificationBinding binding;
-    String phoneNumber;
+    String phoneNumber,countryCode;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,21 +30,30 @@ public class PhoneVerificationFragment extends Fragment {
        return  binding.getRoot();
     }
 
+    @SuppressLint("SetTextI18n")
     private void onCreate(){
         phoneNumber =  App.getSharedpref().getString("phone");
-        binding.changePhoneNumber.setText(phoneNumber);
+        countryCode =  App.getSharedpref().getString("countryCode");
+        binding.changePhoneNumber.setText("+"+countryCode+" "+phoneNumber);
     }
 
     private void onClicks() {
 
         binding.updateNumber.setOnClickListener( view -> {
-            Navigation.findNavController( binding.getRoot() ).navigate( R.id.action_phoneVerificationFragment_to_phoneCodeFragment );
+            Navigation.findNavController( binding.getRoot() ).navigate( R.id.action_phoneVerificationFragment_to_addPhoneNumber);
         } );
 
         binding.backEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActivity().onBackPressed();
+            }
+        });
+
+        binding.changePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController( binding.getRoot() ).navigate( R.id.action_phoneVerificationFragment_to_addPasswordFrag);
             }
         });
     }

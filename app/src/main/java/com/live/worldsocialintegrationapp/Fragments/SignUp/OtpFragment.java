@@ -68,7 +68,7 @@ public class OtpFragment extends Fragment {
         FirebaseMessaging.getInstance().getToken()
                 .addOnCompleteListener(task -> {
                     if (!task.isSuccessful()) {
-                        Log.w("OP", "Fetching FCM registration token failed", task.getException());
+                        Log.w("OTP", "Fetching FCM registration token failed", task.getException());
                         return;
                     }
 //                   token = task.getResult();

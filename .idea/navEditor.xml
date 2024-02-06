@@ -44,6 +44,39 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="addPasswordFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="3381" />
+                            <option name="y" value="4921" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="addPhoneNumber">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="2862" />
+                            <option name="y" value="5377" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_addPhoneNumber_to_phoneCode">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="apply_for_agency">
                     <value>
                       <LayoutPositions>
@@ -61,8 +94,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="-183" />
+                            <option name="y" value="37" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -187,6 +220,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_connectedAccountsFragment_to_addPhoneNumber">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_connectedAccountsFragment_to_phoneVerificationFragment">
                               <value>
                                 <LayoutPositions />
@@ -252,8 +290,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="2208" />
-                            <option name="y" value="5552" />
+                            <option name="x" value="2205" />
+                            <option name="y" value="5554" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -501,8 +539,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="47" />
+                            <option name="y" value="27" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -974,9 +1012,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="3184" />
-                            <option name="y" value="4924" />
+                            <option name="x" value="3188" />
+                            <option name="y" value="5207" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_phoneCodeFrag_to_addPasswordFrag">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -993,6 +1040,11 @@
                         <option name="myPositions">
                           <map>
                             <entry key="action_phoneVerificationFragment_to_phoneCodeFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="phoneVerificationFragment_to_addPasswordFrag">
                               <value>
                                 <LayoutPositions />
                               </value>
