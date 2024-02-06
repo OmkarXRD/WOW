@@ -96,7 +96,7 @@ public class LoginFragment extends Fragment {
     private static final int REQ_ONE_TAP = 2;
     String RegId = "";
     String countryNew,countryName;
-    String socialId, name, email, country;
+    String socialId, name, email="", country;
     private String ImagePath,deviceId;
     private MultipartBody.Part imagePart;
     private RequestBody country_req;
@@ -189,10 +189,6 @@ public class LoginFragment extends Fragment {
                     Log.i("Googlee"," in Onactive 1");
                     Intent signInIntent = mGoogleSignInClient.getSignInIntent();
                     startActivityForResult(signInIntent, REQ_ONE_TAP);
-
-
-
-
                 }else {
                     Toast.makeText(requireContext(), "Please accept the terms and conditions", Toast.LENGTH_SHORT).show();
                 }
@@ -323,7 +319,7 @@ public class LoginFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
+
         if (requestCode == REQ_ONE_TAP) {
             Log.i("Facebookzzzzzzzzz","zzzzzzzzz");
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
@@ -333,6 +329,9 @@ public class LoginFragment extends Fragment {
 
             super.onActivityResult(requestCode, resultCode, data);
         }
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+
+
 
 //        if (requestCode == REQ_ONE_TAP) {
 //            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
@@ -411,10 +410,10 @@ public class LoginFragment extends Fragment {
 
     private void FacebookLogin() {
 
-       loginManager.logInWithReadPermissions(LoginFragment.this, Arrays.asList("public_profile"));
+       //loginManager.logInWithReadPermissions(LoginFragment.this, Arrays.asList("public_profile"));
         Log.i("Facebookzzzzzzzzz","Logged in successfully 1");
-//        loginManager.logInWithReadPermissions(LoginFragment.this,
-//                Arrays.asList("email", "public_profile"));
+        loginManager.logInWithReadPermissions(LoginFragment.this,
+                Arrays.asList("email", "public_profile"));
         loginManager.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -431,10 +430,10 @@ public class LoginFragment extends Fragment {
                             String socialID = object.getString("id");
                             App.getSharedpref().saveString("facebook",personName);
                             Toast.makeText(requireActivity(), "LogIn Success", Toast.LENGTH_SHORT).show();
-                            Log.i("socialLoginApi",personName);
+                            //Log.i("Facebookzzzzzzzzz",personName +object.getString("email"));
 
                             //added static email for now as we need to get mail from facebook
-                            socialLoginApi(countryNew,socialID,personName,"www.test@gmail.com");
+                            socialLoginApi(countryNew,socialID,personName,email);
 
 
                         } catch (JSONException e) {
@@ -640,8 +639,6 @@ public class LoginFragment extends Fragment {
                 }else {
                     //Toast.makeText(requireContext(), "locationProviderClient null ", Toast.LENGTH_SHORT).show();
                 }
-
-
             } else {
                 Toast.makeText(requireActivity(), "Turn on location", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
@@ -712,7 +709,7 @@ public class LoginFragment extends Fragment {
     }
 
     private void getCompleteAddressString() {
-        Log.i("Googleeee","inside getCompleteAddressString");
+
         Geocoder geocoder;
         List<Address> addresses = null;
         geocoder = new Geocoder(requireContext(), Locale.getDefault());

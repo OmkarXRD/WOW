@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.live.worldsocialintegrationapp.R;
 import com.live.worldsocialintegrationapp.databinding.FragmentEnterPhoneBinding;
+import com.live.worldsocialintegrationapp.utils.App;
 
 
 public class EnterPhoneFragment extends Fragment {
@@ -55,7 +56,7 @@ public class EnterPhoneFragment extends Fragment {
 
             String countryCode = binding.ccp.getSelectedCountryCode();
             String country = binding.ccp.getSelectedCountryName().toString();
-
+            App.getSharedpref().saveString("countryCode",countryCode);
             //Toast.makeText(requireContext(), ""+country, Toast.LENGTH_SHORT).show();
 
             if(binding.enterPhoneEdtx.getText().toString().trim().length() == 0){
