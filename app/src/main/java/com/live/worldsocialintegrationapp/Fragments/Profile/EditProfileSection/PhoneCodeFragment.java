@@ -50,6 +50,9 @@ public class PhoneCodeFragment extends Fragment {
     boolean isResend = false;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     Long timeOutSeconds = 60L;
+
+    boolean changePhoneNumber,resetPassword;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -63,13 +66,18 @@ public class PhoneCodeFragment extends Fragment {
     }
 
     private void onCreate(){
+
+        changePhoneNumber = getArguments().getBoolean("changePhoneNumber",false);
+        resetPassword = getArguments().getBoolean("resetPassword",false);
+
         phoneNumber =  App.getSharedpref().getString("phone");
         if(Objects.equals(phoneNumber, "")){
             phoneNumber = getArguments().getString("phone");
         }
-        binding.phoneNumber.setText(phoneNumber);
-        countryCode = getArguments().getString("countryCode");
-        upadtedPhoneNo = "+"+countryCode+""+phoneNumber;
+
+        //countryCode = getArguments().getString("countryCode");
+        upadtedPhoneNo = "+"+phoneNumber;
+        binding.phoneNumber.setText(upadtedPhoneNo);
         Log.i("OTPCheck","error "+upadtedPhoneNo);
     }
     private void onClick() {
@@ -81,7 +89,6 @@ public class PhoneCodeFragment extends Fragment {
             public void onClick(View view) {
                // showdialogbox();
                 String enteredOtp = binding.otpText.getText().toString();
-                Log.i("OTPCheck","otp "+enteredOtp);
                 PhoneAuthCredential credential =  PhoneAuthProvider.getCredential(verificationCode,enteredOtp);
                 signIn(credential);
             }
@@ -99,6 +106,7 @@ public class PhoneCodeFragment extends Fragment {
                 if (binding.otpTimer.getText().toString().equals("Resend")) {
                     timer();
                     Log.i("OTP","resend pressed");
+                   sendOtp(upadtedPhoneNo,true);
                     //call function to send the otp again
                 }
             }
@@ -165,7 +173,7 @@ public class PhoneCodeFragment extends Fragment {
                     @Override
                     public void onVerificationFailed(@NonNull FirebaseException e) {
                         Toast.makeText(requireContext(), "OTP Verification Failed", Toast.LENGTH_SHORT).show();
-                        Log.i("OTPCheck","error "+ e);
+
                         setInProgress(false);
                     }
 
@@ -174,10 +182,14 @@ public class PhoneCodeFragment extends Fragment {
                         super.onCodeSent(s, forceResendingToken);
                         verificationCode = s;
                         resendingToken = forceResendingToken;
-                        Toast.makeText(requireContext(), "OTP Sent Successfully", Toast.LENGTH_SHORT).show();
-                        Log.i("OTPCheck","error oncodeSent 1"+ s);
-                        Log.i("OTPCheck","error oncodeSent 2"+ forceResendingToken);
-                        setInProgress(false);
+                        if (getContext() != null) {
+                            // Access the context and proceed with your code
+                            Toast.makeText(requireContext(), "OTP Sent Successfully", Toast.LENGTH_SHORT).show();
+                            setInProgress(false);
+                            // You can also access other UI elements or perform other actions here
+                        }
+
+
                     }
                 });
         if(isResend){
@@ -196,8 +208,17 @@ public class PhoneCodeFragment extends Fragment {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 setInProgress(false);
                 if(task.isSuccessful()){
-                    Navigation.findNavController(binding.getRoot()).navigate(R.id.action_phoneCodeFrag_to_addPasswordFrag);
-                    App.getSharedpref().saveString("phone",countryCode+""+phoneNumber);
+                    if(changePhoneNumber){
+                        Bundle bundle=new Bundle();
+                        bundle.putBoolean("changePhoneNumber",true);
+                        Navigation.findNavController(binding.getRoot()).navigate(R.id.action_phoneCodeFragment_to_addPhoneNumber,bundle);
+                        Log.i("OTPCheck","Change Phone NUmber");
+                    }
+                    else if(resetPassword){
+                        Navigation.findNavController(binding.getRoot()).navigate(R.id.action_phoneCodeFragment_to_addPasswordFragment);
+                    }
+
+
                 }
                 else{
                     Toast.makeText(requireContext(), "OTP Verification Failed", Toast.LENGTH_SHORT).show();

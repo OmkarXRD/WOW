@@ -61,9 +61,7 @@
         android:name="com.live.worldsocialintegrationapp.Fragments.ChangeNumber.AddPhonenumberFragment"
         android:label="fragment_add_number"
         tools:layout="@layout/fragment_add_phonenumber" >
-        <action
-            android:id="@+id/action_addPhoneNumber_to_phoneCode"
-            app:destination="@+id/phoneCodeFragment" />
+
     </fragment>
 
 
@@ -76,12 +74,8 @@
         <action
             android:id="@+id/action_phoneVerificationFragment_to_phoneCodeFragment"
             app:destination="@id/phoneCodeFragment" />
-        <action
-            android:id="@+id/action_phoneVerificationFragment_to_addPasswordFrag"
-            app:destination="@id/addPasswordFragment" />
-        <action
-            android:id="@+id/action_phoneVerificationFragment_to_addPhoneNumber"
-            app:destination="@+id/addPhoneNumber" />
+
+
 
     </fragment>
     <fragment
@@ -90,9 +84,11 @@
         android:label="fragment_phone_code"
         tools:layout="@layout/fragment_phone_code">
         <action
-            android:id="@+id/action_phoneCodeFrag_to_addPasswordFrag"
+            android:id="@+id/action_phoneCodeFragment_to_addPasswordFragment"
             app:destination="@id/addPasswordFragment" />
-
+        <action
+            android:id="@+id/action_phoneCodeFragment_to_addPhoneNumber"
+            app:destination="@id/addPhoneNumber" />
     </fragment>
 
     <fragment

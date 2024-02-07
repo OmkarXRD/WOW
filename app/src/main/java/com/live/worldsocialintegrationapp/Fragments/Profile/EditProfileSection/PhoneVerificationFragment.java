@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,13 +35,17 @@ public class PhoneVerificationFragment extends Fragment {
     private void onCreate(){
         phoneNumber =  App.getSharedpref().getString("phone");
         countryCode =  App.getSharedpref().getString("countryCode");
-        binding.changePhoneNumber.setText("+"+countryCode+" "+phoneNumber);
+        binding.changePhoneNumber.setText("+"+phoneNumber);
     }
 
     private void onClicks() {
 
         binding.updateNumber.setOnClickListener( view -> {
-            Navigation.findNavController( binding.getRoot() ).navigate( R.id.action_phoneVerificationFragment_to_addPhoneNumber);
+                Bundle bundle=new Bundle();
+                bundle.putString("phone",phoneNumber);
+                bundle.putString("countryCode",countryCode);
+                bundle.putBoolean("changePhoneNumber",true);
+                Navigation.findNavController(binding.getRoot()).navigate(R.id.action_phoneVerificationFragment_to_phoneCodeFragment,bundle);
         } );
 
         binding.backEducation.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +58,11 @@ public class PhoneVerificationFragment extends Fragment {
         binding.changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController( binding.getRoot() ).navigate( R.id.action_phoneVerificationFragment_to_addPasswordFrag);
+                Bundle bundle=new Bundle();
+                bundle.putString("phone",phoneNumber);
+                bundle.putString("countryCode",countryCode);
+                bundle.putBoolean("resetPassword",true);
+                Navigation.findNavController(binding.getRoot()).navigate(R.id.action_phoneVerificationFragment_to_phoneCodeFragment,bundle);
             }
         });
     }

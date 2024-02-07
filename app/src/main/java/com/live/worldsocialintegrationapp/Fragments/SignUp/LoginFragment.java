@@ -182,7 +182,7 @@ public class LoginFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        backPressed(view);
+        //backPressed(view);
     }
 
     private void loginWithGoogle(String countryName, double latitude, double longitude) {

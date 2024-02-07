@@ -517,26 +517,26 @@ public class HomeActivity extends AppCompatActivity {
 //        removeLiveUser();
 
         /////////////////////////////////////////////
-//        super.onDestroy();
-//        NavController navController = Navigation.findNavController(HomeActivity.this, R.id.nav_home);
-//        navController.removeOnDestinationChangedListener(navControllerListener);
-//
-//
-//        onlineUsers.child(AppConstants.USER_ID).removeValue();
-//        finishAffinity();
-//
-//        binding = null;
-        /////////////////////////////////////////////
         super.onDestroy();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        Fragment fragment = fragmentManager.findFragmentById(R.id.nav_home);
-        if (fragment instanceof NavHostFragment) {
-            NavController navController = ((NavHostFragment) fragment).getNavController();
-            navController.removeOnDestinationChangedListener(navControllerListener);
-        }
+        NavController navController = Navigation.findNavController(HomeActivity.this, R.id.nav_home);
+        navController.removeOnDestinationChangedListener(navControllerListener);
+
+
         onlineUsers.child(AppConstants.USER_ID).removeValue();
         finishAffinity();
+
         binding = null;
+        /////////////////////////////////////////////
+//        super.onDestroy();
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        Fragment fragment = fragmentManager.findFragmentById(R.id.nav_home);
+//        if (fragment instanceof NavHostFragment) {
+//            NavController navController = ((NavHostFragment) fragment).getNavController();
+//            navController.removeOnDestinationChangedListener(navControllerListener);
+//        }
+//        onlineUsers.child(AppConstants.USER_ID).removeValue();
+//        finishAffinity();
+//        binding = null;
 
 
     }

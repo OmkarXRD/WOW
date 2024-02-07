@@ -51,7 +51,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginStart="5dp"
             android:fontFamily="@font/inter"
-            android:text="A verification code has been sent to you."
+            android:text="A verification code has been sent to you"
             android:textColor="@color/black"
             android:textSize="12sp" />
 

@@ -88,7 +88,7 @@ public class AddPasswordFragment extends Fragment {
             }
         });
 
-        binding.saveButton.setOnClickListener(new View.OnClickListener() {
+        binding.updatepassButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String password = binding.enterPasswordTxt.getText().toString();
