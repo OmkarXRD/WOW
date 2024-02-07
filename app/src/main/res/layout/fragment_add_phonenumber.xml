@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Fragments.ChangeNumber.AddPhonenumberFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@drawable/wallet_background"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp">
+
+        <ImageView
+            android:id="@+id/backEducation"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
+            android:rotation="180"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/connectAccounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/backEducation"
+            android:fontFamily="@font/inter_medium"
+            android:text="Add Number"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:text="Enter your number"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="13sp" />-->
+<!--        android:text="A verification code has been sent to you."-->
+        <TextView
+            android:id="@+id/infoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/inter"
+            android:text="Enter your number"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infoTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="+91 9876543210"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/LlEnterPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/countrycodeNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccp_arrowSize="15dp"
+                app:ccp_countryPreference="@string/india"
+                app:ccp_showFlag="false"
+                app:ccp_showNameCode="false"
+                app:ccp_textSize="15sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/grey" />
+
+            <EditText
+                android:id="@+id/enterPhoneEdtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="#00000000"
+                android:fontFamily="@font/poppins"
+                android:hint="Enter your phone number"
+                android:inputType="number"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+            <EditText
+                android:id="@+id/enterPasswordTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00000000"
+                android:fontFamily="@font/poppins"
+                android:inputType="textPassword"
+                android:hint="Enter password"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/passwordVisibilityToggle"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                android:rotation="180"
+                android:src="@drawable/password_hide"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Toggle password visibility"
+                app:tint="@color/red" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/otpInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        >
+
+
+        <EditText
+            android:id="@+id/otpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:fontFamily="@font/inter"
+            android:hint="Verification Code"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:inputType="number"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/otpTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/wallet_background"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="3dp"
+            android:text="00:60"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/verifyButton"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginHorizontal="33dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/wallet_background"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+
+        <TextView
+            android:id="@+id/verifyBtnText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:text="Verify"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="visible"
+            />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/submitOtp"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginHorizontal="33dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/wallet_background"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="visible"
+            />
+        <ProgressBar
+            android:id="@+id/otpProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/submitPass"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginHorizontal="33dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/wallet_background"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

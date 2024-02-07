@@ -8,10 +8,13 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -512,6 +515,8 @@ public class HomeActivity extends AppCompatActivity {
     protected void onDestroy() {
 //        Toast.makeText(this, "destroyhomeactivity", Toast.LENGTH_SHORT).show();
 //        removeLiveUser();
+
+        /////////////////////////////////////////////
         super.onDestroy();
         NavController navController = Navigation.findNavController(HomeActivity.this, R.id.nav_home);
         navController.removeOnDestinationChangedListener(navControllerListener);
@@ -521,6 +526,19 @@ public class HomeActivity extends AppCompatActivity {
         finishAffinity();
 
         binding = null;
+        /////////////////////////////////////////////
+//        super.onDestroy();
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        Fragment fragment = fragmentManager.findFragmentById(R.id.nav_home);
+//        if (fragment instanceof NavHostFragment) {
+//            NavController navController = ((NavHostFragment) fragment).getNavController();
+//            navController.removeOnDestinationChangedListener(navControllerListener);
+//        }
+//        onlineUsers.child(AppConstants.USER_ID).removeValue();
+//        finishAffinity();
+//        binding = null;
+
+
     }
 
     @Override

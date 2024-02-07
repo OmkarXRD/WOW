@@ -121,6 +121,7 @@
         android:background="@color/back_light" />
 
     <RelativeLayout
+        android:id="@+id/changePassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="15dp"
@@ -133,7 +134,7 @@
             android:layout_toEndOf="@id/imgChngPass"
             android:fontFamily="@font/inter"
             android:paddingVertical="5dp"
-            android:text="Change Password"
+            android:text="Reset Password"
             android:textColor="#757474"
             android:textSize="14sp" />
 

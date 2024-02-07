@@ -274,7 +274,7 @@ public class EditProfileScreen extends Fragment implements EditProfileImagesRVAd
             }
         });
 
-            editProfileSaveTV.setOnClickListener(view1 -> {
+        editProfileSaveTV.setOnClickListener(view1 -> {
                 //0 means already edited
                 if (setFirstTimeProfile == 0) {
                     editProfileApi();//

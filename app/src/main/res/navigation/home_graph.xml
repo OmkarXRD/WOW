@@ -51,7 +51,21 @@
         <action
             android:id="@+id/action_connectedAccountsFragment_to_phoneVerificationFragment"
             app:destination="@id/phoneVerificationFragment" />
+        <action
+            android:id="@+id/action_connectedAccountsFragment_to_addPhoneNumber"
+            app:destination="@+id/addPhoneNumber" />
     </fragment>
+
+    <fragment
+        android:id="@+id/addPhoneNumber"
+        android:name="com.live.worldsocialintegrationapp.Fragments.ChangeNumber.AddPhonenumberFragment"
+        android:label="fragment_add_number"
+        tools:layout="@layout/fragment_add_phonenumber" >
+
+    </fragment>
+
+
+
     <fragment
         android:id="@+id/phoneVerificationFragment"
         android:name="com.live.worldsocialintegrationapp.Fragments.Profile.EditProfileSection.PhoneVerificationFragment"
@@ -60,12 +74,31 @@
         <action
             android:id="@+id/action_phoneVerificationFragment_to_phoneCodeFragment"
             app:destination="@id/phoneCodeFragment" />
+
+
+
     </fragment>
     <fragment
         android:id="@+id/phoneCodeFragment"
         android:name="com.live.worldsocialintegrationapp.Fragments.Profile.EditProfileSection.PhoneCodeFragment"
         android:label="fragment_phone_code"
-        tools:layout="@layout/fragment_phone_code" />
+        tools:layout="@layout/fragment_phone_code">
+        <action
+            android:id="@+id/action_phoneCodeFragment_to_addPasswordFragment"
+            app:destination="@id/addPasswordFragment" />
+        <action
+            android:id="@+id/action_phoneCodeFragment_to_addPhoneNumber"
+            app:destination="@id/addPhoneNumber" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addPasswordFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.ChangeNumber.AddPasswordFragment"
+        android:label="fragment_add_password"
+        tools:layout="@layout/fragment_add_password">
+
+    </fragment>
+
     <fragment
         android:id="@+id/editProfileMainFragment"
         android:name="com.live.worldsocialintegrationapp.Fragments.Profile.EditProfileSection.EditProfileMainFragment"
