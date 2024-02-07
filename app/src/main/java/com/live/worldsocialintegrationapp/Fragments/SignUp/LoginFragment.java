@@ -2,9 +2,11 @@ package com.live.worldsocialintegrationapp.Fragments.SignUp;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -14,6 +16,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
@@ -22,9 +25,12 @@ import androidx.navigation.Navigation;
 import android.os.Looper;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -171,6 +177,12 @@ public class LoginFragment extends Fragment {
 
 
         return binding.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        backPressed(view);
     }
 
     private void loginWithGoogle(String countryName, double latitude, double longitude) {
@@ -664,7 +676,8 @@ public class LoginFragment extends Fragment {
         );
     }
 
-    private LocationCallback mLocationCallback = new LocationCallback() {
+    private LocationCallback mLocationCallback = new LocationCallback()
+    {
         @Override
         public void onLocationResult(LocationResult locationResult) {
 
@@ -736,6 +749,45 @@ public class LoginFragment extends Fragment {
         } else {
             Toast.makeText(requireContext(), "COUNTRY MISSING", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void backPressed(View sView) {
+        sView.setFocusableInTouchMode(true);
+
+        sView.requestFocus();
+
+        sView.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+                if (keyEvent.getAction() == KeyEvent.ACTION_DOWN) {
+                    if (i == KeyEvent.KEYCODE_BACK) {
+
+                        final Dialog dialog = new Dialog(requireActivity());
+                        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                        dialog.setCancelable(true);
+                        dialog.setContentView(R.layout.exit_app_dialog);
+                        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+                        TextView yesBtn = dialog.findViewById(R.id.yesText);
+                        TextView noBtn = dialog.findViewById(R.id.noText);
+
+                        yesBtn.setOnClickListener(view1 -> {
+                            dialog.dismiss();
+                            requireActivity().finishAffinity();
+                        });
+                        noBtn.setOnClickListener(view1 -> {
+                            dialog.dismiss();
+                        });
+                        dialog.show();
+                        App.getSharedpref().saveString("exit","0");
+
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+
+//        }
     }
 
 }

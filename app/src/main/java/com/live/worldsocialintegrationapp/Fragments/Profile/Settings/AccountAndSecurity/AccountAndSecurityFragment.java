@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.live.worldsocialintegrationapp.Activites.HomeActivity;
 import com.live.worldsocialintegrationapp.Activites.SplashActivity;
 import com.live.worldsocialintegrationapp.ModelClasses.SendOtpRoot;
 import com.live.worldsocialintegrationapp.R;
@@ -146,7 +147,12 @@ public class AccountAndSecurityFragment extends Fragment {
 
                         App.getSharedpref().clearPreferences();
                         AppConstants.USER_ID = "";
-                        startActivity(new Intent(requireContext(), SplashActivity.class));
+                        Intent intent = new Intent(requireContext(), SplashActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                        requireActivity().finish();
+
+                        //startActivity(new Intent(requireContext(), SplashActivity.class));
                     } else {
 //                    Toast.makeText(requireContext(), "0 "+sendOtpRoot.getMessage(), Toast.LENGTH_SHORT).show();
                     }

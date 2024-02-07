@@ -15,7 +15,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import com.live.worldsocialintegrationapp.Activites.HomeActivity;
 import com.live.worldsocialintegrationapp.Activites.MainActivity;
+import com.live.worldsocialintegrationapp.Activites.SplashActivity;
 import com.live.worldsocialintegrationapp.R;
 import com.live.worldsocialintegrationapp.databinding.FragmentAddPasswordBinding;
 import com.live.worldsocialintegrationapp.utils.App;
@@ -49,29 +51,23 @@ public class AddPasswordFragment extends Fragment {
 
     private void onClicks() {
 
-        binding.save.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                if(b){
-                    binding.save.setBackgroundColor(getResources().getColor(R.color.greeni));
-                }else{
-
-                }
-            }
-        });
-
-        binding.save.setOnClickListener(view -> {
-
-               String password = binding.enterPasswordTxt.getText().toString();
-                Navigation.findNavController(binding.getRoot()).navigate(R.id.action_addPhoneNumber_to_phoneCode);
-
-        });
+//        binding.saveButton.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View view, boolean b) {
+//                if(b){
+//                    binding.saveButton.setBackgroundColor(getResources().getColor(R.color.greeni));
+//                }else{
+//
+//                }
+//            }
+//        });
 
         binding.backEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getActivity().onBackPressed();
-            }
+           }
+
         });
 
         binding.passwordVisibilityToggle.setOnClickListener(new View.OnClickListener() {
@@ -92,11 +88,14 @@ public class AddPasswordFragment extends Fragment {
             }
         });
 
-        binding.save.setOnClickListener(new View.OnClickListener() {
+        binding.saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String password = binding.enterPasswordTxt.getText().toString();
+                App.getSharedpref().saveString("password",password);
+                Log.i("Passwordddddd","pass is "+password);
                 Toast.makeText(requireContext(), "Done! Please login again", Toast.LENGTH_SHORT).show();
-
+                //Navigation.findNavController(binding.getRoot()).navigate(R.id.action_addPhoneNumber_to_phoneCode);
             }
         });
 

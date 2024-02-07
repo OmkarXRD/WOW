@@ -37,7 +37,7 @@ public class ConnectedAccountsFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentConnectedAccountsBinding.inflate(inflater, container, false);
         onClick();
-
+        Log.i("ZZZZZZZZZZZZZZZZZZZZZZZZZZ","pass is "+ App.getSharedpref().getString("password"));
 //
 //        // This callback is only called when MyFragment is at least started
 //        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
@@ -150,9 +150,17 @@ public class ConnectedAccountsFragment extends Fragment {
                     if (sendOtpRoot.getSuccess().equalsIgnoreCase("1")) {
                         //                    Toast.makeText(requireContext(), "1 "+sendOtpRoot.getMessage(), Toast.LENGTH_SHORT).show();
 
+                        //////////////////////////////////////////////////////
+//                        App.getSharedpref().clearPreferences();
+//                        AppConstants.USER_ID = "";
+//                        startActivity(new Intent(requireContext(), SplashActivity.class));
+                        //////////////////////////////////////////////////////
                         App.getSharedpref().clearPreferences();
                         AppConstants.USER_ID = "";
-                        startActivity(new Intent(requireContext(), SplashActivity.class));
+                        Intent intent = new Intent(requireContext(), SplashActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                        requireActivity().finish();
                     } else {
 //                    Toast.makeText(requireContext(), "0 "+sendOtpRoot.getMessage(), Toast.LENGTH_SHORT).show();
                     }
