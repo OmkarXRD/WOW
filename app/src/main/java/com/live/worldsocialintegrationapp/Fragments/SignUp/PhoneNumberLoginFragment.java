@@ -24,6 +24,8 @@ public class PhoneNumberLoginFragment extends Fragment {
 
   FragmentPhoneNumberLoginBinding binding;
 
+  boolean phoneNumberExist = false;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -50,10 +52,10 @@ public class PhoneNumberLoginFragment extends Fragment {
 
                 binding.LoginLinearlyut.setClickable(false);
                 if(getArguments()!= null){
-                    sendOtpApi(getArguments().getString("phone"),getArguments().getString("countryCode"));
+                    checkRegisteredNumber(getArguments().getString("phone"),getArguments().getString("countryCode"));
                 }
                 else{
-//                    Toast.makeText(requireContext(), "arguments null", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(requireContext(), "Technical Error", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -69,17 +71,32 @@ public class PhoneNumberLoginFragment extends Fragment {
 
     }
 
-    private void sendOtpApi(String phone, String countryCode) {
+    private void checkRegisteredNumber(String phone, String countryCode) {
 
 //        Toast.makeText(requireContext(), "phone : "+phone, Toast.LENGTH_SHORT).show();
-        Log.i("SendOTP","otp :"+countryCode+" " +phone  );
+
         Bundle bundle = new Bundle();
         bundle = getArguments();
         assert bundle != null;
-        bundle.putString("phoneNo",getArguments().getString("phone"));
-        bundle.putString("phoneOtp","1234");
-        //Navigation.findNavController( binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_enterOtp,bundle);
-        Navigation.findNavController( binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_otpFragment,bundle);
+        bundle.putString("phoneNo",phone);
+        bundle.putString("countryCode",countryCode);
+
+        //check if number is allready registered or not
+        if(phoneNumberExist){
+
+            Navigation.findNavController( binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_passwordFragment,bundle);
+        }
+        else{
+            //if new number goes to otp screen
+            bundle.putBoolean("newUser",true);
+            Navigation.findNavController( binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_otpFragment,bundle);
+        }
+
+
+
+
+
+
         //Api to get static otp
 //        new Mvvm().sendOtp(requireActivity(),countryCode+phone).observe(requireActivity(), new Observer<SendOtpRoot>() {
 //                @Override

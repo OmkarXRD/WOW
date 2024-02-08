@@ -68,54 +68,7 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/passwordRL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:visibility="gone">
 
-    <LinearLayout
-        android:id="@+id/passwordLL"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="40dp" >
-        <EditText
-            android:id="@+id/enterPasswordTxt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#00000000"
-            android:fontFamily="@font/poppins"
-            android:inputType="textPassword"
-            android:hint="Enter password"
-            android:paddingEnd="10dp"
-            android:singleLine="true"
-            android:textColor="@color/black"
-            android:textColorHint="@color/grey"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-        <ImageView
-            android:id="@+id/passwordVisibilityToggle"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center_vertical"
-            android:rotation="180"
-            android:src="@drawable/password_hide"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Toggle password visibility"
-            app:tint="@color/red" />
-
-    </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/grey"
-            android:layout_below="@+id/passwordLL"
-            android:layout_marginHorizontal="25dp"
-            />
-    </RelativeLayout>
 
 
     <in.aabhasjindal.otptextview.OtpTextView

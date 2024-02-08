@@ -29,13 +29,23 @@
         <action
             android:id="@+id/action_phoneNumberLoginFragment_to_enterPhoneFragment"
             app:destination="@id/enterPhoneFragment" />
+        <action
+            android:id="@+id/action_phoneNumberLoginFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
 
     </fragment>
     <fragment
         android:id="@+id/otpFragment"
         android:name="com.live.worldsocialintegrationapp.Fragments.SignUp.OtpFragment"
         android:label="fragment_otp"
-        tools:layout="@layout/fragment_otp" />
+        tools:layout="@layout/fragment_otp" >
+
+        <action
+            android:id="@+id/action_otpFragment_to_signUpPasswordFragment"
+            app:destination="@id/signUpPasswordFragment"
+            app:popUpTo="@id/phoneNumberLoginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/enterPhoneFragment"
         android:name="com.live.worldsocialintegrationapp.Fragments.SignUp.EnterPhoneFragment"
@@ -63,5 +73,19 @@
         android:name="com.live.worldsocialintegrationapp.Fragments.Profile.Settings.About.TermsConditionsTV"
         android:label="fragment_terms_conditions_t_v"
         tools:layout="@layout/fragment_terms_conditions_t_v" />
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.SignUp.PasswordFragment"
+        android:label="fragment_passwordScreen"
+        tools:layout="@layout/fragment_passwordscreen" >
+        <action
+            android:id="@+id/action_passwordFragment_to_otpFragment"
+            app:destination="@id/otpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpPasswordFragment"
+        android:name="com.live.worldsocialintegrationapp.Fragments.SignUp.SignUpPasswordFragment"
+        android:label="fragment_signuppasswordscreen"
+        tools:layout="@layout/fragment_signuppasswordscreen" />
 
 </navigation>
