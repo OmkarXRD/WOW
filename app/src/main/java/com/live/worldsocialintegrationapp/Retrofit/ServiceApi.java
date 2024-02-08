@@ -155,6 +155,8 @@ public interface ServiceApi {
     @POST("sendOtp")
     Call<SendOtpRoot> sendOtp(@Field("phone") String phone);
 
+
+
     @FormUrlEncoded
     @POST("loginRegisterUser")
     Call<RegisterRoot> registerUser(@Field("phone") String phone,
