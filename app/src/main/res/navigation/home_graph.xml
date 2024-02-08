@@ -85,10 +85,14 @@
         tools:layout="@layout/fragment_phone_code">
         <action
             android:id="@+id/action_phoneCodeFragment_to_addPasswordFragment"
-            app:destination="@id/addPasswordFragment" />
+            app:destination="@id/addPasswordFragment"
+            app:popUpTo="@id/phoneVerificationFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_phoneCodeFragment_to_addPhoneNumber"
-            app:destination="@id/addPhoneNumber" />
+            app:destination="@id/addPhoneNumber"
+            app:popUpTo="@id/phoneVerificationFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
