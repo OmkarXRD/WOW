@@ -1463,11 +1463,6 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_enterPhoneFragment_to_loginFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                             <entry key="action_enterPhoneFragment_to_phoneNumberLoginFragment">
                               <value>
                                 <LayoutPositions />
@@ -1546,18 +1541,13 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="500" />
-                            <option name="y" value="410" />
+                            <option name="x" value="480" />
+                            <option name="y" value="406" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
                             <entry key="action_phoneNumberLoginFragment_to_countrySelectFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_phoneNumberLoginFragment_to_enterPhoneFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

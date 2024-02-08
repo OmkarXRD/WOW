@@ -74,7 +74,7 @@ public class EnterPhoneFragment extends Fragment {
         binding.backToLoginImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(binding.getRoot()).navigate(R.id.action_enterPhoneFragment_to_loginFragment);
+               getActivity().onBackPressed();
             }
         });
     }

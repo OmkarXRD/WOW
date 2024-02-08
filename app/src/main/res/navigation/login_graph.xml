@@ -26,9 +26,7 @@
         <action
             android:id="@+id/action_phoneNumberLoginFragment_to_countrySelectFragment"
             app:destination="@id/countrySelectFragment" />
-        <action
-            android:id="@+id/action_phoneNumberLoginFragment_to_enterPhoneFragment"
-            app:destination="@id/enterPhoneFragment" />
+
         <action
             android:id="@+id/action_phoneNumberLoginFragment_to_passwordFragment"
             app:destination="@id/passwordFragment" />
@@ -54,9 +52,7 @@
         <action
             android:id="@+id/action_enterPhoneFragment_to_phoneNumberLoginFragment"
             app:destination="@id/phoneNumberLoginFragment" />
-        <action
-            android:id="@+id/action_enterPhoneFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/countrySelectFragment"

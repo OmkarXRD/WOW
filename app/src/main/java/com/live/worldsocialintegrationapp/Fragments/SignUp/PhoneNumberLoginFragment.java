@@ -24,7 +24,7 @@ public class PhoneNumberLoginFragment extends Fragment {
 
   FragmentPhoneNumberLoginBinding binding;
 
-  boolean phoneNumberExist = false;
+  boolean phoneNumberExist = true;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -60,11 +60,12 @@ public class PhoneNumberLoginFragment extends Fragment {
             }
         });
 
-        binding.backLoginOrRegister.setOnClickListener( view ->
-
-                Navigation.findNavController( binding.getRoot() ).navigate(R.id.action_phoneNumberLoginFragment_to_enterPhoneFragment)
-
-        );
+        binding.backLoginOrRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
 
         binding.countrySelect.setOnClickListener(view ->
                 Navigation.findNavController(binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_countrySelectFragment));
