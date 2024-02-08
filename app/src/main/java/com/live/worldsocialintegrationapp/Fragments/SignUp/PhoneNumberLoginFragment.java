@@ -25,6 +25,7 @@ public class PhoneNumberLoginFragment extends Fragment {
   FragmentPhoneNumberLoginBinding binding;
 
   boolean phoneNumberExist = true;
+  String phoneNumber;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -40,6 +41,7 @@ public class PhoneNumberLoginFragment extends Fragment {
         onClick();
 
         binding.phoneLoginNumberTV.setText(getArguments().getString("phone"));
+        phoneNumber = getArguments().getString("countryCode")+getArguments().getString("phone");
 
     }
 
