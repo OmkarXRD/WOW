@@ -308,6 +308,7 @@ public class Mvvm extends ViewModel {
 
                     if (response != null) {
                         mutableLiveData.postValue(response.body());
+                        Log.i("Issssssueeeeee","phn "+response.body());
                     } else {
                         Toast.makeText(activity, "Body is null", Toast.LENGTH_SHORT).show();
                     }
@@ -325,6 +326,37 @@ public class Mvvm extends ViewModel {
         }
         return mutableLiveData;
     }
+
+//    public LiveData<SendOtpRoot> checkPhoneNumber(Activity activity, String phone) {
+//
+//        mutableLiveData = new MutableLiveData();
+//
+//        if (CommonUtils.isNetworkConnected(activity)) {
+//            Log.i("Issssssueeeeee","phn"+phone);
+//            serviceApi.checkPhoneNumber(phone).enqueue(new Callback<SendOtpRoot>() {
+//                @Override
+//                public void onResponse(Call<SendOtpRoot> call, Response<SendOtpRoot> response) {
+//
+//                    if (response != null) {
+//                        mutableLiveData.postValue(response.body());
+//                        Log.i("Issssssueeeeee","MVVM "+response.body());
+//                    } else {
+//                        Toast.makeText(activity, "Body is null", Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//
+//                @Override
+//                public void onFailure(Call<SendOtpRoot> call, Throwable t) {
+//                    Toast.makeText(activity, "Failure " + t.getMessage(), Toast.LENGTH_SHORT).show();
+//                    mutableLiveData.postValue(null);
+//                }
+//            });
+//
+//        } else {
+//            Toast.makeText(activity, "Connect to network", Toast.LENGTH_SHORT).show();
+//        }
+//        return mutableLiveData;
+//    }
 
     public LiveData<RegisterRoot> registerUser(Activity activity, String phone, String otp, String country, String continent, String regId) {
         mutableLiveData = new MutableLiveData();

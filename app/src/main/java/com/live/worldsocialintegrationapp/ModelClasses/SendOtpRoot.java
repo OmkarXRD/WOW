@@ -8,6 +8,7 @@ public class SendOtpRoot  implements Serializable {
     public String message;
     public String otp;
     public String status;
+    public String isRegistered;
     public boolean likeUnLikestatus;
     public int likeCount;
 
@@ -25,6 +26,14 @@ public class SendOtpRoot  implements Serializable {
 
     public void setLikeUnLikestatus(boolean likeUnLikestatus) {
         this.likeUnLikestatus = likeUnLikestatus;
+    }
+
+    public String getIsRegistered() {
+        return isRegistered;
+    }
+
+    public void setIsRegistered(String isRegistered) {
+        this.isRegistered = isRegistered;
     }
 
     public int getCommentId() {
@@ -68,5 +77,6 @@ public class SendOtpRoot  implements Serializable {
     public void setOtp(String otp) {
         this.otp = otp;
     }
+
 
 }

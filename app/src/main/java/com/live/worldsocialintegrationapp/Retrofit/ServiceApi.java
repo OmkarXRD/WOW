@@ -155,6 +155,10 @@ public interface ServiceApi {
     @POST("sendOtp")
     Call<SendOtpRoot> sendOtp(@Field("phone") String phone);
 
+//    @FormUrlEncoded
+//    @POST("checkPhoneNumber")
+//    Call<SendOtpRoot> checkPhoneNumber(@Field("phone") String phone);
+
 
 
     @FormUrlEncoded

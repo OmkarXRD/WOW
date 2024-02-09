@@ -78,22 +78,20 @@ public class PhoneNumberLoginFragment extends Fragment {
 
 //        Toast.makeText(requireContext(), "phone : "+phone, Toast.LENGTH_SHORT).show();
 
-        Bundle bundle = new Bundle();
-        bundle = getArguments();
-        assert bundle != null;
-        bundle.putString("phoneNo",phone);
-        bundle.putString("countryCode",countryCode);
 
-        //check if number is allready registered or not
-        if(phoneNumberExist){
 
-            Navigation.findNavController( binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_passwordFragment,bundle);
-        }
-        else{
-            //if new number goes to otp screen
-            bundle.putBoolean("newUser",true);
-            Navigation.findNavController( binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_otpFragment,bundle);
-        }
+        checkNumberExist(phone,countryCode);
+
+//        //check if number is allready registered or not
+//        if(phoneNumberExist){
+//
+//            Navigation.findNavController( binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_passwordFragment,bundle);
+//        }
+//        else{
+//            //if new number goes to otp screen
+//            bundle.putBoolean("newUser",true);
+//            Navigation.findNavController( binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_otpFragment,bundle);
+//        }
 
 
 
@@ -128,6 +126,35 @@ public class PhoneNumberLoginFragment extends Fragment {
 //            });
        }
 
+
+
+       public void checkNumberExist(String phone, String countryCode){
+                   new Mvvm().sendOtp(requireActivity(),countryCode+phone).observe(requireActivity(), new Observer<SendOtpRoot>() {
+                @Override
+                public void onChanged(SendOtpRoot sendOtpRoot) {
+
+                    if (sendOtpRoot !=null){
+                        Bundle bundle = new Bundle();
+                        bundle = getArguments();
+                        assert bundle != null;
+                        bundle.putString("phoneNo",phone);
+                        bundle.putString("countryCode",countryCode);
+                        if(sendOtpRoot.getSuccess().equalsIgnoreCase("1")){
+
+
+                            Navigation.findNavController( binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_passwordFragment,bundle);
+                        }
+                        else{
+
+                            bundle.putBoolean("newUser",true);
+                            Navigation.findNavController( binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_otpFragment,bundle);
+                        }
+                    }else {
+                        Toast.makeText(requireContext(), "Technical Issue...", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+       }
 
 
 }
