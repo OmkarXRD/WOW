@@ -79,6 +79,11 @@ public class Details implements Serializable {
     @SerializedName("password")
     @Expose
     private String password;
+
+    @SerializedName("salt")
+    @Expose
+    private String salt;
+
     @SerializedName("is_admin")
     @Expose
     private String isAdmin;
@@ -202,6 +207,10 @@ public class Details implements Serializable {
     @SerializedName("idBannedStatus")
     @Expose
     private Boolean idBannedStatus;
+
+    @SerializedName("forgotPassword")
+    @Expose
+    private String forgotPassword;
     @SerializedName("receivingLevel")
     @Expose
     private String receivingLevel;
@@ -427,6 +436,11 @@ public class Details implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getSalt(){
+        return salt;
+    }
+    public void setSalt(String salt){this.salt = salt;}
 
     public String getIsAdmin() {
         return isAdmin;
@@ -755,4 +769,8 @@ public class Details implements Serializable {
     public void setIdBannedStatus(Boolean idBannedStatus) {
         this.idBannedStatus = idBannedStatus;
     }
+
+    public String getForgotPassword(){return  forgotPassword;};
+
+    public void setForgotPassword(String forgotPassword){this.forgotPassword = forgotPassword;}
 }

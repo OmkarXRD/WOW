@@ -297,12 +297,12 @@ public class Mvvm extends ViewModel {
 
     private MutableLiveData<CountryRoot> getLoginMutableLiveData;
 
-    public LiveData<SendOtpRoot> sendOtp(Activity activity, String phone) {
+    public LiveData<SendOtpRoot> sendOtp(Activity activity, String phone, String resetPassword,String password,String salt) {
 
         mutableLiveData = new MutableLiveData();
 
         if (CommonUtils.isNetworkConnected(activity)) {
-            serviceApi.sendOtp(phone).enqueue(new Callback<SendOtpRoot>() {
+            serviceApi.sendOtp(phone,resetPassword,password,salt).enqueue(new Callback<SendOtpRoot>() {
                 @Override
                 public void onResponse(Call<SendOtpRoot> call, Response<SendOtpRoot> response) {
 
@@ -358,22 +358,23 @@ public class Mvvm extends ViewModel {
 //        return mutableLiveData;
 //    }
 
-    public LiveData<RegisterRoot> registerUser(Activity activity, String phone, String otp, String country, String continent, String regId) {
+    public LiveData<RegisterRoot> registerUser(Activity activity, String phone, String password,String salt, String country, String continent,String forgotPassword, String regId) {
         mutableLiveData = new MutableLiveData();
         if (CommonUtils.isNetworkConnected(activity)) {
             Log.i("RegisterUser","in else");
             Log.i("RegisterUser","phn"+phone);
-            Log.i("RegisterUser","otp "+otp);
+            Log.i("RegisterUser","otp "+password);
             Log.i("RegisterUser","country "+country);
             Log.i("RegisterUser","continent "+continent);
             Log.i("RegisterUser","regId "+regId);
-            serviceApi.registerUser(phone, otp, country, continent, regId).enqueue(new Callback<RegisterRoot>() {
+            serviceApi.registerUser(phone, password,salt, country, continent,forgotPassword, regId).enqueue(new Callback<RegisterRoot>() {
                 @Override
                 public void onResponse(Call<RegisterRoot> call, Response<RegisterRoot> response) {
                     if (response.body() != null) {
                         mutableLiveData.postValue(response.body());
+                        //Log.i("Issssssueeeeee","respose "+response.body().toString());
                     } else {
-                        Log.i("RegisterUser","in else");
+
                         Toast.makeText(activity, "Technical issue", Toast.LENGTH_SHORT).show();
                     }
                 }

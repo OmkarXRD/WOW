@@ -153,7 +153,10 @@ public interface ServiceApi {
 
     @FormUrlEncoded
     @POST("sendOtp")
-    Call<SendOtpRoot> sendOtp(@Field("phone") String phone);
+    Call<SendOtpRoot> sendOtp(@Field("phone") String phone,
+                              @Field("password") String password,
+                              @Field("salt") String salt,
+                              @Field("resetPassword") String resetPassword);
 
 //    @FormUrlEncoded
 //    @POST("checkPhoneNumber")
@@ -164,9 +167,11 @@ public interface ServiceApi {
     @FormUrlEncoded
     @POST("loginRegisterUser")
     Call<RegisterRoot> registerUser(@Field("phone") String phone,
-                                    @Field("otp") String otp,
+                                    @Field("password") String password,
+                                    @Field("salt") String salt,
                                     @Field("Country") String Country,
                                     @Field("continent") String continent,
+                                    @Field("forgotPassword") String forgotPassword,
                                     @Field("reg_id") String reg_id);
 
     @FormUrlEncoded

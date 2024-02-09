@@ -129,7 +129,7 @@ public class PhoneNumberLoginFragment extends Fragment {
 
 
        public void checkNumberExist(String phone, String countryCode){
-                   new Mvvm().sendOtp(requireActivity(),countryCode+phone).observe(requireActivity(), new Observer<SendOtpRoot>() {
+                   new Mvvm().sendOtp(requireActivity(),countryCode+phone,"false","","").observe(requireActivity(), new Observer<SendOtpRoot>() {
                 @Override
                 public void onChanged(SendOtpRoot sendOtpRoot) {
 
@@ -140,8 +140,6 @@ public class PhoneNumberLoginFragment extends Fragment {
                         bundle.putString("phoneNo",phone);
                         bundle.putString("countryCode",countryCode);
                         if(sendOtpRoot.getSuccess().equalsIgnoreCase("1")){
-
-
                             Navigation.findNavController( binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_passwordFragment,bundle);
                         }
                         else{
