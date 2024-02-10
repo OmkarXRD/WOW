@@ -70,7 +70,6 @@ public class AddPasswordFragment extends Fragment {
 //                }
 //            }
 //        });
-
         binding.backEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,7 +100,7 @@ public class AddPasswordFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(binding.enterPasswordTxt.getText().toString().trim().length() == 0){
-                    Toast.makeText(requireContext(), "Please enter the OTP", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(requireContext(), "Please, enter the password", Toast.LENGTH_SHORT).show();
                 }
                 else{
 
@@ -109,28 +108,26 @@ public class AddPasswordFragment extends Fragment {
                     String salt = generateSalt();
                     String hashedPassword = hashPassword(password, salt);
                     //App.getSharedpref().saveString("password",password);
-                    new Mvvm().sendOtp(requireActivity(),phoneNumber,"true",hashedPassword,salt).observe(requireActivity(), new Observer<SendOtpRoot>() {
+                    new Mvvm().sendOtp(requireActivity(),phoneNumber,hashedPassword,salt,"true","false","").observe(requireActivity(), new Observer<SendOtpRoot>() {
                         @Override
                         public void onChanged(SendOtpRoot sendOtpRoot) {
 
                             if (sendOtpRoot !=null){
 
                                 if(sendOtpRoot.getSuccess().equalsIgnoreCase("1")){
+                                    Toast.makeText(requireContext(), "Password Updated", Toast.LENGTH_SHORT).show();
                                     getActivity().onBackPressed();
+                                    Log.i("CheckResetPass",sendOtpRoot.getMessage());
                                 }
                                 else{
-
+                                    Toast.makeText(requireContext(), "Password Updated Failed", Toast.LENGTH_SHORT).show();
+                                    Log.i("CheckResetPass",sendOtpRoot.getMessage());
                                 }
                             }else {
                                 Toast.makeText(requireContext(), "Technical Issue...", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
-
-                    Toast.makeText(requireContext(), "Password Updated", Toast.LENGTH_SHORT).show();
-
-
-
 
 
                 }

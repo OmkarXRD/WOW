@@ -297,12 +297,12 @@ public class Mvvm extends ViewModel {
 
     private MutableLiveData<CountryRoot> getLoginMutableLiveData;
 
-    public LiveData<SendOtpRoot> sendOtp(Activity activity, String phone, String resetPassword,String password,String salt) {
+    public LiveData<SendOtpRoot> sendOtp(Activity activity, String phone,String password,String salt, String resetPassword, String updateNumber,String username) {
 
         mutableLiveData = new MutableLiveData();
 
         if (CommonUtils.isNetworkConnected(activity)) {
-            serviceApi.sendOtp(phone,resetPassword,password,salt).enqueue(new Callback<SendOtpRoot>() {
+            serviceApi.sendOtp(phone,password,salt,resetPassword,updateNumber,username).enqueue(new Callback<SendOtpRoot>() {
                 @Override
                 public void onResponse(Call<SendOtpRoot> call, Response<SendOtpRoot> response) {
 

@@ -107,6 +107,7 @@ public class AddPhonenumberFragment extends Fragment {
             }
         });
 
+        //verify if number is registered or not
         binding.verifyButton.setOnClickListener(view -> {
 
             countryCode = binding.ccp.getSelectedCountryCode();
@@ -165,10 +166,15 @@ public class AddPhonenumberFragment extends Fragment {
         binding.submitPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                App.getSharedpref().saveString("password",binding.enterPasswordTxt.getText().toString());
-                Log.i("AddNumberrr","password "+binding.enterPasswordTxt.getText().toString());
-                getActivity().onBackPressed();
-                Toast.makeText(requireContext(), "Number bound successful", Toast.LENGTH_SHORT).show();
+                if(binding.enterPhoneEdtx.getText().toString().trim().length() == 0){
+                    Toast.makeText(requireContext(), "Please enter the Password", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    App.getSharedpref().saveString("password",binding.enterPasswordTxt.getText().toString());
+                    updateNumber(countryCode+phoneNumber);
+
+                }
+
             }
         });
 
@@ -208,9 +214,6 @@ public class AddPhonenumberFragment extends Fragment {
             }
         }.start();
     }
-
-
-
 
     void sendOtp(String phoneNumber,boolean isResend){
         setInProgress(true);
@@ -271,11 +274,10 @@ public class AddPhonenumberFragment extends Fragment {
                 setInProgress(false);
                 if(task.isSuccessful()){
                     if(changePhoneNumber){
-                        Toast.makeText(requireContext(), "Number Sucessfully Updated", Toast.LENGTH_SHORT).show();
-                        App.getSharedpref().saveString("phone",countryCode+""+phoneNumber);
-                    }
-                    else{
-                        Log.i("AddNumberrr","in if");
+//                        Toast.makeText(requireContext(), "Number Sucessfully Updated", Toast.LENGTH_SHORT).show();
+//                        App.getSharedpref().saveString("phone",countryCode+""+phoneNumber);
+
+
                         App.getSharedpref().saveString("phone",countryCode+""+phoneNumber);
                         binding.infoTextView.setText("Enter Password");
                         binding.otpInput.setVisibility(View.GONE);
@@ -283,6 +285,7 @@ public class AddPhonenumberFragment extends Fragment {
                         binding.submitPass.setVisibility(View.VISIBLE);
                         binding.passwordInput.setVisibility(View.VISIBLE);
                     }
+
 
 
                 }
@@ -307,10 +310,8 @@ public class AddPhonenumberFragment extends Fragment {
 
     public void checkNumberExist(String phone){
 
-        String password = binding.enterPasswordTxt.getText().toString();
-        String salt = generateSalt();
-        String hashedPassword = hashPassword(password, salt);
-        new Mvvm().sendOtp(requireActivity(),countryCode+phone,"false",hashedPassword,salt).observe(requireActivity(), new Observer<SendOtpRoot>() {
+
+        new Mvvm().sendOtp(requireActivity(),countryCode+phone,"","","false","false","").observe(requireActivity(), new Observer<SendOtpRoot>() {
             @Override
             public void onChanged(SendOtpRoot sendOtpRoot) {
 
@@ -333,6 +334,35 @@ public class AddPhonenumberFragment extends Fragment {
             }
         });
     }
+
+    public void updateNumber(String phone){
+
+        String password = binding.enterPasswordTxt.getText().toString();
+        String salt = generateSalt();
+        String hashedPassword = hashPassword(password, salt);
+        String userName = App.getSharedpref().getString("username");
+        new Mvvm().sendOtp(requireActivity(),phone,hashedPassword,salt,"true","true",userName).observe(requireActivity(), new Observer<SendOtpRoot>() {
+            @Override
+            public void onChanged(SendOtpRoot sendOtpRoot) {
+
+                if (sendOtpRoot !=null){
+
+                    if(sendOtpRoot.getSuccess().equalsIgnoreCase("1")){
+                        Toast.makeText(requireContext(), "Number bound successful", Toast.LENGTH_SHORT).show();
+                        getActivity().onBackPressed();
+                    }
+                    else{
+                        Toast.makeText(requireContext(), "Failed to update Number", Toast.LENGTH_SHORT).show();
+
+                    }
+                }else {
+                    Toast.makeText(requireContext(), "Technical Issue...", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+
     public static String hashPassword(String password, String salt) {
         String passwordWithSalt = password + salt;
         try {

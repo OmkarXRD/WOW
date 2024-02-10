@@ -156,7 +156,9 @@ public interface ServiceApi {
     Call<SendOtpRoot> sendOtp(@Field("phone") String phone,
                               @Field("password") String password,
                               @Field("salt") String salt,
-                              @Field("resetPassword") String resetPassword);
+                              @Field("resetPassword") String resetPassword,
+                              @Field("updateNumber") String updateNumber,
+                              @Field("username") String username);
 
 //    @FormUrlEncoded
 //    @POST("checkPhoneNumber")
