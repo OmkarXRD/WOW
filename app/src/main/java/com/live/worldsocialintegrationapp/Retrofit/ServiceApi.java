@@ -413,7 +413,9 @@ public interface ServiceApi {
                                       @Part("email") RequestBody email,
                                       @Part("continent") RequestBody continent,
                                       //@Part MultipartBody.Part image,
-                                      @Part("Country") RequestBody Country);
+                                      @Part("Country") RequestBody Country,
+                                      @Part("isAddingAccount") RequestBody isAddingAccount,
+                                      @Part("userName") RequestBody userName);
 
     @FormUrlEncoded
     @POST("archieveLive")
