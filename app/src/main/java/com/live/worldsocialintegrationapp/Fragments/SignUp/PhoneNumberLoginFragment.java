@@ -18,6 +18,7 @@ import com.live.worldsocialintegrationapp.ModelClasses.SendOtpRoot;
 import com.live.worldsocialintegrationapp.R;
 import com.live.worldsocialintegrationapp.Retrofit.Mvvm;
 import com.live.worldsocialintegrationapp.databinding.FragmentPhoneNumberLoginBinding;
+import com.live.worldsocialintegrationapp.utils.App;
 
 
 public class PhoneNumberLoginFragment extends Fragment {
@@ -40,6 +41,7 @@ public class PhoneNumberLoginFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         onClick();
 
+        binding.countrySelect.setText(App.getSharedpref().getString("countryName"));
         binding.phoneLoginNumberTV.setText(getArguments().getString("phone"));
         phoneNumber = getArguments().getString("countryCode")+getArguments().getString("phone");
 
@@ -69,8 +71,7 @@ public class PhoneNumberLoginFragment extends Fragment {
             }
         });
 
-        binding.countrySelect.setOnClickListener(view ->
-                Navigation.findNavController(binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_countrySelectFragment));
+
 
     }
 

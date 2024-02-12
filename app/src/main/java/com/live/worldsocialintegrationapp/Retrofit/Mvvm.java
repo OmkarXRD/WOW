@@ -4705,11 +4705,14 @@ public class Mvvm extends ViewModel {
                 @Override
                 public void onResponse(Call<GeneratedIdClass> call, Response<GeneratedIdClass> response) {
                     generatedIdClassMutableLiveData.postValue(response.body());
+                    Log.i("SPlacsh","zzzzzzzzzzzzzzzzzzzz on response");
                 }
 
                 @Override
                 public void onFailure(Call<GeneratedIdClass> call, Throwable t) {
                     generatedIdClassMutableLiveData.postValue(null);
+                    Log.i("SPlacsh","zzzzzzzzzzzzzzzzzzzz on failure");
+                    Log.i("SPlacsh","zzzzzzzzzzzzzzzzzzzz on failure" + t.getMessage());
                 }
             });
         } else {

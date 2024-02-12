@@ -42,6 +42,8 @@ import com.live.worldsocialintegrationapp.utils.CommonUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
 public class ChatFragment extends Fragment implements ChatRVAdapter.Callback {
     private final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private final DatabaseReference ChatRequestCountRef = firebaseDatabase.getReference().child("ChatRequestCount");
@@ -164,8 +166,11 @@ public class ChatFragment extends Fragment implements ChatRVAdapter.Callback {
                         for (DataSnapshot snapshot1 : snapshot.getChildren()) {
 
                             RequstChat requstChat = snapshot1.getValue(RequstChat.class);
-                            String type = snapshot1.child("type").getValue().toString();
-                            String otherUserId = snapshot1.child("to").getValue().toString();
+                            Object typeObject = snapshot1.child("type").getValue();
+                            String type = (typeObject != null) ? typeObject.toString() : "";
+                            Object toValue = snapshot1.child("to").getValue();
+                            String otherUserId = (toValue != null) ? toValue.toString() : "";
+
 
 
                             if (!otherUserId.equalsIgnoreCase(AppConstants.USER_ID) && type.equalsIgnoreCase("1")) {

@@ -588,6 +588,7 @@ public class LoginFragment extends Fragment {
                         }
                         else {
                             if (getContext() != null) {
+                                Log.i("in LOGIN FRAG","zzzzzzzzzzzzzzzzzzzz");
                                 Toast.makeText(requireContext(), "Technical issue ", Toast.LENGTH_SHORT).show();
                             }
                         }
