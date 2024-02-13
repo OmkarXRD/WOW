@@ -22,31 +22,31 @@
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/coins_img"
-            android:contentDescription="@string/description"/>
-        <TextView
-            android:id="@+id/coinsTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:fontFamily="sans-serif-medium"
-            android:text="700"
-            />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/coins_img" />
 
-        <TextView
-            android:id="@+id/coinsMoneyTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="₹95,000"
-            android:textSize="14sp"
-            android:fontFamily="sans-serif-medium"/>
+            <TextView
+                android:id="@+id/coinsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="700"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/coinsMoneyTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="₹95,000"
+                android:textSize="14sp" />
 
 
-    </LinearLayout>
+        </LinearLayout>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
