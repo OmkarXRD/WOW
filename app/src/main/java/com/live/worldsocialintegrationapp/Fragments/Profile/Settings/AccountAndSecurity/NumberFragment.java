@@ -94,7 +94,7 @@ public class NumberFragment extends Fragment {
                     if (sendOtpRoot.getStatus().equalsIgnoreCase("1")) {
 //                        Toast.makeText(requireContext(), "1 " + sendOtpRoot.getMessage(), Toast.LENGTH_SHORT).show();
                         Bundle bundle = new Bundle();
-                        bundle.putString("verifyOTP", sendOtpRoot.getOtp());
+                        //bundle.putString("verifyOTP", sendOtpRoot.getOtp());
                         Navigation.findNavController(requireActivity().findViewById(R.id.nav_home)).navigate(R.id.changePhoneNumberFragment, bundle);
                     } else {
 //                        Toast.makeText(requireContext(), "0 " + sendOtpRoot.getMessage(), Toast.LENGTH_SHORT).show();

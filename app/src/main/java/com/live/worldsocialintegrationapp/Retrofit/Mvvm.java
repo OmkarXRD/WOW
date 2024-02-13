@@ -297,17 +297,18 @@ public class Mvvm extends ViewModel {
 
     private MutableLiveData<CountryRoot> getLoginMutableLiveData;
 
-    public LiveData<SendOtpRoot> sendOtp(Activity activity, String phone) {
+    public LiveData<SendOtpRoot> sendOtp(Activity activity, String phone,String password,String salt, String resetPassword, String updateNumber,String username) {
 
         mutableLiveData = new MutableLiveData();
 
         if (CommonUtils.isNetworkConnected(activity)) {
-            serviceApi.sendOtp(phone).enqueue(new Callback<SendOtpRoot>() {
+            serviceApi.sendOtp(phone,password,salt,resetPassword,updateNumber,username).enqueue(new Callback<SendOtpRoot>() {
                 @Override
                 public void onResponse(Call<SendOtpRoot> call, Response<SendOtpRoot> response) {
 
                     if (response != null) {
                         mutableLiveData.postValue(response.body());
+                        Log.i("Issssssueeeeee","phn "+response.body());
                     } else {
                         Toast.makeText(activity, "Body is null", Toast.LENGTH_SHORT).show();
                     }
@@ -326,22 +327,54 @@ public class Mvvm extends ViewModel {
         return mutableLiveData;
     }
 
-    public LiveData<RegisterRoot> registerUser(Activity activity, String phone, String otp, String country, String continent, String regId) {
+//    public LiveData<SendOtpRoot> checkPhoneNumber(Activity activity, String phone) {
+//
+//        mutableLiveData = new MutableLiveData();
+//
+//        if (CommonUtils.isNetworkConnected(activity)) {
+//            Log.i("Issssssueeeeee","phn"+phone);
+//            serviceApi.checkPhoneNumber(phone).enqueue(new Callback<SendOtpRoot>() {
+//                @Override
+//                public void onResponse(Call<SendOtpRoot> call, Response<SendOtpRoot> response) {
+//
+//                    if (response != null) {
+//                        mutableLiveData.postValue(response.body());
+//                        Log.i("Issssssueeeeee","MVVM "+response.body());
+//                    } else {
+//                        Toast.makeText(activity, "Body is null", Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//
+//                @Override
+//                public void onFailure(Call<SendOtpRoot> call, Throwable t) {
+//                    Toast.makeText(activity, "Failure " + t.getMessage(), Toast.LENGTH_SHORT).show();
+//                    mutableLiveData.postValue(null);
+//                }
+//            });
+//
+//        } else {
+//            Toast.makeText(activity, "Connect to network", Toast.LENGTH_SHORT).show();
+//        }
+//        return mutableLiveData;
+//    }
+
+    public LiveData<RegisterRoot> registerUser(Activity activity, String phone, String password,String salt, String country, String continent,String forgotPassword, String regId) {
         mutableLiveData = new MutableLiveData();
         if (CommonUtils.isNetworkConnected(activity)) {
             Log.i("RegisterUser","in else");
             Log.i("RegisterUser","phn"+phone);
-            Log.i("RegisterUser","otp "+otp);
+            Log.i("RegisterUser","otp "+password);
             Log.i("RegisterUser","country "+country);
             Log.i("RegisterUser","continent "+continent);
             Log.i("RegisterUser","regId "+regId);
-            serviceApi.registerUser(phone, otp, country, continent, regId).enqueue(new Callback<RegisterRoot>() {
+            serviceApi.registerUser(phone, password,salt, country, continent,forgotPassword, regId).enqueue(new Callback<RegisterRoot>() {
                 @Override
                 public void onResponse(Call<RegisterRoot> call, Response<RegisterRoot> response) {
                     if (response.body() != null) {
                         mutableLiveData.postValue(response.body());
+                        //Log.i("Issssssueeeeee","respose "+response.body().toString());
                     } else {
-                        Log.i("RegisterUser","in else");
+
                         Toast.makeText(activity, "Technical issue", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -1912,18 +1945,20 @@ public class Mvvm extends ViewModel {
     private MutableLiveData<SocialLoginRoot> socialLoginRootMutableLiveData;
 
     public LiveData<SocialLoginRoot> socialLogin(Activity activity, RequestBody social_id, RequestBody reg_id, RequestBody dev_id, RequestBody dev_type,
-                                                 RequestBody phone, RequestBody name, RequestBody email, RequestBody continent, RequestBody country) {
+                                                 RequestBody phone, RequestBody name, RequestBody email, RequestBody continent, RequestBody country,RequestBody isAddingAccount, RequestBody userName,RequestBody facebookId, RequestBody snapchatId, RequestBody facebookUserName) {
 //        public LiveData<SocialLoginRoot> socialLogin(Activity activity, RequestBody social_id, RequestBody reg_id, RequestBody dev_id, RequestBody dev_type,
 //                RequestBody phone, RequestBody name, RequestBody email, RequestBody continent, MultipartBody.Part image, RequestBody country) {
         socialLoginRootMutableLiveData = new MutableLiveData<>();
         if (CommonUtils.isNetworkConnected(activity)) {
 
-            serviceApi.socialLogin(social_id, reg_id, dev_id, dev_type, phone, name, email, continent, country).enqueue(new Callback<SocialLoginRoot>() {
+            serviceApi.socialLogin(social_id, reg_id, dev_id, dev_type, phone, name, email, continent, country,isAddingAccount,userName,facebookId,snapchatId,facebookUserName).enqueue(new Callback<SocialLoginRoot>() {
                 @Override
                 public void onResponse(@NonNull Call<SocialLoginRoot> call, @NonNull Response<SocialLoginRoot> response) {
                     if (response.body() != null) {
                         socialLoginRootMutableLiveData.postValue(response.body());
+                        Log.i("in LOGIN FRAG","iffff");
                     } else {
+                        Log.i("in LOGIN FRAG","elseeee");
                         socialLoginRootMutableLiveData.postValue(null);
                     }
                 }
@@ -4672,11 +4707,14 @@ public class Mvvm extends ViewModel {
                 @Override
                 public void onResponse(Call<GeneratedIdClass> call, Response<GeneratedIdClass> response) {
                     generatedIdClassMutableLiveData.postValue(response.body());
+                    Log.i("SPlacsh","zzzzzzzzzzzzzzzzzzzz on response");
                 }
 
                 @Override
                 public void onFailure(Call<GeneratedIdClass> call, Throwable t) {
                     generatedIdClassMutableLiveData.postValue(null);
+                    Log.i("SPlacsh","zzzzzzzzzzzzzzzzzzzz on failure");
+                    Log.i("SPlacsh","zzzzzzzzzzzzzzzzzzzz on failure" + t.getMessage());
                 }
             });
         } else {

@@ -426,6 +426,7 @@ public class HomeActivity extends AppCompatActivity {
             bundle.putInt("backPressed", 0);
             Navigation.findNavController(this, R.id.nav_home).navigate(R.id.chatFragment, bundle);
 //            screenStatus = 0;
+
             binding.bottomLay.homeFragment.setImageResource(R.drawable.icon_home_ftr);
             binding.bottomLay.secondMain.setImageResource(R.drawable.icon_explore_ftsvgr);
             binding.bottomLay.bottomMessage.setImageResource(R.drawable.bubble_message_color_full_img);
@@ -516,27 +517,17 @@ public class HomeActivity extends AppCompatActivity {
 //        Toast.makeText(this, "destroyhomeactivity", Toast.LENGTH_SHORT).show();
 //        removeLiveUser();
 
-        /////////////////////////////////////////////
+
         super.onDestroy();
-        NavController navController = Navigation.findNavController(HomeActivity.this, R.id.nav_home);
-        navController.removeOnDestinationChangedListener(navControllerListener);
-
-
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        Fragment fragment = fragmentManager.findFragmentById(R.id.nav_home);
+        if (fragment instanceof NavHostFragment) {
+            NavController navController = ((NavHostFragment) fragment).getNavController();
+            navController.removeOnDestinationChangedListener(navControllerListener);
+        }
         onlineUsers.child(AppConstants.USER_ID).removeValue();
         finishAffinity();
-
         binding = null;
-        /////////////////////////////////////////////
-//        super.onDestroy();
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        Fragment fragment = fragmentManager.findFragmentById(R.id.nav_home);
-//        if (fragment instanceof NavHostFragment) {
-//            NavController navController = ((NavHostFragment) fragment).getNavController();
-//            navController.removeOnDestinationChangedListener(navControllerListener);
-//        }
-//        onlineUsers.child(AppConstants.USER_ID).removeValue();
-//        finishAffinity();
-//        binding = null;
 
 
     }

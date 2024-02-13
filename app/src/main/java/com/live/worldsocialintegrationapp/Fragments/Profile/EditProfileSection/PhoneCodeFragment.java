@@ -88,9 +88,16 @@ public class PhoneCodeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                // showdialogbox();
-                String enteredOtp = binding.otpText.getText().toString();
-                PhoneAuthCredential credential =  PhoneAuthProvider.getCredential(verificationCode,enteredOtp);
-                signIn(credential);
+
+                if(binding.otpText.getText().toString().trim().length() == 0){
+                    Toast.makeText(requireContext(), "Please enter the OTP", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    String enteredOtp = binding.otpText.getText().toString();
+                    PhoneAuthCredential credential =  PhoneAuthProvider.getCredential(verificationCode,enteredOtp);
+                    signIn(credential);
+                }
+
             }
         });
         binding.backEducation.setOnClickListener(new View.OnClickListener() {

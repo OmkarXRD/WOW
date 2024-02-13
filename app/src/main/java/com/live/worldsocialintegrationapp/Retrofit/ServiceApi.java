@@ -153,16 +153,27 @@ public interface ServiceApi {
 
     @FormUrlEncoded
     @POST("sendOtp")
-    Call<SendOtpRoot> sendOtp(@Field("phone") String phone);
+    Call<SendOtpRoot> sendOtp(@Field("phone") String phone,
+                              @Field("password") String password,
+                              @Field("salt") String salt,
+                              @Field("resetPassword") String resetPassword,
+                              @Field("updateNumber") String updateNumber,
+                              @Field("username") String username);
+
+//    @FormUrlEncoded
+//    @POST("checkPhoneNumber")
+//    Call<SendOtpRoot> checkPhoneNumber(@Field("phone") String phone);
 
 
 
     @FormUrlEncoded
     @POST("loginRegisterUser")
     Call<RegisterRoot> registerUser(@Field("phone") String phone,
-                                    @Field("otp") String otp,
+                                    @Field("password") String password,
+                                    @Field("salt") String salt,
                                     @Field("Country") String Country,
                                     @Field("continent") String continent,
+                                    @Field("forgotPassword") String forgotPassword,
                                     @Field("reg_id") String reg_id);
 
     @FormUrlEncoded
@@ -402,7 +413,12 @@ public interface ServiceApi {
                                       @Part("email") RequestBody email,
                                       @Part("continent") RequestBody continent,
                                       //@Part MultipartBody.Part image,
-                                      @Part("Country") RequestBody Country);
+                                      @Part("Country") RequestBody Country,
+                                      @Part("isAddingAccount") RequestBody isAddingAccount,
+                                      @Part("userName") RequestBody userName,
+                                      @Part("facebookId") RequestBody facebookId,
+                                      @Part("snapchatId") RequestBody snapchatId,
+                                      @Part("facebookUserName") RequestBody facebookUserName);
 
     @FormUrlEncoded
     @POST("archieveLive")

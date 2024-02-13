@@ -151,6 +151,7 @@ public class LoginFragment extends Fragment {
                     Log.d("OTP", "REGID " + RegId);
                 });
         if (CommonUtils.isNetworkConnected(requireContext())) {
+            //checks if network is connected
         } else {
             Toast.makeText(requireContext(), "Connect to Network", Toast.LENGTH_SHORT).show();
         }
@@ -182,7 +183,7 @@ public class LoginFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //backPressed(view);
+        backPressed(view);
     }
 
     private void loginWithGoogle(String countryName, double latitude, double longitude) {
@@ -198,7 +199,6 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (binding.switchButton.isChecked()){
-                    Log.i("Googlee"," in Onactive 1");
                     Intent signInIntent = mGoogleSignInClient.getSignInIntent();
                     startActivityForResult(signInIntent, REQ_ONE_TAP);
                 }else {
@@ -333,7 +333,6 @@ public class LoginFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == REQ_ONE_TAP) {
-            Log.i("Facebookzzzzzzzzz","zzzzzzzzz");
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
             callbackManager.onActivityResult(requestCode, resultCode, data);
@@ -377,7 +376,7 @@ public class LoginFragment extends Fragment {
                 Log.i("socialLoginApi",personName);
                 Log.i("socialLoginApi",personEmail);
                 //Log.i("socialLoginApi",personPhoto.toString());
-                socialLoginApi(countryNew,personId,personName,personEmail);
+                socialLoginApi(countryNew,personId,personName,personEmail,"false","","","","");
 
             }
             // Signed in successfully, show authenticated UI.
@@ -439,13 +438,13 @@ public class LoginFragment extends Fragment {
 
                             String personName = object.getString("name");
                             //String personEmail = object.getString("email");
-                            String socialID = object.getString("id");
+                            String facebookId = object.getString("id");
                             App.getSharedpref().saveString("facebook",personName);
                             Toast.makeText(requireActivity(), "LogIn Success", Toast.LENGTH_SHORT).show();
                             //Log.i("Facebookzzzzzzzzz",personName +object.getString("email"));
 
                             //added static email for now as we need to get mail from facebook
-                            socialLoginApi(countryNew,socialID,personName,email);
+                            socialLoginApi(countryNew,"",personName,email,"false","",facebookId,"",personName);
 
 
                         } catch (JSONException e) {
@@ -509,32 +508,32 @@ public class LoginFragment extends Fragment {
         });
     }
 
-    private void handleFacebookAccessToken(AccessToken accessToken) {
+//    private void handleFacebookAccessToken(AccessToken accessToken) {
+//
+//        Log.d("accessToken", "handleFacebookAccessToken:" + accessToken);
+//
+//        AuthCredential credential = FacebookAuthProvider.getCredential(String.valueOf(accessToken));
+//        mAuth.signInWithCredential(credential)
+//                .addOnCompleteListener((Executor) this, (OnCompleteListener<AuthResult>) new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if (task.isSuccessful()) {
+//                            // Sign in success, update UI with the signed-in user's information
+//                            Log.d("TAG", "signInWithCredential:success");
+//                            FirebaseUser user = mAuth.getCurrentUser();
+////                            socialLoginApi(countryNew);
+//
+//                        } else {
+//                            // If sign in fails, display a message to the user.
+//                            Log.w("TAG", "signInWithCredential:failure", task.getException());
+//                            Toast.makeText(requireContext(), "Authentication failed", Toast.LENGTH_SHORT).show();
+////                            socialLoginApi("");
+//                        }
+//                    }
+//                });
+//    }
 
-        Log.d("accessToken", "handleFacebookAccessToken:" + accessToken);
-
-        AuthCredential credential = FacebookAuthProvider.getCredential(String.valueOf(accessToken));
-        mAuth.signInWithCredential(credential)
-                .addOnCompleteListener((Executor) this, (OnCompleteListener<AuthResult>) new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d("TAG", "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-//                            socialLoginApi(countryNew);
-
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w("TAG", "signInWithCredential:failure", task.getException());
-                            Toast.makeText(requireContext(), "Authentication failed", Toast.LENGTH_SHORT).show();
-//                            socialLoginApi("");
-                        }
-                    }
-                });
-    }
-
-    private void socialLoginApi(String continent, String socialId, String name, String email) {
+    private void socialLoginApi(String continent, String gmailId, String name, String email,String isAddingAccount,String userName, String facebookId,String snapchatId, String facebookUserName) {
 
         Log.d("socialLoginApi", "socialLoginApi: ");
         Log.d("socialLoginApi", "socialLoginApi: "+socialId);
@@ -552,7 +551,7 @@ public class LoginFragment extends Fragment {
 
 
         new Mvvm().socialLogin(requireActivity(),
-                        CommonUtils.getRequestBodyText(socialId),
+                        CommonUtils.getRequestBodyText(gmailId),
                         CommonUtils.getRequestBodyText(RegId),
                         CommonUtils.getRequestBodyText(deviceId),
                         CommonUtils.getRequestBodyText("android"),
@@ -561,9 +560,15 @@ public class LoginFragment extends Fragment {
                         CommonUtils.getRequestBodyText(email),
                         CommonUtils.getRequestBodyText(continentName),
                        // CommonUtils.getFileData(s,"image"),
-                        CommonUtils.getRequestBodyText(countryNew))
+                        CommonUtils.getRequestBodyText(countryNew),
+                        CommonUtils.getRequestBodyText(isAddingAccount),
+                        CommonUtils.getRequestBodyText(userName),
+                        CommonUtils.getRequestBodyText(facebookId),
+                        CommonUtils.getRequestBodyText(snapchatId),
+                        CommonUtils.getRequestBodyText(facebookUserName))
                 .observe(requireActivity(), socialLoginRoot -> {
 //                    if (socialLoginRoot != null) {
+                    Log.i("in LOGIN FRAG","zzzzzzzzzzzzzzzzzzzz " +socialLoginRoot +" "+ socialLoginRoot.getStatus() );
                         if (socialLoginRoot != null && socialLoginRoot.getStatus() == 1) {
 
                             App.getSharedpref().saveString(AppConstant.SESSION, "1");
@@ -577,6 +582,7 @@ public class LoginFragment extends Fragment {
                             App.getSharedpref().saveString("dob", socialLoginRoot.getDetails().getDob());
                             App.getSharedpref().saveString("email", socialLoginRoot.getDetails().getEmail());
                             App.getSharedpref().saveModel("RegisterRoot", socialLoginRoot.getDetails());
+
                             AppConstants.USER_ID = socialLoginRoot.getDetails().getId();
 
                             if (String.valueOf(socialLoginRoot.getDetails().idBannedStatus).equalsIgnoreCase("false")){
@@ -587,6 +593,7 @@ public class LoginFragment extends Fragment {
                         }
                         else {
                             if (getContext() != null) {
+                                Log.i("in LOGIN FRAG","zzzzzzzzzzzzzzzzzzzz");
                                 Toast.makeText(requireContext(), "Technical issue ", Toast.LENGTH_SHORT).show();
                             }
                         }

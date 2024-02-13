@@ -25,6 +25,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.animation.Animation;
@@ -97,6 +98,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void banUserStatusCheck() {
+        Log.i("SPlacsh","zzzzzzzzzzzzzzzzzz "+AppConstants.USER_ID);
         new Mvvm().getGeneratedIdClassLiveData(SplashActivity.this,AppConstants.USER_ID).observe(SplashActivity.this, new Observer<GeneratedIdClass>() {
             @Override
             public void onChanged(GeneratedIdClass generatedIdClass) {
@@ -117,7 +119,9 @@ public class SplashActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     }
-                }else {
+                }
+                else {
+                    Log.i("SPlacsh","zzzzzzzzzzzzzzzzzz");
                     Toast.makeText(SplashActivity.this, "Technical issue...", Toast.LENGTH_SHORT).show();
                 }
 

@@ -132,8 +132,10 @@ public class ChatRequests extends Fragment implements ChatRequestRVAdapter.Callb
                     for (DataSnapshot snapshot1 : snapshot.getChildren())
                     {
                         RequstChat requstChat = snapshot1.getValue(RequstChat.class);
-                        String type = snapshot1.child("type").getValue().toString();
-                        String otherUserId = snapshot1.child("from").getValue().toString();
+                        Object typeObject = snapshot1.child("type").getValue();
+                        String type = (typeObject != null) ? typeObject.toString() : "";
+                        Object toValue = snapshot1.child("to").getValue();
+                        String otherUserId = (toValue != null) ? toValue.toString() : "";
                         noChatRequestTv.setVisibility(View.GONE);
 
                         if(!otherUserId.equalsIgnoreCase(AppConstants.USER_ID) && type.equalsIgnoreCase("0")){

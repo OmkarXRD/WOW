@@ -48,6 +48,7 @@
         android:textColor="@color/sub_header_color"
         android:textSize="15sp" />
 
+<!--    app:drawableEndCompat="@drawable/india_1_"-->
     <TextView
         android:id="@+id/countrySelect"
         android:layout_width="match_parent"
@@ -59,7 +60,7 @@
         android:gravity="center_vertical"
         android:text="@string/india"
         android:textColor="@color/black"
-        app:drawableEndCompat="@drawable/india_1_"
+
         tools:ignore="LabelFor" />
 
     <View

@@ -18,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.navigation.Navigation;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,10 +29,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.live.worldsocialintegrationapp.ModelClasses.SendOtpRoot;
 import com.live.worldsocialintegrationapp.R;
+import com.live.worldsocialintegrationapp.Retrofit.Mvvm;
 import com.live.worldsocialintegrationapp.databinding.FragmentAddPhonenumberBinding;
 import com.live.worldsocialintegrationapp.utils.App;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
@@ -41,12 +47,12 @@ public class AddPhonenumberFragment extends Fragment {
     FragmentAddPhonenumberBinding binding;
 
     String phoneNumber,upadtedPhoneNo,verificationCode,countryCode;
-
+    String numberWithCode;
     PhoneAuthProvider.ForceResendingToken resendingToken;
     boolean isResend = false;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     Long timeOutSeconds = 60L;
-
+    private static final int SALT_LENGTH = 16;
     boolean changePhoneNumber;
 
 
@@ -101,6 +107,7 @@ public class AddPhonenumberFragment extends Fragment {
             }
         });
 
+        //verify if number is registered or not
         binding.verifyButton.setOnClickListener(view -> {
 
             countryCode = binding.ccp.getSelectedCountryCode();
@@ -118,15 +125,17 @@ public class AddPhonenumberFragment extends Fragment {
 //                bundle.putString("country",country);
 //                Navigation.findNavController(binding.getRoot()).navigate(R.id.action_addPhoneNumber_to_phoneCode,bundle);
 //            }
-
+            Log.i("ADDPHONEEEE","000000");
             ///NEW implementation #007
             if(binding.enterPhoneEdtx.getText().toString().trim().length() == 0){
                 Toast.makeText(requireContext(), "Please enter the Phone no. ", Toast.LENGTH_SHORT).show();
             }
             else{
-                    phoneNumber = binding.enterPhoneEdtx.getText().toString();
-                    String numberWithCode =  onCreate(phoneNumber,countryCode);
-                    sendOtp(numberWithCode,false);
+                phoneNumber = binding.enterPhoneEdtx.getText().toString();
+                numberWithCode =  onCreate(phoneNumber,countryCode);
+                Log.i("ADDPHONEEEE","1111");
+                checkNumberExist(phoneNumber);
+
                }
 
 
@@ -135,9 +144,18 @@ public class AddPhonenumberFragment extends Fragment {
         binding.submitOtp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String enteredOtp = binding.otpText.getText().toString();
-                PhoneAuthCredential credential =  PhoneAuthProvider.getCredential(verificationCode,enteredOtp);
-                signIn(credential);
+
+                if(binding.enterPhoneEdtx.getText().toString().trim().length() == 0){
+                    Log.i("ADDPHONEEEE","on submit");
+                    Toast.makeText(requireContext(), "Please enter the OTP", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Log.i("ADDPHONEEEE","on submit 1");
+                    String enteredOtp = binding.otpText.getText().toString();
+                    PhoneAuthCredential credential =  PhoneAuthProvider.getCredential(verificationCode,enteredOtp);
+                    signIn(credential);
+                }
+
             }
         });
         binding.backEducation.setOnClickListener(new View.OnClickListener() {
@@ -150,10 +168,15 @@ public class AddPhonenumberFragment extends Fragment {
         binding.submitPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                App.getSharedpref().saveString("password",binding.enterPasswordTxt.getText().toString());
-                Log.i("AddNumberrr","password "+binding.enterPasswordTxt.getText().toString());
-                getActivity().onBackPressed();
-                Toast.makeText(requireContext(), "Number bound successful", Toast.LENGTH_SHORT).show();
+                if(binding.enterPhoneEdtx.getText().toString().trim().length() == 0){
+                    Toast.makeText(requireContext(), "Please enter the Password", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    App.getSharedpref().saveString("password",binding.enterPasswordTxt.getText().toString());
+                    updateNumber(countryCode+phoneNumber);
+
+                }
+
             }
         });
 
@@ -174,7 +197,6 @@ public class AddPhonenumberFragment extends Fragment {
                         R.drawable.password_visible : R.drawable.password_hide);
             }
         });
-
     }
 
     private void timer() {
@@ -195,9 +217,6 @@ public class AddPhonenumberFragment extends Fragment {
         }.start();
     }
 
-
-
-
     void sendOtp(String phoneNumber,boolean isResend){
         setInProgress(true);
         PhoneAuthOptions.Builder builder = PhoneAuthOptions.newBuilder(mAuth)
@@ -209,6 +228,7 @@ public class AddPhonenumberFragment extends Fragment {
                     public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
                         signIn(phoneAuthCredential);
                         setInProgress(false);
+                        Log.i("ADDPHONEEEE","1.1111");
                     }
 
                     @Override
@@ -216,6 +236,7 @@ public class AddPhonenumberFragment extends Fragment {
                         Toast.makeText(requireContext(), "OTP Verification Failed", Toast.LENGTH_SHORT).show();
                         Log.i("OTPCheck","error "+ e);
                         setInProgress(false);
+                        Log.i("ADDPHONEEEE","1.222222");
                     }
 
                     @Override
@@ -234,7 +255,7 @@ public class AddPhonenumberFragment extends Fragment {
                         binding.infoTextView.setText("A verification code has been sent to you");
                         binding.phoneNumber.setVisibility(View.VISIBLE);
                         binding.phoneNumber.setText(upadtedPhoneNo);
-
+                        Log.i("ADDPHONEEEE","1.33333");
 
 
 
@@ -257,17 +278,25 @@ public class AddPhonenumberFragment extends Fragment {
                 setInProgress(false);
                 if(task.isSuccessful()){
                     if(changePhoneNumber){
-                        Toast.makeText(requireContext(), "Number Sucessfully Updated", Toast.LENGTH_SHORT).show();
-                        App.getSharedpref().saveString("phone",countryCode+""+phoneNumber);
-                    }
-                    else{
-                        Log.i("AddNumberrr","in if");
+//                        Toast.makeText(requireContext(), "Number Sucessfully Updated", Toast.LENGTH_SHORT).show();
+//                        App.getSharedpref().saveString("phone",countryCode+""+phoneNumber);
+
+                        Log.i("ADDPHONEEEE","on submit change phone");
                         App.getSharedpref().saveString("phone",countryCode+""+phoneNumber);
                         binding.infoTextView.setText("Enter Password");
                         binding.otpInput.setVisibility(View.GONE);
                         binding.submitOtp.setVisibility(View.GONE);
                         binding.submitPass.setVisibility(View.VISIBLE);
                         binding.passwordInput.setVisibility(View.VISIBLE);
+                    }
+                    else{
+                        App.getSharedpref().saveString("phone",countryCode+""+phoneNumber);
+                        binding.infoTextView.setText("Enter Password");
+                        binding.otpInput.setVisibility(View.GONE);
+                        binding.submitOtp.setVisibility(View.GONE);
+                        binding.submitPass.setVisibility(View.VISIBLE);
+                        binding.passwordInput.setVisibility(View.VISIBLE);
+                        Log.i("ADDPHONEEEE","on submit change phone else " + countryCode+""+phoneNumber);
                     }
 
 
@@ -291,4 +320,88 @@ public class AddPhonenumberFragment extends Fragment {
 
     }
 
+    public void checkNumberExist(String phone){
+
+
+        new Mvvm().sendOtp(requireActivity(),countryCode+phone,"","","false","false","").observe(requireActivity(), new Observer<SendOtpRoot>() {
+            @Override
+            public void onChanged(SendOtpRoot sendOtpRoot) {
+
+                if (sendOtpRoot !=null){
+//                    Bundle bundle = new Bundle();
+//                    bundle = getArguments();
+//                    assert bundle != null;
+//                    bundle.putString("phoneNo",phone);
+//                    bundle.putString("countryCode",countryCode);
+                    if(sendOtpRoot.getSuccess().equalsIgnoreCase("1")){
+                        Log.i("ADDPHONEEEE","22222");
+                        Toast.makeText(requireContext(), "Number is already registered, User another number", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Log.i("ADDPHONEEEE","33333");
+                        sendOtp(numberWithCode,false);
+
+                    }
+                }else {
+                    Log.i("ADDPHONEEEE","4444");
+                    Toast.makeText(requireContext(), "Technical Issue...", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    public void updateNumber(String phone){
+
+        String password = binding.enterPasswordTxt.getText().toString();
+        String salt = generateSalt();
+        String hashedPassword = hashPassword(password, salt);
+        String userName = App.getSharedpref().getString("username");
+        new Mvvm().sendOtp(requireActivity(),phone,hashedPassword,salt,"true","true",userName).observe(requireActivity(), new Observer<SendOtpRoot>() {
+            @Override
+            public void onChanged(SendOtpRoot sendOtpRoot) {
+
+                if (sendOtpRoot !=null){
+
+                    if(sendOtpRoot.getSuccess().equalsIgnoreCase("1")){
+                        Toast.makeText(requireContext(), "Number bound successful", Toast.LENGTH_SHORT).show();
+                        getActivity().onBackPressed();
+                    }
+                    else{
+                        Toast.makeText(requireContext(), "Failed to update Number", Toast.LENGTH_SHORT).show();
+
+                    }
+                }else {
+                    Toast.makeText(requireContext(), "Technical Issue...", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+
+    public static String hashPassword(String password, String salt) {
+        String passwordWithSalt = password + salt;
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            byte[] hash = digest.digest(passwordWithSalt.getBytes());
+            return bytesToHex(hash); // Convert byte array to hexadecimal string
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    private static String bytesToHex(byte[] bytes) {
+        StringBuilder result = new StringBuilder();
+        for (byte b : bytes) {
+            result.append(String.format("%02x", b));
+        }
+        return result.toString();
+    }
+
+    public static String generateSalt() {
+        SecureRandom random = new SecureRandom();
+        byte[] saltBytes = new byte[SALT_LENGTH];
+        random.nextBytes(saltBytes);
+        return bytesToHex(saltBytes);
+    }
 }

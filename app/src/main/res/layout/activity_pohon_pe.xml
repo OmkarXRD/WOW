@@ -7,11 +7,11 @@
     tools:context=".Activites.PhonePeActivity">
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/payBTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pay Now"
         android:layout_centerInParent="true"
         android:layout_marginHorizontal="@dimen/dp_50"
         android:background="@color/app_pink_color"
-        android:id="@+id/payBTN"/>
+        android:text="Pay Now" />
 </RelativeLayout>
