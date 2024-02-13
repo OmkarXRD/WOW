@@ -13,6 +13,10 @@ public class Details implements Serializable {
     @SerializedName("name")
     @Expose
     private String name;
+    @SerializedName("facebookUserName")
+    @Expose
+    private String facebookUserName;
+
     @SerializedName("host_status")
     @Expose
     private String hostStatus;
@@ -259,6 +263,14 @@ public class Details implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getFacebookUserName() {
+        return facebookUserName;
+    }
+
+    public void setFacebookUserName(String facebookUserName) {
+        this.facebookUserName = facebookUserName;
     }
 
     public String getHostStatus() {

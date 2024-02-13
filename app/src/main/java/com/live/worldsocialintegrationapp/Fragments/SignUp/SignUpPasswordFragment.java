@@ -150,6 +150,8 @@ public class SignUpPasswordFragment extends Fragment {
                                 App.getSharedpref().saveString("country_showUnshow",registerRoot.getDetails().getCountryShowUnshow());
                                 App.getSharedpref().saveString("familyId",registerRoot.getDetails().getFamilyId());
                                 App.getSharedpref().saveString("eventId",registerRoot.getDetails().getEventId());
+                                App.getSharedpref().saveString("email",registerRoot.getDetails().getEmail());
+
                                 AppConstants.USER_ID = registerRoot.getDetails().getId();
                                 Log.i("Issssssueeeeee",registerRoot.getDetails().getSalt());
                                 Log.i("Issssssueeeeee", "old "+registerRoot.getDetails().getPassword());

@@ -417,7 +417,8 @@ public interface ServiceApi {
                                       @Part("isAddingAccount") RequestBody isAddingAccount,
                                       @Part("userName") RequestBody userName,
                                       @Part("facebookId") RequestBody facebookId,
-                                      @Part("snapchatId") RequestBody snapchatId);
+                                      @Part("snapchatId") RequestBody snapchatId,
+                                      @Part("facebookUserName") RequestBody facebookUserName);
 
     @FormUrlEncoded
     @POST("archieveLive")

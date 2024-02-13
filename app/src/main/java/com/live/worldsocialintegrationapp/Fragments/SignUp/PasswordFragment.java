@@ -150,6 +150,9 @@ public class PasswordFragment extends Fragment {
                                 App.getSharedpref().saveString("country_showUnshow",registerRoot.getDetails().getCountryShowUnshow());
                                 App.getSharedpref().saveString("familyId",registerRoot.getDetails().getFamilyId());
                                 App.getSharedpref().saveString("eventId",registerRoot.getDetails().getEventId());
+                                App.getSharedpref().saveString("email",registerRoot.getDetails().getEmail());
+                                App.getSharedpref().saveString("facebook",registerRoot.getDetails().getFacebookUserName());
+
                                 AppConstants.USER_ID = registerRoot.getDetails().getId();
 
                                 String storedPass = registerRoot.getDetails().getPassword();

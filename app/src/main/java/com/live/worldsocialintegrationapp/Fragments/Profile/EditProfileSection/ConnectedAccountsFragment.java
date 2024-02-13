@@ -306,7 +306,7 @@ public class ConnectedAccountsFragment extends Fragment {
                             //Toast.makeText(requireActivity(), "LogIn Success", Toast.LENGTH_SHORT).show();
 
                             //added static email for now as we need to get mail from facebook
-                            socialLoginApi(countryNew,"","",email,"true",username,facebookId,"");
+                            socialLoginApi(countryNew,"","",email,"true",username,facebookId,"",personName);
 
 
                         } catch (JSONException e) {
@@ -334,7 +334,7 @@ public class ConnectedAccountsFragment extends Fragment {
         });
     }
 
-    private void socialLoginApi(String continent, String gmailId, String name, String email, String isAddingAccount, String userName, String facebookId, String snapChatId) {
+    private void socialLoginApi(String continent, String gmailId, String name, String email, String isAddingAccount, String userName, String facebookId, String snapChatId, String facebookUserName) {
 
         Log.d("socialLoginApi", "socialLoginApi: ");
         Log.d("socialLoginApi", "socialLoginApi: "+gmailId);
@@ -365,7 +365,8 @@ public class ConnectedAccountsFragment extends Fragment {
                         CommonUtils.getRequestBodyText(isAddingAccount),
                         CommonUtils.getRequestBodyText(userName),
                         CommonUtils.getRequestBodyText(facebookId),
-                        CommonUtils.getRequestBodyText(snapChatId))
+                        CommonUtils.getRequestBodyText(snapChatId),
+                        CommonUtils.getRequestBodyText(facebookUserName))
                 .observe(requireActivity(), socialLoginRoot -> {
 //                    if (socialLoginRoot != null) {
                     if (socialLoginRoot != null && socialLoginRoot.getStatus() == 1) {
@@ -582,7 +583,7 @@ public class ConnectedAccountsFragment extends Fragment {
                 Log.i("socialLoginApi",personName);
                 Log.i("socialLoginApi",personEmail);
                 //Log.i("socialLoginApi",personPhoto.toString());
-                socialLoginApi(countryNew,personId,"",personEmail,"true",username,"","");
+                socialLoginApi(countryNew,personId,"",personEmail,"true",username,"","","");
 
             }
             // Signed in successfully, show authenticated UI.

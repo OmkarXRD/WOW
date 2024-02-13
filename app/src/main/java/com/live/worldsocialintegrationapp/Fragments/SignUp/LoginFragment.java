@@ -376,7 +376,7 @@ public class LoginFragment extends Fragment {
                 Log.i("socialLoginApi",personName);
                 Log.i("socialLoginApi",personEmail);
                 //Log.i("socialLoginApi",personPhoto.toString());
-                socialLoginApi(countryNew,personId,personName,personEmail,"false","","","");
+                socialLoginApi(countryNew,personId,personName,personEmail,"false","","","","");
 
             }
             // Signed in successfully, show authenticated UI.
@@ -444,7 +444,7 @@ public class LoginFragment extends Fragment {
                             //Log.i("Facebookzzzzzzzzz",personName +object.getString("email"));
 
                             //added static email for now as we need to get mail from facebook
-                            socialLoginApi(countryNew,"",personName,email,"false","",facebookId,"");
+                            socialLoginApi(countryNew,"",personName,email,"false","",facebookId,"",personName);
 
 
                         } catch (JSONException e) {
@@ -533,7 +533,7 @@ public class LoginFragment extends Fragment {
 //                });
 //    }
 
-    private void socialLoginApi(String continent, String gmailId, String name, String email,String isAddingAccount,String userName, String facebookId,String snapchatId) {
+    private void socialLoginApi(String continent, String gmailId, String name, String email,String isAddingAccount,String userName, String facebookId,String snapchatId, String facebookUserName) {
 
         Log.d("socialLoginApi", "socialLoginApi: ");
         Log.d("socialLoginApi", "socialLoginApi: "+socialId);
@@ -564,7 +564,8 @@ public class LoginFragment extends Fragment {
                         CommonUtils.getRequestBodyText(isAddingAccount),
                         CommonUtils.getRequestBodyText(userName),
                         CommonUtils.getRequestBodyText(facebookId),
-                        CommonUtils.getRequestBodyText(snapchatId))
+                        CommonUtils.getRequestBodyText(snapchatId),
+                        CommonUtils.getRequestBodyText(facebookUserName))
                 .observe(requireActivity(), socialLoginRoot -> {
 //                    if (socialLoginRoot != null) {
                     Log.i("in LOGIN FRAG","zzzzzzzzzzzzzzzzzzzz " +socialLoginRoot +" "+ socialLoginRoot.getStatus() );
@@ -581,6 +582,7 @@ public class LoginFragment extends Fragment {
                             App.getSharedpref().saveString("dob", socialLoginRoot.getDetails().getDob());
                             App.getSharedpref().saveString("email", socialLoginRoot.getDetails().getEmail());
                             App.getSharedpref().saveModel("RegisterRoot", socialLoginRoot.getDetails());
+
                             AppConstants.USER_ID = socialLoginRoot.getDetails().getId();
 
                             if (String.valueOf(socialLoginRoot.getDetails().idBannedStatus).equalsIgnoreCase("false")){
