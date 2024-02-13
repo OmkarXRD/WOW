@@ -84,6 +84,9 @@ public class ChatFragment extends Fragment implements ChatRVAdapter.Callback {
             window.setStatusBarColor(this.getResources().getColor(R.color.white));
         }
 
+        //disables bottom navigation
+        CommonUtils.disableBottomNavigation(requireActivity());
+
         if (backPressed==0) {
 
             //CommonUtils.disableBottomNavigation(requireActivity());

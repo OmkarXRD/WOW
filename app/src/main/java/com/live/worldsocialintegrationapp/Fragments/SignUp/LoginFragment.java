@@ -376,7 +376,7 @@ public class LoginFragment extends Fragment {
                 Log.i("socialLoginApi",personName);
                 Log.i("socialLoginApi",personEmail);
                 //Log.i("socialLoginApi",personPhoto.toString());
-                socialLoginApi(countryNew,personId,personName,personEmail,"false","");
+                socialLoginApi(countryNew,personId,personName,personEmail,"false","","","");
 
             }
             // Signed in successfully, show authenticated UI.
@@ -438,13 +438,13 @@ public class LoginFragment extends Fragment {
 
                             String personName = object.getString("name");
                             //String personEmail = object.getString("email");
-                            String socialID = object.getString("id");
+                            String facebookId = object.getString("id");
                             App.getSharedpref().saveString("facebook",personName);
                             Toast.makeText(requireActivity(), "LogIn Success", Toast.LENGTH_SHORT).show();
                             //Log.i("Facebookzzzzzzzzz",personName +object.getString("email"));
 
                             //added static email for now as we need to get mail from facebook
-                            socialLoginApi(countryNew,socialID,personName,email,"false","");
+                            socialLoginApi(countryNew,"",personName,email,"false","",facebookId,"");
 
 
                         } catch (JSONException e) {
@@ -533,7 +533,7 @@ public class LoginFragment extends Fragment {
 //                });
 //    }
 
-    private void socialLoginApi(String continent, String socialId, String name, String email,String isAddingAccount,String userName) {
+    private void socialLoginApi(String continent, String gmailId, String name, String email,String isAddingAccount,String userName, String facebookId,String snapchatId) {
 
         Log.d("socialLoginApi", "socialLoginApi: ");
         Log.d("socialLoginApi", "socialLoginApi: "+socialId);
@@ -551,7 +551,7 @@ public class LoginFragment extends Fragment {
 
 
         new Mvvm().socialLogin(requireActivity(),
-                        CommonUtils.getRequestBodyText(socialId),
+                        CommonUtils.getRequestBodyText(gmailId),
                         CommonUtils.getRequestBodyText(RegId),
                         CommonUtils.getRequestBodyText(deviceId),
                         CommonUtils.getRequestBodyText("android"),
@@ -562,9 +562,12 @@ public class LoginFragment extends Fragment {
                        // CommonUtils.getFileData(s,"image"),
                         CommonUtils.getRequestBodyText(countryNew),
                         CommonUtils.getRequestBodyText(isAddingAccount),
-                        CommonUtils.getRequestBodyText(userName))
+                        CommonUtils.getRequestBodyText(userName),
+                        CommonUtils.getRequestBodyText(facebookId),
+                        CommonUtils.getRequestBodyText(snapchatId))
                 .observe(requireActivity(), socialLoginRoot -> {
 //                    if (socialLoginRoot != null) {
+                    Log.i("in LOGIN FRAG","zzzzzzzzzzzzzzzzzzzz " +socialLoginRoot +" "+ socialLoginRoot.getStatus() );
                         if (socialLoginRoot != null && socialLoginRoot.getStatus() == 1) {
 
                             App.getSharedpref().saveString(AppConstant.SESSION, "1");

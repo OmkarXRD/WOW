@@ -299,14 +299,14 @@ public class ConnectedAccountsFragment extends Fragment {
 
                             String personName = object.getString("name");
                             //String personEmail = object.getString("email");
-                            String socialID = object.getString("id");
+                            String facebookId = object.getString("id");
                             //add facebook username in sharedPref
                             App.getSharedpref().saveString("facebook",personName);
 
                             //Toast.makeText(requireActivity(), "LogIn Success", Toast.LENGTH_SHORT).show();
 
                             //added static email for now as we need to get mail from facebook
-                            socialLoginApi(countryNew,socialID,"",email,"true",username);
+                            socialLoginApi(countryNew,"","",email,"true",username,facebookId,"");
 
 
                         } catch (JSONException e) {
@@ -334,10 +334,10 @@ public class ConnectedAccountsFragment extends Fragment {
         });
     }
 
-    private void socialLoginApi(String continent, String socialId, String name, String email, String isAddingAccount, String userName) {
+    private void socialLoginApi(String continent, String gmailId, String name, String email, String isAddingAccount, String userName, String facebookId, String snapChatId) {
 
         Log.d("socialLoginApi", "socialLoginApi: ");
-        Log.d("socialLoginApi", "socialLoginApi: "+socialId);
+        Log.d("socialLoginApi", "socialLoginApi: "+gmailId);
         Log.d("socialLoginApi", "socialLoginApi: "+RegId);
         Log.d("socialLoginApi", "socialLoginApi: "+deviceId);
         Log.d("socialLoginApi", "socialLoginApi: "+ "Device type");
@@ -352,7 +352,7 @@ public class ConnectedAccountsFragment extends Fragment {
 
 
         new Mvvm().socialLogin(requireActivity(),
-                        CommonUtils.getRequestBodyText(socialId),
+                        CommonUtils.getRequestBodyText(gmailId),
                         CommonUtils.getRequestBodyText(RegId),
                         CommonUtils.getRequestBodyText(deviceId),
                         CommonUtils.getRequestBodyText("android"),
@@ -363,7 +363,9 @@ public class ConnectedAccountsFragment extends Fragment {
                         // CommonUtils.getFileData(s,"image"),
                         CommonUtils.getRequestBodyText(countryNew),
                         CommonUtils.getRequestBodyText(isAddingAccount),
-                        CommonUtils.getRequestBodyText(userName))
+                        CommonUtils.getRequestBodyText(userName),
+                        CommonUtils.getRequestBodyText(facebookId),
+                        CommonUtils.getRequestBodyText(snapChatId))
                 .observe(requireActivity(), socialLoginRoot -> {
 //                    if (socialLoginRoot != null) {
                     if (socialLoginRoot != null && socialLoginRoot.getStatus() == 1) {
@@ -580,7 +582,7 @@ public class ConnectedAccountsFragment extends Fragment {
                 Log.i("socialLoginApi",personName);
                 Log.i("socialLoginApi",personEmail);
                 //Log.i("socialLoginApi",personPhoto.toString());
-                socialLoginApi(countryNew,personId,"",personEmail,"true",username);
+                socialLoginApi(countryNew,personId,"",personEmail,"true",username,"","");
 
             }
             // Signed in successfully, show authenticated UI.

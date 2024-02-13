@@ -426,6 +426,7 @@ public class HomeActivity extends AppCompatActivity {
             bundle.putInt("backPressed", 0);
             Navigation.findNavController(this, R.id.nav_home).navigate(R.id.chatFragment, bundle);
 //            screenStatus = 0;
+
             binding.bottomLay.homeFragment.setImageResource(R.drawable.icon_home_ftr);
             binding.bottomLay.secondMain.setImageResource(R.drawable.icon_explore_ftsvgr);
             binding.bottomLay.bottomMessage.setImageResource(R.drawable.bubble_message_color_full_img);

@@ -415,7 +415,9 @@ public interface ServiceApi {
                                       //@Part MultipartBody.Part image,
                                       @Part("Country") RequestBody Country,
                                       @Part("isAddingAccount") RequestBody isAddingAccount,
-                                      @Part("userName") RequestBody userName);
+                                      @Part("userName") RequestBody userName,
+                                      @Part("facebookId") RequestBody facebookId,
+                                      @Part("snapchatId") RequestBody snapchatId);
 
     @FormUrlEncoded
     @POST("archieveLive")
