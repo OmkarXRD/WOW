@@ -35,6 +35,7 @@ public class SocialLoginRoot implements Serializable {
     public class Details {
         public String id;
         public String name;
+        public String facebookUserName;
         public String host_status;
         public String social_id;
         public String myExp;
@@ -116,6 +117,15 @@ public class SocialLoginRoot implements Serializable {
         public void setName(String name) {
             this.name = name;
         }
+
+        public String getFacebookUserName() {
+            return facebookUserName;
+        }
+
+        public void setFacebookUserName(String facebookUserName) {
+            this.facebookUserName = facebookUserName;
+        }
+
 
         public String getHost_status() {
             return host_status;

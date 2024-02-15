@@ -301,7 +301,6 @@ public class ConnectedAccountsFragment extends Fragment {
                             //String personEmail = object.getString("email");
                             String facebookId = object.getString("id");
                             //add facebook username in sharedPref
-                            App.getSharedpref().saveString("facebook",personName);
 
                             //Toast.makeText(requireActivity(), "LogIn Success", Toast.LENGTH_SHORT).show();
 
@@ -381,10 +380,13 @@ public class ConnectedAccountsFragment extends Fragment {
                         //App.getSharedpref().saveString("country", socialLoginRoot.getDetails().getCountry());
                         //App.getSharedpref().saveString("dob", socialLoginRoot.getDetails().getDob());
                         App.getSharedpref().saveString("email", socialLoginRoot.getDetails().getEmail());
+                        App.getSharedpref().saveString("facebook",socialLoginRoot.getDetails().getFacebookUserName());
+
                         //App.getSharedpref().saveModel("RegisterRoot", socialLoginRoot.getDetails());
                         AppConstants.USER_ID = socialLoginRoot.getDetails().getId();
 
                         if (String.valueOf(socialLoginRoot.getDetails().idBannedStatus).equalsIgnoreCase("false")){
+
                             Toast.makeText(requireContext(), "Account added successfully!!", Toast.LENGTH_SHORT).show();
                             //startActivity(new Intent(requireActivity(), HomeActivity.class));
                         }else {
@@ -393,7 +395,8 @@ public class ConnectedAccountsFragment extends Fragment {
                     }
                     else {
                         if (getContext() != null) {
-                            Toast.makeText(requireContext(), "Technical issue ", Toast.LENGTH_SHORT).show();
+                            assert socialLoginRoot != null;
+                            Toast.makeText(requireContext(), socialLoginRoot.message, Toast.LENGTH_SHORT).show();
                         }
                     }
 
@@ -576,7 +579,7 @@ public class ConnectedAccountsFragment extends Fragment {
                 String personEmail = acct.getEmail();
                 String personId = acct.getId();
                 //Uri personPhoto = acct.getPhotoUrl();
-                Toast.makeText(requireActivity(), "Account added successfully!!", Toast.LENGTH_SHORT).show();
+
                 Log.i("socialLoginApi"," above social login api call ");
                 Log.i("socialLoginApi",countryNew);
                 Log.i("socialLoginApi",personId);

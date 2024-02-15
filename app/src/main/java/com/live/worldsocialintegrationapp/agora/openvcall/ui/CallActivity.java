@@ -3509,7 +3509,6 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
 
     }
 
-
     private void openDialogForSendMessage() {
         sendMessageBottomSheet = new BottomSheetDialog(this);
         DialogSendMessageBinding dialogGiftBinding = DialogSendMessageBinding.inflate(LayoutInflater.from(this));
@@ -5997,7 +5996,18 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
         callViewModel.getLiveTotalDiamonds(CallActivity.this,liveHostBackImg).observe(CallActivity.this, getLiveTotalDiamondRoot -> {
             if (getLiveTotalDiamondRoot != null) {
                 if (getLiveTotalDiamondRoot.getSuccess().equalsIgnoreCase("1")) {
-                    String formattedValue = formatValue(Integer.parseInt(getLiveTotalDiamondRoot.getDetails().getDiamond()));
+                    //String formattedValue = formatValue(Integer.parseInt(getLiveTotalDiamondRoot.getDetails().getDiamond()));
+                    String formattedValue = null;
+                    try {
+                        String diamondValue = getLiveTotalDiamondRoot.getDetails().getDiamond();
+                        int diamond = Integer.parseInt(diamondValue);
+                        formattedValue = formatValue(diamond);
+                        // Use the formattedValue as needed
+                    } catch (NumberFormatException e) {
+                        // Handle the case where the diamondValue is not a valid integer
+                        // Log an error, show a message to the user, or take appropriate action
+                        e.printStackTrace(); // Print the stack trace for debugging purposes
+                    }
                     liveDiamonds.child("liveDiamonds").setValue(formattedValue);
                     if (formattedValue !=null){
                         binding.liveDiamondsTv.setText(formattedValue);

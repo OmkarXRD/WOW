@@ -90,7 +90,9 @@ public class CoinsTabFragment extends Fragment {
                    CoinsTabRVAdapter coinsTabRVAdapter = new CoinsTabRVAdapter(list, requireContext(), new CoinsTabRVAdapter.Callback() {
                        @Override
                        public void callback(Detail value) {
-                           openPhonePe(value);
+                           //#007
+                           //openPhonePe(value);
+                           genrateOrder(value);
                        }
                    });
                    binding.coinsRV.setAdapter(coinsTabRVAdapter);

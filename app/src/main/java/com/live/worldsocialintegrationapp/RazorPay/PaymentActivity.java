@@ -112,6 +112,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
                 JSONObject options = new JSONObject(etCustomOptions.getText().toString());
                 co.open(activity, options);
             } catch (JSONException e) {
+                Log.i("Razorpay","zzzzzzzzzzzzzzz 111");
                 Toast.makeText(activity, "Error in payment: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
@@ -139,7 +140,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
                    preFill.put("email", email);
                }
                 if(phone.isEmpty()){
-                    preFill.put("contact", "9876676547");
+                    preFill.put("contact", "9999999999");
                 }else{
                     preFill.put("contact", phone);
                 }
@@ -148,6 +149,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
 
                 co.open(activity, options);
             } catch (Exception e) {
+                Log.i("Razorpay","zzzzzzzzzzzzzzz 22222");
                 Toast.makeText(activity, "Error in payment: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
