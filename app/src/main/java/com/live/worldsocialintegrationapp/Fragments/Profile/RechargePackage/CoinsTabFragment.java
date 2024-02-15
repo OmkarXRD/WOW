@@ -82,22 +82,30 @@ public class CoinsTabFragment extends Fragment {
        new Mvvm().getCoins(requireActivity(),AppConstants.USER_ID).observe(requireActivity(), new Observer<GetCoinRoot>() {
            @Override
            public void onChanged(GetCoinRoot getCoinRoot) {
-               if(getCoinRoot.getStatus().equalsIgnoreCase("1")){
-                   list = new ArrayList<>();
-                   list = getCoinRoot.getDetails();
-                   phoneNumber = getCoinRoot.getPhone();
+               if(getCoinRoot != null){
+                   if(getCoinRoot.getStatus().equalsIgnoreCase("1")){
+                       list = new ArrayList<>();
+                       list = getCoinRoot.getDetails();
+                       phoneNumber = getCoinRoot.getPhone();
 
-                   CoinsTabRVAdapter coinsTabRVAdapter = new CoinsTabRVAdapter(list, requireContext(), new CoinsTabRVAdapter.Callback() {
-                       @Override
-                       public void callback(Detail value) {
-                           //#007
-                           //openPhonePe(value);
-                           genrateOrder(value);
-                       }
-                   });
-                   binding.coinsRV.setAdapter(coinsTabRVAdapter);
-               }else{
+                       CoinsTabRVAdapter coinsTabRVAdapter = new CoinsTabRVAdapter(list, requireContext(), new CoinsTabRVAdapter.Callback() {
+                           @Override
+                           public void callback(Detail value) {
+                               //#007
+                               //openPhonePe(value);
+                               genrateOrder(value);
+                           }
+                       });
+
+                       binding.coinsRV.setAdapter(coinsTabRVAdapter);
+                   }else{
+                   }
+               } else {
+                   if (getContext() != null) {
+                       //Toast.makeText(requireContext(), "Technical issue", Toast.LENGTH_SHORT).show();
+                   }
                }
+
            }
        });
     }
@@ -127,31 +135,43 @@ public class CoinsTabFragment extends Fragment {
     }
 
     private void genrateOrder(Detail detail){
+        //order_Nb9aC2ilbW0OSN
+        //order_Nb9aVE2RaQdV1z
 
-        new Mvvm().generateOrder(requireActivity(), detail.getMoneyValue()).observe(requireActivity(), new Observer<GenerateOrderRoot>() {
-            @Override
-            public void onChanged(GenerateOrderRoot generateOrderRoot) {
+        Intent intent = new Intent(requireActivity(), PaymentActivity.class);
 
-                if(generateOrderRoot != null){
-                    if(generateOrderRoot.getSuccess().equalsIgnoreCase("1")){
+        intent.putExtra("orderId","order_Nb9aVE2RaadVer");
+        intent.putExtra("key","rzp_test_usEmd5LTJQKCTA");
+        intent.putExtra("price",detail.getMoneyValue());
+        intent.putExtra("itemId",detail.getId());
 
-                        Intent intent = new Intent(requireActivity(), PaymentActivity.class);
+        startActivity(intent);
 
-                        intent.putExtra("orderId",generateOrderRoot.getOrderId());
-                        intent.putExtra("key",generateOrderRoot.getKey());
-                        intent.putExtra("price",generateOrderRoot.getAmount());
-                        intent.putExtra("itemId",detail.getId());
-
-                        startActivity(intent);
-
-                    }else{
-                        Toast.makeText(requireContext(), "shit men", Toast.LENGTH_SHORT).show();
-                    }
-                }else {
-                    Toast.makeText(requireContext(), "shit men", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+//        new Mvvm().generateOrder(requireActivity(), detail.getMoneyValue()).observe(requireActivity(), new Observer<GenerateOrderRoot>() {
+//            @Override
+//            public void onChanged(GenerateOrderRoot generateOrderRoot) {
+//
+//                if(generateOrderRoot != null){
+//                    if(generateOrderRoot.getSuccess().equalsIgnoreCase("1")){
+//
+//                        Intent intent = new Intent(requireActivity(), PaymentActivity.class);
+//
+//                        intent.putExtra("orderId",generateOrderRoot.getOrderId());
+//                        intent.putExtra("key",generateOrderRoot.getKey());
+//                        intent.putExtra("price",generateOrderRoot.getAmount());
+//                        intent.putExtra("itemId",detail.getId());
+//
+//                        startActivity(intent);
+//
+//                    }else{
+//                        Toast.makeText(requireContext(), "shit men", Toast.LENGTH_SHORT).show();
+//                    }
+//                }else {
+//                    Toast.makeText(requireContext(), "shit men", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
+//
     }
 
 

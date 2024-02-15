@@ -48,6 +48,13 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
             key = getIntent().getStringExtra("key");
             price = getIntent().getStringExtra("price");
             itemId=getIntent().getStringExtra("itemId");
+
+            Log.i("Razorpayzzzzzzzz","111 "+orderId);
+            Log.i("Razorpayzzzzzzzz","111 "+key);
+            Log.i("Razorpayzzzzzzzz","111 "+price);
+            Log.i("Razorpayzzzzzzzz","111 "+itemId);
+
+
         }
         startPayment();
     }
@@ -59,7 +66,8 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
         //    checkout.setKeyID("rzp_live_mltyt2YlNJ6Olg");  //live key
 //        checkout.setKeyID("rzp_test_usEmd5LTJQKCTA");  //test key
 
-
+        //order_Nb9aC2ilbW0OSN
+        //order_Nb9aVE2RaQdV1z
     }
 
 
@@ -73,12 +81,13 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
 
                 if(addWalletMoneyRoot.getSuccess().equalsIgnoreCase("1")){
 
-                    Toast.makeText(PaymentActivity.this, "Successfully payment " + s, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(PaymentActivity.this, "Payment Successful" + s, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PaymentActivity.this, "Payment Successful", Toast.LENGTH_SHORT).show();
 
                     onBackPressed();
 
                 }else{
-                    Toast.makeText(PaymentActivity.this, "not done payment " + s, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PaymentActivity.this, "Payment Failed" + s, Toast.LENGTH_SHORT).show();
                     onBackPressed();
                 }
             }
@@ -88,7 +97,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
 
     @Override
     public void onPaymentError(int i, String s, PaymentData paymentData) {
-
+        Log.i("Razorpayzzzzzzzz","zzzzzzzzzzzzzzz zzzzz on payment error " + s );
         Toast.makeText(this, "Error " + s, Toast.LENGTH_SHORT).show();
         onBackPressed();
     }
@@ -98,35 +107,39 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
         /*
           You need to pass current activity in order to let Razorpay create CheckoutActivity
          */
-        final Activity activity = this;
+
 
         final Checkout co = new Checkout();
 
         co.setKeyID(key);
+        final Activity activity = this;
 
         EditText etCustomOptions = new EditText(this);
 
         if (!TextUtils.isEmpty(etCustomOptions.getText().toString())) {
-
+            Log.i("Razorpayzzzzzzzz","zzzzzzzzzzzzzzz zzzzz" + key);
             try {
                 JSONObject options = new JSONObject(etCustomOptions.getText().toString());
                 co.open(activity, options);
             } catch (JSONException e) {
-                Log.i("Razorpay","zzzzzzzzzzzzzzz 111");
+                Log.i("Razorpayzzzzzzzz","zzzzzzzzzzzzzzz 111");
                 Toast.makeText(activity, "Error in payment: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
 
         } else {
+            //Log.i("Razorpayzzzzzzzz","zzzzzzzzzzzzzzz zzzzz 111111111111 " + key);
             try {
                 JSONObject options = new JSONObject();
                 options.put("name", App.getSharedpref().getString("name"));
-                options.put("description", "Demoing Charges");
+                options.put("description", "Demo Charges");
+                //options.put("order_id", orderId);
                 options.put("send_sms_hash", true);
                 options.put("allow_rotation", true);
                 //You can omit the image option to fetch the image from dashboard
                 options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
                 options.put("currency", "INR");
+
                 options.put("amount", Integer.parseInt(price)*100);
 
                 JSONObject preFill = new JSONObject();
@@ -135,12 +148,12 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
                String phone= App.getSharedpref().getString("phone").toString();
 
                if(email.isEmpty()){
-                   preFill.put("email", "test@razorpay.com");
+                   preFill.put("email", "");
                }else{
                    preFill.put("email", email);
                }
                 if(phone.isEmpty()){
-                    preFill.put("contact", "9999999999");
+                    preFill.put("contact", "");
                 }else{
                     preFill.put("contact", phone);
                 }
@@ -149,7 +162,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
 
                 co.open(activity, options);
             } catch (Exception e) {
-                Log.i("Razorpay","zzzzzzzzzzzzzzz 22222");
+                Log.i("Razorpayzzzzzzzz","zzzzzzzzzzzzzzz 22222");
                 Toast.makeText(activity, "Error in payment: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }

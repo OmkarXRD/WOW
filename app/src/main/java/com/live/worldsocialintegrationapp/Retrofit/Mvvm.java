@@ -3745,6 +3745,7 @@ public class Mvvm extends ViewModel {
                     if (response.body() != null) {
                         generateOrderRootMutableLiveData.postValue(response.body());
                     } else {
+                        Log.i("Razorpayzzzzzzzz","zzzzzzzzzzz 11111");
                         Toast.makeText(activity, "Technical issue", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -3752,6 +3753,7 @@ public class Mvvm extends ViewModel {
                 @Override
                 public void onFailure(Call<GenerateOrderRoot> call, Throwable t) {
                     generateOrderRootMutableLiveData.postValue(null);
+                    Log.i("Razorpayzzzzzzzz","zzzzzzzzzzz 222222222");
                     Toast.makeText(activity, "Technical issue", Toast.LENGTH_SHORT).show();
                 }
             });
