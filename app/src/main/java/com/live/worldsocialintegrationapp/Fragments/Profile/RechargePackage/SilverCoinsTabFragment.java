@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -89,7 +90,7 @@ public class SilverCoinsTabFragment extends Fragment {
                 if(purchaseSilverCoins != null){
                     if (purchaseSilverCoins.getSuccess().equalsIgnoreCase("1")) {
 
-//                        binding.sivlerCoinsTV.setText(purchaseSilverCoins.getDetails().getCoinValue());
+                      //binding.sivlerCoinsTV.setText(purchaseSilverCoins.getDetails().getCoinValue());
                         getTotalSilverCoinsApi();
 
                         App.getSharedpref().saveString("silverCoins", purchaseSilverCoins.getDetails().getCoinValue());
@@ -97,7 +98,8 @@ public class SilverCoinsTabFragment extends Fragment {
                         notEnoughCoins();
                     }
                 }else{
-                    Toast.makeText(requireContext(), "Technical issue", Toast.LENGTH_SHORT).show();
+                    Log.i("CoinFrag","Technical issue 11");
+                    //Toast.makeText(requireContext(), "Technical issue", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -128,25 +130,27 @@ public class SilverCoinsTabFragment extends Fragment {
 
     private void getTotalSilverCoinsApi(){
 
-//        new Mvvm().getTotalSilverCoins(requireActivity(),AppConstants.USER_ID).observe(requireActivity(), new Observer<GetTotalSilverCoinsRoot>() {
-//            @Override
-//            public void onChanged(GetTotalSilverCoinsRoot getTotalSilverCoinsRoot) {
-//
-//                if(getTotalSilverCoinsRoot !=  null){
-//                    if(getTotalSilverCoinsRoot.getSuccess().equalsIgnoreCase("1")){
-//                        binding.sivlerCoinsTV.setText(getTotalSilverCoinsRoot.getDetails().getCoinValue());
-//                    }else{
-//                        if (getContext() != null){
-//                            Toast.makeText(requireContext(), "Technical issue", Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                }else{
-//                    if (getContext() != null){
-//                        Toast.makeText(requireContext(), "Technical issue", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//            }
-//        });
+        new Mvvm().getTotalSilverCoins(requireActivity(),AppConstants.USER_ID).observe(requireActivity(), new Observer<GetTotalSilverCoinsRoot>() {
+            @Override
+            public void onChanged(GetTotalSilverCoinsRoot getTotalSilverCoinsRoot) {
+
+                if(getTotalSilverCoinsRoot !=  null){
+                    if(getTotalSilverCoinsRoot.getSuccess().equalsIgnoreCase("1")){
+                        binding.sivlerCoinsTV.setText(getTotalSilverCoinsRoot.getDetails().getCoinValue());
+                    }else{
+                        if (getContext() != null){
+                            Log.i("CoinFrag","Technical issue 22");
+                            //Toast.makeText(requireContext(), "Technical issue", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }else{
+                    if (getContext() != null){
+                        Log.i("CoinFrag","Technical issue 33");
+                        //Toast.makeText(requireContext(), "Technical issue", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
     }
 
 }

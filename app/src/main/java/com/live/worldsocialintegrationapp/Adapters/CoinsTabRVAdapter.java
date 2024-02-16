@@ -45,7 +45,12 @@ public class CoinsTabRVAdapter extends RecyclerView.Adapter<CoinsTabRVAdapter.Vi
         holder.coinsTv.setText(list.get(position).getCoinValue());
         holder.coinsMoneyTV.setText("₹"+list.get(position).getMoneyValue());
 
-        holder.itemView.setOnClickListener(view -> callback.callback(list.get(position)));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View v) {
+                        callback.callback(list.get(position));
+                   }
+                });
     }
 
     @Override

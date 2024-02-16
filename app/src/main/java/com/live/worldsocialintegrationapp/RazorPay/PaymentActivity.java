@@ -1,7 +1,9 @@
 package com.live.worldsocialintegrationapp.RazorPay;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import android.app.Activity;
@@ -10,6 +12,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -19,6 +24,7 @@ import com.live.worldsocialintegrationapp.Fragments.Profile.RechargePackage.Rech
 import com.live.worldsocialintegrationapp.ModelClasses.Wallet.AddWalletMoneyRoot;
 import com.live.worldsocialintegrationapp.R;
 import com.live.worldsocialintegrationapp.Retrofit.Mvvm;
+import com.live.worldsocialintegrationapp.databinding.FragmentProfileMainBinding;
 import com.live.worldsocialintegrationapp.utils.App;
 import com.live.worldsocialintegrationapp.utils.AppConstants;
 import com.razorpay.Checkout;
@@ -53,6 +59,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
         }
         startPayment();
     }
+
 
     public synchronized void makePayment() {
 

@@ -39,7 +39,8 @@ public class RechargeCointsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         if(CallActivityCheck==0){
             CommonUtils.disableBottomNavigation(requireActivity());
-        }else{
+        }
+        else{
 
         }
         App.getSharedpref().saveString("userCheck","");
@@ -56,7 +57,7 @@ public class RechargeCointsFragment extends Fragment {
 
         view.findViewById(R.id.rechargeBackImag).setOnClickListener(view1 -> {
             getActivity().onBackPressed();
-        });
+    });
 
         view.findViewById(R.id.googleWaletBillingImg).setOnClickListener(new View.OnClickListener() {
             @Override
