@@ -151,7 +151,6 @@ public class CoinsTabFragment extends Fragment {
                         intent.putExtra("key","rzp_test_usEmd5LTJQKCTA");
                         intent.putExtra("price",generateOrderRoot.getAmount());
                         intent.putExtra("itemId",detail.getId());
-
                         startActivity(intent);
 
                     }else{
