@@ -137,41 +137,32 @@ public class CoinsTabFragment extends Fragment {
     private void genrateOrder(Detail detail){
         //order_Nb9aC2ilbW0OSN
         //order_Nb9aVE2RaQdV1z
+        new Mvvm().generateOrder(requireActivity(), detail.getMoneyValue()).observe(requireActivity(), new Observer<GenerateOrderRoot>() {
+            @Override
+            public void onChanged(GenerateOrderRoot generateOrderRoot) {
 
-        Intent intent = new Intent(requireActivity(), PaymentActivity.class);
+                if(generateOrderRoot != null){
+                    if(generateOrderRoot.getSuccess().equalsIgnoreCase("1")){
 
-        intent.putExtra("orderId","order_Nb9aVE2RaadVer");
-        intent.putExtra("key","rzp_test_usEmd5LTJQKCTA");
-        intent.putExtra("price",detail.getMoneyValue());
-        intent.putExtra("itemId",detail.getId());
+                        Intent intent = new Intent(requireActivity(), PaymentActivity.class);
 
-        startActivity(intent);
+                        intent.putExtra("orderId",generateOrderRoot.getOrderId());
+                        //intent.putExtra("key",generateOrderRoot.getKey());
+                        intent.putExtra("key","rzp_test_usEmd5LTJQKCTA");
+                        intent.putExtra("price",generateOrderRoot.getAmount());
+                        intent.putExtra("itemId",detail.getId());
 
-//        new Mvvm().generateOrder(requireActivity(), detail.getMoneyValue()).observe(requireActivity(), new Observer<GenerateOrderRoot>() {
-//            @Override
-//            public void onChanged(GenerateOrderRoot generateOrderRoot) {
-//
-//                if(generateOrderRoot != null){
-//                    if(generateOrderRoot.getSuccess().equalsIgnoreCase("1")){
-//
-//                        Intent intent = new Intent(requireActivity(), PaymentActivity.class);
-//
-//                        intent.putExtra("orderId",generateOrderRoot.getOrderId());
-//                        intent.putExtra("key",generateOrderRoot.getKey());
-//                        intent.putExtra("price",generateOrderRoot.getAmount());
-//                        intent.putExtra("itemId",detail.getId());
-//
-//                        startActivity(intent);
-//
-//                    }else{
-//                        Toast.makeText(requireContext(), "shit men", Toast.LENGTH_SHORT).show();
-//                    }
-//                }else {
-//                    Toast.makeText(requireContext(), "shit men", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-//
+                        startActivity(intent);
+
+                    }else{
+                        Toast.makeText(requireContext(), "Technical Issue", Toast.LENGTH_SHORT).show();
+                    }
+                }else {
+                    Toast.makeText(requireContext(), "Technical Issue", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
 
 

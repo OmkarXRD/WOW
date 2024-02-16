@@ -24,13 +24,14 @@ import com.live.worldsocialintegrationapp.utils.AppConstants;
 import com.razorpay.Checkout;
 import com.razorpay.ExternalWalletListener;
 import com.razorpay.PaymentData;
+import com.razorpay.PaymentResultListener;
 import com.razorpay.PaymentResultWithDataListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class PaymentActivity extends AppCompatActivity implements PaymentResultWithDataListener {
+public class PaymentActivity extends AppCompatActivity implements PaymentResultListener {
 
     private static final String TAG = "check";
     private AlertDialog.Builder alertDialogBuilder;
@@ -49,12 +50,6 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
             price = getIntent().getStringExtra("price");
             itemId=getIntent().getStringExtra("itemId");
 
-            Log.i("Razorpayzzzzzzzz","111 "+orderId);
-            Log.i("Razorpayzzzzzzzz","111 "+key);
-            Log.i("Razorpayzzzzzzzz","111 "+price);
-            Log.i("Razorpayzzzzzzzz","111 "+itemId);
-
-
         }
         startPayment();
     }
@@ -71,36 +66,40 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
     }
 
 
-    @Override
-    public void onPaymentSuccess(String s, PaymentData paymentData) {
+//    @Override
+//    public void onPaymentSuccess(String s, PaymentData paymentData) {
+//        Log.i("Razorpayzzzzzzzz","zzzz "+paymentData.getSignature());
+//        Log.i("Razorpayzzzzzzzz","zzzz "+paymentData.getPaymentId());
+//        Log.i("Razorpayzzzzzzzz","zzzz "+orderId);
+//        Log.i("Razorpayzzzzzzzz","zzzz "+itemId);
+//        Log.i("Razorpayzzzzzzzz","zzzz "+AppConstants.USER_ID);
+//        new Mvvm().addMoneyToWallet(PaymentActivity.this,AppConstants.USER_ID,itemId,orderId,paymentData.getPaymentId(),paymentData.getSignature()).observe(PaymentActivity.this,
+//                new Observer<AddWalletMoneyRoot>() {
+//            @Override
+//            public void onChanged(AddWalletMoneyRoot addWalletMoneyRoot) {
+//
+//                if(addWalletMoneyRoot.getSuccess().equalsIgnoreCase("1")){
+//
+//                    //Toast.makeText(PaymentActivity.this, "Payment Successful" + s, Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(PaymentActivity.this, "Payment Successful", Toast.LENGTH_SHORT).show();
+//
+//                    onBackPressed();
+//
+//                }else{
+//                    Toast.makeText(PaymentActivity.this, "Payment Failed" + s, Toast.LENGTH_SHORT).show();
+//                    onBackPressed();
+//                }
+//            }
+//        });
+//
+//    }
 
-        new Mvvm().addMoneyToWallet(PaymentActivity.this,AppConstants.USER_ID,itemId,orderId,paymentData.getPaymentId(),paymentData.getSignature()).observe(PaymentActivity.this,
-                new Observer<AddWalletMoneyRoot>() {
-            @Override
-            public void onChanged(AddWalletMoneyRoot addWalletMoneyRoot) {
-
-                if(addWalletMoneyRoot.getSuccess().equalsIgnoreCase("1")){
-
-                    //Toast.makeText(PaymentActivity.this, "Payment Successful" + s, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(PaymentActivity.this, "Payment Successful", Toast.LENGTH_SHORT).show();
-
-                    onBackPressed();
-
-                }else{
-                    Toast.makeText(PaymentActivity.this, "Payment Failed" + s, Toast.LENGTH_SHORT).show();
-                    onBackPressed();
-                }
-            }
-        });
-
-    }
-
-    @Override
-    public void onPaymentError(int i, String s, PaymentData paymentData) {
-        Log.i("Razorpayzzzzzzzz","zzzzzzzzzzzzzzz zzzzz on payment error " + s );
-        Toast.makeText(this, "Error " + s, Toast.LENGTH_SHORT).show();
-        onBackPressed();
-    }
+//    @Override
+//    public void onPaymentError(int i, String s, PaymentData paymentData) {
+//        Log.i("Razorpayzzzzzzzz","zzzzzzzzzzzzzzz zzzzz on payment error " + s );
+//        Toast.makeText(this, "Error " + s, Toast.LENGTH_SHORT).show();
+//        onBackPressed();
+//    }
 
 
     public void startPayment() {
@@ -117,19 +116,17 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
         EditText etCustomOptions = new EditText(this);
 
         if (!TextUtils.isEmpty(etCustomOptions.getText().toString())) {
-            Log.i("Razorpayzzzzzzzz","zzzzzzzzzzzzzzz zzzzz" + key);
             try {
                 JSONObject options = new JSONObject(etCustomOptions.getText().toString());
                 co.open(activity, options);
             } catch (JSONException e) {
-                Log.i("Razorpayzzzzzzzz","zzzzzzzzzzzzzzz 111");
                 Toast.makeText(activity, "Error in payment: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
 
         } else {
-            //Log.i("Razorpayzzzzzzzz","zzzzzzzzzzzzzzz zzzzz 111111111111 " + key);
             try {
+
                 JSONObject options = new JSONObject();
                 options.put("name", App.getSharedpref().getString("name"));
                 options.put("description", "Demo Charges");
@@ -162,7 +159,6 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
 
                 co.open(activity, options);
             } catch (Exception e) {
-                Log.i("Razorpayzzzzzzzz","zzzzzzzzzzzzzzz 22222");
                 Toast.makeText(activity, "Error in payment: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
@@ -170,4 +166,37 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultW
     }
 
 
+    @Override
+    public void onPaymentSuccess(String s) {
+        //Log.i("Razorpayzzzzzzzz","zzzz "+paymentData.getSignature());
+        //Log.i("Razorpayzzzzzzzz","zzzz "+paymentData.getPaymentId());
+        Log.i("Razorpayzzzzzzzz","zzzz "+orderId);
+        Log.i("Razorpayzzzzzzzz","zzzz "+itemId);
+        Log.i("Razorpayzzzzzzzz","zzzz "+AppConstants.USER_ID);
+
+
+        //need to remove the razorpay_payment_id and razorpay_signature sending static at the moment
+        new Mvvm().addMoneyToWallet(PaymentActivity.this,AppConstants.USER_ID,itemId,orderId,"123123","asdad123123").observe(PaymentActivity.this,
+                new Observer<AddWalletMoneyRoot>() {
+                    @Override
+                    public void onChanged(AddWalletMoneyRoot addWalletMoneyRoot) {
+
+                        if(addWalletMoneyRoot.getSuccess().equalsIgnoreCase("1")){
+                            //Toast.makeText(PaymentActivity.this, "Payment Successful" + s, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(PaymentActivity.this, "Payment Successful", Toast.LENGTH_SHORT).show();
+                            onBackPressed();
+
+                        }else{
+                            Toast.makeText(PaymentActivity.this, "Payment Failed" + s, Toast.LENGTH_SHORT).show();
+                            onBackPressed();
+                        }
+                    }
+                });
+    }
+
+    @Override
+    public void onPaymentError(int i, String s) {
+        Toast.makeText(this, "Error " + s, Toast.LENGTH_SHORT).show();
+        onBackPressed();
+    }
 }
