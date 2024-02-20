@@ -202,9 +202,10 @@
             android:supportsPictureInPicture="true"
             android:windowSoftInputMode="adjustNothing" />
 
+        <!--#007 changed exported to true-->
         <receiver
             android:name="com.razorpay.RzpTokenReceiver"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
                 <action android:name="rzp.device_token.share" />
             </intent-filter>
@@ -218,7 +219,17 @@
                 <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED" />
             </intent-filter>
         </receiver>
-
+<!--        #007-->
+        <activity
+            android:name="com.live.worldsocialintegrationapp.RazorPay.PaymentActivity"
+            android:label="PaymentActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.live.worldsocialintegrationapp.ACTION_PAYMENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--        #007-->
         <activity
             android:name="com.razorpay.CheckoutActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"

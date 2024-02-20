@@ -56,7 +56,7 @@ public class PhonePeActivity extends AppCompatActivity {
 
     private void phonePe() {
         try {
-            PhonePe.init(this, PhonePeEnvironment.UAT_SIMULATOR, merchantId, String.valueOf(merchantTransactionId));
+            PhonePe.init(this, PhonePeEnvironment.UAT, merchantId, String.valueOf(merchantTransactionId));
             String string_signature = PhonePe.getPackageSignature();
             Log.d("getData", "string_signature: "+string_signature);
             List<UPIApplicationInfo> upiApps = PhonePe.getUpiApps();
@@ -196,19 +196,19 @@ public class PhonePeActivity extends AppCompatActivity {
 
     private void hitapi(Intent data) {
 
-//        new Mvvm().saveTransaction(AppConstants.USER_ID,merchantId, String.valueOf(merchantTransactionId),amount,d,"","").observe(PhonePeActivity.this, response ->{
-//            if (response !=null){
-//                if (response.success){
-//                    Toast.makeText(this, "1 :-"+response.getMessage(), Toast.LENGTH_SHORT).show();
-//                }else {
-//                    Toast.makeText(this, "0 :-"+response.getMessage(), Toast.LENGTH_SHORT).show();
-//
-//                }
-//            }else {
-//                Toast.makeText(this, "Technical issue...", Toast.LENGTH_SHORT).show();
-//
-//            }
-//        });
+        new Mvvm().saveTransaction(AppConstants.USER_ID,merchantId, String.valueOf(merchantTransactionId),amount,"","","").observe(PhonePeActivity.this, response ->{
+            if (response !=null){
+                if (response.success){
+                    Toast.makeText(this, "1 :-"+response.getMessage(), Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(this, "0 :-"+response.getMessage(), Toast.LENGTH_SHORT).show();
+
+                }
+            }else {
+                Toast.makeText(this, "Technical issue...", Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
 

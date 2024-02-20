@@ -1,3 +1,10 @@
+#new
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface <methods>;
+}
+-keepattributes JavascriptInterface
+
+#old
 -keepattributes *Annotation*
 -dontwarn com.razorpay.**
 -keep class com.razorpay.** {*;}
@@ -11,3 +18,4 @@
 -keep class com.opensource.svgaplayer.proto.* {  }
 
 -keep class io.agora.**{*;}
+

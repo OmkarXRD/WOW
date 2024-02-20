@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,8 +48,10 @@ public class CoinsTabFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         binding = FragmentCoinsTabBinding.inflate(inflater, container, false);
+        getWalletApi();
         return binding.getRoot();
     }
 
@@ -66,7 +69,11 @@ public class CoinsTabFragment extends Fragment {
         setStatusBarGradiant(requireActivity());
 
     }
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        getWalletApi();
+    }
     private void clicks(View view) {
 
         binding.CoinsTabonCallTV.setOnClickListener(new View.OnClickListener() {
@@ -82,20 +89,30 @@ public class CoinsTabFragment extends Fragment {
        new Mvvm().getCoins(requireActivity(),AppConstants.USER_ID).observe(requireActivity(), new Observer<GetCoinRoot>() {
            @Override
            public void onChanged(GetCoinRoot getCoinRoot) {
-               if(getCoinRoot.getStatus().equalsIgnoreCase("1")){
-                   list = new ArrayList<>();
-                   list = getCoinRoot.getDetails();
-                   phoneNumber = getCoinRoot.getPhone();
+               if(getCoinRoot != null){
+                   if(getCoinRoot.getStatus().equalsIgnoreCase("1")){
+                       list = new ArrayList<>();
+                       list = getCoinRoot.getDetails();
+                       phoneNumber = getCoinRoot.getPhone();
 
-                   CoinsTabRVAdapter coinsTabRVAdapter = new CoinsTabRVAdapter(list, requireContext(), new CoinsTabRVAdapter.Callback() {
-                       @Override
-                       public void callback(Detail value) {
-                           openPhonePe(value);
-                       }
-                   });
-                   binding.coinsRV.setAdapter(coinsTabRVAdapter);
-               }else{
+                       CoinsTabRVAdapter coinsTabRVAdapter = new CoinsTabRVAdapter(list, requireContext(), new CoinsTabRVAdapter.Callback() {
+                           @Override
+                           public void callback(Detail value) {
+                               //#007
+                               //openPhonePe(value);
+                               genrateOrder(value);
+                           }
+                       });
+
+                       binding.coinsRV.setAdapter(coinsTabRVAdapter);
+                   }else{
+                   }
+               } else {
+                   if (getContext() != null) {
+                       //Toast.makeText(requireContext(), "Technical issue", Toast.LENGTH_SHORT).show();
+                   }
                }
+
            }
        });
     }
@@ -116,15 +133,27 @@ public class CoinsTabFragment extends Fragment {
         new Mvvm().getWallet(requireActivity(), AppConstants.USER_ID).observe(requireActivity(), new Observer<GetWalletRoot>() {
             @Override
             public void onChanged(GetWalletRoot getWalletRoot) {
-                if(getWalletRoot.getSuccess().equalsIgnoreCase("1")){
-                    binding.goldCoinTV.setText(getWalletRoot.getDetails().get(0).getWallet_amount());
-                }else{
+                if(getWalletRoot != null){
+                    if(getWalletRoot.getSuccess().equalsIgnoreCase("1")){
+                        String goldCoinValue = getWalletRoot.getDetails().get(0).getWallet_amount();
+                        binding.goldCoinTV.setText(goldCoinValue);
+                    }else{
+                        Log.i("CoinFrag","Something went wrong");
+                    }
+                }else {
+                    if (getContext() != null) {
+                        //Toast.makeText(requireContext(), "Technical issue", Toast.LENGTH_SHORT).show();
+                    }
                 }
+
             }
         });
     }
 
     private void genrateOrder(Detail detail){
+
+        //order_Nb9aC2ilbW0OSN
+        //order_Nb9aVE2RaQdV1z
 
         new Mvvm().generateOrder(requireActivity(), detail.getMoneyValue()).observe(requireActivity(), new Observer<GenerateOrderRoot>() {
             @Override
@@ -134,22 +163,22 @@ public class CoinsTabFragment extends Fragment {
                     if(generateOrderRoot.getSuccess().equalsIgnoreCase("1")){
 
                         Intent intent = new Intent(requireActivity(), PaymentActivity.class);
-
                         intent.putExtra("orderId",generateOrderRoot.getOrderId());
-                        intent.putExtra("key",generateOrderRoot.getKey());
+                        //intent.putExtra("key",generateOrderRoot.getKey());
+                        intent.putExtra("key","rzp_test_usEmd5LTJQKCTA");
                         intent.putExtra("price",generateOrderRoot.getAmount());
                         intent.putExtra("itemId",detail.getId());
-
                         startActivity(intent);
 
                     }else{
-                        Toast.makeText(requireContext(), "shit men", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(requireContext(), "Technical Issue", Toast.LENGTH_SHORT).show();
                     }
                 }else {
-                    Toast.makeText(requireContext(), "shit men", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(requireContext(), "Technical Issue", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
     }
 
 

@@ -116,35 +116,42 @@ public class HomeFragment extends Fragment {
         new Mvvm().getSpinWheelDetailsViewModel(requireActivity(),"1").observe(this, new Observer<SpinWheelModelClass>() {
             @Override
             public void onChanged(SpinWheelModelClass spinWheelModelClass) {
-                if (spinWheelModelClass.getSuccess().equalsIgnoreCase("1")){
-                    coins= spinWheelModelClass.getDetails().get(0).getCoins();
-                    coinsOne=spinWheelModelClass.getDetails().get(1).getCoins();
-                    coinsTwo=spinWheelModelClass.getDetails().get(2).getCoins();
-                    App.getSharedpref().saveString("coins",coins);
-                    App.getSharedpref().saveString("coinsOne",coinsOne);
-                    App.getSharedpref().saveString("coinsTwo",coinsTwo);
+                if(spinWheelModelClass != null){
+                    if (spinWheelModelClass.getSuccess().equalsIgnoreCase("1")){
+                        coins= spinWheelModelClass.getDetails().get(0).getCoins();
+                        coinsOne=spinWheelModelClass.getDetails().get(1).getCoins();
+                        coinsTwo=spinWheelModelClass.getDetails().get(2).getCoins();
+                        App.getSharedpref().saveString("coins",coins);
+                        App.getSharedpref().saveString("coinsOne",coinsOne);
+                        App.getSharedpref().saveString("coinsTwo",coinsTwo);
+                    }
                 }
+
             }
         });
 
         new Mvvm().getSpinWheelDetailsViewModel(requireActivity(),"2").observe(this, new Observer<SpinWheelModelClass>() {
             @Override
             public void onChanged(SpinWheelModelClass spinWheelModelClass) {
-                if (spinWheelModelClass.getSuccess().equalsIgnoreCase("1")){
-                    diamonds= spinWheelModelClass.getDetails().get(0).getDiamonds();
-                    diamondsOne=spinWheelModelClass.getDetails().get(1).getDiamonds();
-                    App.getSharedpref().saveString("diamonds_key",diamonds);
-                    App.getSharedpref().saveString("diamondsOne_key",diamondsOne);
+                if(spinWheelModelClass != null){
+                    if (spinWheelModelClass.getSuccess().equalsIgnoreCase("1")){
+                        diamonds= spinWheelModelClass.getDetails().get(0).getDiamonds();
+                        diamondsOne=spinWheelModelClass.getDetails().get(1).getDiamonds();
+                        App.getSharedpref().saveString("diamonds_key",diamonds);
+                        App.getSharedpref().saveString("diamondsOne_key",diamondsOne);
+                    }
                 }
+
             }
         });
 
         new Mvvm().getSpinWheelDetailsViewModel(requireActivity(),"3").observe(this, new Observer<SpinWheelModelClass>() {
             @Override
             public void onChanged(SpinWheelModelClass spinWheelModelClass) {
-                if (spinWheelModelClass.getSuccess().equalsIgnoreCase("1")){
-                    App.getSharedpref().saveString("frame",spinWheelModelClass.getDetails().get(0).getFrame());
-
+                if(spinWheelModelClass != null){
+                    if (spinWheelModelClass.getSuccess().equalsIgnoreCase("1")){
+                        App.getSharedpref().saveString("frame",spinWheelModelClass.getDetails().get(0).getFrame());
+                    }
                 }
             }
         });
@@ -152,8 +159,10 @@ public class HomeFragment extends Fragment {
         new Mvvm().getSpinWheelDetailsViewModel(requireActivity(),"4").observe(this, new Observer<SpinWheelModelClass>() {
             @Override
             public void onChanged(SpinWheelModelClass spinWheelModelClass) {
-                if (spinWheelModelClass.getSuccess().equalsIgnoreCase("1")){
-                    App.getSharedpref().saveString("entryEffect",spinWheelModelClass.getDetails().get(0).getEntryEffect());
+                if(spinWheelModelClass != null) {
+                    if (spinWheelModelClass.getSuccess().equalsIgnoreCase("1")) {
+                        App.getSharedpref().saveString("entryEffect", spinWheelModelClass.getDetails().get(0).getEntryEffect());
+                    }
                 }
             }
         });
@@ -161,14 +170,16 @@ public class HomeFragment extends Fragment {
         new Mvvm().getSpinWheelDetailsViewModel(requireActivity(),"5").observe(this, new Observer<SpinWheelModelClass>() {
             @Override
             public void onChanged(SpinWheelModelClass spinWheelModelClass) {
-                if (spinWheelModelClass.getSuccess().equalsIgnoreCase("1")){
-                    App.getSharedpref().saveString("firstgift",spinWheelModelClass.getDetails().get(0).getGift());
-                    App.getSharedpref().saveString("Secondgift",spinWheelModelClass.getDetails().get(1).getGift());
-                    App.getSharedpref().saveString("thirdgift",spinWheelModelClass.getDetails().get(2).getGift());
-                    App.getSharedpref().saveString("fourthgift",spinWheelModelClass.getDetails().get(3).getGift());
-                    App.getSharedpref().saveString("fifthgift",spinWheelModelClass.getDetails().get(4).getGift());
-                    App.getSharedpref().saveString("fifthgift",spinWheelModelClass.getDetails().get(5).getGift());
-                    App.getSharedpref().saveString("fifthgift",spinWheelModelClass.getDetails().get(6).getGift());
+                if(spinWheelModelClass != null) {
+                    if (spinWheelModelClass.getSuccess().equalsIgnoreCase("1")) {
+                        App.getSharedpref().saveString("firstgift", spinWheelModelClass.getDetails().get(0).getGift());
+                        App.getSharedpref().saveString("Secondgift", spinWheelModelClass.getDetails().get(1).getGift());
+                        App.getSharedpref().saveString("thirdgift", spinWheelModelClass.getDetails().get(2).getGift());
+                        App.getSharedpref().saveString("fourthgift", spinWheelModelClass.getDetails().get(3).getGift());
+                        App.getSharedpref().saveString("fifthgift", spinWheelModelClass.getDetails().get(4).getGift());
+                        App.getSharedpref().saveString("fifthgift", spinWheelModelClass.getDetails().get(5).getGift());
+                        App.getSharedpref().saveString("fifthgift", spinWheelModelClass.getDetails().get(6).getGift());
+                    }
                 }
             }
         });
