@@ -1,8 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 import java.lang.String;
-
+@Keep
 public class TestJson implements Serializable {
   private String success;
 

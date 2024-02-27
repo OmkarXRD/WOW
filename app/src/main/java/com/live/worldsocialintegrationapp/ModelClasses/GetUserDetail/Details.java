@@ -1,10 +1,13 @@
 package com.live.worldsocialintegrationapp.ModelClasses.GetUserDetail;
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
+@Keep
 public class Details implements Serializable {
 
     public String id;

@@ -1,7 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses.Family;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 
+@Keep
 public class CreateFamilyRoot implements Serializable {
 
     public int status;

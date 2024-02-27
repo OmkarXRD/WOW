@@ -1,5 +1,8 @@
 package com.live.worldsocialintegrationapp.ModelClasses.PurchaseHistory;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class PurchaseLuckyIdHistory {
 
     public String id;

@@ -1,10 +1,13 @@
 package com.live.worldsocialintegrationapp.ModelClasses.GiftWall;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+@Keep
 public class RootGiftWall {
 
     @SerializedName("success")

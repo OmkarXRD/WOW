@@ -1,5 +1,8 @@
 package com.live.worldsocialintegrationapp.Root;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class CountryRootDetails {
 
     public String id;

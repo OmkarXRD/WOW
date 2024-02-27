@@ -1,7 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses.GetUserDetail;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 
+@Keep
 public class GetUserDetailRoot implements Serializable {
 
     public String status;

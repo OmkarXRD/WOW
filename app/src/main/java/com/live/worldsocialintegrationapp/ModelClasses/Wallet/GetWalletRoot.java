@@ -1,8 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses.Wallet;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-
+@Keep
 public class GetWalletRoot implements Serializable {
 
     public String success;

@@ -1,8 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-
+@Keep
 public class GetLiveBackgroundImagesRoot implements Serializable {
 
     public String success;

@@ -1,7 +1,9 @@
 package com.live.worldsocialintegrationapp.ModelClasses.UploadPost;
 
-import java.io.Serializable;
+import androidx.annotation.Keep;
 
+import java.io.Serializable;
+@Keep
 public class UploadPostRoot implements Serializable {
 
     public String message;

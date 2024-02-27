@@ -2,8 +2,10 @@ package com.live.worldsocialintegrationapp.games;
 
 import android.os.Bundle;
 
+import androidx.annotation.Keep;
 import androidx.appcompat.app.AppCompatActivity;
 import com.live.worldsocialintegrationapp.R;
+@Keep
 public class WinnerScreen extends AppCompatActivity {
 
 

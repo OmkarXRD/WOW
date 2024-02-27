@@ -1,8 +1,11 @@
 package com.live.worldsocialintegrationapp.ModelClasses.GetEmoji;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
+@Keep
 public class GetEmojiRoot implements Serializable {
 
     public String success;

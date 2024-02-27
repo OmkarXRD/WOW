@@ -1,8 +1,11 @@
 package com.live.worldsocialintegrationapp.ModelClasses.Family;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
+@Keep
 public class GetFamilyTopGiftersRoot implements Serializable {
     public String status;
     public String message;

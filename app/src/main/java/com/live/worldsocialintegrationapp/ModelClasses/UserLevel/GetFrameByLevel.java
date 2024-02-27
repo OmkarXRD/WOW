@@ -1,7 +1,9 @@
 package com.live.worldsocialintegrationapp.ModelClasses.UserLevel;
 
-import java.util.ArrayList;
+import androidx.annotation.Keep;
 
+import java.util.ArrayList;
+@Keep
 public class GetFrameByLevel {
     public int status;
     public String message;

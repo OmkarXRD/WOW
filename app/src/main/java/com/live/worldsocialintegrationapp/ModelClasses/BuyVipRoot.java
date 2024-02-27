@@ -1,7 +1,9 @@
 package com.live.worldsocialintegrationapp.ModelClasses;
 
-import java.io.Serializable;
+import androidx.annotation.Keep;
 
+import java.io.Serializable;
+@Keep
 public class BuyVipRoot implements Serializable {
 
     public int status;

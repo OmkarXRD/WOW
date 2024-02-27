@@ -158,7 +158,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Mvvm extends ViewModel {
-    ServiceApi serviceApi = RetrofitClient.getRetrofitCallerObject().create(ServiceApi.class);
+    //ServiceApi serviceApi = RetrofitClient.getRetrofitCallerObject().create(ServiceApi.class);
+    ServiceApi serviceApi = RetrofitClient.getInstance().create(ServiceApi.class);
 
     private MutableLiveData mutableLiveData;
 
@@ -306,11 +307,12 @@ public class Mvvm extends ViewModel {
                 @Override
                 public void onResponse(Call<SendOtpRoot> call, Response<SendOtpRoot> response) {
 
-                    if (response != null) {
+                    if (response.isSuccessful() && response.body() != null) {
                         mutableLiveData.postValue(response.body());
-                        Log.i("Issssssueeeeee","phn "+response.body());
+                        Log.i("Issssssueeeeee","phn "+response.body().getMessage());
                     } else {
-                        Toast.makeText(activity, "Body is null", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity, "Response body is null or unsuccessful", Toast.LENGTH_SHORT).show();
+                        mutableLiveData.postValue(null);
                     }
                 }
 
@@ -1956,8 +1958,10 @@ public class Mvvm extends ViewModel {
                 public void onResponse(@NonNull Call<SocialLoginRoot> call, @NonNull Response<SocialLoginRoot> response) {
                     if (response.body() != null) {
                         socialLoginRootMutableLiveData.postValue(response.body());
+                        Toast.makeText(activity,"in if " + response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         Log.i("in LOGIN FRAG","iffff");
                     } else {
+                        Toast.makeText(activity, "in elase ", Toast.LENGTH_SHORT).show();
                         Log.i("in LOGIN FRAG","elseeee");
                         socialLoginRootMutableLiveData.postValue(null);
                     }

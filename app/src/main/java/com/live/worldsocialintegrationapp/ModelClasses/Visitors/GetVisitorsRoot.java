@@ -1,8 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses.Visitors;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-
+@Keep
 public class GetVisitorsRoot implements Serializable {
 
     public String status;

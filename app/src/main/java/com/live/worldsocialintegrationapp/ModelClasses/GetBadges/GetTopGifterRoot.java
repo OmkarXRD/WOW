@@ -1,8 +1,11 @@
 package com.live.worldsocialintegrationapp.ModelClasses.GetBadges;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
+@Keep
 public class GetTopGifterRoot implements Serializable {
 
     public int status;

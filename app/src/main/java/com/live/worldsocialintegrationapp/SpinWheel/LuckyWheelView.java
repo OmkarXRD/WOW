@@ -13,15 +13,16 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 
+import androidx.annotation.Keep;
+
 import com.live.worldsocialintegrationapp.R;
 import com.live.worldsocialintegrationapp.SpinWheel.model.LuckyItem;
 
 import java.util.List;
 
-/**
- * Created by kiennguyen on 11/5/16.
- */
 
+
+@Keep
 public class LuckyWheelView extends RelativeLayout implements PielView.PieRotateListener {
     private int mBackgroundColor;
     private int mTextColor;

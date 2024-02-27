@@ -1,7 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses.Events;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 
+@Keep
 public class SuscribeUnscribeRoot implements Serializable {
     public String success;
     public String message;

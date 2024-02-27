@@ -38,7 +38,7 @@
         android:name="android.permission.CALL_PHONE"
         tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+<!--    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />-->
     <uses-permission
         android:name="android.permission.READ_SMS"
         tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" /> <!-- for android 12 permission -->

@@ -1,7 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses.LiveGallery;
 
+import androidx.annotation.Keep;
+
 import java.util.ArrayList;
 
+@Keep
 public class PurchaseGalleryRoot {
     public int status;
     public String message;

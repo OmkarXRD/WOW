@@ -1,7 +1,9 @@
 package com.live.worldsocialintegrationapp.ModelClasses.AllPopularUsers;
 
-import java.io.Serializable;
+import androidx.annotation.Keep;
 
+import java.io.Serializable;
+@Keep
 public class Detail implements Serializable {
 
     public String id;

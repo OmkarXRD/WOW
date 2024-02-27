@@ -1,8 +1,11 @@
 package com.live.worldsocialintegrationapp.ModelClasses.GetFans;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
+@Keep
 public class GetFansRoot implements Serializable {
 
     public String status;

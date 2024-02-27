@@ -3,6 +3,9 @@ package com.live.worldsocialintegrationapp.ModelClasses;
 import android.os.SystemClock;
 import android.view.View;
 
+import androidx.annotation.Keep;
+
+@Keep
 public abstract class DoubleClickListener implements View.OnClickListener {
 
     // The time in which the second tap should be done in order to qualify as

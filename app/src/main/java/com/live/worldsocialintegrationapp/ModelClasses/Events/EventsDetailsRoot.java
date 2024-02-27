@@ -1,7 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses.Events;
 
+import androidx.annotation.Keep;
+
 import java.util.ArrayList;
 
+@Keep
 public class EventsDetailsRoot {
 
     public String success;

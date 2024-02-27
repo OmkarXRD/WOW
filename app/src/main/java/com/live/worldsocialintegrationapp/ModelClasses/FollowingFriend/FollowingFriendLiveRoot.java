@@ -1,11 +1,14 @@
 package com.live.worldsocialintegrationapp.ModelClasses.FollowingFriend;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Keep
 public class FollowingFriendLiveRoot {
 
     @SerializedName("status")

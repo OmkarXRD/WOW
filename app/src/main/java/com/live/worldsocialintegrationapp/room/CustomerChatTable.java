@@ -1,10 +1,11 @@
 package com.live.worldsocialintegrationapp.room;
 
 
+import androidx.annotation.Keep;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
+@Keep
 @Entity(tableName = "chat")
 public class CustomerChatTable {
 

@@ -1,7 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses.GetFans;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 
+@Keep
 public class Detail implements Serializable {
 
     public String followFeedId;

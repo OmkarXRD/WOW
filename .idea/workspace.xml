@@ -1076,12 +1076,189 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fbe7f4d-af4c-474b-b3a8-adb47f5cf8c0" name="Changes" comment="Initial Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/CoinsTabRVAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/CoinsTabRVAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/RechargePackage/CoinsTabFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/RechargePackage/CoinsTabFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/RechargePackage/RechargeCointsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/RechargePackage/RechargeCointsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/RechargePackage/SilverCoinsTabFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/RechargePackage/SilverCoinsTabFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/SignUp/LoginFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/SignUp/LoginFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/SignUp/PhoneNumberLoginFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/SignUp/PhoneNumberLoginFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/AdminFirebaseRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/AdminFirebaseRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/AdminPanelStatusRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/AdminPanelStatusRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/AllPopularUsers/Detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/AllPopularUsers/Detail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/AllPopularUsers/GetAllPopularRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/AllPopularUsers/GetAllPopularRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ApplyForHostModelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ApplyForHostModelClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ApplyGalleryImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ApplyGalleryImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/BannerSliderRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/BannerSliderRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/BlockUser/RootBlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/BlockUser/RootBlocked.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/BuyVipRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/BuyVipRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ChatInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ChatInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ChatModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ChatModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ChatNotificationRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ChatNotificationRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/DailyDateLiveRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/DailyDateLiveRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/DailyTask/GetDailyTaskRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/DailyTask/GetDailyTaskRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/DailyTask/SetDailyTaskRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/DailyTask/SetDailyTaskRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/DoubleClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/DoubleClickListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/EDitFamilyModelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/EDitFamilyModelClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/EntryEffectsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/EntryEffectsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Events/CreateEventRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Events/CreateEventRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Events/EventsDetailsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Events/EventsDetailsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Events/GetAllEventInvitationsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Events/GetAllEventInvitationsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Events/GetEventsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Events/GetEventsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Events/ResponseEventInvitationRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Events/ResponseEventInvitationRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Events/SuscribeUnscribeRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Events/SuscribeUnscribeRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ExchangeCoinsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ExchangeCoinsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/CreateFamilyRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/CreateFamilyRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetAllFamilyRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetAllFamilyRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetFamilyDetailsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetFamilyDetailsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetFamilyMembersRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetFamilyMembersRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetFamilyTopGiftersRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetFamilyTopGiftersRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetInvitationsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetInvitationsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetJoinRequestRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetJoinRequestRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetLiveFamilyJoinersRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/GetLiveFamilyJoinersRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/InvitationsResponseRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/InvitationsResponseRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/Joiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/Joiner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/ResponseJoinRequestRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Family/ResponseJoinRequestRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/FirebaseSendReqRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/FirebaseSendReqRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/FollowingFriend/FollowingFriendLiveRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/FollowingFriend/FollowingFriendLiveRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GenerateOrderRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GenerateOrderRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GeneratedIdClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GeneratedIdClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetAppliedFrameRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetAppliedFrameRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetAppliedGalleryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetAppliedGalleryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetAppliedLuckyIdRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetAppliedLuckyIdRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetBadges/GetTopGifterRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetBadges/GetTopGifterRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetChatFilesRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetChatFilesRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetCoin/Detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetCoin/Detail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetCoin/GetCoinRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetCoin/GetCoinRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetCoin/GetSilverCoinRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetCoin/GetSilverCoinRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetCoin/PurchaseSilverCoins.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetCoin/PurchaseSilverCoins.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetComment/Detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetComment/Detail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetComment/GetCommentRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetComment/GetCommentRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetDiamondRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetDiamondRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetEmoji/GetEmojiRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetEmoji/GetEmojiRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFamilyDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFamilyDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFans/Detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFans/Detail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFans/GetFansRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFans/GetFansRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFollowing/Detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFollowing/Detail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFollowing/GetFollowingRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFollowing/GetFollowingRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFollowingLiveRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFollowingLiveRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFramesRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFramesRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFriends/Detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFriends/Detail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFriends/GetFriendRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFriends/GetFriendRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetLiveBackgroundImagesRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetLiveBackgroundImagesRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetLiveDiamondRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetLiveDiamondRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetLiveGiftHistoryRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetLiveGiftHistoryRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetLiveTotalDiamondRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetLiveTotalDiamondRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetLuckIdRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetLuckIdRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetPurchaseGallery.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetPurchaseGallery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetPurchaseThemes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetPurchaseThemes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetTotalSilverCoinsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetTotalSilverCoinsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetUserCoinModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetUserCoinModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetUserDetail/Details.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetUserDetail/Details.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetUserDetail/GetUserDetailRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetUserDetail/GetUserDetailRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetUserDetail/VipDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetUserDetail/VipDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetUserImagesRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetUserImagesRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetUserTalentLevelRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetUserTalentLevelRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GiftWall/RootGiftWall.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GiftWall/RootGiftWall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GiftWallLiveUsersRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GiftWallLiveUsersRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GiftWallReceiverModelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GiftWallReceiverModelClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/HostApproveModelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/HostApproveModelClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/KickOutLiveRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/KickOutLiveRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveGallery/GetLiveGalleryRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveGallery/GetLiveGalleryRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveGallery/PurchaseGalleryRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveGallery/PurchaseGalleryRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveGallery/SendGalleryRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveGallery/SendGalleryRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveTheme/GetLiveThemeRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveTheme/GetLiveThemeRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveTheme/SendLiveTheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveTheme/SendLiveTheme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveUserByCountry/RootLiveUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveUserByCountry/RootLiveUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveUserByIdRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveUserByIdRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveUserHideUnhideRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LiveUserHideUnhideRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LockBroadCast/RootLockBroadCast.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LockBroadCast/RootLockBroadCast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/Coin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/CreateSuperLuckyBagRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/CreateSuperLuckyBagRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/DeductCoinsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/DeductCoinsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/Details.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/Details.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/HitLuckyBagCoinsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/HitLuckyBagCoinsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/HitSuperLuckyBagRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/HitSuperLuckyBagRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/LuckBagRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/LuckBagRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/Quantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/Quantity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/SuperLuckyBagDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/LuckBag/SuperLuckyBagDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Meet/RootMeet.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Meet/RootMeet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/NameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/NameModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/NearByLiveUsers/Detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/NearByLiveUsers/Detail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/NearByLiveUsers/NearByLiveUsersRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/NearByLiveUsers/NearByLiveUsersRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Posts/Details.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Posts/Details.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Posts/GetAllPostsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Posts/GetAllPostsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Posts/GetFriendsFollowingPostsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Posts/GetFriendsFollowingPostsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Posts/PostDetailsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Posts/PostDetailsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Posts/UserImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Posts/UserImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseCarsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseCarsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseFramesRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseFramesRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseGallery.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseGallery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseHistory/Details.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseHistory/Details.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseHistory/PurchaseFrameHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseHistory/PurchaseFrameHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseHistory/PurchaseHistoryRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseHistory/PurchaseHistoryRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseHistory/PurchaseLuckyIdHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseHistory/PurchaseLuckyIdHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseHistory/PurchaseSilverCoinHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/PurchaseHistory/PurchaseSilverCoinHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Register/Details.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Register/Details.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Register/RegisterRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Register/RegisterRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/RequstChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/RequstChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/RootNewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/RootNewUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SaveTransactionRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SaveTransactionRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SendEventInviationRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SendEventInviationRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SendFileInChatRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SendFileInChatRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SendMsgRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SendMsgRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SendOtpRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SendOtpRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SendingLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SendingLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SetLiveCoverImgRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SetLiveCoverImgRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ShowMyFamilyModelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/ShowMyFamilyModelClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SingleLiveUserRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SingleLiveUserRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SocialLoginRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SocialLoginRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SomeFunctionalityModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SomeFunctionalityModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/TestJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/TestJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UpdateUserProfileRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UpdateUserProfileRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UploadPost/Details.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UploadPost/Details.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UploadPost/RemoveUserPostRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UploadPost/RemoveUserPostRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UploadPost/UploadPostRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UploadPost/UploadPostRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserLevel/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserLevel/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserLevel/GetCarUserLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserLevel/GetCarUserLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserLevel/GetColorByLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserLevel/GetColorByLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserLevel/GetFrameByLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserLevel/GetFrameByLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserLevel/LuckyId.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserLevel/LuckyId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserLevel/Theme.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserLevel/Theme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserReportCategoryRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserReportCategoryRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserReportRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UserReportRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UsersSearch/Detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UsersSearch/Detail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UsersSearch/UsersSearchRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/UsersSearch/UsersSearchRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/VipImagesRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/VipImagesRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/VipRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/VipRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Visitors/Detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Visitors/Detail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Visitors/GetVisitorsRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Visitors/GetVisitorsRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Visitors/UserDeatil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Visitors/UserDeatil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/VoiceDectionRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/VoiceDectionRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Wallet/AddWalletMoneyRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Wallet/AddWalletMoneyRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Wallet/GetWalletRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/Wallet/GetWalletRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/onlineServices/GetAnswerRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/onlineServices/GetAnswerRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/onlineServices/GetQuestionRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/onlineServices/GetQuestionRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/onlineServices/MessageModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/onlineServices/MessageModal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/RazorPay/PaymentActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/RazorPay/PaymentActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/RazorPay/SomeEarlierMerchantActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/RazorPay/SomeEarlierMerchantActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/AgencyRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/AgencyRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/Mvvm.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/Mvvm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/RetrofitClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Retrofit/RetrofitClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Root/CountryRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Root/CountryRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Root/CountryRootDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Root/CountryRootDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/SpinWheel/LuckyWheelUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/SpinWheel/LuckyWheelUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/SpinWheel/LuckyWheelView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/SpinWheel/LuckyWheelView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/SpinWheel/PielView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/SpinWheel/PielView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/games/LosserScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/games/LosserScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/games/WinnerScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/games/WinnerScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/room/CustomerChatTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/room/CustomerChatTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/room/DiffaultQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/room/DiffaultQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/room/MusicTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/room/MusicTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/sqlite/DatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/sqlite/DatabaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1091,7 +1268,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\rishabh\.android\avd\Pixel_4_API_33.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[8c6859b8]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -1105,30 +1282,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="WorldSocialIntegrationapp" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="WorldSocialIntegrationapp" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="WorldSocialIntegrationapp" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="WorldSocialIntegrationapp" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -1147,7 +1301,6 @@
     <option name="KEY_STORE_PATH" value="D:\KeyStore\Wow.jks" />
     <option name="KEY_ALIAS" value="key0" />
     <option name="REMEMBER_PASSWORDS" value="true" />
-    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -1175,7 +1328,7 @@
     "ApkExportedModule": "WorldSocialIntegrationapp.app",
     "BundleExportedModule": "WorldSocialIntegrationapp.app",
     "ExportApk.ApkPathForWorldSocialIntegrationapp.app": "D:\\Builds WOW\\Build 1 with key\\Debug",
-    "ExportBundle.BundlePathForWorldSocialIntegrationapp.app": "D:\\WOW's application\\WOW's Mobile\\app",
+    "ExportBundle.BundlePathForWorldSocialIntegrationapp.app": "D:\\Builds WOW\\Build 1 with key\\Release",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -1190,14 +1343,19 @@
     "android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/view/View.java_SELECTED": "View",
     "android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/widget/ImageView.java_SELECTED": "ImageView",
     "android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/widget/TextView.java_SELECTED": "TextView",
+    "android-custom-viewD:/WOW's application/WOW's/app/src/main/java/com/live/worldsocialintegrationapp/SpinWheel/LuckyWheelView.java_SELECTED": "LuckyWheelView",
+    "android-custom-viewD:/WOW's application/WOW's/app/src/main/java/com/live/worldsocialintegrationapp/SpinWheel/PielView.java_SELECTED": "PielView",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "feature/phonePayModule",
-    "last_opened_file_path": "D:/WOW's application/WOW's/app/src/main/res/layout",
+    "git-widget-placeholder": "feature/releaseBuild",
+    "last_opened_file_path": "D:/Builds WOW/Build 1 with key/Release",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Errors",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "show.migrate.to.gradle.popup": "false"
   },
   "keyToStringList": {
@@ -1219,7 +1377,7 @@
       <recent name="com.live.worldsocialintegrationapp.Fragments.ChangeNumber" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="WorldSocialIntegrationapp.app.main" />
       <option name="DEPLOY" value="true" />
@@ -1287,6 +1445,49 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WOW's:app [testDebugUnitTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="testDebugUnitTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="gradlew" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/gradlew" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.gradlew" />
+        <item itemvalue="Gradle.WOW's:app [testDebugUnitTest]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -1383,5 +1584,16 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Revert &quot;removed large files&quot;&#10;&#10;This reverts commit c55257ea" />
     <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;removed large files&quot;&#10;&#10;This reverts commit c55257ea" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/SpinWheel/PielView.java</url>
+          <line>146</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,8 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses.Posts;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-
+@Keep
 public class PostDetailsRoot implements Serializable {
 
     public String status;

@@ -1,7 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses.Events;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 
+@Keep
 public class ResponseEventInvitationRoot implements Serializable {
 
     public int success;

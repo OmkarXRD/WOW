@@ -1,8 +1,11 @@
 package com.live.worldsocialintegrationapp.ModelClasses.LuckBag;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+@Keep
 public class LuckBagRoot {
 
     @SerializedName("success")

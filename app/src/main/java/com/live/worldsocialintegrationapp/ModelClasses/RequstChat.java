@@ -1,5 +1,8 @@
 package com.live.worldsocialintegrationapp.ModelClasses;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class RequstChat {
 
     public String from,userId,type,to,toImg,toName,fromImg,fromName,lastMessage,fromDob="",fromGender="",fromFriendStatus="",toFriendStatus="",byUnfriend;

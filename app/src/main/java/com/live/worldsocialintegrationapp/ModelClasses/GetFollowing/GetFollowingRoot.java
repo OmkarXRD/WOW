@@ -1,8 +1,11 @@
 package com.live.worldsocialintegrationapp.ModelClasses.GetFollowing;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
+@Keep
 public class GetFollowingRoot implements Serializable {
 
     public String success;
