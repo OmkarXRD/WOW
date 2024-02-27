@@ -1,5 +1,8 @@
 package com.live.worldsocialintegrationapp.agora.firebase;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class GoLiveModelClass {
     private String userID = "";
     private String image = "";

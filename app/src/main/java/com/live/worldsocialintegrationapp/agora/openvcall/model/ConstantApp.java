@@ -1,8 +1,10 @@
 package com.live.worldsocialintegrationapp.agora.openvcall.model;
 
+import androidx.annotation.Keep;
+
 import io.agora.rtc.Constants;
 import io.agora.rtc.video.VideoEncoderConfiguration;
-
+@Keep
 public class ConstantApp {
     public static final String APP_BUILD_DATE = "today";
 

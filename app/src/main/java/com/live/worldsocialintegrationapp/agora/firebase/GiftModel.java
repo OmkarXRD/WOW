@@ -1,5 +1,8 @@
 package com.live.worldsocialintegrationapp.agora.firebase;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class GiftModel {
 
     private String userId = "";

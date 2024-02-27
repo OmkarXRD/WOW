@@ -1,10 +1,13 @@
 package com.live.worldsocialintegrationapp.agora.firebase;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class PKLiveUserModel {
 
 
 
-
+    @Keep
     public class Dimaond{
 
         private String name="";

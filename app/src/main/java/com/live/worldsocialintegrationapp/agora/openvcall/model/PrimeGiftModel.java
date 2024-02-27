@@ -1,6 +1,8 @@
 package com.live.worldsocialintegrationapp.agora.openvcall.model;
 
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.live.worldsocialintegrationapp.agora.openvcall.model.GiftType.EventGift;
@@ -9,7 +11,7 @@ import com.live.worldsocialintegrationapp.agora.openvcall.model.GiftType.SoundGi
 import com.live.worldsocialintegrationapp.agora.openvcall.model.GiftType.Trick;
 
 import java.util.List;
-
+@Keep
 public class PrimeGiftModel {
 
     @SerializedName("success")
@@ -46,6 +48,7 @@ public class PrimeGiftModel {
         this.details = details;
     }
 
+    @Keep
     public class Details {
 
         @SerializedName("Privilege")

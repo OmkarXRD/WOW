@@ -1,10 +1,12 @@
 package com.live.worldsocialintegrationapp.agora.openvcall.model;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
-
+@Keep
 public class EmojiGiftModel {
 
     @SerializedName("success")
@@ -40,6 +42,7 @@ public class EmojiGiftModel {
     public void setDetails(List<Detail> details) {
         this.details = details;
     }
+    @Keep
     public class Detail {
 
         @SerializedName("id")
