@@ -129,6 +129,7 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d("AppFlow", "On Create View of Login Fragment");
         // Inflate the layout for this fragment
         binding = FragmentLoginBinding.inflate(inflater, container, false);
 
@@ -283,24 +284,27 @@ public class LoginFragment extends Fragment {
             }
         });
 
+        //updated the url by Omkar007
         binding.loginPrivacyTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //             Navigation.findNavController(binding.getRoot()).navigate(R.id.privacyPolicyFragment2);
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://omninos.life/Social_Integration/privecy.html")));
+                //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://omninos.life/Social_Integration/privecy.html")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wows.co.in/privacy-policy")));
             }
         });
         binding.loginTermsTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //             Navigation.findNavController(binding.getRoot()).navigate(R.id.termsConditionsTV2);
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://omninos.life/Social_Integration/termandcondition.html")));
+                //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://omninos.life/Social_Integration/termandcondition.html")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wows.co.in/terms-and-conditions")));
             }
         });
 
         binding.loginServiceTv.setOnClickListener(view -> {
 //             Navigation.findNavController(binding.getRoot()).navigate(R.id.termsConditionsTV2);
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://omninos.life/Social_Integration/termandcondition.html")));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wows.co.in/terms-and-conditions")));
         });
 
 
