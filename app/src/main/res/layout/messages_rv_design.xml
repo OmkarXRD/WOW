@@ -16,6 +16,77 @@
 <!--        android:layout_marginVertical="10dp"-->
 <!--        android:background="@color/light_grey_color"/>-->
 
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/defaultMessageServiceRL"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="visible">-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="100dp"-->
+<!--            android:background="@drawable/chat_2"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="10dp"-->
+<!--            >-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:autoLink="web"-->
+<!--                    android:clickable="false"-->
+<!--                    android:fontFamily="sans-serif-medium"-->
+<!--                    android:gravity="start"-->
+<!--                    android:text="Welcome to Wow's Online Service-->
+<!--                                  How can we assist you?-->
+<!--                                  1 For Gender Changes-->
+<!--                                  2 For location Changes-->
+<!--                                  3 My account was banned               -->
+<!--                                  4 Unsuccessful Transactions Related              -->
+<!--                                  5 This account abused me, please ban                     -->
+<!--                                  6 Moments &amp; Post Related Inquiries-->
+<!--                                  7 Game's Related inquiries-->
+<!--                                  8 I want to Create an agency-->
+<!--                                  9 Razorpay Related Inquiry Link/Unlink               -->
+<!--                                  10 To connect with customer service"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textIsSelectable="true"-->
+<!--                    android:textSize="14sp" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="end">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:fontFamily="sans-serif-medium"-->
+<!--                    android:gravity="start"-->
+<!--                    android:text="jfkjfj"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="10sp" />-->
+
+<!--            </RelativeLayout>-->
+
+<!--        </LinearLayout>-->
+
+
+<!--    </RelativeLayout>-->
 
     <RelativeLayout
         android:id="@+id/senderRL"
@@ -155,7 +226,7 @@
             android:background="@drawable/rect_corners_6dp"
             android:orientation="horizontal"
             android:paddingVertical="3dp"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/senderCirAudioImg"
@@ -234,7 +305,7 @@
                     android:clickable="false"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="start"
-                    android:text=" jfkfj  jfkjf jk"
+                    android:text="Hii, How are your?"
                     android:textColor="@color/white"
                     android:textIsSelectable="true"
                     android:textSize="14sp" />
@@ -507,7 +578,6 @@
 
 
     </LinearLayout>
-
 
     <RelativeLayout
         android:id="@+id/receive"

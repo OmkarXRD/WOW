@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -505,6 +506,7 @@ public class Vip1 extends Fragment {
                 FriendsFragment.check = 1;
                 FriendsFragment.getFrameCheck = 2;
                 Navigation.findNavController(requireActivity().findViewById(R.id.nav_home)).navigate(R.id.friendsFragment, bundle);
+                Log.i("Vipppp","sendClicked");
             }
         });
 

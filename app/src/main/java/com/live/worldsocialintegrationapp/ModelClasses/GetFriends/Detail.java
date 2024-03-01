@@ -13,6 +13,8 @@ public class Detail implements Serializable {
     public String purchasedCoin;
     public String coin;
     public String diamond;
+    public String receivingLevel;
+    public String reciveColor;
     public String dob;
     public String email;
 //    @JsonProperty("Country")
@@ -101,6 +103,22 @@ public class Detail implements Serializable {
 
     public void setDiamond(String diamond) {
         this.diamond = diamond;
+    }
+
+    public String getReceivingLevel() {
+        return receivingLevel;
+    }
+
+    public void setReceivingLevel(String receivingLevel) {
+        this.receivingLevel = receivingLevel;
+    }
+
+    public String getReciveColor() {
+        return reciveColor;
+    }
+
+    public void setReciveColor(String reciveColor) {
+        this.reciveColor = reciveColor;
     }
 
     public String getDob() {

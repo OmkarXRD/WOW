@@ -52,6 +52,7 @@ public class SendMsgRoot {
     public void setDetails(Details details) {
         this.details = details;
     }
+    @Keep
     public class Details {
 
         @SerializedName("senderId")
@@ -111,6 +112,7 @@ public class SendMsgRoot {
         }
 
     }
+    @Keep
     public class Detail {
 
         @SerializedName("senderId")

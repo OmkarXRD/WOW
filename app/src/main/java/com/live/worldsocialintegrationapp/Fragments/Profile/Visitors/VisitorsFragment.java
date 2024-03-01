@@ -71,6 +71,7 @@ public class VisitorsFragment extends Fragment {
                         }
                     });
                     binding.visitorsRV.setAdapter(visitorsRVAdapter);
+
                 }else{
 //                    Toast.makeText(requireContext(), "0 "+getVisitorsRoot.getMessage(), Toast.LENGTH_SHORT).show();
                 }

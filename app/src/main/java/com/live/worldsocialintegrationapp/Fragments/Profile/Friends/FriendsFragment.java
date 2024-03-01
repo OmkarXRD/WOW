@@ -77,6 +77,7 @@ public class FriendsFragment extends Fragment implements FriendRVAdapter.Callbac
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_friends, container, false);
+
     }
 
     @Override
@@ -99,7 +100,6 @@ public class FriendsFragment extends Fragment implements FriendRVAdapter.Callbac
         }
 
         if (check == 1) {
-            Log.i("VipCheck","zzzz");
             view.findViewById(R.id.editProfileFriendBakImg).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -110,7 +110,12 @@ public class FriendsFragment extends Fragment implements FriendRVAdapter.Callbac
             view.findViewById(R.id.editFriendsLinearLayout).setVisibility(View.VISIBLE);
             view.findViewById(R.id.editFriendsLine).setVisibility(View.VISIBLE);
             FriendRVAdapter.sendCheck = 1;
-            FriendRVAdapter.sendEventInvitationCheck = 1;
+            if(getFrameCheck == 2){
+                FriendRVAdapter.sendEventInvitationCheck = 2;
+            }else{
+                FriendRVAdapter.sendEventInvitationCheck = 1;
+            }
+
         } else if (liveShareCheck == 1) {
 
             view.findViewById(R.id.editProfileFriendBakImg).setOnClickListener(new View.OnClickListener() {
@@ -360,10 +365,13 @@ public class FriendsFragment extends Fragment implements FriendRVAdapter.Callbac
             public void onClick(View v) {
                 // 1 means cars fragemnt get and 2 frame fragment
                 if (getFrameCheck == 1) {
+
                     sendLuckId();
                 } else if (getFrameCheck == 2) {
+
                     sendVip();
                 } else {
+
                     sendFrame();
                 }
                 dialog_share.dismiss();
@@ -443,7 +451,7 @@ public class FriendsFragment extends Fragment implements FriendRVAdapter.Callbac
             public void onChanged(BuyVipRoot buyVipRoot) {
                 if (buyVipRoot != null) {
                     if (buyVipRoot.getStatus() == 1) {
-//                   Toast.makeText(requireContext(), "1 " + buyVipRoot.getMessage(), Toast.LENGTH_SHORT).show();
+                   Toast.makeText(requireContext(), "1 " + buyVipRoot.getMessage(), Toast.LENGTH_SHORT).show();
                     } else {
                         notEnoughCoins();
                     }

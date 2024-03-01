@@ -83,7 +83,7 @@ public class OtherUser extends Fragment implements SliderAdapterExample.Callback
     private TextView otherUserIdTV, othrUserName, othrUsrFollowingTV, countryTv, othrUsrFansTV, othrUsrTopNameTV, otherUserRequestTV,
             otherAgeTv, bioTv,offlineStatusTV,otherUserFriendTv,otherUserAddToBlokedTv,vipText,WLevelTv,editProfileMyLvlTv,familyNameTv;
     private LinearLayout followUserLlayout, userProfileMsglLyout, bottomBtnsLyout,linearLayout;
-    private ImageView followingImg, othrUserBgImg, otherUserIdbackImg,lvlimg,vipLayout,receivingLayout,userProfileBackImg, othrUserCircleImg,
+    private ImageView followingImg, othrUserBgImg, otherUserIdbackImg,lvlimg,vipLayout,receivingImageView,userProfileBackImg, othrUserCircleImg,
             menu, genderImg, ageWithGenderImg,coinAjency;
     private List<Detail> list = new ArrayList<>();
     private int listPoisition;
@@ -104,7 +104,7 @@ public class OtherUser extends Fragment implements SliderAdapterExample.Callback
     private final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private final DatabaseReference ChatRequestCountRef = firebaseDatabase.getReference().child("ChatRequestCount");
     private Boolean ajecy = true;
-    private RelativeLayout sendingLayout;
+    private RelativeLayout sendingLayout,receiveRL;
 
 
     @Override
@@ -254,7 +254,8 @@ public class OtherUser extends Fragment implements SliderAdapterExample.Callback
         WLevelTv = view.findViewById(R.id.WLevelTv);
         lvlimg = view.findViewById(R.id.lvlimg);
         sendingLayout = view.findViewById(R.id.sendingLayout);
-        receivingLayout = view.findViewById(R.id.receivingLayout);
+        receiveRL = view.findViewById(R.id.receiveRL);
+        receivingImageView = view.findViewById(R.id.receivingImageView);
         offlineStatusTV = view.findViewById(R.id.offlineStatusTV);
         liveFamilyLlayout = view.findViewById(R.id.liveFamilyLlayout);
         familyNameTv = view.findViewById(R.id.familyNameTv);
@@ -806,14 +807,16 @@ public class OtherUser extends Fragment implements SliderAdapterExample.Callback
                        //     WLevelTv.setText(getUserDetailRoot.getDetails().getLavelInfomation().getSendLevel());
                             editProfileMyLvlTv.setText(getUserDetailRoot.getDetails().getLavelInfomation().getReciveLevel());
                             if (getUserDetailRoot.getDetails().getLavelInfomation().getReciveLevel().equals("0")){
+                                receiveRL.setVisibility(View.GONE);
                                 sendingLayout.setVisibility(View.GONE);
+
                             }
                             //sendingLayout.setBackgroundColor(Color.parseColor(getUserDetailRoot.getDetails().getLavelInfomation().getSandColor()));
                         //    sendingLayout.getBackground().setColorFilter(Color.parseColor(getUserDetailRoot.getDetails().getLavelInfomation().getSandColor()), PorterDuff.Mode.SRC_ATOP);
 
                             //receivingLayout.setBackgroundColor(Color.parseColor(getUserDetailRoot.getDetails().getLavelInfomation().getReciveColor()));
 //                                receivingLayout.getBackground().setColorFilter(Color.parseColor(getUserDetailRoot.getDetails().getLavelInfomation().getReciveColor()), PorterDuff.Mode.SRC_ATOP);
-                            Glide.with(requireContext()).load(getUserDetailRoot.getDetails().getLavelInfomation().getReciveColor()).into(receivingLayout);
+                            Glide.with(requireContext()).load(getUserDetailRoot.getDetails().getLavelInfomation().getReciveColor()).into(receivingImageView);
 
                             if(getUserDetailRoot.getDetails().getLavelInfomation().getSendLevel().isEmpty()){
                                 sendingLayout.setVisibility(View.GONE);

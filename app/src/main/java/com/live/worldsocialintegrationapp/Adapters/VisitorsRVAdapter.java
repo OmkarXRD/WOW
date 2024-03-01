@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -73,7 +74,9 @@ public class VisitorsRVAdapter extends RecyclerView.Adapter<VisitorsRVAdapter.Vi
                     holder.receivingTxt.setText(list.get(position).getReciveLevel());
                     if (Integer.parseInt(list.get(position).getReceivingLevel())==0){
                         holder.receivingLayout.setVisibility(View.GONE);
+                        holder.visitorReceivingRL.setVisibility(View.GONE);
                     }else {
+                        holder.visitorReceivingRL.setVisibility(View.VISIBLE);
                         holder.receivingLayout.setVisibility(View.VISIBLE);
                         Glide.with(context).load(list.get(position).getReciveColor()).into(holder.receivingLayout);
 //                        holder.receivingLayout.getBackground().setColorFilter(Color.parseColor(list.get(position).getReciveColor()), PorterDuff.Mode.SRC_ATOP);
@@ -188,7 +191,7 @@ public class VisitorsRVAdapter extends RecyclerView.Adapter<VisitorsRVAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         CircleImageView visitorsCirImg;
-
+        RelativeLayout visitorReceivingRL;
         TextView topDateTV,visitorsName,genderTxt,sendingTxt,receivingTxt;
         ImageView genderIcon,lvlimg,receivingLayout;
         LinearLayout visitor_rv_linearLayout,genderLayout,sendingLayout;
@@ -205,6 +208,7 @@ public class VisitorsRVAdapter extends RecyclerView.Adapter<VisitorsRVAdapter.Vi
             genderLayout = itemView.findViewById(R.id.genderLayout);
             sendingLayout = itemView.findViewById(R.id.sendingLayout);
             receivingLayout = itemView.findViewById(R.id.receivingLayout);
+            visitorReceivingRL = itemView.findViewById(R.id.visitorReceivingRL);
             lvlimg = itemView.findViewById(R.id.lvlimg);
         }
     }

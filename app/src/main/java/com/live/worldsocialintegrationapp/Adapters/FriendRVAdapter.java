@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -53,6 +54,9 @@ public class FriendRVAdapter extends RecyclerView.Adapter<FriendRVAdapter.ViewHo
 
         holder.shareCheckBox.setVisibility(View.GONE);
 
+        if(sendEventInvitationCheck==2){
+            holder.friendInviteTv.setText("Send");
+        }
         //this is for share live link
         if ( App.getSharedpref().getString("liveShareCheckAdpter").equalsIgnoreCase("1")){
             holder.shareCheckBox.setVisibility(View.VISIBLE);
@@ -92,9 +96,11 @@ public class FriendRVAdapter extends RecyclerView.Adapter<FriendRVAdapter.ViewHo
         }else {
             holder.receivingTxt.setText(list.get(position).getLavelInformation().getReciveLevel());
             if (Integer.parseInt(list.get(position).getLavelInformation().getReciveLevel())==0){
+                holder.friendsReceivingRL.setVisibility(View.GONE);
                 holder.receivingLayout.setVisibility(View.GONE);
             }else {
                 holder.receivingLayout.setVisibility(View.VISIBLE);
+                holder.friendsReceivingRL.setVisibility(View.VISIBLE);
                 Glide.with(context).load(list.get(position).getLavelInformation().getReciveColor()).into(holder.receivingLayout);
 //                holder.receivingLayout.getBackground().setColorFilter(Color.parseColor(list.get(position).getLavelInformation().getReciveColor()), PorterDuff.Mode.SRC_ATOP);
             }
@@ -179,17 +185,22 @@ public class FriendRVAdapter extends RecyclerView.Adapter<FriendRVAdapter.ViewHo
             holder.friendInviteTv.setVisibility(View.VISIBLE);
             //Toast.makeText(context, "852845841554154", Toast.LENGTH_SHORT).show();
 //            holder.friendsDateTimeTv.setVisibility(View.GONE);
+            Log.i("Vipppp","at sendEventInvitation");
+           holder.friendInviteTv.setOnClickListener(view -> callback.sendEventInvitation(list.get(position).getId(),holder.friendInviteTv));
 
-            holder.friendInviteTv.setOnClickListener(view -> callback.sendEventInvitation(list.get(position).getId(),holder.friendInviteTv));
-        }else{
-            holder.friendInviteTv.setVisibility(View.GONE);
+        }
+        else{
+            //holder.friendInviteTv.setVisibility(View.VISIBLE);
 //            holder.friendsDateTimeTv.setVisibility(View.VISIBLE);
             holder.itemView.setOnClickListener(view -> {
                 //Toast.makeText(context, "fszdcgbm", Toast.LENGTH_SHORT).show();
+
                 //send check ==0 means profile open hovegi otherWise gift send hoga
                 if (sendCheck == 0) {
                     callback.callback(list.get(position).getId(),position);
                 } else {
+
+                    holder.friendInviteTv.setVisibility(View.VISIBLE);
                     callback.callback("001",position);
                 }
             });
@@ -214,6 +225,7 @@ public class FriendRVAdapter extends RecyclerView.Adapter<FriendRVAdapter.ViewHo
         LinearLayout genderLayout;
         LinearLayout sendingLayout;
         TextView sendingTxt,receivingTxt;
+        RelativeLayout friendsReceivingRL;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -231,6 +243,7 @@ public class FriendRVAdapter extends RecyclerView.Adapter<FriendRVAdapter.ViewHo
             sendingTxt = itemView.findViewById(R.id.sendingLvl);
             receivingTxt = itemView.findViewById(R.id.receivingLvl);
             lvlimg = itemView.findViewById(R.id.lvlimg);
+            friendsReceivingRL = itemView.findViewById(R.id.friendsReceivingRL);
 
 
         }
