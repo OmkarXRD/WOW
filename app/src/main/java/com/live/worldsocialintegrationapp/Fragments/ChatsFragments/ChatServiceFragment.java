@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,12 +22,13 @@ import com.live.worldsocialintegrationapp.Adapters.ServiceChatAdapter;
 import com.live.worldsocialintegrationapp.ModelClasses.SendMsgRoot;
 import com.live.worldsocialintegrationapp.R;
 import com.live.worldsocialintegrationapp.Retrofit.Mvvm;
+import com.live.worldsocialintegrationapp.room.AppDatabase;
 import com.live.worldsocialintegrationapp.utils.AppConstants;
 import java.util.List;
 
 public class ChatServiceFragment extends Fragment {
 
-    private RecyclerView recycler;
+    private RecyclerView recycler,recycler2;
     private RelativeLayout msgSendRL;
     private EditText chatMsgEdtx;
     private Mvvm mvvm;
@@ -61,6 +63,7 @@ public class ChatServiceFragment extends Fragment {
         mvvm.sendMsg(AppConstants.USER_ID,chatMsgEdtx.getText().toString()).observe(requireActivity(),response ->{
             if (response!=null){
                 if (response.getSuccess().equalsIgnoreCase("1")){
+                    Log.d("Listsssssss","in Hit APi " + chatMsgEdtx.getText().toString() );
                     getMsgApi();
                     chatMsgEdtx.setText(null);
                 }else {
@@ -80,6 +83,9 @@ public class ChatServiceFragment extends Fragment {
             if (response !=null){
                 if (response.getSuccess().equalsIgnoreCase("1")){
                     list = response.getDetail();
+                    Log.d("Listsssssss", list.get(0).toString());
+                    Log.d("Listsssssss","111 "+response.getDetail());
+                    Log.d("Listsssssss","222 "+response.getMessage());
                     ServiceChatAdapter adapter = new ServiceChatAdapter(list,requireContext());
                     recycler.setAdapter(adapter);
                 }else {

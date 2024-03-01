@@ -1,10 +1,13 @@
 package com.live.worldsocialintegrationapp.ModelClasses.LiveTheme;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+@Keep
 public class SendLiveTheme {
 
     @SerializedName("status")

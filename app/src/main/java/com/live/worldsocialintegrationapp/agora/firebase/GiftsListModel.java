@@ -1,10 +1,13 @@
 package com.live.worldsocialintegrationapp.agora.firebase;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+@Keep
 public class GiftsListModel {
 
     @SerializedName("success")
@@ -52,7 +55,7 @@ public class GiftsListModel {
         this.dimaond = dimaond;
     }
 
-
+    @Keep
     public class Detail {
 
         @SerializedName("id")

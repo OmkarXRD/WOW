@@ -1,5 +1,8 @@
 package com.live.worldsocialintegrationapp.ModelClasses;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class ExchangeCoinsRoot {
 
     public String status;

@@ -1,7 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 
+@Keep
 public class SocialLoginRoot implements Serializable {
 
     public int status;

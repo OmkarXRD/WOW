@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -67,12 +68,15 @@ public class FansRVAdapter extends RecyclerView.Adapter<FansRVAdapter.ViewHolder
 
         if (list.get(position).getReceivingLevel().isEmpty()){
             holder.receivingLayout.setVisibility(View.GONE);
-        }else {
+        }
+        else {
             holder.receivingLvl.setText(list.get(position).getReceivingLevel());
             if (Integer.parseInt(list.get(position).getReceivingLevel())==0){
                 holder.receivingLayout.setVisibility(View.GONE);
+                holder.fansReceivingRL.setVisibility(View.GONE);
             }else {
                 holder.receivingLayout.setVisibility(View.VISIBLE);
+                holder.fansReceivingRL.setVisibility(View.VISIBLE);
                 Glide.with(context).load(list.get(position).getReciveColor()).into(holder.receivingLayout);
 //                holder.receivingLayout.getBackground().setColorFilter(Color.parseColor(list.get(position).getReciveColor()), PorterDuff.Mode.SRC_ATOP);
             }
@@ -172,6 +176,7 @@ public class FansRVAdapter extends RecyclerView.Adapter<FansRVAdapter.ViewHolder
         ImageView fanGenderImg,lvlimg,receivingLayout;
         LinearLayout sendingLayout,genderLayout;
         TextView sendingLvl, receivingLvl;
+        RelativeLayout fansReceivingRL;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -187,6 +192,7 @@ public class FansRVAdapter extends RecyclerView.Adapter<FansRVAdapter.ViewHolder
             receivingLvl = itemView.findViewById(R.id.receivingLvl);
             genderLayout = itemView.findViewById(R.id.genderLayout);
             lvlimg = itemView.findViewById(R.id.lvlimg);
+            fansReceivingRL = itemView.findViewById(R.id.fansReceivingRL);
         }
     }
 

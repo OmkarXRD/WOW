@@ -1,7 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses.DailyTask;
 
+import androidx.annotation.Keep;
+
 import java.util.ArrayList;
 
+@Keep
 public class GetDailyTaskRoot {
 
     public int status;

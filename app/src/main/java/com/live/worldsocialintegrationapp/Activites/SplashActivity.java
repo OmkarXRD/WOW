@@ -94,7 +94,8 @@ public class SplashActivity extends AppCompatActivity {
 
     public void onResume() {
         super.onResume();
-        getLastLocation();
+        //It is calling the get location function 2 times so commented by #007_Omkar
+        //getLastLocation();
     }
 
     private void banUserStatusCheck() {
@@ -171,6 +172,7 @@ public class SplashActivity extends AppCompatActivity {
                         }
                 );
             } else {
+                Log.d("AppFlow", "In On create of Main Activity");
                 Toast.makeText(SplashActivity.this, "Turn on location", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                 startActivity(intent);

@@ -48,6 +48,8 @@ import com.live.worldsocialintegrationapp.utils.App;
 import com.live.worldsocialintegrationapp.utils.AppConstants;
 import com.live.worldsocialintegrationapp.utils.CommonUtils;
 
+import java.util.Objects;
+
 
 public class EditProfileMomentsFragment extends Fragment {
 
@@ -79,14 +81,20 @@ public class EditProfileMomentsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         if(App.getSharedpref().getString("receiveLevel").isEmpty()){
+            Log.i("Levelssss"," In If ");
 //            binding.editProfileMyLvlTv.setText("0");
-            binding.level.setVisibility(View.GONE);
+                binding.level.setVisibility(View.GONE);
+
+
         }else{
+            Log.i("Levelssss"," In else ");
             //updated to hide layout when receivelevel is 0
             if (Integer.parseInt(App.getSharedpref().getString("receiveLevel"))==0){
+                Log.i("Levelssss"," In else if ");
                 binding.level.setVisibility(View.GONE);
             }
             else {
+                Log.i("Levelssss"," In else else ");
                 binding.level.setVisibility(View.VISIBLE);
                 binding.editProfileMyLvlTv.setText(App.getSharedpref().getString("receiveLevel"));
             }

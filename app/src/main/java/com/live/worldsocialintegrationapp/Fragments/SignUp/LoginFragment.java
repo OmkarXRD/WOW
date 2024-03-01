@@ -129,6 +129,7 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d("AppFlow", "On Create View of Login Fragment");
         // Inflate the layout for this fragment
         binding = FragmentLoginBinding.inflate(inflater, container, false);
 
@@ -283,24 +284,27 @@ public class LoginFragment extends Fragment {
             }
         });
 
+        //updated the url by Omkar007
         binding.loginPrivacyTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //             Navigation.findNavController(binding.getRoot()).navigate(R.id.privacyPolicyFragment2);
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://omninos.life/Social_Integration/privecy.html")));
+                //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://omninos.life/Social_Integration/privecy.html")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wows.co.in/privacy-policy")));
             }
         });
         binding.loginTermsTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //             Navigation.findNavController(binding.getRoot()).navigate(R.id.termsConditionsTV2);
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://omninos.life/Social_Integration/termandcondition.html")));
+                //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://omninos.life/Social_Integration/termandcondition.html")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wows.co.in/terms-and-conditions")));
             }
         });
 
         binding.loginServiceTv.setOnClickListener(view -> {
 //             Navigation.findNavController(binding.getRoot()).navigate(R.id.termsConditionsTV2);
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://omninos.life/Social_Integration/termandcondition.html")));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wows.co.in/terms-and-conditions")));
         });
 
 
@@ -369,7 +373,6 @@ public class LoginFragment extends Fragment {
                 String personEmail = acct.getEmail();
                 String personId = acct.getId();
                 //Uri personPhoto = acct.getPhotoUrl();
-                Toast.makeText(requireActivity(), "LogIn Success", Toast.LENGTH_SHORT).show();
                 Log.i("socialLoginApi"," above social login api call ");
                 Log.i("socialLoginApi",countryNew);
                 Log.i("socialLoginApi",personId);
@@ -440,12 +443,11 @@ public class LoginFragment extends Fragment {
                             //String personEmail = object.getString("email");
                             String facebookId = object.getString("id");
                             App.getSharedpref().saveString("facebook",personName);
-                            Toast.makeText(requireActivity(), "LogIn Success", Toast.LENGTH_SHORT).show();
+
                             //Log.i("Facebookzzzzzzzzz",personName +object.getString("email"));
 
                             //added static email for now as we need to get mail from facebook
                             socialLoginApi(countryNew,"",personName,email,"false","",facebookId,"",personName);
-
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -535,18 +537,27 @@ public class LoginFragment extends Fragment {
 
     private void socialLoginApi(String continent, String gmailId, String name, String email,String isAddingAccount,String userName, String facebookId,String snapchatId, String facebookUserName) {
 
+
+        String continentName = App.getSharedpref().getString("continentName");
+
+
         Log.d("socialLoginApi", "socialLoginApi: ");
-        Log.d("socialLoginApi", "socialLoginApi: "+socialId);
+        Log.d("socialLoginApi", "socialId: "+gmailId);
         Log.d("socialLoginApi", "socialLoginApi: "+RegId);
         Log.d("socialLoginApi", "socialLoginApi: "+deviceId);
-        Log.d("socialLoginApi", "socialLoginApi: "+ "Device type");
-        Log.d("socialLoginApi", "socialLoginApi: "+ "Phone number");
+        Log.d("socialLoginApi", "socialLoginApi: "+ "android");
+        Log.d("socialLoginApi", "socialLoginApi: "+ "");
         Log.d("socialLoginApi", "socialLoginApi: "+name);
         Log.d("socialLoginApi", "socialLoginApi: "+email);
-        Log.d("socialLoginApi", "socialLoginApi: "+continent);
+        Log.d("socialLoginApi", "continent: "+continentName);
         Log.d("socialLoginApi", "socialLoginApi: "+countryNew);
+        Log.d("socialLoginApi", "socialLoginApi: "+isAddingAccount);
+        Log.d("socialLoginApi", "socialLoginApi: "+userName);
+        Log.d("socialLoginApi", "socialLoginApi: "+facebookId);
+        Log.d("socialLoginApi", "socialLoginApi: "+snapchatId);
+        Log.d("socialLoginApi", "socialLoginApi: "+facebookUserName);
         //Log.d("socialLoginApi", "socialLoginApi: "+s);
-        String continentName = App.getSharedpref().getString("continentName");
+
 
 
 
@@ -567,7 +578,6 @@ public class LoginFragment extends Fragment {
                         CommonUtils.getRequestBodyText(snapchatId),
                         CommonUtils.getRequestBodyText(facebookUserName))
                 .observe(requireActivity(), socialLoginRoot -> {
-//                    if (socialLoginRoot != null) {
                     Log.i("in LOGIN FRAG","zzzzzzzzzzzzzzzzzzzz " +socialLoginRoot +" "+ socialLoginRoot.getStatus() );
                         if (socialLoginRoot != null && socialLoginRoot.getStatus() == 1) {
 
@@ -586,6 +596,8 @@ public class LoginFragment extends Fragment {
                             AppConstants.USER_ID = socialLoginRoot.getDetails().getId();
 
                             if (String.valueOf(socialLoginRoot.getDetails().idBannedStatus).equalsIgnoreCase("false")){
+                                Toast.makeText(requireActivity(), "Login Success", Toast.LENGTH_SHORT).show();
+                                Log.i("in LOGIN FRAG","zzzzzzzzzzzzzzzzzzzz " +socialLoginRoot.getStatus() + socialLoginRoot.getMessage());
                                 startActivity(new Intent(requireActivity(), HomeActivity.class));
                             }else {
                                 startActivity(new Intent(requireContext(), IdBannedActivity.class));
@@ -594,14 +606,10 @@ public class LoginFragment extends Fragment {
                         else {
                             if (getContext() != null) {
                                 Log.i("in LOGIN FRAG","zzzzzzzzzzzzzzzzzzzz");
-                                Toast.makeText(requireContext(), "Technical issue ", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(requireContext(), "Technical issue "+socialLoginRoot.getStatus() + socialLoginRoot.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
-//                    } else {
-//                        if (getContext() != null) {
-//                            Toast.makeText(requireContext(), "Technical issue", Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
+
                 });
 
     }

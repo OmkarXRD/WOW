@@ -1,11 +1,14 @@
 package com.live.worldsocialintegrationapp.ModelClasses.LiveUserByCountry;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 import java.util.List;
 
+@Keep
 public class RootLiveUser implements Serializable {
 
     @SerializedName("success")

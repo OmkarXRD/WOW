@@ -1,7 +1,9 @@
 package com.live.worldsocialintegrationapp.ModelClasses.Wallet;
 
-import java.io.Serializable;
+import androidx.annotation.Keep;
 
+import java.io.Serializable;
+@Keep
 public class AddWalletMoneyRoot implements Serializable {
 
     public String success;

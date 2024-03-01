@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.navigation.Navigation;
 
+import android.os.Debug;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,9 +57,11 @@ public class PhoneNumberLoginFragment extends Fragment {
 
                 binding.LoginLinearlyut.setClickable(false);
                 if(getArguments()!= null){
+                    Log.e("Issssssueeeeee","555555555zzz");
                     checkRegisteredNumber(getArguments().getString("phone"),getArguments().getString("countryCode"));
                 }
                 else{
+                    Log.e("Issssssueeeeee","6666666zzz");
                     Toast.makeText(requireContext(), "Technical Error", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -130,25 +133,32 @@ public class PhoneNumberLoginFragment extends Fragment {
 
 
        public void checkNumberExist(String phone, String countryCode){
+           if (binding == null) {
+               Log.e("PhoneNumberLoginFragment", "Binding is null");
+               return;
+           }
                    new Mvvm().sendOtp(requireActivity(),countryCode+phone,"","","false","false","").observe(requireActivity(), new Observer<SendOtpRoot>() {
                 @Override
                 public void onChanged(SendOtpRoot sendOtpRoot) {
 
                     if (sendOtpRoot !=null){
-                        Bundle bundle = new Bundle();
-                        bundle = getArguments();
-                        assert bundle != null;
-                        bundle.putString("phoneNo",phone);
-                        bundle.putString("countryCode",countryCode);
-                        if(sendOtpRoot.getSuccess().equalsIgnoreCase("1")){
-                            Navigation.findNavController( binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_passwordFragment,bundle);
-                        }
-                        else{
-
-                            bundle.putBoolean("newUser",true);
-                            Navigation.findNavController( binding.getRoot()).navigate(R.id.action_phoneNumberLoginFragment_to_otpFragment,bundle);
-                        }
-                    }else {
+                        Log.e("Issssssueeeeee","111111111111");
+                        Bundle bundle=new Bundle();
+                            bundle.putString("phoneNo", phone);
+                            bundle.putString("countryCode", countryCode);
+                            if (sendOtpRoot.getSuccess().equalsIgnoreCase("1")) {
+                                Log.e("Issssssueeeeee", "22222222");
+                                Navigation.findNavController(binding.getRoot())
+                                        .navigate(R.id.action_phoneNumberLoginFragment_to_passwordFragment, bundle);
+                            } else {
+                                Log.e("Issssssueeeeee", "33333333");
+                                bundle.putBoolean("newUser", true);
+                                Navigation.findNavController(binding.getRoot())
+                                        .navigate(R.id.action_phoneNumberLoginFragment_to_otpFragment, bundle);
+                            }
+                    }
+                    else {
+                        Log.e("Issssssueeeeee","44444444444");
                         Toast.makeText(requireContext(), "Technical Issue...", Toast.LENGTH_SHORT).show();
                     }
                 }

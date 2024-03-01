@@ -1,9 +1,11 @@
 package com.live.worldsocialintegrationapp.Root;
 
+import androidx.annotation.Keep;
+
 import com.live.worldsocialintegrationapp.ModelClasses.AllPopularUsers.Detail;
 
 import java.util.List;
-
+@Keep
 public class CountryRoot {
 
     public String success;

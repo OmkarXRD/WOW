@@ -1,5 +1,8 @@
 package com.live.worldsocialintegrationapp.ModelClasses.UserLevel;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class Frame {
     public String userId;
     public String frameId;

@@ -1,8 +1,11 @@
 package com.live.worldsocialintegrationapp.ModelClasses.Events;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
+@Keep
 public class CreateEventRoot implements Serializable {
 
     public int status;

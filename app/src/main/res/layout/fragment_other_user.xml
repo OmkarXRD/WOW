@@ -365,6 +365,7 @@
                             android:textSize="9sp" />
                     </RelativeLayout>
                     <RelativeLayout
+                        android:id="@+id/receiveRL"
                         android:layout_width="50dp"
                         android:layout_height="15dp"
                         android:layout_marginStart="@dimen/dp_5">
@@ -372,7 +373,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/receivingLayout"
+                            android:id="@+id/receivingImageView"
                             android:scaleType="fitXY"/>
                         <ImageView
                             android:id="@+id/imgg"

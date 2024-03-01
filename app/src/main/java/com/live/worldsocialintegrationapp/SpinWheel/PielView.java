@@ -26,6 +26,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 
 import androidx.annotation.IntDef;
+import androidx.annotation.Keep;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.core.graphics.ColorUtils;
 
@@ -35,11 +36,10 @@ import com.live.worldsocialintegrationapp.SpinWheel.model.LuckyItem;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by kiennguyen on 11/5/16.
- */
 
-public class PielView extends View {
+@Keep
+public class PielView extends View
+{
     private RectF mRange = new RectF();
     private int mRadius;
 

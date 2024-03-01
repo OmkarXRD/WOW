@@ -1,7 +1,10 @@
 package com.live.worldsocialintegrationapp.ModelClasses.DailyTask;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 
+@Keep
 public class SetDailyTaskRoot implements Serializable {
 
     public int status;

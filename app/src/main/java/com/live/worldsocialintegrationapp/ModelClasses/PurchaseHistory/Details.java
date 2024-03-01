@@ -1,7 +1,9 @@
 package com.live.worldsocialintegrationapp.ModelClasses.PurchaseHistory;
 
-import java.util.ArrayList;
+import androidx.annotation.Keep;
 
+import java.util.ArrayList;
+@Keep
 public class Details {
 
     public ArrayList<PurchaseLuckyIdHistory> purchase_luckyId_history;

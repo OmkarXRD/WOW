@@ -1,7 +1,9 @@
 package com.live.worldsocialintegrationapp.ModelClasses;
 
-import java.util.ArrayList;
+import androidx.annotation.Keep;
 
+import java.util.ArrayList;
+@Keep
 public class UserReportCategoryRoot {
     public String success;
     public String message;

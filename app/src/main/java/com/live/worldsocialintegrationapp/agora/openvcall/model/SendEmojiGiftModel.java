@@ -1,8 +1,10 @@
 package com.live.worldsocialintegrationapp.agora.openvcall.model;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
+@Keep
 public class SendEmojiGiftModel {
 
     @SerializedName("success")

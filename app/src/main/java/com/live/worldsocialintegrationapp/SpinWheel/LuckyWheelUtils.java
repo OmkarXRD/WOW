@@ -7,10 +7,10 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.TypedValue;
 
-/**
- * Created by kiennguyen on 11/5/16.
- */
+import androidx.annotation.Keep;
 
+
+@Keep
 public class LuckyWheelUtils {
     public static Bitmap drawableToBitmap(Drawable drawable) {
         Bitmap bitmap;

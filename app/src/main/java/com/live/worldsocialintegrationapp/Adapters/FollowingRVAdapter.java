@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -68,8 +69,10 @@ public class FollowingRVAdapter extends RecyclerView.Adapter<FollowingRVAdapter.
             holder.receivingLvl.setText(list.get(position).getReceivingLevel());
             if (Integer.parseInt(list.get(position).getReceivingLevel())==0){
                 holder.receivingLayout.setVisibility(View.GONE);
+                holder.followingReceivingRL.setVisibility(View.GONE);
             }else {
                 holder.receivingLayout.setVisibility(View.VISIBLE);
+                holder.followingReceivingRL.setVisibility(View.VISIBLE);
                 Glide.with(context).load(list.get(position).getReciveColor()).into(holder.receivingLayout);
 //                holder.receivingLayout.getBackground().setColorFilter(Color.parseColor(list.get(position).getReciveColor()), PorterDuff.Mode.SRC_ATOP);
             }
@@ -176,6 +179,7 @@ public class FollowingRVAdapter extends RecyclerView.Adapter<FollowingRVAdapter.
         CircleImageView followingCirleImg;
         LinearLayout  sendingLayout,genLayout;
         TextView sendingLvl, receivingLvl;
+        RelativeLayout followingReceivingRL;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -189,6 +193,7 @@ public class FollowingRVAdapter extends RecyclerView.Adapter<FollowingRVAdapter.
             sendingLvl = itemView.findViewById(R.id.sendingLvl);
             receivingLvl = itemView.findViewById(R.id.receivingLvl);
             lvlimg = itemView.findViewById(R.id.lvlimg);
+            followingReceivingRL = itemView.findViewById(R.id.followingReceivingRL);
         }
     }
 

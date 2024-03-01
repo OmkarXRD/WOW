@@ -1,7 +1,9 @@
 package com.live.worldsocialintegrationapp.ModelClasses;
 
 import java.io.Serializable;
+import androidx.annotation.Keep;
 
+@Keep
 public class SendOtpRoot  implements Serializable {
 
     public String success;

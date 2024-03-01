@@ -1,11 +1,13 @@
 package com.live.worldsocialintegrationapp.ModelClasses.Meet;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 import java.util.List;
-
+@Keep
 public class RootMeet implements Serializable {
 
     @SerializedName("success")

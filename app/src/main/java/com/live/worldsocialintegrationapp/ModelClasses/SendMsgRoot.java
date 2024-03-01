@@ -1,10 +1,12 @@
 package com.live.worldsocialintegrationapp.ModelClasses;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
-
+@Keep
 public class SendMsgRoot {
     @SerializedName("success")
     @Expose
@@ -50,6 +52,7 @@ public class SendMsgRoot {
     public void setDetails(Details details) {
         this.details = details;
     }
+    @Keep
     public class Details {
 
         @SerializedName("senderId")
@@ -109,6 +112,7 @@ public class SendMsgRoot {
         }
 
     }
+    @Keep
     public class Detail {
 
         @SerializedName("senderId")

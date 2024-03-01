@@ -1,7 +1,9 @@
 package com.live.worldsocialintegrationapp.ModelClasses.Posts;
 
-import java.io.Serializable;
+import androidx.annotation.Keep;
 
+import java.io.Serializable;
+@Keep
 public class Details implements Serializable {
 
     public String mediaId;

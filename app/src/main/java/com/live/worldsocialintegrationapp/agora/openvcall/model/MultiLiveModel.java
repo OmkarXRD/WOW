@@ -1,5 +1,8 @@
 package com.live.worldsocialintegrationapp.agora.openvcall.model;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class MultiLiveModel {
 
     private String channleName = "";

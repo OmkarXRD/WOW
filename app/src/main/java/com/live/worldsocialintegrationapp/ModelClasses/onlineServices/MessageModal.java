@@ -1,5 +1,8 @@
 package com.live.worldsocialintegrationapp.ModelClasses.onlineServices;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class MessageModal {
     // string to store our message and sender
     private String message;

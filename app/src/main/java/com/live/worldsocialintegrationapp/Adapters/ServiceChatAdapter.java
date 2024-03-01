@@ -1,6 +1,7 @@
 package com.live.worldsocialintegrationapp.Adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,9 +39,8 @@ public class ServiceChatAdapter extends RecyclerView.Adapter<ServiceChatAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ServiceChatAdapter.holder holder, int position) {
-
         holder.senderAudioLlayout.setVisibility(View.GONE);
-
+        Log.d("Listsssssss",position + " = "+ list.get(position).getMsg());
 
         if (list.get(position).getSenderId().equalsIgnoreCase(AppConstants.USER_ID)){
             holder.senderLlayout.setVisibility(View.VISIBLE);
@@ -55,6 +55,7 @@ public class ServiceChatAdapter extends RecyclerView.Adapter<ServiceChatAdapter.
             holder.receiverMessageTimeTv.setText(list.get(position).getTime());
 
         }
+
     }
 
     @Override
@@ -63,7 +64,7 @@ public class ServiceChatAdapter extends RecyclerView.Adapter<ServiceChatAdapter.
     }
 
     public class holder extends RecyclerView.ViewHolder {
-        private RelativeLayout senderAudioLlayout;
+        private RelativeLayout senderAudioLlayout,defaultMessageRL;
         private LinearLayout senderLlayout, receiverLlayout;
         private TextView sender_message_text,receiver_message_text,receiverMessageTimeTv,senderMessageTimeTv;
         public holder(@NonNull View itemView) {

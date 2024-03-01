@@ -1,5 +1,7 @@
 package com.live.worldsocialintegrationapp.ModelClasses.Family;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -7,6 +9,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+@Keep
 public class GetLiveFamilyJoinersRoot implements Serializable {
 
     @SerializedName("success")

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -53,6 +54,24 @@ public class GiftFirendAdapter extends RecyclerView.Adapter<GiftFirendAdapter.ho
         Glide.with(holder.friendCicleImg.getContext()).load(list.get(position).getImageDp())
                 .error(R.drawable.demo_user_profile_img).into(holder.friendCicleImg);
         holder.friendInviteTv.setText("Send");
+
+        if (list.get(position).getReceivingLevel().isEmpty()){
+            holder.receivingLayout.setVisibility(View.GONE);
+        }
+        else {
+            holder.receivingTxt.setText(list.get(position).getReceivingLevel());
+            if (Integer.parseInt(list.get(position).getReceivingLevel())==0){
+                holder.receivingLayout.setVisibility(View.GONE);
+                holder.friendsReceivingRL.setVisibility(View.GONE);
+            }else {
+                holder.receivingLayout.setVisibility(View.VISIBLE);
+                holder.friendsReceivingRL.setVisibility(View.VISIBLE);
+                Glide.with(context).load(list.get(position).getReciveColor()).into(holder.receivingLayout);
+//                holder.receivingLayout.getBackground().setColorFilter(Color.parseColor(list.get(position).getReciveColor()), PorterDuff.Mode.SRC_ATOP);
+            }
+        }
+
+
 
         if (list.get(position).getLavelInformation().getSendLevel().isEmpty()){
             holder.sendingLayout.setVisibility(View.GONE);
@@ -144,6 +163,7 @@ public class GiftFirendAdapter extends RecyclerView.Adapter<GiftFirendAdapter.ho
         private LinearLayout sendingLayout;
         private TextView sendingTxt,receivingTxt;
         private CheckBox shareCheckBox;
+        private RelativeLayout friendsReceivingRL;
 
         public holder(@NonNull View itemView) {
             super(itemView);
@@ -157,6 +177,7 @@ public class GiftFirendAdapter extends RecyclerView.Adapter<GiftFirendAdapter.ho
             genderLayout = itemView.findViewById(R.id.genderLayout);
             sendingLayout = itemView.findViewById(R.id.sendingLayout);
             receivingLayout = itemView.findViewById(R.id.receivingLayout);
+            friendsReceivingRL = itemView.findViewById(R.id.friendsReceivingRL);
             sendingTxt = itemView.findViewById(R.id.sendingLvl);
             receivingTxt = itemView.findViewById(R.id.receivingLvl);
             lvlimg = itemView.findViewById(R.id.lvlimg);

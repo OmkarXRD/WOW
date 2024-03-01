@@ -155,6 +155,7 @@
                         </LinearLayout>
 
                         <RelativeLayout
+                            android:id="@+id/friendsReceivingRL"
                             android:layout_width="50dp"
                             android:layout_height="15dp"
                             android:layout_weight="1"

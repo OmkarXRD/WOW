@@ -1,8 +1,11 @@
 package com.live.worldsocialintegrationapp.agora.openvcall.model.GiftType;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+@Keep
 public class Trick {
 
     @SerializedName("id")
