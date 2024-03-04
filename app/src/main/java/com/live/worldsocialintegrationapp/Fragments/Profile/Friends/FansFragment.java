@@ -1,5 +1,8 @@
 package com.live.worldsocialintegrationapp.Fragments.Profile.Friends;
 
+import android.app.Activity;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,9 +12,12 @@ import androidx.lifecycle.Observer;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.view.DisplayCutout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +43,7 @@ public class FansFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        setStatusBar();
         return inflater.inflate(R.layout.fragment_fans, container, false);
     }
 
@@ -66,6 +73,19 @@ public class FansFragment extends Fragment {
         findIds(view);
         getFansListApi();
     }
+
+    //Method to adjust the system UI as per required
+    private void setStatusBar() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            Activity activity = getActivity();
+            if (activity != null) {
+                Window window = activity.getWindow();
+                View decorView = window.getDecorView();
+                decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            }
+        }
+    }
+
 
     private void getFansListApi() {
 
