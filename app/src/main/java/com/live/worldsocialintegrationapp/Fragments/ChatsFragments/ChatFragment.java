@@ -85,10 +85,10 @@ public class ChatFragment extends Fragment implements ChatRVAdapter.Callback {
         }
 
         //disables bottom navigation
-        CommonUtils.disableBottomNavigation(requireActivity());
+        //CommonUtils.disableBottomNavigation(requireActivity());
 
         if (backPressed==0) {
-
+                CommonUtils.visibileBottomNavigation(requireActivity());
             //CommonUtils.disableBottomNavigation(requireActivity());
         }else if (backPressed == 1){
 //            binding.back.setOnClickListener(view1 -> );
@@ -336,6 +336,8 @@ public class ChatFragment extends Fragment implements ChatRVAdapter.Callback {
             }
         }
     }
+
+
 
     //    @Override
 //    public void onDestroyView() {

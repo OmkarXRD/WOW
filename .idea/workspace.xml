@@ -1116,12 +1116,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fbe7f4d-af4c-474b-b3a8-adb47f5cf8c0" name="Changes" comment="Initial Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Home/Related/SearchUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Home/Related/SearchUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/OtherUserTabs/FamilyBatchFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/OtherUserTabs/FamilyBatchFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/agora/openvcall/ui/CallActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/agora/openvcall/ui/CallActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_call.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_call.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_family_batch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_family_batch.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/ChatsFragments/ChatFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/ChatsFragments/ChatFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/ChatsFragments/MessagesFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/ChatsFragments/MessagesFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Home/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Home/HomeFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

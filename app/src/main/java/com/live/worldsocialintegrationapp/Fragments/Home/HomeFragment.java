@@ -269,6 +269,7 @@ public class HomeFragment extends Fragment {
     public void onResume() {
         super.onResume();
         disableBottomNavigation();
+        firstSelectedTab(view);
     }
 
     private void disableBottomNavigation() {
