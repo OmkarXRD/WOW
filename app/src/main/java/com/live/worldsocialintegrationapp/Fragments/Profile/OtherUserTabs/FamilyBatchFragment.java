@@ -169,7 +169,6 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
 
         Log.d("getFamilyLiveJoinersApi", "getFamilyLiveJoinersApi: " + familyId);
         Log.d("getFamilyLiveJoinersApi", "getFamilyLiveJoinersApi: " + AppConstants.USER_ID);
-        Log.d("getFamilyLiveJoinersApi", "getFamilyLiveJoinersApi: " + AppConstants.USER_ID);
         mvvm.getFamilyLiveJoiners(requireActivity(), familyId, AppConstants.USER_ID, AppConstants.USER_ID).observe(requireActivity(), getLiveFamilyJoinersRoot -> {
             if (getLiveFamilyJoinersRoot != null) {
                 if (getLiveFamilyJoinersRoot.getSuccess().equalsIgnoreCase("1")) {

@@ -89,7 +89,7 @@ public class SearchUsers extends Fragment implements SearchUserRVAdapter.SearchU
 
         findIds(view);
         clicks(view);
-//        searchData();
+       searchData();
 
         if (familyJoinCheck == 0) {
         } else {

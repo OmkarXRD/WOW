@@ -650,11 +650,29 @@
                             android:layout_marginTop="@dimen/dp_10"
                             app:civ_border_color="@color/orange"
                             app:civ_border_width="@dimen/dp_2" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlGustHost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rlHost">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvMultiLiveVideos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="4"
+                            tools:listitem="@layout/layout_multi_user_live_list" />
                         <RelativeLayout
                             android:id="@+id/animationRL"
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
-                            android:layout_below="@id/host_Name_tv">
+                            android:layout_below="@id/rvMultiLiveVideos">
 
                             <ImageView
                                 android:id="@+id/nameAnim"
@@ -683,22 +701,6 @@
                                 tools:ignore="SpUsage" />
                         </RelativeLayout>
 
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/rlGustHost"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/rlHost">
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/rvMultiLiveVideos"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="4dp"
-                            android:orientation="vertical"
-                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                            app:spanCount="4"
-                            tools:listitem="@layout/layout_multi_user_live_list" />
                     </RelativeLayout>
 
                 </RelativeLayout>

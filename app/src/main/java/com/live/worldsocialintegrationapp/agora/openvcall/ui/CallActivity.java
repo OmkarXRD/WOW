@@ -5394,6 +5394,7 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
     public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode, Configuration newConfig) {
         super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig);
         if (isInPictureInPictureMode) {
+            Log.i("onPictureInP", "show full screen in if " + newConfig.getLayoutDirection());
             binding.rlHostA.setVisibility(View.VISIBLE);
             binding.rlChair.setVisibility(View.GONE);
             binding.rlWholeLayout.setVisibility(View.GONE);
@@ -5404,6 +5405,8 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
             binding.rlHostA.setVisibility(View.GONE);
             binding.rlChair.setVisibility(View.VISIBLE);
             binding.rlWholeLayout.setVisibility(View.VISIBLE);
+
+
         }
     }
 
