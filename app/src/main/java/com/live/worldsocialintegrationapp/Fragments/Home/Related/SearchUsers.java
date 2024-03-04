@@ -281,7 +281,7 @@ public class SearchUsers extends Fragment implements SearchUserRVAdapter.SearchU
     @Override
     public void openfamilyprofile(Detail detail) {
         if(detail!=null){
-            FamilyBatchFragment.familyID = detail.getId();
+            FamilyBatchFragment.FamilyID = detail.getId();
            Navigation.findNavController(requireActivity().findViewById(R.id.nav_home)).navigate(R.id.familyBatchFragment);
         }else{
             Toast.makeText(requireContext(), "Technical issue..", Toast.LENGTH_SHORT).show();

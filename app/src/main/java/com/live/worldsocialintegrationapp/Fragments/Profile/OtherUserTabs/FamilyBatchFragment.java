@@ -357,12 +357,14 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
                         joinFamilyBtn.setText("Invite");
                     }
                     else if(!Objects.equals(isFamilyMember, "1") && !Objects.equals(isFamilyLeader, "1")){
+                        Log.i("FamilyStatus","Else if");
                         joinFamilyBtn.setVisibility(View.VISIBLE);
                         leaveFamilyImg.setVisibility(View.GONE);
                         joinFamilyBtn.setText("Join");
                     }
                     else {
                         Log.i("FamilyStatus","In else");
+
                         if (!familyJoinStatuss) {
                             leaveFamilyImg.setVisibility(View.GONE);
                             joinFamilyBtn.setVisibility(View.VISIBLE);
@@ -376,7 +378,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
                         }
                     }
                     //condition to check if user is family leader to show edit/leave button
-                    if (Objects.equals(isFamilyLeader, "1")) {
+                    if (Objects.equals(isFamilyLeader, "1") &&  Objects.equals(familyId, FamilyJoinedID)) {
                         leaveFamilyImg.setVisibility(View.GONE);
                         editFamily.setVisibility(View.VISIBLE);
                         editFamily.setOnClickListener(v -> {
@@ -388,13 +390,15 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
                     }
                     else {
                         editFamily.setVisibility(View.GONE);
+                        joinFamilyBtn.setVisibility(View.GONE);
                     }
 
                     if (getFamilyDetailsRoot.getDetails().isFamily_create_status()) {
                         joinFamilyBtn.setText("Invite");
                         //leaveFamilyImg.setVisibility(View.VISIBLE);
                         sendInvitationApi();
-                    } else {
+                    }
+                    else {
 
                         joinFamilyApi();
                         leaveFamilyDialogBox();
