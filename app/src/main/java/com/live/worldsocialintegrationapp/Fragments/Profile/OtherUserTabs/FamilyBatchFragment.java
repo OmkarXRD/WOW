@@ -138,14 +138,26 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
 
         familyMemberCirImg.setOnClickListener(v -> {
             if (leaderId != null) {
-                Bundle bundle1 = new Bundle();
-                bundle1.putString("otherUserId", leaderId);
+                if(Objects.equals(familyId, FamilyJoinedID)){
+                    Log.i("Familyyyy","in if iffff");
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("value_check",2);
+//                Fragment_Moments.check_value = 2;
+                    Navigation.findNavController(requireActivity().findViewById(R.id.nav_home)).navigate(R.id.editProfileMomentsFragment, bundle);
+                }
+                else {
+                    Log.i("Familyyyy","in if else");
+                    Bundle bundle1 = new Bundle();
+                    bundle1.putString("otherUserId", leaderId);
+                    Navigation.findNavController(requireActivity().findViewById(R.id.nav_home)).navigate(R.id.otherUser, bundle1);
+                }
 
-                Navigation.findNavController(requireActivity().findViewById(R.id.nav_home)).navigate(R.id.otherUser, bundle1);
             } else {
                 if (getContext() != null) {
+                    Log.i("Familyyyy","else iffff");
                     //Toast.makeText(requireContext(), "userId not found", Toast.LENGTH_SHORT).show();
                 } else {
+                    Log.i("Familyyyy","else elseeee");
                 }
             }
         });
@@ -517,6 +529,8 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
     public static void setStatusBarGradiant(Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
+            View decorView = window.getDecorView();
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
             @SuppressLint("UseCompatLoadingForDrawables")
             Drawable background = activity.getResources().getDrawable(R.drawable.themee);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -526,6 +540,12 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
         }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.i("ONResumee","in on resume");
+        setStatusBarGradiant(requireActivity());
+    }
 
     @Override
     public void onBottomSheetDismissed() {
