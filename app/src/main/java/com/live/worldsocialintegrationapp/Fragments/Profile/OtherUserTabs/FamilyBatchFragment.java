@@ -347,8 +347,9 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
 
                     /// Note: Updated members to int and getMembers() return to int
                     int currentMembers = getFamilyDetailsRoot.getDetails().getMembers();
-                    // Incrementing the number of family members by 1
-                    int newMembers = currentMembers + 1;
+
+
+                    int newMembers = currentMembers;
 
                     Log.i("FamilyStatus z", String.valueOf(familyJoinStatuss));
                     Log.i("FamilyStatus z", String.valueOf(getFamilyDetailsRoot.getDetails().isFamily_create_status()));
