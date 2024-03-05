@@ -4156,7 +4156,7 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
                 profileBottomSheetBinding.bottomProfileAgeTv, profileBottomSheetBinding.bottomProfileGenderImg,
                 profileBottomSheetBinding.anchorimg,profileBottomSheetBinding.vipImage,profileBottomSheetBinding.genderLayout,
                 profileBottomSheetBinding.sendingLayout,profileBottomSheetBinding.receivingLayout,profileBottomSheetBinding.sendingLvl,
-                profileBottomSheetBinding.receivingLvl,profileBottomSheetBinding.lvlimg);
+                profileBottomSheetBinding.receivingLvl,profileBottomSheetBinding.lvlimg,profileBottomSheetBinding.receivingBottomSheetRL);
 
         getAppliedFrameApi(goLiveModelClass.getUserID(), profileBottomSheetBinding.liveBottomProfieFrame);
 
@@ -5480,7 +5480,7 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
         }
     }
 
-    private void getUserDetailApi(String otherUserId, TextView othrUsrFollowingTV, TextView countryTv, ImageView followingImg, TextView age, ImageView gender, ImageView anchorimg, ImageView vipImage, LinearLayout genderlayout, LinearLayout sendingLayout, ImageView receivinglayout, TextView sendinglvl, TextView receivingLvl, ImageView lvlimg) {
+    private void getUserDetailApi(String otherUserId, TextView othrUsrFollowingTV, TextView countryTv, ImageView followingImg, TextView age, ImageView gender, ImageView anchorimg, ImageView vipImage, LinearLayout genderlayout, LinearLayout sendingLayout, ImageView receivinglayout, TextView sendinglvl, TextView receivingLvl, ImageView lvlimg, RelativeLayout receivingBottomSheetRL) {
         callViewModel.getUserDetail(CallActivity.this, AppConstants.USER_ID,otherUserId, "").observe(CallActivity.this,
                 new Observer<GetUserDetailRoot>() {
                     @Override
@@ -5497,6 +5497,9 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
                             //  sendinglvl.setText(getUserDetailRoot.getDetails().getLavelInfomation().getSendLevel());
                                 Glide.with(CallActivity.this).load(getUserDetailRoot.getDetails().getLavelInfomation().getReciveColor()).into(receivinglayout);
                                 Log.d("receivingLvl", "receivingLvl: "+getUserDetailRoot.getDetails().getLavelInfomation().getReciveLevel());
+                                if(Integer.parseInt(getUserDetailRoot.getDetails().getLavelInfomation().getReciveLevel()) == 0){
+                                    receivingBottomSheetRL.setVisibility(View.GONE);
+                                }
                               receivingLvl.setText(getUserDetailRoot.getDetails().getLavelInfomation().getReciveLevel());
 
 
