@@ -30,6 +30,7 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Debug;
 import android.provider.Settings;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -80,6 +81,8 @@ import com.live.worldsocialintegrationapp.utils.AppConstants;
 import com.live.worldsocialintegrationapp.utils.CommonUtils;
 
 import java.util.List;
+import java.util.Objects;
+
 public class HomeActivity extends AppCompatActivity {
     public static final String data_key = "data_key";  //this for notification
     public static ActivityHomeBinding binding;
@@ -134,6 +137,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d("AppFlow", "On Create of Home Activity");
+
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();

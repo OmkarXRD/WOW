@@ -202,8 +202,16 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
         joinFamilyBtn.setOnClickListener(view -> {
             mvvm.sendJoinRequest(requireActivity(), AppConstants.USER_ID, familyId).observe(requireActivity(), getInvitationsRoot -> {
                 if (getInvitationsRoot.getStatus() == 1) {
-                    joinFamilyBtn.setText("Invited");
+                    if(Objects.equals(isFamilyLeader, "1")){
+                        //joinFamilyBtn.setText("Invited");
+                    }
+                    else{
+                        joinFamilyBtn.setText("Requested");
+                        Toast.makeText(requireContext(), getInvitationsRoot.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+
                 } else {
+                    Toast.makeText(requireContext(), getInvitationsRoot.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
         });
@@ -363,56 +371,113 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
 
                     familyMembersCountTv.setText("Family Members " + newMembers  + "/500");
 
-                    if(Objects.equals(familyId, FamilyJoinedID)){
-                        Log.i("FamilyStatus","First if");
-                        leaveFamilyImg.setVisibility(View.VISIBLE);
-                        joinFamilyBtn.setVisibility(View.VISIBLE);
-                        joinFamilyBtn.setText("Invite");
-                    }
-                    else if(!Objects.equals(isFamilyMember, "1") && !Objects.equals(isFamilyLeader, "1")){
-                        Log.i("FamilyStatus","Else if");
-                        joinFamilyBtn.setVisibility(View.VISIBLE);
-                        leaveFamilyImg.setVisibility(View.GONE);
-                        joinFamilyBtn.setText("Join");
-                    }
-                    else {
-                        Log.i("FamilyStatus","In else");
+//                    if(Objects.equals(familyId, FamilyJoinedID)){
+//                        Log.i("FamilyStatus","First if");
+//                        leaveFamilyImg.setVisibility(View.VISIBLE);
+//                        joinFamilyBtn.setVisibility(View.VISIBLE);
+//                        joinFamilyBtn.setText("Invite");
+//                    }
+//                    else if(!Objects.equals(isFamilyMember, "1") && !Objects.equals(isFamilyLeader, "1")){
+//                        Log.i("FamilyStatus","First Else if");
+//                        joinFamilyBtn.setVisibility(View.VISIBLE);
+//                        leaveFamilyImg.setVisibility(View.GONE);
+//                        joinFamilyBtn.setText("Join");
+//                    }
+//                    else {
+//                        Log.i("FamilyStatus","First else");
+//
+//                        if (!familyJoinStatuss) {
+//                            leaveFamilyImg.setVisibility(View.GONE);
+//                            joinFamilyBtn.setVisibility(View.VISIBLE);
+//                            Log.i("FamilyStatus","In First else 1");
+//                        }
+//                        else{
+//                            joinFamilyBtn.setVisibility(View.GONE);
+//                            leaveFamilyImg.setVisibility(View.GONE);
+//                            //joinFamilyBtn.setText("Join");
+//                            Log.i("FamilyStatus","In First else 2");
+//                        }
+//                    }
+//                    //condition to check if user is family leader to show edit/leave button
+//                    if (Objects.equals(isFamilyLeader, "1") &&  Objects.equals(familyId, FamilyJoinedID)) {
+//                        Log.i("FamilyStatus","In Second IF");
+//                        leaveFamilyImg.setVisibility(View.GONE);
+//                        editFamily.setVisibility(View.VISIBLE);
+//                        editFamily.setOnClickListener(v -> {
+//                            status = 1;
+//                            Bundle bundle12 = new Bundle();
+//                            bundle12.putString("status", "1");
+//                            Navigation.findNavController(requireActivity().findViewById(R.id.nav_home)).navigate(R.id.createFamilyFragment, bundle12);
+//                        });
+//                    }
+//                    else {
+//                        Log.i("FamilyStatus","In Second Else");
+//                        editFamily.setVisibility(View.GONE);
+//                        joinFamilyBtn.setVisibility(View.GONE);
+//                    }
 
-                        if (!familyJoinStatuss) {
-                            leaveFamilyImg.setVisibility(View.GONE);
-                            joinFamilyBtn.setVisibility(View.VISIBLE);
-                            Log.i("FamilyStatus","In else 1");
+                    if(familyJoinStatuss){
+                        Log.i("FamilyStatus","In First IF");
+                        if(Objects.equals(isFamilyLeader, "1")){
+                            Log.i("FamilyStatus","In First IF IF");
+                            if(Objects.equals(familyId, FamilyJoinedID)){
+                                Log.i("FamilyStatus","In First IF IF IF");
+                                joinFamilyBtn.setVisibility(View.VISIBLE);
+                                editFamily.setVisibility(View.VISIBLE);
+                                leaveFamilyImg.setVisibility(View.GONE);
+                            }
+                            else{
+                                Log.i("FamilyStatus","In First IF IF Else");
+                                joinFamilyBtn.setVisibility(View.GONE);
+                                editFamily.setVisibility(View.GONE);
+                                leaveFamilyImg.setVisibility(View.GONE);
+                            }
                         }
                         else{
-                            joinFamilyBtn.setVisibility(View.GONE);
-                            leaveFamilyImg.setVisibility(View.GONE);
-                            //joinFamilyBtn.setText("Join");
-                            Log.i("FamilyStatus","In else 2");
+                            Log.i("FamilyStatus","In First IF Else");
+                            if(Objects.equals(familyId, FamilyJoinedID)){
+                                Log.i("FamilyStatus","In First IF Else IF");
+                                joinFamilyBtn.setVisibility(View.GONE);
+                                editFamily.setVisibility(View.GONE);
+                                leaveFamilyImg.setVisibility(View.VISIBLE);
+                            }
+                           else{
+                                Log.i("FamilyStatus","In First IF Else Else");
+                                joinFamilyBtn.setVisibility(View.GONE);
+                                editFamily.setVisibility(View.GONE);
+                                leaveFamilyImg.setVisibility(View.GONE);
+                            }
                         }
+
                     }
-                    //condition to check if user is family leader to show edit/leave button
-                    if (Objects.equals(isFamilyLeader, "1") &&  Objects.equals(familyId, FamilyJoinedID)) {
-                        leaveFamilyImg.setVisibility(View.GONE);
-                        editFamily.setVisibility(View.VISIBLE);
-                        editFamily.setOnClickListener(v -> {
-                            status = 1;
-                            Bundle bundle12 = new Bundle();
-                            bundle12.putString("status", "1");
-                            Navigation.findNavController(requireActivity().findViewById(R.id.nav_home)).navigate(R.id.createFamilyFragment, bundle12);
-                        });
-                    }
-                    else {
-                        editFamily.setVisibility(View.GONE);
-                        joinFamilyBtn.setVisibility(View.GONE);
+                    else{
+                        Log.i("FamilyStatus","In First ELSE");
+
+                        if(Objects.equals(familyId, FamilyJoinedID)){
+                            Log.i("FamilyStatus","In First Else IF");
+                            joinFamilyBtn.setVisibility(View.GONE);
+                            editFamily.setVisibility(View.GONE);
+                            leaveFamilyImg.setVisibility(View.GONE);
+                        }
+                        else{
+                            Log.i("FamilyStatus","In First Else ELSE");
+                            joinFamilyBtn.setVisibility(View.VISIBLE);
+                            editFamily.setVisibility(View.GONE);
+                            leaveFamilyImg.setVisibility(View.GONE);
+                            joinFamilyBtn.setText("Join");
+                        }
+
                     }
 
+
                     if (getFamilyDetailsRoot.getDetails().isFamily_create_status()) {
+                        Log.i("FamilyStatus","In Third IF");
                         joinFamilyBtn.setText("Invite");
                         //leaveFamilyImg.setVisibility(View.VISIBLE);
                         sendInvitationApi();
                     }
                     else {
-
+                        Log.i("FamilyStatus","In Third else");
                         joinFamilyApi();
                         leaveFamilyDialogBox();
                     }

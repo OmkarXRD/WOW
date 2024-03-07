@@ -15,6 +15,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,7 @@ import com.live.worldsocialintegrationapp.utils.CommonUtils;
 
 
 public class Fragment_Create_Family extends Fragment {
+    //007
     private static final int MININUM_WEALTH_LEVEL_FOR_FAMILY_CREATION = 0;
 
 
@@ -62,6 +64,7 @@ public class Fragment_Create_Family extends Fragment {
                 String wealthLevel =App.getSharedpref().getString("mylevel"); //thhis is the wealth level
 
                 if(wealthLevel != null && !wealthLevel.isEmpty()){
+
                     if(Integer.parseInt(wealthLevel) >= MININUM_WEALTH_LEVEL_FOR_FAMILY_CREATION){
                         Bundle bundle = new Bundle();
                         bundle.putString("status","2");
@@ -69,7 +72,8 @@ public class Fragment_Create_Family extends Fragment {
                     }else{
                         dialogBox();
                     }
-                }else{
+                }
+                else{
                     dialogBox();
                 }
             }

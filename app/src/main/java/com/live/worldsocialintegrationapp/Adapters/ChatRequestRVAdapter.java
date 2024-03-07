@@ -2,6 +2,7 @@ package com.live.worldsocialintegrationapp.Adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,7 +47,7 @@ public class ChatRequestRVAdapter extends RecyclerView.Adapter<ChatRequestRVAdap
         holder.chatRequestUserNameRV.setText(list.get(position).getFromName());
         Glide.with(holder.chatReqCirImg.getContext()).load(list.get(position).getFromImg()).error(R.drawable.demo_user_profile_img)
                 .into(holder.chatReqCirImg);
-
+        Log.i("ReqMsg","zzzzzzz "+ list.get(position).getFromName());
         if (list.get(position).getFromGender().equalsIgnoreCase("male")) {
             holder.heSheWantsTV.setText("He wants to become your friend");
         } else {

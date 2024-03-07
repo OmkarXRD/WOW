@@ -192,6 +192,7 @@ public class CreateFamilyFragment extends Fragment {
                                 .setText("waiting for request accepting")
                                 .setBackgroundResource(R.drawable.wallet_background)
                                 .show();
+                        //007 call api to add admin in the database
                     }
                     if(createFamilyRoot.getStatus() == 2){
                         Alerter.create(requireActivity())

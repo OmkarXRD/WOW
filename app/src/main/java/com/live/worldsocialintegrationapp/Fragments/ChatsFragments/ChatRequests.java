@@ -60,6 +60,7 @@ public class ChatRequests extends Fragment implements ChatRequestRVAdapter.Callb
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        Log.i("CHAT SCREEN","in On create view");
         return inflater.inflate(R.layout.fragment_chat_requests, container, false);
     }
 
@@ -128,9 +129,11 @@ public class ChatRequests extends Fragment implements ChatRequestRVAdapter.Callb
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
+                    Log.i("CHAT SCREEN","zzz 111"+snapshot.toString());
                     chatRequestList.clear();
                     for (DataSnapshot snapshot1 : snapshot.getChildren())
                     {
+                        Log.i("CHAT SCREEN","zzz 222"+snapshot.toString());
                         RequstChat requstChat = snapshot1.getValue(RequstChat.class);
                         Object typeObject = snapshot1.child("type").getValue();
                         String type = (typeObject != null) ? typeObject.toString() : "";
@@ -141,10 +144,11 @@ public class ChatRequests extends Fragment implements ChatRequestRVAdapter.Callb
                         if(!otherUserId.equalsIgnoreCase(AppConstants.USER_ID) && type.equalsIgnoreCase("0")){
                             chatRequestList.add(requstChat);
                             noChatRequestTv.setVisibility(View.GONE);
-                            Log.i("ReqMsg",type + "_______" + otherUserId);
+                            Log.i("CHAT SCREEN",type + "_______if" + otherUserId);
                         }else{
-                                chatRequestList.remove(requstChat);
+                            Log.i("CHAT SCREEN",type + "_______else" + otherUserId);
 
+                                chatRequestList.remove(requstChat);
                             if (chatRequestList.isEmpty()){
                                 noChatRequestTv.setVisibility(View.VISIBLE);
                             }
@@ -223,8 +227,8 @@ public class ChatRequests extends Fragment implements ChatRequestRVAdapter.Callb
             @Override
             public void onChanged(SendOtpRoot sendOtpRoot) {
 
-                Log.i("FriendReq",otherUserId);
-                Log.i("FriendReq",AppConstants.USER_ID);
+                Log.i("CHAT SCREEN",otherUserId);
+                Log.i("CHAT SCREEN",AppConstants.USER_ID);
             }
 
 
@@ -238,6 +242,7 @@ public class ChatRequests extends Fragment implements ChatRequestRVAdapter.Callb
     public void callback(String otherUserId, String poistion) {
 
         if(!otherUserId.isEmpty() && chatRequestList.get(Integer.parseInt(poistion)).getType().equalsIgnoreCase("0")){
+
             ChatRequestDialogBox(poistion);
 
         }else if(!otherUserId.isEmpty() && chatRequestList.get(Integer.parseInt(poistion)).getType().equalsIgnoreCase("1")){

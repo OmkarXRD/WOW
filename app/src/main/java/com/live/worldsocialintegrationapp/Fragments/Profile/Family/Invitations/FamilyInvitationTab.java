@@ -118,13 +118,13 @@ public class FamilyInvitationTab extends Fragment implements FamilyInvitationsRV
                         if (getContext() != null) {
                             Toast.makeText(requireContext(), "" + invitationsResponseRoot.getMessage(), Toast.LENGTH_SHORT).show();
                         } else {
-
+                            Toast.makeText(requireContext(), "" + invitationsResponseRoot.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
             });
         } else {
-            Toast.makeText(requireContext(), "null", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show();
         }
     }
 
