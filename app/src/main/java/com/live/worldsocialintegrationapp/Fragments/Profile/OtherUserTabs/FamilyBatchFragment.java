@@ -424,6 +424,12 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
                                 Log.i("FamilyStatus","In First IF IF IF");
                                 joinFamilyBtn.setVisibility(View.VISIBLE);
                                 editFamily.setVisibility(View.VISIBLE);
+                                editFamily.setOnClickListener(v -> {
+                                    status = 1;
+                                    Bundle bundle12 = new Bundle();
+                                    bundle12.putString("status", "1");
+                                    Navigation.findNavController(requireActivity().findViewById(R.id.nav_home)).navigate(R.id.createFamilyFragment, bundle12);
+                        });
                                 leaveFamilyImg.setVisibility(View.GONE);
                             }
                             else{
