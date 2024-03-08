@@ -141,12 +141,12 @@ public class ChatRequests extends Fragment implements ChatRequestRVAdapter.Callb
                         String otherUserId = (toValue != null) ? toValue.toString() : "";
                         noChatRequestTv.setVisibility(View.GONE);
 
-                        if(!otherUserId.equalsIgnoreCase(AppConstants.USER_ID) && type.equalsIgnoreCase("0")){
+                        //007
+                        //if(!otherUserId.equalsIgnoreCase(AppConstants.USER_ID) && type.equalsIgnoreCase("0")){
+                        if(otherUserId.equalsIgnoreCase(AppConstants.USER_ID) && type.equalsIgnoreCase("0")){
                             chatRequestList.add(requstChat);
                             noChatRequestTv.setVisibility(View.GONE);
-                            Log.i("CHAT SCREEN",type + "_______if" + otherUserId);
                         }else{
-                            Log.i("CHAT SCREEN",type + "_______else" + otherUserId);
 
                                 chatRequestList.remove(requstChat);
                             if (chatRequestList.isEmpty()){

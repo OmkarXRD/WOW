@@ -294,6 +294,7 @@ public class FriendsFragment extends Fragment implements FriendRVAdapter.Callbac
                         friendList = getFriendRoot.getDetails();
                         if (isAdded() && getContext()!=null){
                             FriendRVAdapter friendRVAdapter = new FriendRVAdapter(friendList, getContext(), FriendsFragment.this);
+                            FriendRVAdapter.sendEventInvitationCheck = 3;
                             friendsRV.setAdapter(friendRVAdapter);
                         }
                     } else {

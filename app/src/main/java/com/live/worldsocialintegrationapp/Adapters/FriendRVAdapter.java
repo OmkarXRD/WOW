@@ -51,11 +51,14 @@ public class FriendRVAdapter extends RecyclerView.Adapter<FriendRVAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull FriendRVAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-
+    Log.i("FriendReq","on bindVIew " + sendEventInvitationCheck + " --- " );
         holder.shareCheckBox.setVisibility(View.GONE);
 
         if(sendEventInvitationCheck==2){
             holder.friendInviteTv.setText("Send");
+        }
+        if(sendEventInvitationCheck==3){
+            holder.friendInviteTv.setVisibility(View.GONE);
         }
         //this is for share live link
         if ( App.getSharedpref().getString("liveShareCheckAdpter").equalsIgnoreCase("1")){
