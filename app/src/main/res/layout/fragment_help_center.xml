@@ -34,24 +34,25 @@
                android:layout_toRightOf="@+id/helpCenterBackImg"
                android:layout_marginStart="20dp"/>
        </RelativeLayout>
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:textColor="@color/black"
-           android:textSize="14sp"
-           android:text="Help Center"
-           android:layout_below="@+id/helpCenterTopRL"
-           android:layout_marginStart="30dp"
-           android:layout_marginTop="30dp"/>
+<!--       <TextView-->
+<!--           android:layout_width="wrap_content"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:textColor="@color/black"-->
+<!--           android:textSize="14sp"-->
+<!--           android:text="Help Center"-->
+<!--           android:layout_below="@+id/helpCenterTopRL"-->
+<!--           android:layout_marginStart="30dp"-->
+<!--           android:layout_marginTop="30dp"/>-->
 
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:textColor="@color/red"
            android:textSize="14sp"
-           android:text="1. Simply dummy text of the printing and  industry."
+           android:text="1. The purchased Diamonds/Coins/Items didn't arrive?"
            android:layout_marginStart="30dp"
-           android:layout_marginTop="10dp"/>
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="30dp"/>
 
        <TextView
            android:layout_width="wrap_content"
@@ -60,43 +61,49 @@
            android:textSize="14sp"
            android:text="@string/helpcentertvdes"
            android:layout_marginStart="30dp"
-           android:layout_marginTop="10dp"/>
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="30dp"
+           />
 
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:textColor="@color/red"
            android:textSize="14sp"
-           android:text="2. Simply dummy text of the printing and  industry?"
+           android:text="2. What's Diamonds?"
            android:layout_marginStart="30dp"
-           android:layout_marginTop="20dp"/>
+           android:layout_marginTop="20dp"
+           android:layout_marginEnd="30dp"/>
 
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:textColor="@color/grey"
            android:textSize="14sp"
-           android:text="@string/helpcentertvdes"
+           android:text="@string/helpcentertvdes2"
            android:layout_marginStart="30dp"
-           android:layout_marginTop="10dp"/>
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="30dp"/>
 
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:textColor="@color/red"
            android:textSize="14sp"
-           android:text="3. Simply dummy text of the?"
+           android:text="3. Other issues"
            android:layout_marginStart="30dp"
-           android:layout_marginTop="20dp"/>
+           android:layout_marginTop="20dp"
+           android:layout_marginEnd="30dp"/>
 
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:textColor="@color/grey"
            android:textSize="14sp"
-           android:text="@string/helpcentertvdes"
+           android:text="@string/helpcentertvdes3"
            android:layout_marginStart="30dp"
-           android:layout_marginTop="10dp"/>
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="30dp"/>
 
 
 
