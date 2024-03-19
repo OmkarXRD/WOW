@@ -600,11 +600,15 @@ public class HomeActivity extends AppCompatActivity {
                 if (snapshot.exists()) {
                      if(Objects.requireNonNull(snapshot.getValue()).toString().equals("true")){
                          Log.i("OnlinUser", "All ready logged in");
-                         Toast.makeText(HomeActivity.this, "ID is already logged in on other device", Toast.LENGTH_LONG).show();
-                         App.getSharedpref().clearPreferences();
-                         Intent intent=new Intent(HomeActivity.this, MainActivity.class);
-                         startActivity(intent);
-                         finish();
+                         //007
+//                         Toast.makeText(HomeActivity.this, "ID is already logged in on other device", Toast.LENGTH_LONG).show();
+//                         App.getSharedpref().clearPreferences();
+//                         Intent intent=new Intent(HomeActivity.this, MainActivity.class);
+//                         startActivity(intent);
+//                         finish();
+
+                         onlineUsers.child(AppConstants.USER_ID).setValue(true);
+                         isOnline = true;
                      }
                      if(Objects.requireNonNull(snapshot.getValue()).toString().equals("false")){
                          onlineUsers.child(AppConstants.USER_ID).setValue(true);
