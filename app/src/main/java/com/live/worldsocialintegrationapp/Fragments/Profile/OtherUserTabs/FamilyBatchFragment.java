@@ -318,6 +318,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
                     Log.d("checkExp", String.valueOf(currentFamilyLevel));
                     int currentLevelProgress = (currentExpInt * 100) / totalRequiredExperienceInt;
                     Log.d("checkExp", String.valueOf(currentLevelProgress));
+
                     bar.setProgress(currentLevelProgress);
 
                     totalreciveCoin.setText(totalrecive +"/"+totalRequiredExperienceInt);

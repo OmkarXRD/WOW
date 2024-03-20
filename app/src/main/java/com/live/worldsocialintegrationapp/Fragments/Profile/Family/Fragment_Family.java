@@ -155,6 +155,7 @@ public class Fragment_Family extends Fragment {
         layout_family= view.findViewById(R.id.familyTablayout);
         viewPager_family = view.findViewById(R.id.famlyViewPager);
         layout_family.setTabGravity(TabLayout.GRAVITY_FILL);
+
     }
 
     private void tabLayoutMethod(View view) {
