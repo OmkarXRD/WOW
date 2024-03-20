@@ -2794,8 +2794,10 @@ public class Mvvm extends ViewModel {
                 public void onResponse(Call<GetFamilyDetailsRoot> call, Response<GetFamilyDetailsRoot> response) {
 
                     if (response.body() != null) {
+                        Log.d("FamilyID", "in if of mvvm");
                         getFamilyDetailsRootMutableLiveData.postValue(response.body());
                     } else {
+                        Log.d("FamilyID", "in else of mvvm");
                         Toast.makeText(activity, "Technical issue", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -2803,6 +2805,7 @@ public class Mvvm extends ViewModel {
                 @Override
                 public void onFailure(Call<GetFamilyDetailsRoot> call, Throwable t) {
                     getFamilyDetailsRootMutableLiveData.postValue(null);
+                    Log.d("FamilyID", "failuiteeeeeeeeeeeee");
                     Toast.makeText(activity, "onFailure " + t.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
@@ -2818,11 +2821,12 @@ public class Mvvm extends ViewModel {
         leaveFamilyMutableLiveData = new MutableLiveData<>();
         if (CommonUtils.isNetworkConnected(activity)) {
 
-            serviceApi.leaveFamily(familyId, userId).enqueue(new Callback<GetFamilyDetailsRoot>() {
+            serviceApi.leaveFamily(userId,familyId).enqueue(new Callback<GetFamilyDetailsRoot>() {
                 @Override
                 public void onResponse(Call<GetFamilyDetailsRoot> call, Response<GetFamilyDetailsRoot> response) {
 
                     if (response.body() != null) {
+                        Log.d("leaveFamilyApi", response.body().getMessage());
                         leaveFamilyMutableLiveData.postValue(response.body());
                     } else {
                         Toast.makeText(activity, "Technical issue", Toast.LENGTH_SHORT).show();

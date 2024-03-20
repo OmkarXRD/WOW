@@ -607,8 +607,9 @@ public interface ServiceApi {
 
     @FormUrlEncoded
     @POST("leavefamilyGroup")
-    Call<GetFamilyDetailsRoot> leaveFamily(@Field("familyId") String familyId,
-                                           @Field("userId") String userId);
+    Call<GetFamilyDetailsRoot> leaveFamily(
+                                           @Field("userId") String userId,
+                                           @Field("familyId") String familyId);
 
     @FormUrlEncoded
     @POST("getLiveJoiners")

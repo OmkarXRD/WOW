@@ -74,6 +74,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
     private TextView familyMembersCountTv;
     private TextView familyid,reqestCountTv,totalreciveCoin;
     private List<Joiner> list;
+    private List<Joiner> allMembers;
     private List<GetLiveFamilyJoinersRoot> listt;
     private RelativeLayout familyMemberRL;
     public static int mainProfileClick = 0;
@@ -161,6 +162,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
                 }
             }
         });
+        Log.d("CHECKERROR", "1");
     }
 
     private void hitApiGetUserDetails() {
@@ -261,7 +263,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
         familyBatchBackImg.setOnClickListener(view1 -> requireActivity().onBackPressed());
         familyMemberRL.setOnClickListener(view14 -> {
             Bundle bundle = new Bundle();
-            bundle.putSerializable("joinerList", (Serializable) list);
+            bundle.putSerializable("joinerList", (Serializable) allMembers);
             bundle.putBoolean("admin",leader);
             Navigation.findNavController(requireActivity().findViewById(R.id.nav_home)).navigate(R.id.familyMembersFragment, bundle);
         });
@@ -284,11 +286,11 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
         else{
             fid =FamilyID;
         }
-        Log.d("FamilyID", "FamilyID: "+fid);
         //Toast.makeText(requireContext(), "fid "+fid, Toast.LENGTH_SHORT).show();
         mvvm.getFamilyDetails(requireActivity(), fid, AppConstants.USER_ID).observe(requireActivity(), getFamilyDetailsRoot -> {
             if (getFamilyDetailsRoot != null) {
                 if (getFamilyDetailsRoot.getSuccess().equalsIgnoreCase("1")) {
+
                     familyid.setText("ID:" + getFamilyDetailsRoot.getDetails().getUniqueId());
                     App.getSharedpref().saveString("leaderId", getFamilyDetailsRoot.getDetails().getLeaderId());
                     App.getSharedpref().saveString("id", getFamilyDetailsRoot.getDetails().getId());
@@ -296,6 +298,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
 
                     leaderId = getFamilyDetailsRoot.getDetails().getLeaderId();
                     list = new ArrayList<>();
+                    allMembers = new ArrayList<>();
                     reqestCount= String.valueOf(getFamilyDetailsRoot.getDetails().getRequest_count());
 
                     totalrecive = String.valueOf(getFamilyDetailsRoot.getDetails().getTotalRecieving());
@@ -305,7 +308,6 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
                     currentLevelLowerBound.setText(currentFamilyLevel);
                     int upperLevelBoundString =getFamilyDetailsRoot.getDetails().getFamilyLevel() +1;
                     currentLevelUpperBound.setText(String.valueOf(upperLevelBoundString));
-
 
                     Integer totalRequiredExperienceInt = Integer.parseInt(totalExp);
                     int currentExpInt = Integer.parseInt(totalrecive);
@@ -325,6 +327,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
                     }
 
                     list = getFamilyDetailsRoot.getDetails().getJoiner();
+                    allMembers = getFamilyDetailsRoot.getDetails().getAllMembers();
                     leader = getFamilyDetailsRoot.getDetails().admin;
                     if (getFamilyDetailsRoot.getDetails().admin){
                         familyInvitationImg.setVisibility(View.VISIBLE);
@@ -488,7 +491,8 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
                         leaveFamilyDialogBox();
                     }
                 }
-                } else {
+                }
+            else {
                 //Toast.makeText(requireContext(), "Technical issue", Toast.LENGTH_SHORT).show();
                 }
          });
@@ -522,7 +526,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
     private void leaveFamilyApi() {
         Log.d("leaveFamilyApi", "USER_ID: "+AppConstants.USER_ID);
         Log.d("leaveFamilyApi", "familyId: "+familyId);
-        mvvm.leaveFamily(requireActivity(),familyId, AppConstants.USER_ID).observe(requireActivity(), getFamilyDetailsRoot -> {
+        mvvm.leaveFamily(requireActivity(), AppConstants.USER_ID,familyId).observe(requireActivity(), getFamilyDetailsRoot -> {
             if (getFamilyDetailsRoot != null) {
                 if (getFamilyDetailsRoot.getSuccess().equalsIgnoreCase("1")) {
                     Toast.makeText(requireContext(), "1 :-" + getFamilyDetailsRoot.getMessage(), Toast.LENGTH_SHORT).show();

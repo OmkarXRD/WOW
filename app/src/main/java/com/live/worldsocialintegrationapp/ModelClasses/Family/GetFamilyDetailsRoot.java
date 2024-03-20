@@ -47,6 +47,7 @@ public class GetFamilyDetailsRoot implements Serializable {
         public String created_at;
         public boolean family_create_status;
         public ArrayList<Joiner> joiner;
+        public ArrayList<Joiner> allMembers;
         public String family_OwnerName;
         public String leaderImage;
         public String uniqueId;
@@ -182,6 +183,14 @@ public class GetFamilyDetailsRoot implements Serializable {
 
         public void setJoiner(ArrayList<Joiner> joiner) {
             this.joiner = joiner;
+        }
+
+        public ArrayList<Joiner> getAllMembers() {
+            return allMembers;
+        }
+
+        public void setAllMembers(ArrayList<Joiner> allMembers) {
+            this.allMembers = allMembers;
         }
 
         public String getFamily_OwnerName() {

@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d("AppFlow", "In On create of Main Activity");
         getWindow().getDecorView().setSystemUiVisibility(getWindow().getDecorView().getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
-
     }
 
     @Override
