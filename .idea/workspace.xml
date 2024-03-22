@@ -69,6 +69,11 @@
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/banner_slider_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/bottom_navigation.xml">
         <config>
           <theme>@style/Theme.WorldSocialIntegration</theme>
@@ -334,6 +339,11 @@
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bronze_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cars.xml">
         <config>
           <theme>@style/Theme.WorldSocialIntegration</theme>
@@ -360,6 +370,16 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_chat_service.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_click_batch.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_click_batch_view_pager.xml">
         <config>
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
@@ -1034,6 +1054,11 @@
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/priviliagelayout.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/profile_bottom_sheet.xml">
         <config>
           <theme>@style/Theme.WorldSocialIntegration</theme>
@@ -1122,8 +1147,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7fbe7f4d-af4c-474b-b3a8-adb47f5cf8c0" name="Changes" comment="Initial Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/Family/Fragment_Family.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/Family/Fragment_Family.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Bronze1TabFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Bronze1TabFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/OtherUserTabs/FamilyBatchFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/OtherUserTabs/FamilyBatchFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_family_batch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_family_batch.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1180,7 +1206,7 @@
     <setting file="file://$PROJECT_DIR$/app/src/main/res/navigation/home_graph.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2aOcjsZ7NyeIjPz4T0pyIyq6zBq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

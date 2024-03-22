@@ -37,6 +37,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.engine.GlideException;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.CustomTarget;
+import com.bumptech.glide.request.target.Target;
+import com.bumptech.glide.request.transition.Transition;
 import com.live.worldsocialintegrationapp.Adapters.FamilyLiveRoomRVAdapter;
 import com.live.worldsocialintegrationapp.Adapters.familyMembersRVAdapter;
 import com.live.worldsocialintegrationapp.BottomFragment;
@@ -45,6 +52,7 @@ import com.live.worldsocialintegrationapp.ModelClasses.Family.GetFamilyDetailsRo
 import com.live.worldsocialintegrationapp.ModelClasses.Family.GetInvitationsRoot;
 import com.live.worldsocialintegrationapp.ModelClasses.Family.GetLiveFamilyJoinersRoot;
 import com.live.worldsocialintegrationapp.ModelClasses.Family.Joiner;
+import com.live.worldsocialintegrationapp.ModelClasses.GetFamilyDetails;
 import com.live.worldsocialintegrationapp.R;
 import com.live.worldsocialintegrationapp.Retrofit.Mvvm;
 import com.live.worldsocialintegrationapp.agora.openvcall.ui.CallActivity;
@@ -64,7 +72,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
     private RecyclerView familyMemberRv, familyLiveRoomRV;
     private AppCompatButton joinFamilyBtn;
     private familyMembersRVAdapter familyMembersRVAdapter;
-    private ImageView familyBatchBackImg, familyBatchImg, leaveFamilyImg, familyInvitationImg;
+    private ImageView familyBatchBackImg, familyBatchImg, leaveFamilyImg, familyInvitationImg,batchClick,backgroundImage;
     private String familyId;
     public static String familyID;
     public static String FamilyID;
@@ -81,6 +89,8 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
     private List<GetLiveFamilyJoinersRoot.Detail> liveJoinersList;
     private CircleImageView familyMemberCirImg;
     private String leaderId,isAdmin,reqestCount,totalrecive,currentFamilyLevel,totalExp;
+
+    private int familyLevel;
     private ImageView editFamily;
     int status;
     private String editleaderId;
@@ -113,6 +123,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
         getFamilyDetails();
         getFamilyLiveJoinersApi();
         setStatusBarGradiant(requireActivity());
+
         if (getArguments() != null) {
             Bundle bundle = getArguments();
         }
@@ -188,13 +199,16 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
                 if (getLiveFamilyJoinersRoot.getSuccess().equalsIgnoreCase("1")) {
                     liveJoinersList = getLiveFamilyJoinersRoot.getDetails();
                     if (liveJoinersList.isEmpty()) {
+                        Log.i("FamilyDetails","Joiner list is empty");
                     } else {
                         FamilyLiveRoomRVAdapter familyLiveRoomRVAdapter = new FamilyLiveRoomRVAdapter(liveJoinersList, requireContext(), FamilyBatchFragment.this);
                         familyLiveRoomRV.setAdapter(familyLiveRoomRVAdapter);
                     }
                 } else {
+                    Log.i("FamilyDetails","response in 0");
                 }
             } else {
+                Log.i("FamilyDetails","response in null");
             }
         });
     }
@@ -242,6 +256,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
         FamilyDescriptionTv = view.findViewById(R.id.FamilyDescriptionTv);
         familyMembersCountTv = view.findViewById(R.id.familyMembersCountTv);
         familyBatchImg = view.findViewById(R.id.familyBatchImg);
+        backgroundImage = view.findViewById(R.id.backgroundImage);
         leaveFamilyImg = view.findViewById(R.id.leaveFamilyImg);
         familyMemberRL = view.findViewById(R.id.familyMemberRL);
         familyLiveRoomRV = view.findViewById(R.id.familyLiveRoomRV);
@@ -250,6 +265,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
         familyMemberCirImg = view.findViewById(R.id.familyMemberCirImg);
         editFamily = view.findViewById(R.id.editFamily);
         familyInvitationImg = view.findViewById(R.id.familyInvitationImg);
+        batchClick = view.findViewById(R.id.batchClick);
         totalreciveCoin = view.findViewById(R.id.totalreciveCoin);
         bar = view.findViewById(R.id.WealthprogressBar);
         currentLevelLowerBound = view.findViewById(R.id.currentLevelLowerBoundTv);
@@ -305,6 +321,16 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
                     totalExp = String.valueOf(getFamilyDetailsRoot.getDetails().getTotalExp());
                     bar.setMax(100);
                     currentFamilyLevel = String.valueOf(getFamilyDetailsRoot.getDetails().getFamilyLevel());
+                    familyLevel = getFamilyDetailsRoot.getDetails().getFamilyLevel();
+
+                    if(familyLevel >0){
+                        apiHit();
+                    }
+                    else {
+                        familyLevel = 1;
+                        apiHit();
+                    }
+
                     currentLevelLowerBound.setText(currentFamilyLevel);
                     int upperLevelBoundString =getFamilyDetailsRoot.getDetails().getFamilyLevel() +1;
                     currentLevelUpperBound.setText(String.valueOf(upperLevelBoundString));
@@ -339,7 +365,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
 
                     }
                     if (list.isEmpty()) {
-
+                            Log.i("List","List is empty");
                     } else {
                         requireActivity();
                         requireContext();
@@ -348,10 +374,7 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
                         } catch (Exception ignored) {
 
                         }
-
                     }
-
-
 
                     Glide.with(familyBatchImg.getContext()).load(getFamilyDetailsRoot.getDetails().getImage()).error(R.drawable.demo_user_profile_img).into(familyBatchImg);
                     familyBatchFamilyName.setText(getFamilyDetailsRoot.getDetails().getFamilyName());
@@ -628,5 +651,74 @@ public class FamilyBatchFragment extends Fragment implements familyMembersRVAdap
     public void onBottomSheetDismissed() {
         getFamilyDetails();
         setAdapter(list);
+    }
+
+    private void apiHit() {
+        new Mvvm().getFamilyDetailsData(requireActivity(), familyLevel).observe(requireActivity(), new Observer<GetFamilyDetails>() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onChanged(GetFamilyDetails getFamilyDetails) {
+                try {
+                    if (getFamilyDetails != null) {
+                        if (getFamilyDetails.getStatus() == 1) {
+                            batchClick.setVisibility(View.VISIBLE);
+                            Glide.with(batchClick.getContext()).load(getFamilyDetails.getDetails().get(0).getMainImage()).error(R.drawable.demo_user_profile_img).into(batchClick);
+                            RequestOptions options = new RequestOptions()
+                                    .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                    .skipMemoryCache(true);
+                            Glide.with(batchClick.getContext())
+                                    .load(getFamilyDetails.getDetails().get(0).getExclusiveBackground())
+                                    .apply(options)
+                                    .error(R.drawable.demo_user_profile_img) // Placeholder image in case of error
+                                    .into(backgroundImage);
+
+//                            Glide.with(getContext())
+//                                    .load(getFamilyDetails.getDetails().get(0).getExclusiveBackground())
+//                                    .error(R.drawable.demo_user_profile_img) // Optional error image
+//                                    .listener(new RequestListener<Drawable>() {
+//                                        @Override
+//                                        public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, com.bumptech.glide.load.DataSource dataSource, boolean isFirstResource) {
+//                                            backgroundImage.setBackground(resource);
+//                                            return false;
+//                                        }
+//
+//                                        @Override
+//                                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+//                                            // Handle loading failure (optional)
+//                                            return false;
+//                                        }
+//                                    })
+//                                    .into(backgroundImage);
+//                            Glide.with(getContext())
+//                                    .load(getFamilyDetails.getDetails().get(0).getExclusiveBackground())
+//                                    .listener(new RequestListener<Drawable>() {
+//                                        @Override
+//                                        public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, com.bumptech.glide.load.DataSource dataSource, boolean isFirstResource) {
+//                                            int imageWidth = resource.getIntrinsicWidth();
+//                                            int imageHeight = resource.getIntrinsicHeight();
+//                                            Log.d("Image Size", "Width: " + imageWidth + ", Height: " + imageHeight);
+//
+//                                            backgroundImage.setBackground(resource);
+//                                            return false;
+//                                        }
+//                                        @Override
+//                                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+//                                            // Handle loading failure (optional)
+//                                            return false;
+//                                        }
+//                                    })
+//                                    .into(backgroundImage);
+
+                        } else {
+                            Toast.makeText(requireActivity(), "" + getFamilyDetails.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                    }
+                } catch (Exception e) {
+
+                }
+
+            }
+        });
     }
 }

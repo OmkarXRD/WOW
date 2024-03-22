@@ -90,5 +90,25 @@ public class Bronze1TabFragment extends Fragment {
 
             }
         });
+
+        new Mvvm().getFamilyDetailsData(requireActivity(), 1).observe(requireActivity(), new Observer<GetFamilyDetails>() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onChanged(GetFamilyDetails getFamilyDetails) {
+                try {
+                    if (getFamilyDetails != null) {
+                        if (getFamilyDetails.getStatus() == 1) {
+                            Glide.with(binding.pic.getContext()).load(getFamilyDetails.getDetails().get(0).getMainImage()).error(R.drawable.demo_user_profile_img).into(binding.pic);
+                        } else {
+                            Toast.makeText(requireActivity(), "" + getFamilyDetails.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                    }
+                } catch (Exception e) {
+
+                }
+
+            }
+        });
     }
 }
