@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -132,7 +133,7 @@ public class Fragment_Weekly extends Fragment implements AdapterNew_family.Callb
                                         adapter = new AdapterNew_family(list, requireContext(), Fragment_Weekly.this);
                                         recyclerView.setAdapter(adapter);
                                     }catch (Exception e){
-
+                                            Log.i("Errorrrrrr"," in getFamilyTopGifters");
                                     }
                                 }
                             }

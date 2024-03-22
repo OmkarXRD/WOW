@@ -5327,6 +5327,7 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
 
         exit.setOnClickListener(v -> {
             if (status.equals("1")) {
+                Log.i("LiveCall","in if of exit");
                 dialog.dismiss();
                 newDialog(this,time);
                 endLiveApiHit();
@@ -5340,6 +5341,7 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
 //             intent.putExtra("liveUserCount", liveUsersCount);
 //             startActivity(intent);
                 ref.child(otherUserId).child(liveType).child(otherUserId).child("viewer List").child(userId).removeValue();
+                Log.i("LiveCall","in else if");
                 endLiveApiHit();
                 //finish();
             }
@@ -6244,6 +6246,7 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
 
     @Override
     protected void onDestroy() {
+        Log.i("LiveCall","on destroy");
         endLiveApiHit();
       //  ref.child(otherUserId).child(liveType).child(otherUserId).child("viewer List").child(userId).removeValue();
         super.onDestroy();

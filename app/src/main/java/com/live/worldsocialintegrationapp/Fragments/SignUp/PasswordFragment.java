@@ -261,9 +261,4 @@ public class PasswordFragment extends Fragment {
         random.nextBytes(saltBytes);
         return bytesToHex(saltBytes);
     }
-
-
-
-
-
 }
