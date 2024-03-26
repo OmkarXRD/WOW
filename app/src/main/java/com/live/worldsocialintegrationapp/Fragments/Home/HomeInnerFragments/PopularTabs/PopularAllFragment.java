@@ -335,7 +335,6 @@ public class PopularAllFragment extends Fragment implements PopularAllItemsAdapt
                         String liveId = snapshot.child("liveId").getValue().toString();
                         String hostId = snapshot.child("hostId").getValue().toString();
                         String liveType = snapshot.child("liveType").getValue().toString();
-                        Log.i("LiveCall","in removeLiveUser");
                         //endLiveApi(liveId, hostId, liveType);
                         getAllPopularLiveUsersApi();
                     }
@@ -345,7 +344,6 @@ public class PopularAllFragment extends Fragment implements PopularAllItemsAdapt
                     String hostId = App.getSharedpref().getString("hostId");
 
                     if (!liveId.equalsIgnoreCase("") && !liveType.equalsIgnoreCase("") && !hostId.equalsIgnoreCase("")) {
-                        Log.i("LiveCall","in removeLiveUser else if");
                         endLiveApi(liveId, hostId, liveType);
                         getAllPopularLiveUsersApi();
                     }
