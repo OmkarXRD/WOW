@@ -124,13 +124,13 @@ public class CreateFamilyFragment extends Fragment {
         view.findViewById(R.id.createFamilySubmitBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (crateFmilyNameEdtx.getText().toString()==null){
+                if (crateFmilyNameEdtx.getText().toString().equals("")){
                     Alerter.create(requireActivity())
                             .setTitle("Family Name")
                             .setText("Please enter the Family name")
                             .setBackgroundResource(R.drawable.wallet_background)
                             .show();
-                }else if (fmailyDesciptionEdtx.getText().toString()==null){
+                }else if (fmailyDesciptionEdtx.getText().toString().equals("")){
                     Alerter.create(requireActivity())
                             .setTitle("Description")
                             .setText("Please enter the Description")
@@ -164,8 +164,8 @@ public class CreateFamilyFragment extends Fragment {
         RequestBody familyName= RequestBody.create(MediaType.parse("text/plain"),crateFmilyNameEdtx.getText().toString());
         RequestBody familyDes=RequestBody.create(MediaType.parse("text/plain"),fmailyDesciptionEdtx.getText().toString());
         RequestBody userId=RequestBody.create(MediaType.parse("text/plain"), AppConstants.USER_ID);
-       // Toast.makeText(requireContext(), "FamilyImagePath : "+ImagePath, Toast.LENGTH_SHORT).show();
-       // Toast.makeText(requireContext(), "uiuiu"+userId, Toast.LENGTH_SHORT).show();
+        // Toast.makeText(requireContext(), "FamilyImagePath : "+ImagePath, Toast.LENGTH_SHORT).show();
+        // Toast.makeText(requireContext(), "uiuiu"+userId, Toast.LENGTH_SHORT).show();
         if(ImagePath != null){
             File file1=new File(ImagePath);
 //            Toast.makeText(requireContext(), "image Path : "+ImagePath, Toast.LENGTH_SHORT).show();
@@ -192,7 +192,16 @@ public class CreateFamilyFragment extends Fragment {
                                 .setText("waiting for request accepting")
                                 .setBackgroundResource(R.drawable.wallet_background)
                                 .show();
-                    } else {
+                        //007 call api to add admin in the database
+                    }
+                    if(createFamilyRoot.getStatus() == 2){
+                        Alerter.create(requireActivity())
+                                .setTitle("Alert")
+                                .setText(createFamilyRoot.getMessage())
+                                .setBackgroundResource(R.drawable.wallet_background)
+                                .show();
+                    }
+                    else {
                         Alerter.create(requireActivity())
                                 .setTitle("Alert")
                                 .setText(createFamilyRoot.getMessage())

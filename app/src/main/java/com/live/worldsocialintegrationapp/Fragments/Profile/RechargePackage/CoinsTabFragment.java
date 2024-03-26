@@ -161,11 +161,10 @@ public class CoinsTabFragment extends Fragment {
 
                 if(generateOrderRoot != null){
                     if(generateOrderRoot.getSuccess().equalsIgnoreCase("1")){
-
                         Intent intent = new Intent(requireActivity(), PaymentActivity.class);
                         intent.putExtra("orderId",generateOrderRoot.getOrderId());
-                        //intent.putExtra("key",generateOrderRoot.getKey());
-                        intent.putExtra("key","rzp_test_usEmd5LTJQKCTA");
+                        intent.putExtra("key",generateOrderRoot.getKey());
+                        //intent.putExtra("key","rzp_test_usEmd5LTJQKCTA");
                         intent.putExtra("price",generateOrderRoot.getAmount());
                         intent.putExtra("itemId",detail.getId());
                         startActivity(intent);

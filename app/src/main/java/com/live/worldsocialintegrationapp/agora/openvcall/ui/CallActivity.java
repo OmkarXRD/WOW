@@ -4156,7 +4156,7 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
                 profileBottomSheetBinding.bottomProfileAgeTv, profileBottomSheetBinding.bottomProfileGenderImg,
                 profileBottomSheetBinding.anchorimg,profileBottomSheetBinding.vipImage,profileBottomSheetBinding.genderLayout,
                 profileBottomSheetBinding.sendingLayout,profileBottomSheetBinding.receivingLayout,profileBottomSheetBinding.sendingLvl,
-                profileBottomSheetBinding.receivingLvl,profileBottomSheetBinding.lvlimg);
+                profileBottomSheetBinding.receivingLvl,profileBottomSheetBinding.lvlimg,profileBottomSheetBinding.receivingBottomSheetRL);
 
         getAppliedFrameApi(goLiveModelClass.getUserID(), profileBottomSheetBinding.liveBottomProfieFrame);
 
@@ -5327,6 +5327,7 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
 
         exit.setOnClickListener(v -> {
             if (status.equals("1")) {
+                Log.i("LiveCall","in if of exit");
                 dialog.dismiss();
                 newDialog(this,time);
                 endLiveApiHit();
@@ -5340,6 +5341,7 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
 //             intent.putExtra("liveUserCount", liveUsersCount);
 //             startActivity(intent);
                 ref.child(otherUserId).child(liveType).child(otherUserId).child("viewer List").child(userId).removeValue();
+                Log.i("LiveCall","in else if");
                 endLiveApiHit();
                 //finish();
             }
@@ -5394,6 +5396,7 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
     public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode, Configuration newConfig) {
         super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig);
         if (isInPictureInPictureMode) {
+            Log.i("onPictureInP", "show full screen in if " + newConfig.getLayoutDirection());
             binding.rlHostA.setVisibility(View.VISIBLE);
             binding.rlChair.setVisibility(View.GONE);
             binding.rlWholeLayout.setVisibility(View.GONE);
@@ -5404,6 +5407,8 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
             binding.rlHostA.setVisibility(View.GONE);
             binding.rlChair.setVisibility(View.VISIBLE);
             binding.rlWholeLayout.setVisibility(View.VISIBLE);
+
+
         }
     }
 
@@ -5477,7 +5482,7 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
         }
     }
 
-    private void getUserDetailApi(String otherUserId, TextView othrUsrFollowingTV, TextView countryTv, ImageView followingImg, TextView age, ImageView gender, ImageView anchorimg, ImageView vipImage, LinearLayout genderlayout, LinearLayout sendingLayout, ImageView receivinglayout, TextView sendinglvl, TextView receivingLvl, ImageView lvlimg) {
+    private void getUserDetailApi(String otherUserId, TextView othrUsrFollowingTV, TextView countryTv, ImageView followingImg, TextView age, ImageView gender, ImageView anchorimg, ImageView vipImage, LinearLayout genderlayout, LinearLayout sendingLayout, ImageView receivinglayout, TextView sendinglvl, TextView receivingLvl, ImageView lvlimg, RelativeLayout receivingBottomSheetRL) {
         callViewModel.getUserDetail(CallActivity.this, AppConstants.USER_ID,otherUserId, "").observe(CallActivity.this,
                 new Observer<GetUserDetailRoot>() {
                     @Override
@@ -5494,6 +5499,9 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
                             //  sendinglvl.setText(getUserDetailRoot.getDetails().getLavelInfomation().getSendLevel());
                                 Glide.with(CallActivity.this).load(getUserDetailRoot.getDetails().getLavelInfomation().getReciveColor()).into(receivinglayout);
                                 Log.d("receivingLvl", "receivingLvl: "+getUserDetailRoot.getDetails().getLavelInfomation().getReciveLevel());
+                                if(Integer.parseInt(getUserDetailRoot.getDetails().getLavelInfomation().getReciveLevel()) == 0){
+                                    receivingBottomSheetRL.setVisibility(View.GONE);
+                                }
                               receivingLvl.setText(getUserDetailRoot.getDetails().getLavelInfomation().getReciveLevel());
 
 
@@ -6238,6 +6246,7 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
 
     @Override
     protected void onDestroy() {
+        Log.i("LiveCall","on destroy");
         endLiveApiHit();
       //  ref.child(otherUserId).child(liveType).child(otherUserId).child("viewer List").child(userId).removeValue();
         super.onDestroy();

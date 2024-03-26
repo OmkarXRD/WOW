@@ -57,6 +57,8 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
             price = getIntent().getStringExtra("price");
             itemId=getIntent().getStringExtra("itemId");
 
+            Log.i("Razorpayzzzzzzzz","zzzz "+orderId);
+
         }
         startPayment();
     }
@@ -101,7 +103,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
 //        });
 //
 //    }
-
+//
 //    @Override
 //    public void onPaymentError(int i, String s, PaymentData paymentData) {
 //        Log.i("Razorpayzzzzzzzz","zzzzzzzzzzzzzzz zzzzz on payment error " + s );
@@ -114,7 +116,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
         /*
           You need to pass current activity in order to let Razorpay create CheckoutActivity
          */
-
+         Log.i("Razorpayzzzzzzzz"," Start Payment ");
 
         final Checkout co = new Checkout();
 
@@ -137,8 +139,8 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
 
                 JSONObject options = new JSONObject();
                 options.put("name", App.getSharedpref().getString("name"));
-                options.put("description", "Demo Charges");
-                //options.put("order_id", orderId);
+                options.put("description", "Coin Purchase");
+                options.put("order_id", orderId);
                 options.put("send_sms_hash", true);
                 options.put("allow_rotation", true);
                 //You can omit the image option to fetch the image from dashboard

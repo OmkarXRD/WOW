@@ -183,10 +183,12 @@ public class MessagesFragment extends Fragment implements MessagesRVAdapter.Call
                 decor.setSystemUiVisibility(0);
             }
         }
-
+//        CommonUtils.disableBottomNavigation(requireActivity());
         if (getArguments() != null && getArguments().containsKey("backPressed")) {
             getArguments().getString("data_key");
             backPressed = getArguments().getInt("backPressed");
+            CommonUtils.disableBottomNavigation(requireActivity());
+
 
         } else if (getArguments() != null && getArguments().containsKey("notification")) {
 //            CommonUtils.disableBottomNavigation(requireActivity());

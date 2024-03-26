@@ -26,9 +26,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.live.worldsocialintegrationapp.Activites.HomeActivity;
 import com.live.worldsocialintegrationapp.Activites.IdBannedActivity;
+import com.live.worldsocialintegrationapp.Activites.MainActivity;
 import com.live.worldsocialintegrationapp.ModelClasses.Register.RegisterRoot;
 import com.live.worldsocialintegrationapp.R;
 import com.live.worldsocialintegrationapp.Retrofit.Mvvm;
@@ -45,6 +51,8 @@ import java.util.concurrent.TimeUnit;
 
 public class PasswordFragment extends Fragment {
 
+    private final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private final DatabaseReference onlineUsers = firebaseDatabase.getReference().child("onlineUsers");
     FragmentPasswordscreenBinding binding;
     String continentName,countryName, phoneNo,countryCode;
 
@@ -125,7 +133,6 @@ public class PasswordFragment extends Fragment {
               String password = binding.enterPasswordTxt.getText().toString();
               String salt = generateSalt();
               String hashedPassword = hashPassword(password, salt);
-              Log.i("Issssssueeeeee","entered "+hashedPassword);
 
               //IF password is correct user will be redirected to HOME SCREEN
                 new Mvvm().registerUser(requireActivity(),countryCode+getArguments().getString("phoneNo"),hashedPassword,salt,countryName,continentName,"false",RegId).observe(requireActivity(), new Observer<RegisterRoot>() {
@@ -164,8 +171,9 @@ public class PasswordFragment extends Fragment {
                                 }else {
                                     String hashedEnteredPassword = hashPassword(password, storedSalt);
                                     if(Objects.equals(storedPass, hashedEnteredPassword)){
-                                        Log.i("Issssssueeeeee", String.valueOf(Objects.equals(storedPass, hashedEnteredPassword)));
                                         startActivity(new Intent(requireContext(),HomeActivity.class));
+                                        //checkIfOnline();
+
                                     }
                                     else{
                                         Toast.makeText(requireContext(), "Wrong Password", Toast.LENGTH_SHORT).show();
@@ -197,7 +205,35 @@ public class PasswordFragment extends Fragment {
     }
 
 
+    private void checkIfOnline() {
 
+        onlineUsers.child(AppConstants.USER_ID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    if(Objects.requireNonNull(snapshot.getValue()).toString().equals("true")){
+                        Log.i("OnlinUser", "USer is online");
+                        Toast.makeText(getActivity(), "ID is already logged in on other device", Toast.LENGTH_LONG).show();
+                        App.getSharedpref().clearPreferences();
+                        startActivity(new Intent(getActivity(), MainActivity.class));
+                        requireActivity().finish();
+                    }
+                    if(Objects.requireNonNull(snapshot.getValue()).toString().equals("false")){
+                        startActivity(new Intent(requireContext(),HomeActivity.class));
+                        Log.i("OnlinUser", "USer is not online 1");
+                    }
+                } else {
+                    Log.i("OnlinUser", "USer is not online 2");
+                    startActivity(new Intent(requireContext(),HomeActivity.class));
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.i("OnlinUser", "zzzzzzzzzzz cancelled");
+            }
+        });
+    }
 
     public static String hashPassword(String password, String salt) {
         String passwordWithSalt = password + salt;
@@ -225,9 +261,4 @@ public class PasswordFragment extends Fragment {
         random.nextBytes(saltBytes);
         return bytesToHex(saltBytes);
     }
-
-
-
-
-
 }

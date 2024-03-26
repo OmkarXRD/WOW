@@ -524,7 +524,7 @@ public class Vip1 extends Fragment {
             public void onChanged(BuyVipRoot buyVipRoot) {
 
                 if (buyVipRoot.getStatus() == 1) {
-                    //Toast.makeText(requireContext(), "1 " + buyVipRoot.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(requireContext(), "1 " + buyVipRoot.getMessage(), Toast.LENGTH_SHORT).show();
                 } else {
                     notEnoughCoins();
                 }

@@ -173,11 +173,12 @@
             </LinearLayout>
 
             <RelativeLayout
+                android:id="@+id/receivingBottomSheetRL"
                 android:layout_width="50dp"
                 android:layout_height="15dp"
                 android:paddingHorizontal="5dp"
                 android:orientation="horizontal"
-                android:layout_marginHorizontal="@dimen/dp_3"
+                android:layout_marginStart="3dp"
                 android:layout_marginTop="5dp">
                 <ImageView
                     android:layout_width="match_parent"

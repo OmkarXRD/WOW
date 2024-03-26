@@ -85,6 +85,7 @@ public class RechargeActivity extends AppCompatActivity implements PaymentResult
 //        if (!TextUtils.isEmpty(etApiKey.getText().toString())){
 //            co.setKeyID(etApiKey.getText().toString());
 //        }
+        Log.i("RechargeAct","zzzzzzzzzzzzzzzzzzzz");
         co.setKeyID("rzp_test_usEmd5LTJQKCTA");
         EditText etCustomOptions = findViewById(R.id.et_custom_options);
         if (!TextUtils.isEmpty(etCustomOptions.getText().toString())){

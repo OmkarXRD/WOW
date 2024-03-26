@@ -30,6 +30,7 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Debug;
 import android.provider.Settings;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -80,6 +81,8 @@ import com.live.worldsocialintegrationapp.utils.AppConstants;
 import com.live.worldsocialintegrationapp.utils.CommonUtils;
 
 import java.util.List;
+import java.util.Objects;
+
 public class HomeActivity extends AppCompatActivity {
     public static final String data_key = "data_key";  //this for notification
     public static ActivityHomeBinding binding;
@@ -90,6 +93,8 @@ public class HomeActivity extends AppCompatActivity {
     String userId, userName, userImage;
     Dialog dia;
 //  public static int screenStatus = 0;
+
+    Boolean isOnline = false;
 
     private Mvvm homeActivityViewModel;
 
@@ -133,7 +138,9 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("AppFlow", "On Create of Home Activity");
+        Log.d("AppFlow", "On Create of Home Activity 1");
+        checkIfOnline();
+        Log.d("AppFlow", "On Create of Home Activity 2");
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -165,7 +172,8 @@ public class HomeActivity extends AppCompatActivity {
         App.getSharedpref().saveString("exit", "1");
 
         FirebaseCrashlytics.getInstance().setUserId(AppConstants.USER_ID); //firebase crash
-        onlineUsers.child(AppConstants.USER_ID).setValue(true);
+
+
 
         FirebaseDynamicLinks.getInstance()
                 .getDynamicLink(getIntent())
@@ -526,7 +534,11 @@ public class HomeActivity extends AppCompatActivity {
             NavController navController = ((NavHostFragment) fragment).getNavController();
             navController.removeOnDestinationChangedListener(navControllerListener);
         }
-        onlineUsers.child(AppConstants.USER_ID).removeValue();
+        //onlineUsers.child(AppConstants.USER_ID).removeValue();
+        if(isOnline){
+            onlineUsers.child(AppConstants.USER_ID).setValue(false);
+        }
+
         finishAffinity();
         binding = null;
 
@@ -576,6 +588,43 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+    }
+
+    private void checkIfOnline() {
+
+        onlineUsers.child(AppConstants.USER_ID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                     if(Objects.requireNonNull(snapshot.getValue()).toString().equals("true")){
+                         Log.i("OnlinUser", "All ready logged in");
+                         //007
+//                         Toast.makeText(HomeActivity.this, "ID is already logged in on other device", Toast.LENGTH_LONG).show();
+//                         App.getSharedpref().clearPreferences();
+//                         Intent intent=new Intent(HomeActivity.this, MainActivity.class);
+//                         startActivity(intent);
+//                         finish();
+
+                         onlineUsers.child(AppConstants.USER_ID).setValue(true);
+                         isOnline = true;
+                     }
+                     if(Objects.requireNonNull(snapshot.getValue()).toString().equals("false")){
+                         onlineUsers.child(AppConstants.USER_ID).setValue(true);
+                         isOnline = true;
+                        Log.i("OnlinUser", "New Login");
+                     }
+                } else {
+                    isOnline = true;
+                    onlineUsers.child(AppConstants.USER_ID).setValue(true);
+                    Log.i("OnlinUser", "zzzzzzzzzzz");
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.i("OnlinUser", "zzzzzzzzzzz cancelled");
             }
         });
     }

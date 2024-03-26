@@ -188,7 +188,7 @@ public class Fragment_Moments extends Fragment implements PostsAdapter.Callback{
     @Override
     public void postShare(int pos,Details details) {
 
-        DynamicLink dynamicLink = FirebaseDynamicLinks.getInstance().createDynamicLink()
+                            DynamicLink dynamicLink = FirebaseDynamicLinks.getInstance().createDynamicLink()
                 // .setLink(dynamicLinkUri)
                 .setLink(Uri.parse("http://www.google.com/?userId=" + "?key="))
                 .setDomainUriPrefix("https://worldsocialintegrationapp.page.link")

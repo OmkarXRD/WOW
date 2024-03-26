@@ -69,6 +69,11 @@
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/banner_slider_design.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/bottom_navigation.xml">
         <config>
           <theme>@style/Theme.WorldSocialIntegration</theme>
@@ -334,6 +339,11 @@
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bronze_tab.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cars.xml">
         <config>
           <theme>@style/Theme.WorldSocialIntegration</theme>
@@ -364,6 +374,16 @@
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_click_batch.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_click_batch_view_pager.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_coins_tab.xml">
         <config>
           <theme>@style/Theme.WorldSocialIntegration</theme>
@@ -375,6 +395,11 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_countries.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_create_family.xml">
         <config>
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
@@ -455,6 +480,11 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_family_rules.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fans.xml">
         <config>
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
@@ -994,6 +1024,11 @@
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/music_play_dialog.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/mylook_entry_effects_rv_design.xml">
         <config>
           <theme>@style/Theme.WorldSocialIntegration</theme>
@@ -1015,6 +1050,11 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/popular_all_items.xml">
+        <config>
+          <theme>@style/Theme.WorldSocialIntegration</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/priviliagelayout.xml">
         <config>
           <theme>@style/Theme.WorldSocialIntegration</theme>
         </config>
@@ -1106,31 +1146,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fbe7f4d-af4c-474b-b3a8-adb47f5cf8c0" name="Changes" comment="Initial Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/FansRVAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/FansRVAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/FollowingRVAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/FollowingRVAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/FriendRVAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/FriendRVAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/GiftFirendAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/GiftFirendAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/ServiceChatAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/ServiceChatAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/VisitorsRVAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Adapters/VisitorsRVAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/ChatsFragments/ChatServiceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/ChatsFragments/ChatServiceFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/EditProfileSection/EditProfileMomentsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/EditProfileSection/EditProfileMomentsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/Friends/FriendsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/Friends/FriendsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/OtherUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/OtherUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/VIPCenter/Vip1.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/VIPCenter/Vip1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/Visitors/VisitorsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/Fragments/Profile/Visitors/VisitorsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFriends/Detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/GetFriends/Detail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/RequstChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/RequstChat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SendMsgRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/live/worldsocialintegrationapp/ModelClasses/SendMsgRoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fans_rv_design.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fans_rv_design.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/following_rv_design.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/following_rv_design.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_other_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_other_user.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/friend_rv_design.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/friend_rv_design.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/messages_rv_design.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/messages_rv_design.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/online_services_rv_design.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/online_services_rv_design.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/visitors_rv_design.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/visitors_rv_design.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1187,7 +1203,7 @@
     <setting file="file://$PROJECT_DIR$/app/src/main/res/navigation/home_graph.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2aOcjsZ7NyeIjPz4T0pyIyq6zBq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -1206,11 +1222,13 @@
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.4.1/f9e48179ea0c6ac0080a277b9383f74523f56aa2/appcompat-1.4.1-sources.jar!/androidx/appcompat/widget/AppCompatButton.java_SELECTED&quot;: &quot;AppCompatButton&quot;,
+    &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/androidx.core/core/1.7.0/f1c3685231d49092ae301932de1481d9b7a9e025/core-1.7.0-sources.jar!/androidx/core/widget/NestedScrollView.java_SELECTED&quot;: &quot;NestedScrollView&quot;,
     &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.2.1/f0f93e67af3f7417bdd560d5142f6dec4fe629c3/recyclerview-1.2.1-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED&quot;: &quot;RecyclerView&quot;,
     &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/androidx.viewpager/viewpager/1.0.0/db045f92188b9d247d5f556866f8861ab68528f0/viewpager-1.0.0-sources.jar!/androidx/viewpager/widget/ViewPager.java_SELECTED&quot;: &quot;ViewPager&quot;,
     &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.github.aabhasr1/OtpView/v1.1.2/3111a07f43afb3a044512cd8e5003913ec0a4cec/OtpView-v1.1.2-sources.jar!/in/aabhasjindal/otptextview/OtpTextView.java_SELECTED&quot;: &quot;OtpTextView&quot;,
     &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.6.0/976aa22bd46c7748fade98594298bcd36b92f844/material-1.6.0-sources.jar!/com/google/android/material/progressindicator/BaseProgressIndicator.java_SELECTED&quot;: &quot;BaseProgressIndicator&quot;,
     &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.6.0/976aa22bd46c7748fade98594298bcd36b92f844/material-1.6.0-sources.jar!/com/google/android/material/progressindicator/LinearProgressIndicator.java_SELECTED&quot;: &quot;LinearProgressIndicator&quot;,
+    &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.6.0/976aa22bd46c7748fade98594298bcd36b92f844/material-1.6.0-sources.jar!/com/google/android/material/tabs/TabLayout.java_SELECTED&quot;: &quot;TabLayout&quot;,
     &quot;android-custom-viewC:/Users/rishabh/.gradle/caches/modules-2/files-2.1/com.hbb20/ccp/2.5.0/6b43edd160236196968851c69816bc2230df1d5a/ccp-2.5.0-sources.jar!/com/hbb20/CountryCodePicker.java_SELECTED&quot;: &quot;CountryCodePicker&quot;,
     &quot;android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/view/View.java_SELECTED&quot;: &quot;View&quot;,
     &quot;android-custom-viewC:/Users/rishabh/AppData/Local/Android/Sdk/sources/android-34/android/widget/ImageView.java_SELECTED&quot;: &quot;ImageView&quot;,
@@ -1222,8 +1240,8 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/releaseBuild&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Builds WOW/Build 1 with key/Release&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/fixes__twentyEightFeb&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/TestAppsMobile/TestApp1&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,

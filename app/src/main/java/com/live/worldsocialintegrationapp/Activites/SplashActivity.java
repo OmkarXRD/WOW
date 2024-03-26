@@ -99,22 +99,29 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void banUserStatusCheck() {
-        Log.i("SPlacsh","zzzzzzzzzzzzzzzzzz "+AppConstants.USER_ID);
         new Mvvm().getGeneratedIdClassLiveData(SplashActivity.this,AppConstants.USER_ID).observe(SplashActivity.this, new Observer<GeneratedIdClass>() {
             @Override
             public void onChanged(GeneratedIdClass generatedIdClass) {
                 if (generatedIdClass !=null){
                     if (generatedIdClass.getSuccess().equalsIgnoreCase("1")){
                         if (generatedIdClass.getStatus().equalsIgnoreCase("1")){
+                            Toast.makeText(SplashActivity.this, generatedIdClass.getMessage(), Toast.LENGTH_LONG).show();
                             Intent intent=new Intent(SplashActivity.this, MainActivity.class);
                             App.getSharedpref().saveString("bannedId",generatedIdClass.getMessage());
                             startActivity(intent);
                             finish();
                         } else if (generatedIdClass.getStatus().equalsIgnoreCase("2")) {
+                            Toast.makeText(SplashActivity.this, generatedIdClass.getMessage(), Toast.LENGTH_LONG).show();
                             finishAffinity();
                         } else if (generatedIdClass.getStatus().equalsIgnoreCase("3")) {
+                            Toast.makeText(SplashActivity.this, generatedIdClass.getMessage(), Toast.LENGTH_LONG).show();
                             finishAffinity();
                         }
+                    }else if (generatedIdClass.getSuccess().equalsIgnoreCase("4")) {
+                        Toast.makeText(SplashActivity.this, generatedIdClass.getMessage(), Toast.LENGTH_LONG).show();
+                        Intent intent=new Intent(SplashActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
                     }else {
                         Intent intent=new Intent(SplashActivity.this, HomeActivity.class);
                         startActivity(intent);
@@ -122,7 +129,6 @@ public class SplashActivity extends AppCompatActivity {
                     }
                 }
                 else {
-                    Log.i("SPlacsh","zzzzzzzzzzzzzzzzzz");
                     Toast.makeText(SplashActivity.this, "Technical issue...", Toast.LENGTH_SHORT).show();
                 }
 

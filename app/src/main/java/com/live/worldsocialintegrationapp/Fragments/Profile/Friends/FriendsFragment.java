@@ -294,6 +294,7 @@ public class FriendsFragment extends Fragment implements FriendRVAdapter.Callbac
                         friendList = getFriendRoot.getDetails();
                         if (isAdded() && getContext()!=null){
                             FriendRVAdapter friendRVAdapter = new FriendRVAdapter(friendList, getContext(), FriendsFragment.this);
+                            FriendRVAdapter.sendEventInvitationCheck = 3;
                             friendsRV.setAdapter(friendRVAdapter);
                         }
                     } else {
@@ -446,13 +447,15 @@ public class FriendsFragment extends Fragment implements FriendRVAdapter.Callbac
 
     private void sendVip() {
 
-        new Mvvm().buyVip(requireActivity(), friendList.get(poistion).getId(), frameId).observe(requireActivity(), new Observer<BuyVipRoot>() {
+        new Mvvm().buyVip(requireActivity(), friendList.get(poistion).getId(), vipId).observe(requireActivity(), new Observer<BuyVipRoot>() {
             @Override
             public void onChanged(BuyVipRoot buyVipRoot) {
                 if (buyVipRoot != null) {
                     if (buyVipRoot.getStatus() == 1) {
-                   Toast.makeText(requireContext(), "1 " + buyVipRoot.getMessage(), Toast.LENGTH_SHORT).show();
+                        Log.i("Vipppp","in if");
+                        Toast.makeText(requireContext(), "1 " + buyVipRoot.getMessage(), Toast.LENGTH_SHORT).show();
                     } else {
+                        Log.i("Vipppp",buyVipRoot.getMessage());
                         notEnoughCoins();
                     }
                 } else {

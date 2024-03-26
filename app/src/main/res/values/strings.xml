@@ -59,7 +59,10 @@
 
     <string name="label_title_resolution">Resolution</string>
     <string name="label_title_frame_rate">Frame Rate(fps)</string>
-    <string name="helpcentertvdes">when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</string>
+    <string name="helpcentertvdes">•	The transaction may take 10-30 minutes to proceed.\n•	Please try to refresh the page.\n•	If you did not get the  Diamonds/Coins/Item after refreshing and no refund was sent, please share feedback ID, Time , details of issues we will check and feedback to you . Our services email is hello@wows.co.in</string>
+    <string name="helpcentertvdes2">•	The number of Diamonds in your account increases when you receive gifts.\n•	Diamonds can be used to redeem Coins .\n•	The corresponding platform rules stipulate the means to obtain and calculate Diamonds , and Wow’s has the right of final interpretation and execution.\n•	If your behavior violates any laws, regulations or wows platform rules. or if the Diamonds in your account are earned as a result of malicious refunds, card frauds, cyber hacking and other illegal operations, no matter whether adverse consequences have been caused.\n•	Wow’s reserves the right to take appropriate action and right to deduct from the Diamonds balance in your account at its sole discretion.
+Other issues</string>
+    <string name="helpcentertvdes3">•	If you meet any other issues, like: if the item can’t be purchased, please contact on hello@wows.co.in and state the issues you have met, we will sort it out as soon as possible.</string>
     <string name="privacytv">On the profile page, your country will appear as unknown country(exclusive privilege of VIP 4)</string>
     <string name="privacydialogtv">VIP exclusive privilege.Activate VIP 4 then you can use it.</string>
 

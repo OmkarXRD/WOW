@@ -59,9 +59,11 @@ public class SearchUserRVAdapter extends RecyclerView.Adapter<SearchUserRVAdapte
 
             holder.itemView.setOnClickListener(v -> {
                 if (list.get(position).getFamilyId() == null || list.get(position).getFamilyId().length() == 0 || list.get(position).getFamilyId().equalsIgnoreCase("")) {
+                    Log.i("SearchOption","in if");
                     searchUserDataCallback.searchDataOfUsers(list.get(position));
                 }
                 else if(list.get(position).getUsername() == null || list.get(position).getUsername().length() == 0 || list.get(position).getUsername().equalsIgnoreCase("")) {
+                    Log.i("SearchOption","in else");
                     searchUserDataCallback.openfamilyprofile(list.get(position));
                }
             });

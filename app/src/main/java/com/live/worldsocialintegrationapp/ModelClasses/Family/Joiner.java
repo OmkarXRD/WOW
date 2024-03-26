@@ -2,7 +2,10 @@ package com.live.worldsocialintegrationapp.ModelClasses.Family;
 
 import androidx.annotation.Keep;
 
+import com.live.worldsocialintegrationapp.ModelClasses.GetFans.Detail;
+
 import java.io.Serializable;
+import java.util.ArrayList;
 
 @Keep
 public class Joiner implements Serializable {
@@ -13,17 +16,39 @@ public class Joiner implements Serializable {
     public String type;
     public String status;
     public String name;
+    public String dob;
+    public String gender;
     public String UserProfileImage;
     public String is_admin;
+    public String is_leader;
     public String contribution;
     public boolean show_status;
+    public String myLevel;
+    public String reciveLevel,sendLevel,reciveColor;
 
     public boolean isShow_status() {
         return show_status;
     }
 
+    public String getMyLevel() {
+        return myLevel;
+    }
+
+    public void setMyLevel(String myLevel) {
+        this.myLevel = myLevel;
+    }
+
+
     public void setShow_status(boolean show_status) {
         this.show_status = show_status;
+    }
+
+    public String getReciveColor() {
+        return reciveColor;
+    }
+
+    public void setReciveColor(String reciveColor) {
+        this.reciveColor = reciveColor;
     }
 
     public String getContribution() {
@@ -40,6 +65,14 @@ public class Joiner implements Serializable {
 
     public void setIs_admin(String is_admin) {
         this.is_admin = is_admin;
+    }
+
+    public String getIs_leader() {
+        return is_leader;
+    }
+
+    public void setIs_leader(String is_leader) {
+        this.is_leader = is_leader;
     }
 
     public String getFamilyMemberId() {
@@ -97,4 +130,36 @@ public class Joiner implements Serializable {
     public void setUserProfileImage(String userProfileImage) {
         UserProfileImage = userProfileImage;
     }
+    public String getReciveLevel() {
+        return reciveLevel;
+    }
+
+    public void setReciveLevel(String reciveLevel) {
+        this.reciveLevel = reciveLevel;
+    }
+
+    public String getSendLevel() {
+        return sendLevel;
+    }
+
+    public void setSendLevel(String sendLevel) {
+        this.sendLevel = sendLevel;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
 }
